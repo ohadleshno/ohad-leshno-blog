@@ -7,9 +7,23 @@ import { Clock, Calendar, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export function generateStaticParams() {
-  const heSlugs = getAllPostSlugs('he').map((slug) => ({ lang: 'he', slug }));
-  const enSlugs = getAllPostSlugs('en').map((slug) => ({ lang: 'en', slug }));
-  return [...heSlugs, ...enSlugs];
+  const heSlugs = getAllPostSlugs('he').flatMap((slug) => [
+    { lang: 'he', slug },
+    { lang: 'he', slug: encodeURIComponent(slug) },
+    { lang: 'he', slug: decodeURIComponent(slug) },
+  ]);
+  const enSlugs = getAllPostSlugs('en').flatMap((slug) => [
+    { lang: 'en', slug },
+    { lang: 'en', slug: encodeURIComponent(slug) },
+    { lang: 'en', slug: decodeURIComponent(slug) },
+  ]);
+
+  const allParams = [...heSlugs, ...enSlugs];
+  const uniqueMap = new Map();
+  for (const p of allParams) {
+    uniqueMap.set(`${p.lang}:${p.slug}`, p);
+  }
+  return Array.from(uniqueMap.values());
 }
 
 export default function MusicPostDetail({
