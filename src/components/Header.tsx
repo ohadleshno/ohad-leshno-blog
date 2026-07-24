@@ -43,9 +43,11 @@ export function Header({ lang }: HeaderProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Brand Logo */}
         <Link href={`/${lang}`} className="flex items-center gap-2 font-bold text-lg sm:text-xl text-slate-900 dark:text-white hover:opacity-90 transition-opacity">
-          <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-500 to-sky-400 flex items-center justify-center text-white font-black text-base shadow-sm">
-            OL
-          </span>
+          <img
+            src="/logo.png"
+            alt="Ohad Leshno"
+            className="w-8 h-8 rounded-lg object-cover shadow-sm"
+          />
           <span>{isHe ? 'אוהד לשנו' : 'Ohad Leshno'}</span>
         </Link>
 
