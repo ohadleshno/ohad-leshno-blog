@@ -41,3 +41,28 @@ html[dir="rtl"] body {
 .glass-card:hover {
   transform: translateY(-2px);
 }
+
+/* Custom Blockquote Styling matching Wix red bar design */
+.prose blockquote,
+blockquote {
+  border-inline-start-width: 4px !important;
+  border-inline-start-color: #b91c1c !important; /* Deep Red bar like Wix */
+  padding-inline-start: 1.25rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  background-color: rgba(185, 28, 28, 0.05);
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: inherit;
+}
+
+.dark .prose blockquote,
+.dark blockquote {
+  border-inline-start-color: #ef4444 !important;
+  background-color: rgba(239, 68, 68, 0.08);
+}

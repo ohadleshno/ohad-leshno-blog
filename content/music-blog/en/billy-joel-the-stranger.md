@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "en"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=DglOd7Wdueg&ab_channel=LeBeau" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/DglOd7Wdueg" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 היום נדבר על בילי ג'ואל, שהוא אחד האומנים האהובים עליי. השירים שלו, כגון "Piano Man", "Uptown Girl", "Just the Way You Are" ו-"New York State of Mind", הם מוכרים מאוד כולם. הם פופולריים עד כדי כך שהסיכוי שלא נחשפתם אליהם קלוש. אני יודע שמקצת האנשים יכולים לחשוב שזה קצת בסיסי לאהוב זמר פופ קלאסי, שבקלות אפשר לראות בו את שלמה ארצי של ארצות הברית, שבמקום להופיע בקיסריה הוא מופיע בMadison Square Garden. אבל אני חושב שהוא אומן מעניין מאוד, ועם כל כך הרבה נופך. אף שלשירים של ג'ואל מבנה פופ קלאסי, הם מורכבים ביותר ומרובי רבדים. הם מלאים בפרטים קטנים שמעמיקים את המשמעות שלהם.

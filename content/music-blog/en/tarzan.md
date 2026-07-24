@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "en"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=EfHLHdSxQA0&ab_channel=PhilCollins-Topic" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/EfHLHdSxQA0" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 אני, מי שלא מכיר, חנון גאה שגדל על כל הקלישאות הכי גנריות של חנונים. אוהב את הביטלס היה בונה לגו של Star Wars, שיחק בכל משחק מחשב שהיה אפשר למצוא, וכמובן הייתה גם אהבתי הגדולה לסרטי דיסני. לכן, זה מתבקש שאבחר לפחות באלבום פסקול אחד של סרטי דיסני. לאחר התלבטות קשה ומריבות עם "עצמי הקטן בראש" על איזה אלבום כדאי שאכתוב, הצלחתי להגיע למסקנה שעליי לבחור באלבום של Tarzan. 

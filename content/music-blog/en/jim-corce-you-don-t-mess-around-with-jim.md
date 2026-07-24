@@ -8,7 +8,7 @@ minutesToRead: 2
 language: "en"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=uZkU-DrE9P0&list=PLz6cAheObZchyxDtuSMWUFptI96MX_ADs&ab_channel=SouthernRocker" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/uZkU-DrE9P0" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 היום אנחנו נדבר על אלבום מעניין מאוד שרובכם כנראה לא מכירים. מי שמכיר אותי יודע כמה אני אוהב אמני פולק, במיוחד כאלה עם סיפורים "דפוקים". ג'ים הוא אומן פולק "על-פי הספר", הוא התחיל את הקריירה שלו בהופעות בכל הברים והמועדונים הכי דלוחים בארה"ב, התחתן ב-1966 והתגייר לאחר נישואיו. לאחר מכן החליט למכור את כל רכושו, ולעבור מניו יורק לחווה כלשהי בפנסילבניה. בכל לילה הופיע עבור 25 דולר אבל לא הצליח לשלם את כל חשבונותיו, לכן נוסף לכך עבד בעבודות מסוג של "צווארון כחול", כמו נהג משאית ומורה לגיטרה.

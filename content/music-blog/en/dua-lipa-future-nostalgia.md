@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "en"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=4-NkTMyVq2c&list=PLZI0UMvokhcYcyjvFbC0j0nNMSYpHfQq0&index=1&ab_channel=DuaLipa-Topic" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/4-NkTMyVq2c" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 הסכסוך הישראלי-פלסטיני הוא בעיה קשה שרבים בישראל פוגשים אותה בשלב כזה או אחר. סער, אחד האנשים שאני הכי אוהב בעולם, הציע פתרון יצירתי: לנגן את המוזיקה של דואה ליפה בעזה

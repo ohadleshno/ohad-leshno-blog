@@ -43,6 +43,23 @@ interface WixPost {
   content: string;
 }
 
+function extractYouTubeId(url: string): string {
+  if (!url) return '';
+  if (url.includes('youtu.be/')) {
+    const parts = url.split('youtu.be/')[1];
+    return parts ? parts.split('?')[0] : '';
+  }
+  if (url.includes('youtube.com/watch')) {
+    try {
+      const match = url.match(/[?&]v=([^&]+)/);
+      return match ? match[1] : '';
+    } catch (e) {
+      return '';
+    }
+  }
+  return '';
+}
+
 function convertBlocksToMarkdown(contentStr: string): string {
   if (!contentStr) return '';
   let contentJson: WixPostContent;
@@ -70,9 +87,12 @@ function convertBlocksToMarkdown(contentStr: string): string {
           }
         } else if (entity.type === 'wix-draft-plugin-video') {
           const videoSrc = entity.data?.src || '';
-          const title = entity.data?.metadata?.title || 'Embedded Video';
-          if (videoSrc) {
-            lines.push(`\n<YouTubeEmbed url="${videoSrc}" title="${title.replace(/"/g, '&quot;')}" />\n`);
+          const title = entity.data?.metadata?.title || 'Video Embed';
+          const videoId = extractYouTubeId(videoSrc);
+          if (videoId) {
+            lines.push(`\n<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title.replace(/"/g, '&quot;')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>\n`);
+          } else if (videoSrc) {
+            lines.push(`\n[🎥 Watch Video: ${title}](${videoSrc})\n`);
           }
         }
       }

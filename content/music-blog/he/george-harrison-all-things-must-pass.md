@@ -8,7 +8,7 @@ minutesToRead: 4
 language: "he"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=QWV4pFV5nX4&ab_channel=GeorgeHarrisonVEVO" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/QWV4pFV5nX4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 בעקבות תקופתה החגים וחג הסוכות הקרב ובא אלינו נזכרתי בשבת ישיבה שהייתה לי אי שם בשלהי קיץ 2013. הקונספט עד היום לא ברור לי עד הסוף, בגדול נסענו לאיזו פנימיה להתארח בשבת כל השכבות הבוגרות של הישיבה התיכונית.על הנייר נשמע כיף, כל החברים נשארים בשבת ביחד באיזה מקום דלוח עם אוכל בינוני, מה כבר יכול להיות רע? הבעיה היא שהמסגרת מלאה בהמון תכנים לא מעניינים שאתה חייב להיות בהם. אחד מהם זה סעודה שלישית, למי שלא מכיר בשבת אמורים לעשות שלוש ארוחות, בערב אחרי ערבית, ביום אחרי שחרית ואחרונה לפני השקיעה. הרבה דתיים אימצו את המנהג לעשות ארוחה קטנה יחסית בסעודה שלישית ולשיר שירים דתיים. 
@@ -39,7 +39,7 @@ Isn't it a pity?”
 אחרי שהבנו בגדול את האטמוספרה של האלבום, עם המשבר הגדול בחייו עם פירוק הביטלס, בנוסף מות אמו והמסע שלו להודו והחיבור להארי קרישנה. כעת נוכל לצלול כעת לשירים הרוחניים יותר באלבום. ג'ורג מתעסק הרבה באלבום בקשר שלנו אל האל, הוא מתחיל עם השיר המוכר ביותר באלבום הוא כנראה באלבום my sweet lord, שיצא בהתחלה כסינגל ושבר את המצעדים. הרצון של ג'ורג בשיר הוא שנתחבר לאל כל אחד בדרכו שלו ולא משנה הפלטפורמה דתית שבה הוא משתמש. הוא משלב סגנון של שירי גוספל עם השפעות מהארי קרישנה, הוא משתמש במילים כמו ״הללויה״ ומנגד מקריא את מַהָא-מנטרה (המנטרה הגדולה). תפילה מדיטטיבית בת שש-עשרה מילים המורכבת משמותיו של אלוהים בסנסקריט. לימים ג'ורג הודה שהוא התבסס על שיר גוספל oh happy day  ולימים הפסיד בתביעה על גניבה ספרותית על השיר. 
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=KJohGa66FJM&ab_channel=EdwinHawkinsVEVO" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/KJohGa66FJM" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 > "I really want to see you

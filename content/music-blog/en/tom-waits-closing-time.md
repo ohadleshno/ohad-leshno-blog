@@ -8,7 +8,7 @@ minutesToRead: 4
 language: "en"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=BeeK37wrBDQ&list=OLAK5uy_neKJhoE9IdbhQoGuAI22y4ccDrbdqJc1k&ab_channel=TomWaits" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/BeeK37wrBDQ" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 השבוע חגגנו את יום האהבה, 14 בפברואר, ותהיתי: למה אנחנו קוראים לו "ולנטיין"? הרי אין לנו יום כעס (טוב, יש יום זעם, אבל בקשה לא להכנס לקטנות בסדר). למה דווקא לאהבה יש יום מיוחד? תהיתי מה המקור של החג, אחרי מחקר עומק הכולל כניסה לויקיפדיה, כתבה בבלייזר על ״12 הנשים הכי שוות במאה ה21״ ולפחות צפייה ב2 סרטוני יוטיוב של איך להתחיל עם נשים אסכם לכם את עיקרי הדברים. כמו כל דבר בהיסטוריה המערבית יום ולנטיין החל כציון נוצרי לזכרו של ולנטינוס הקדוש ובעת היותר מודרנית החג הפך בתרבות העממית כיום ציון לאהבה רומנטית יש הרבה תיאוריות לאיך זה קרה אבל אני לא היסטוריון ונראה לי תשמעו פרק של the rest is history ותדעו יותר מאיזה חרטטן בפייסבוק .

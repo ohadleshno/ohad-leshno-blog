@@ -8,7 +8,7 @@ minutesToRead: 4
 language: "he"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=pjSsV4iLdjs&list=OLAK5uy_l8I4o6dglhPO1JBp3C5WT_OZsFkEXKm_4&index=1&ab_channel=Matisyahu-Topic" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/pjSsV4iLdjs" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 "שמע, אם הוא היה לוקח את עצמו ברצינות, הוא היה סופרסטאר", סיכם אחי את ההופעה של מתיסיהו שהיינו בה לפני חודש. זה היה אחד מהמופעים הטובים שראיתי בחיי. מעולם לא ראיתי מישהו כל כך טבעי על הבמה, כל כך לא מתאמץ ובו-זמנית כובש את כל עולמך ובמשך שעתיים מצליח לייצר חוויה רוחנית אחרת. כמובן שעדיין לא נוצרה אוזן אנושית שיכולה להבין אפילו חצי מהמלמולים של ראפ הרגאיי שלו, אבל פה ושם בין עשרות המסרים שהוא יורה לאוויר, הוא מצליח לירות חץ ישר ללב ולפתוח אותו לרווחה. אפילו "One Day", שיר כל כך קלישאתי ומרוחק, מצליח באותה סיטואציה לתפקד כמו תפילה כנה וחזקה מהמקום הכי טהור. מתיסיהו הגיע לארץ בתקופה לא פשוטה ועשה מופע שהכנסותיו הלכו למשפחות החטופים - אקט שמאוד לא מובן בעיני, במיוחד לאחר המסע שהוא עבר. (ביקורת על המופע)

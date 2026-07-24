@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "he"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=xYJWZ1K6hPI&ab_channel=GalGodonut" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/xYJWZ1K6hPI" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 היום הוא יום הולדתו ש ה40 של אחי הגדול ארי לפי לוח השנה הגרגוריאני (למניינם) , על כן אחרי כל כך הרבה זמן שלא הצלחתי לכתוב פוסט לבלוג נוצר בי הכוח לכתוב מחדש הקדשה לבן אדם המדהים שגידל אותי ונתן לי מקום חם בעולם. ארי הוא הבן אדם שלימד אותי את הדברים הכי חשובים בחיים, הוא לימד אותי מה המשמעות של מוסיקה, הוא השריש בי את האהבה למשחקי מחשב, הפך אותי לחנון הגאה שאני היום. הוא התניע בי את האהבה הראשונה למוסיקה שהייתי שומע בתור ילד מבוב דילן שהפך לאורים והתומים שלי ועד Oasis שהם הלהקה שהכי אהב. אז היום אכתוב על האלבום שעוד מעט יהיה 30 שנה לכתיבתו Definitely Maybe שהוא אחד מהאלבומים האוהבים עליו ועלי.
@@ -17,7 +17,7 @@ language: "he"
 לפני שנתחיל לדבר על האלבום קצת רקע על הלהקה, הלהקה מורכבת מזוג האחים, ליאם ונואל גאלאגר, שגדלו במנצ'סטר, ערסים בריטים במלוא מובן המילה. באחת מההופעות הראושנות שלהם הם שברו את כל הפאב, כי למה לא. ממליץ לעשות עליהם חיפוש בגוגל, כמות הכתבות הלא הגיוניות שיש עד היום עליהם היא mind blowing בלשון המעטה. הם היו רוקרים במלוא מובן המילה, סקס סמים ורוקנרול, מלאים בהיבריס להגיד שהם יותר גדולים מהביטלס. לצערנו, במרוצת השנים השניים הפכו לאויבים מרים, הלהקה התפרקה ומאז הם מופיעים בנפרד. האלבום הזה היה הפריצה של זוג האחים שיום אחד עוד יכבשו את העולם ויגרמו לאחד מכל שישה בריטים לנסות לקנות כרטיס להופעה שלהם ב Knebworth שהיא אחת מההופעות הגדולות בהיסטוריה. הם הופיעו בפני 500 אלף אנשים בשתי לילות נפרדים, וזה בזמנים שלא היה אינטרנט עדין בצורתו המלאה. והיום ליאם יגיע למצב שהוא צריך להכין תה לעצמו כי אנשים לא קונים תקליטים יותר (סרטון למטה).
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=N66OWMQqsxA&ab_channel=JulianHernandez" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/N66OWMQqsxA" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 האלבום "Definitely Maybe" נחת בדיוק בזמן קריטי עבור סצנת המוזיקה הבריטית, והציע אלטרנטיבה מרעננת לתנועת הגראנג' ששלטה באותה תקופה. למי שלא מכיר מוזיקת הגראנג' מורכבת באופן כללי מצליל גיטרה "מלוכלך", ריפים חזקים ותיפוף כבד. הצליל ה"מלוכלך" הושג כתוצאה משינוי בסגנון הנגינה המסורתי של הפאנק רוק, ותוך שימוש רב בדיסטורשן.  אואזיס, בהובלת האחים ליאם ונואל גלאגר, שילבה במוזיקה שלה תערובת ייחודית של רוק ופופ, ויצרה סאונד חדש שדיבר לדור שלם. האלבום הזה הגיע לעולם בדיוק אחרי הסוף של נירוונה שהעולם רק חיכה לדבר חדש שיגיע.

@@ -49,7 +49,7 @@ Will she remember my old voice
 While I fight the tears?"
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=y9Mse62NFl4&ab_channel=Shumway31" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/y9Mse62NFl4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 סיפור דומה קיים בשירים operator של הGrateful Dead ובשיר  Operator של Jim Corce שעליו הרחבתי כבר בפוסט שלם בבלוג. הפורטוגוניסט של השיר לא מצליח להגיע לאותה אישה מן העבר, הוא מנסה לגלות עליה מידע אבל נכשל מסיבות שונות שמעבר לכוחו. לבסוף הוא נכנע והוא מגיע למסקנה שלא מעניין אותו מה הסטטוס שלה, העיקר שהיא בסדר. 
@@ -64,7 +64,7 @@ I don't care where she's been
 Long as she's been doin' it right"
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=3MZeol_aMAM&ab_channel=GratefulDead-Topic" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/3MZeol_aMAM" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 כמובן שעל מנת להוסיף קדושה בעולם הוספתי ביצועים של בוב דילן ו chuck berry שגם שרים על long distance phone. הם מדברים על החוויה של ההתקשרות למישהו רחוק  והמסע שעוברים על מנת לבצע את אותה השיחה. אני ממליץ לכם לצלול בעצמכם לאותם שירים וקצת לחוות עוד פרספקטיבה קצת שונה על אותו רכיב המקשר אותנו לעולם הרחוק מאיתנו.
@@ -82,7 +82,7 @@ Long as she's been doin' it right"
 היא לא כזאת שמופיעה בספרים.״
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=RU5AIRlc3g0&ab_channel=%D7%97%D7%99%D7%99%D7%9D%D7%A8%D7%95%D7%9E%D7%A0%D7%95-%D7%94%D7%A2%D7%A8%D7%95%D7%A5%D7%94%D7%A8%D7%A9%D7%9E%D7%99" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/RU5AIRlc3g0" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 הפלייליסט יסתיים בביצוע הפומפוזי של ELO בTelephone Line שמדגיש את גודל העוצמה שיש לנו בחוויה הזאת של ההמתנה על הקו לרגע המכונן. אני מאחל לכל הקוראים הנכבדים שלי סופ״ש נעים שנלמד להתגעגע,ללכת לאיבוד ולמצוא את עצמנו מחדש.

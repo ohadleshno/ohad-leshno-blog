@@ -14,7 +14,7 @@ language: "en"
 
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=IrVD0bP_ybg&ab_channel=JoanBaez-Topic" title="Diamonds And Rust" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/IrVD0bP_ybg" title="Diamonds And Rust" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 בהיסטוריה העשירה של מוזיקת פולק, מעט שמות בולטים כמו ג'ואן באאז. ילידת סטטן איילנד, ניו יורק, לאב מקסיקני ואם אמריקאית, גדלה באאז בקהילה של קוואקרים (האלו של השיבולת שועל), קבוצה דתית המדגישה ערכים של קהילה, שוויון ופציפיזם. השפעות אלו עיצבו רבות את נושאי שיריה ופעילותה הפוליטית לאורך השנים.פריצתה הגיעה בגיל צעיר, כשהייתה בת 18 בלבד. הופעתה בפסטיבל ניופורט בשנת 1960 זכתה לשבחים רבים, ו-Time Magazine אף הכתיר אותה כאמנית הפולק המובילה של אותה תקופה. לאורך הקריירה שלה, שילבה באאז בהופעותיה ובשיריה הן מוזיקה מקורית והן עיבודים לשירים עממיים, תוך שהיא מעבירה מסרים של צדק חברתי, שלום ושוויון.
@@ -37,7 +37,7 @@ language: "en"
 מערכת היחסים שלהם לא החזיקה מעמד לאורך זמן. בשנת 1965 נפרדו באאז ודילן, כשברקע השינויים שחלו בקריירה של דילן, שהפך לסופרסטאר עולמי ונטש בהדרגה את המוזיקה המחאתית. למרות פרידתם, באאז המשיכה לכבד את דילן ואת יצירתו. היא ביצעה את שיריו בהופעותיה לאורך השנים, ואף התאחדו שוב בשנת 1975 עבור סיבוב הופעות משותף בשם Rolling Thunder Revue, שהונצח בסרט דוקומנטרי מאת מרטין סקורסזה שהוא אחד מהסבבי ההופעות הגדולים בהיסטוריה.
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=PR5ShVsy7EM&list=RDPR5ShVsy7EM&start_radio=1&ab_channel=Swingin%E2%80%99Pig" title="Bob Dylan & Joan Baez Sing Together, 1965 [&quot;DON'T LOOK BACK&quot; OUTTAKE]" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/PR5ShVsy7EM" title="Bob Dylan & Joan Baez Sing Together, 1965 [&quot;DON'T LOOK BACK&quot; OUTTAKE]" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 דווקא לאחר כל התקופה האקטיביסית שלה באאז קצת החליטה לשנות כיון ולהוציא את אחד מהאלבומים הגדולים שלה Diamond and rust. באז כבר הייתה עם רפרטואר מאוד מרשים כשהיא באה להוציא את האלבום הזה. והאלבום הזה הוא מאוד שונה משאר האלבומים שלה, רובו מורכב מקאברים ומחוות לגודלי אמני הFolk, ובמקום שירי מחאה הנושא לכל אורך האלבום הוא הדינמיקה שלה מול האוהבים שלה.
@@ -91,7 +91,7 @@ You've known that hollow sound of your own steps in flight"
 ובהקשר של יום השואה אני אחתום במנטרה שגם ברגעים הכי קשים בחיים שמעתי אותה והאמנתי בה בכל ליבי שבאמת "We shall overcome".
 
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=RkNsEH1GD7Q&ab_channel=pierva" title="Joan Baez - We shall overcome" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/RkNsEH1GD7Q" title="Joan Baez - We shall overcome" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 האזנה נעימה, שנדע רק בשורות טובות ואמן שהחטופים כבר יחזרו הביתה.

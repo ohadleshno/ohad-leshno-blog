@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "he"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=PMlmoLvRBNQ&list=PLp8oXTv1PUtHOpd1TQhLOpP8bQHk2rQOV&ab_channel=RodrigoLima" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/PMlmoLvRBNQ" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 אני זוכר נסיעה חזרה מהבסיס, לקחתי טרמפ עם מישהי למקום שבו החניתי את הרכב. בתקופה הזו הרכב שלי היה חסום והייתי צריך להחנות אותו מחוץ לבסיס. אלו היו נסיעות של חמש דקות, נסיעות קצרות בקיץ כשכל האוטו חם, כי הוא עמד בשמש כל היום. נכנסים לרכב ותכף צועקים ״תפעיל את המזגן״, כולם מזיעים את חייהם אחרי יום עבודה בינוני בבסיס. בנסיעה הקצרה הזאת התנגן ברדיו Change The World של אריק קלפטון. אני זוכר שהנהגת החביבה הסתכלה עליי ואמרה ״וואלה אהבתי, שיר נחמד, של מי זה?״, ואני מלמלתי שנראה לי שזה של קלפטון אבל אני לא בטוח. ירדתי מהטרמפ לעבר הרכב שלי וחשבתי לעצמי שאף פעם לא באמת הכרתי לעומק את קלפטון, ואולי כדאי לתת צ׳אנס ולשמוע את אחד האלבומים שלו. נכנסתי לApple Music- שמתי את האלבום  One More Car, One More Rider, ומאותה נקודה נשאבתי – שמעתי כמעט רק את האלבום הזה במשך חודש שלם.

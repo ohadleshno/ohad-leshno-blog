@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "he"
 ---
 
-<YouTubeEmbed url="https://www.youtube.com/watch?v=zMy4S_JkfbY&ab_channel=54music2" title="Embedded Video" />
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/zMy4S_JkfbY" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
 לקראת סיום שירות החובה החלטנו ישראל ואני לעשות טיול אחים לגולדן המדינה (ארצות־הברית למניינם). היינו שבוע אצל אחי בשיקגו ושבוע אצל אחיו בניו־יורק. בשיקגו חרשנו את העיר, הלכנו לאכול בסופר, ביקרנו בRain Forest café, והסתכלנו על רהיטים בחנויות של היפסטרים. באחד הימים הלכנו לוויקר־פארק, שכונה ידועה בחנויות התקליטים שלה ובחנויות בגדי יד־שנייה. נתקלנו בחנות, שזכורה לי מאוד לטובה עד היום, Dusty groove  ,לחובבי הזאנר. בחנות פגשנו מוכר שהיה מתכנת PHP בעברו, שהחליט לעשות הסבה להיות מוכר תקליטים, כי נמאס לו מהתחום. הוא היה expensive brother , והוא המליץ לנו על כל מיני תקליטים נישתיים. אחד מהתקליטים שהוא המליץ לנו עליו היה אלבום, שאני הולך לדבר עליו היום. בזכות המוכר נחשפתי לאלבום האייקוני Songs for Beginners של גרהם נאש. האסוציאציה הראשונה שלי למילה "beginners"  תמיד הייתה קורסים עם קריינים מעצבנים ב-Udemy על Python , אבל האלבום הזה הוא מין קורס קצר על איך לאהוב ולהתמודד עם אהבה נכזבת. הוא גרם לי לחשוב על החיים, על האהבה ועל המוזיקה.
