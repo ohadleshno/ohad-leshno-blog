@@ -22,7 +22,9 @@ you don't mess around with Jim − השיר הראשון שמופיע באלבו
  :שלא עושים
 
 
-> "You don't tug on Superman's cape/You don't spit into the wind/You don't pull the mask off that ol' Lone Ranger/And you don't mess around with Jim." 
+<blockquote dir="auto">
+"You don't tug on Superman's cape/You don't spit into the wind/You don't pull the mask off that ol' Lone Ranger/And you don't mess around with Jim." 
+</blockquote>
 
 
 הגיטרה בשירים של ג'ים חזקה ועם אופי וטון משלה, שמהווה כמו עוד שכבה מעל השיר. השירים מעולים ונוגעים ללב. הדבר בא לידי ביטוי במיוחד בשירים שבהם המלודיה משתלבת באופן הרמוני לחלוטין עם הסיפור. הנה כמה דוגמאות מצוינות:
@@ -31,43 +33,51 @@ you don't mess around with Jim − השיר הראשון שמופיע באלבו
 photograph and memories – שיר על זיכרונות שנשארו מאהובתו שהלכה
 
 
-> "Photographs and memories
+<blockquote dir="auto">
+"Photographs and memories
 Christmas cards you sent to me
 All that I have are these
  To remember you״
+</blockquote>
 
 
 time in a bottle – שיר אהבה יפה 
 
 
-> "If I could save time in a bottle
+<blockquote dir="auto">
+"If I could save time in a bottle
 The first thing that I'd like to do
 Is to save every day till eternity passes away
 Just to spend them with you״
+</blockquote>
 
 
 A long time ago – שיר על ערב שבו האהבה גדולה, תמימה כל כך; אהבה ילדותית, טהורה, מפגש שיש בו חשש ממגע, חוסר הבנה ואיפוק 
 
 
 
-> "I was so afraid to touch you
+<blockquote dir="auto">
+"I was so afraid to touch you
 Thought you were too young too know
 So I just watched you sleeping
 Then you woke and said to me
 The night is cold
 It frightens me
 And I could sleep so easy next to you”
+</blockquote>
 
 
 וגם בשיר operator – ג'ים מצליח לספק ולהנציח במדויק את האווירה והחוויה, שכבר לא קיימות כיום בעידן המודרני. השיר מספר על בחור שמתקשר למוקד טלפוני בשביל למצוא את המספר של אהובתו לשעבר, שעברה לגור עם חבר שלו ב-LA. הוא רוצה להתקשר להגיד לה שהוא הצליח להתגבר על אובדן הקשר, אך כאשר הוא מקבל את המספר הוא לא מצליח לקרוא אותו, כנראה שמרוב דמעות, ומודה בפני המוקדן שהוא לא יכול, ומוותר על השיחה. ג'ים קיבל את ההשראה למילות השיר במהלך שירותו הצבאי, כאשר צפה בתור של אנשים המחכים להתקשר הבייתה.
 
 
-> "So I can call just to tell 'em I'm fine
+<blockquote dir="auto">
+"So I can call just to tell 'em I'm fine
 And to show I've overcome the blow
 I've learned to take it well
 I only wish my words could just convince myself
 That it just wasn't real
 But that's not the way it feels״
+</blockquote>
 
 
 אני מרגיש, שהאלבום מכיל אוסף של סצנות עם סיפורים מורכבים ועצומים שזורקים אותך מייד לעמוקים. ממליץ מאוד לשמוע עוד שירים מתוך האלבומים של הבחור.

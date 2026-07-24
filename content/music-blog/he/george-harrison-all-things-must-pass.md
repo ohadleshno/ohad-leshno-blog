@@ -22,12 +22,14 @@ language: "he"
  
 
 
-> “Isn't it a pity?
+<blockquote dir="auto">
+“Isn't it a pity?
 Now isn't it a shame?
 How we break each other's hearts and cause each other pain
 How we take each other's love without thinking anymore
 Forgetting to give back
 Isn't it a pity?”
+</blockquote>
 
 
 והשיר wah wah שנכתב במהלך הפסקה שלקח מה beatles במהלכי הסשן של get back, המבטא את האווירה העכורה של הלהקה באותם ימים. ממש ניתן לשמוע כמה ג'ורג עצוב על המצב של הלהקה, מדהים איך מצליח לבטא באותו הרגע כבר את הרגשות שלו בצורה כל כך כנה ויפה. 
@@ -42,19 +44,23 @@ Isn't it a pity?”
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/KJohGa66FJM" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
 
-> "I really want to see you
+<blockquote dir="auto">
+"I really want to see you
 Really want to be with you
 Really want to see you, Lord
 But it takes so long, my Lord"
+</blockquote>
 
 
 והוא ממשיך בhear me lord שגם אותו הביטלס לא רצו ואפילו יש לו גרסה שלו בסשן של get back.  הוא מבקש סליחה מהאל על כל השנים שהתעלם ממנו ורק רוצה שישמע אותו ויעזור לו להתעלות. מוטיב שנמצא בהמון שירים דתיים בכל הדתות. והוא לא חס מלכתוב שיר אהבה ב what is life  עם riff הפתיחה הכל כך מושך שבו הוא כותב שיר אהבה לאל.
 
 
-> "Beware of sadness
+<blockquote dir="auto">
+"Beware of sadness
 It can hit you, it can hurt you
 Make you sore and what is more
 That is not what we are here for"
+</blockquote>
 
 
 ואפילו באלבום כזה רציני שמכיל את התפוצצות המוחלטת של ג'ורג אנחנו מוצאים את עצמו נחשפים לקצת הומור עצמי בשיר I dig love. שבו האריסון פשוט שר על איך הוא אוהב את איבר המין הגברי. איך הוא אוהב אותו על הבוקר, איך הוא אוהב אותו כל ערב והוא פשוט רוצה שנדע את זה.
@@ -66,8 +72,10 @@ That is not what we are here for"
 לבסוף נציין את השיר שמבחינתי הוא גולת הכותרת של האלבום, all things must pass, עוד ניסיון של ג'ורג לכתוב שיר בסגנון של the band, האריסון כותב בצורה שלא תבייש כותבים כמו דילן. הוא מזכיר לנו את האמת הכל כך פשוטה שאנחנו תמיד מנסים לברוח ממנה, בסוף הכל חולף. הדברים הרעים, הדברים הטובים כולם בסוף חולפים ובניהם גם אנחנו. 
 
 
-> "All things must pass, so I must be on my way 
+<blockquote dir="auto">
+"All things must pass, so I must be on my way 
 The darkness only stay the night time in the morning it will past away״
+</blockquote>
 
 
 האזנה נעימה

@@ -15,7 +15,8 @@ language: "he"
  אני בעל נטייה נוסטלגית לעיתים, רוב המוסיקה שאני שומע נוצרה לפני שנולדתי. אני בעל אוסף תקליטים ומשתדל לשמוע מוסיקה דרך הפטיפון כמו איזה היפסטר מזורגג. בכללי אני משתדל לקדש את החוויה האנלוגית ומוצא בה דברים אוטנטים שנעלמו מן העולם. קצת משהו בתרבות הinstant לא נותנת לנו להיות בחוסר, להיות באין ועל כן מונעת מאתנו להתגעגע ולחוות, אפילו לעיתים להנות. במהלך שהותי בהודו למדתי קצת על הבודיהזם, מאוד התחברתי לפסקה הבאה מספר הדאו:
 
 
-> [2]
+<blockquote dir="auto">
+[2]
 ״הכל תחת השמים יודעים את יפי היפה,
 ומתוך זה את המכוער;
 הכל יודעים את טיב הטוב,
@@ -29,12 +30,15 @@ language: "he"
 לפיכך: החכם -
 מתגורר במעשה שבאין עשיה,
 מנהיג את הלימוד שבאין מילים״
+</blockquote>
 
 
 אנחנו מתחילים להעריך ולהבין דברים רק שאין לנו אותם, תופעה שאצלי פועלת בעצימות מוגברת. לפעמים אנחנו חייבים ללכת לאיבוד בשביל למצוא את עצמנו או כפי שאמר הנרי דיוויד ת׳ורו:
 
 
-> ״רק משאבדנו, כלומר רק משאיבדנו את העולם, אנו מתחילים למצוא את עצמו, ולגלות היכן אנו ואת מידת האינסופיות של יחסינו״
+<blockquote dir="auto">
+״רק משאבדנו, כלומר רק משאיבדנו את העולם, אנו מתחילים למצוא את עצמו, ולגלות היכן אנו ואת מידת האינסופיות של יחסינו״
+</blockquote>
 
 
 לכן, במוטיב של החוסר נדבר על חוויה שנעלמה מן העולם אבל מאוד מסקרנת גם היום, נדבר על מוקד טלפוני (operator בלעז) במוסיקה. אפילו כשאני הייתי צעיר, עדין היה קיים בעולם 144, מוקד שבו היה ניתן  להציג פרטים של בן אדם והיו מנסים לאתר את מספר הטלפון שלו. הוא עדין קיים, אבל,  אני לא בטוח מי משתמש בו כאשר יש את ״ספר הפנים״ וטינדר וכדומיהן. אז הפלייליסט שלנו יורכב היום משירים בעקבות הגוף המקשר הזה שנותן לנו את היכולת ליצור קשר עם הדבר הזה שאיבדנו חזרה.
@@ -43,10 +47,12 @@ language: "he"
 כמובן שברוב השירים האידאה העצובה שמנסים ליצור איתה קשר היא איזו אהבה ישנה שאבדה מסיבה כזו או אחרת. אנחנו מתחילים עם Tom Waits בשירו הנפלא Martha, שם הוא מתקשר לאהובתו הישנה ומנסה  לסכם את 40 השנים שהיו בנפרד ולהתרפק ברגעים המיוחדים שהיו להם יחדיו.
 
 
-> "Operator, number please
+<blockquote dir="auto">
+"Operator, number please
 It's been so many years
 Will she remember my old voice
 While I fight the tears?"
+</blockquote>
 
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/y9Mse62NFl4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
@@ -55,13 +61,15 @@ While I fight the tears?"
 סיפור דומה קיים בשירים operator של הGrateful Dead ובשיר  Operator של Jim Corce שעליו הרחבתי כבר בפוסט שלם בבלוג. הפורטוגוניסט של השיר לא מצליח להגיע לאותה אישה מן העבר, הוא מנסה לגלות עליה מידע אבל נכשל מסיבות שונות שמעבר לכוחו. לבסוף הוא נכנע והוא מגיע למסקנה שלא מעניין אותו מה הסטטוס שלה, העיקר שהיא בסדר. 
 
 
-> "She could be hangin' 'round the steel mill
+<blockquote dir="auto">
+"She could be hangin' 'round the steel mill
 Working in a house of blue lights
 Riding a getaway bus out of Portland
 Talking to the night
 I don't know where she's going
 I don't care where she's been
 Long as she's been doin' it right"
+</blockquote>
 
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/3MZeol_aMAM" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
@@ -73,13 +81,15 @@ Long as she's been doin' it right"
 וכמובן מי אם לא יונתן גפן, אחד מהכותבים הגדולים שהיו כאן, שלצערנו נפטר בטרם עת השנה, כתב שיר מדהים על אותה החוויה. באלבומו עם דני ליטני ״מכתבים למערכת״, שהוא אלבום מצוין לכל דבר ועניין, אנחנו נחשפים לשיר אחת ארבע. יונתן מתקשר למוקד ומנסה לאתר מישהי שאת מספרה היה לו על קופסאות סיגריות אבל המספר נמחק. אין לו כמעט פרטים עליה, אבל הוא ממש רוצה לבקש סליחה. אנו עדים עוד פעם לאותה החוויה שמתוארת בשפתו של יונתן בצורה כל כך חזקה כמו שרק הוא יודע.  והליווי של דני והעיבוד הנפלא של מיקי גבריאלוב וחיים רומנו נותנים את האווירה הקודרת של השיחה. 
 
 
-> ״אני רק רוצה להגיד לה סליחה, 
+<blockquote dir="auto">
+״אני רק רוצה להגיד לה סליחה, 
 ושלא הייתי צריך ושאני אדע להבא.
 לא אני לא זוכר את שם המשפחה,
  אבל בשביל זה את שם אחת ארבע.
 (אם המספר שביקשת מופיע בספר הטלפון תעלה לה שיחה זאת לירה אחת ועשרים ושתים אגורות)
 לא היא לא מופיעה בספר הטלפונים, 
 היא לא כזאת שמופיעה בספרים.״
+</blockquote>
 
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/RU5AIRlc3g0" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>

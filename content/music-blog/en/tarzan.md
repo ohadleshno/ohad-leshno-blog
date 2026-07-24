@@ -29,19 +29,23 @@ language: "en"
 כל כך נקי מכל המניירות, הוא פשוט שיר אהבה לילד: 
 
 
-> "Cause you'll be in my heart
+<blockquote dir="auto">
+"Cause you'll be in my heart
 Yes, you'll be in my heart
 From this day on
 Now and forever more״
+</blockquote>
 
 
 והשיר הבא  Son of man הוא עוד קטע מעבר שמציג את ההתפתחות של טרזן מילד למבוגר. השיר מלא במוטיבים ועצות לילד המתפתח, מילות השיר אומרות לילד: אל דאגה הכל יהיה בסדר, אתה תצליח, אתה תוכל להיות כל מה שתרצה ואפילו יותר ממה שחלמת עליו. כילד, ההורים שלי דאגו תמיד להעביר לי את אותו המסר: לא משנה מה תרצה אתה תצליח, הכל תלוי בך. כמה יופי יש באמונה הזאת וכמה כוח היא נותנת.
 
 
-> "Son of man, look to the sky
+<blockquote dir="auto">
+"Son of man, look to the sky
 Lift your spirit, set it free
 Some day you'll walk tall with pride
 Son of man, a man, in time you'll be״
+</blockquote>
 
 
 השיר האחרון שאתייחס אליו הוא Strangers like me, שיר המפגש בין טרזן לג׳יין. טרזן מגלה מחדש את הדברים שהם הוא, הכל נראה לו כל כך בעל משמעות, אבל הוא לא מצליח להבין אותם. למעשה, טרזן הוא מישהו שנחשף לעולם שלם שתמיד היה בתוכו, והוא רק צריך שיושיטו לו יד ויראו לו מחדש את העולם. 

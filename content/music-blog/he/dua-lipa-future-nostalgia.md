@@ -35,19 +35,25 @@ language: "he"
  השירים Don't Start Now, Physical  ו -Break My Heart הם כולם סינגלים ראויים ביותר, עם לחנים קליטים שיישארו בראש במשך שבועות לאחר ההאזנה. הסינתיסייזר שנמצא ברבים משירי Future Nostalgia הוא המפתח להחזרת האווירה של שנות ה-80. שירים אחרים כמו Levitating, Hallucinate, Pretty Please, Cool ו-Good in Bed, הם כולם גם כן בעלי לחנים מרגשים שיגרמו לך לרקוד, ויישמעו עדיין "חדשים" במובנים מסוימים, גם לאחר ההאזנה מרובה. השירים שתיארתי כאן, מתארים באופן קולקטיבי את הצד האסתטי והמרגש של האהבה:
 
 
-> "Who needs to go to sleep when I got you next to me?" 
+<blockquote dir="auto">
+"Who needs to go to sleep when I got you next to me?" 
+</blockquote>
 
 
 ומנגד את האופי ההרסני של האהבה.
 
 
->  "You broke my heart / And now I'm picking up the pieces"
+<blockquote dir="auto">
+ "You broke my heart / And now I'm picking up the pieces"
+</blockquote>
 
 
 נוסף לכך הבלדה הפופית Boys Will Be Boys בוחנת באופן עוצמתי את נושא ההעצמה הנשית, בתקופה של גבריות רעילה ושל הטרדות מתמשכת בקהילה המודרנית שלנו.
 
 
-> “It’s second nature to walk home before the sun goes down / And put your keys between your knuckles when there’s boys around,”
+<blockquote dir="auto">
+“It’s second nature to walk home before the sun goes down / And put your keys between your knuckles when there’s boys around,”
+</blockquote>
 
 
 הנקודה שלה ברורה, בנות צריכות להתבגר הרבה יותר מהר מהחברים הגברים שלהן, שיכולים בעיקר להישאר חסרי מודעות לאלימות בעולם עד גיל מאוחר יותר, בעוד שחברותיהן הנשים פורצות את בועות הילדות שלהן על ידי עצות להגנה עצמית.
@@ -59,7 +65,9 @@ language: "he"
 האלבום Future Nostalgia יצא ב-27 במרץ 2020 , וכמה ימים לאחר מכן העולם נכנס לסגר בעקבות מגפת הקורונה. באופן די אירוני, המטרה של האלבום הייתה ליצור מוזיקה שמייצרת אסקפיזים על בעיות העולם. דואה ליפה אמרה, שהיא רצתה ליצור אלבום שיגרום לאנשים לרקוד ולשכוח מהצרות שלהם לזמן מה.
 
 
-> “I wanted to make music that takes your mind away from that. I wanted to just make it a bit easier for me to get out of bed and not think about the negative things that are going on in the world all the time.”
+<blockquote dir="auto">
+“I wanted to make music that takes your mind away from that. I wanted to just make it a bit easier for me to get out of bed and not think about the negative things that are going on in the world all the time.”
+</blockquote>
 
 
 כחלק מהשקת האלבום החדש שלה דואה ליפה הופיעה ב-Tiny Desk Concert, לא נפתח אבל משום שבאותה תקופה היה סגר בעולם, היא נאלצה לבצע את ההופעה באולפן סטודיו אחר. אני חושב שגרסאות הלייב שלה מעניינות יותר מהגרסאות המקוריות שלה, כי הן מאפשרות לה להביע את עצמה בצורה אישית יותר ; זה בא לידי ביטוי במיוחד בשיר Love Again. אני אישית שמעתי את ההופעה הזאת אולי עשרות פעמים.

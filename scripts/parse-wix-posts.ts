@@ -118,7 +118,8 @@ function convertBlocksToMarkdown(contentStr: string): string {
     } else if (type === 'header-six') {
       lines.push(`\n###### ${formattedText}\n`);
     } else if (type === 'blockquote') {
-      lines.push(`\n> ${formattedText}\n`);
+      // Use <blockquote dir="auto"> so English blockquotes automatically render in LTR layout with left red border
+      lines.push(`\n<blockquote dir="auto">\n${formattedText}\n</blockquote>\n`);
     } else {
       lines.push(`\n${formattedText}\n`);
     }

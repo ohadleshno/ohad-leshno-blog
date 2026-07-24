@@ -25,12 +25,14 @@ language: "en"
 
 
 
-> "She took my hand
+<blockquote dir="auto">
+"She took my hand
 And tried to make me understand
 That she would always be there
 But I looked away
 And she ran away from me today
 I'm such a lonely man״ 
+</blockquote>
 
 
 
@@ -40,7 +42,9 @@ I'm such a lonely man״
 קרבות גיטרות הן חלק נכבד מאוד באלבום ובמיוחד בשיר Anyday. השיר הזה הוא קרב גיטרות של קלפטון עם Duane Allman (חבר להקת The Allman Brothers). הגיטרות צורחות את מה שהלב של קלפטון מבקש
 
 
-> "And I know anyday, anyday I will see you smile, I will see you smile"
+<blockquote dir="auto">
+"And I know anyday, anyday I will see you smile, I will see you smile"
+</blockquote>
 
 
 קלפטון הוא אומן שמצליח עם מגוון הכלים שיש בידיו, להעביר את הוויה שלו. הגיטרה כאן בשיר היא דרך תקשורת נוספת להגיע אלינו המאזינים, כדי שנבין את השאיפה שלו לאהבה.

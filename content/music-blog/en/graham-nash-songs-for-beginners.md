@@ -25,22 +25,28 @@ language: "en"
 הנושא הנוסף שמלווה את האלבום הוא הפרידה שלו מהזמרת ג'וני מיטשל. רבים מהשירים באלבום מכילים רפרנסים לקשר שהיה להם. אנחנו מתחילים מהשיר Better days , שהוא מין טיפול עצמי. נאש מתאר את ההתמודדות שלו עם הפרידה:
 
 
-> " When your love has moved away
+<blockquote dir="auto">
+" When your love has moved away
 You must face yourself and you must say
 I remember better days "
+</blockquote>
 
 
 השיר מכיל הרבה משפטי תוכחה עצמיים גאוניים כגון:
 
 
-> "Though you're where you want to be, you're not where you belong"
+<blockquote dir="auto">
+"Though you're where you want to be, you're not where you belong"
+</blockquote>
 
 
 
 לאחר מכן אנחנו ממשיכים לשיר Used to be a king , רפרנס לשיר I had a king  של ג'וני, בו הוא מתאר את התסכול מהפרידה, ועוד פעם התקווה העתידית.
 
 
-> "Someone is going to take my heart But no one is going to break my heart again"
+<blockquote dir="auto">
+"Someone is going to take my heart But no one is going to break my heart again"
+</blockquote>
 
 
 השיר האחרון באלבום, שעוסק בנושא הפרידה הוא Simple man . השיר הוא גולת הכותרת של האלבום, והוא מציג את ההבנה העמוקה של נאש, שבאמת ברזי נפשו הוא רוצה דברים פשוטים. הוא רוצה לאהוב בצורה פשוטה. זוהי שאיפה בסיסית שקיימת גם אצל הפוצים הכי גדולים.

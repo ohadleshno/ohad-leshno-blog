@@ -24,7 +24,9 @@ language: "he"
 ![](https://static.wixstatic.com/media/cd66a9_3d086bb65d3c49e5bcfe27941d264cbb~mv2.png)
 
 
-> "When I think of god I think of earth as a very small thing. Then I think of myself hardly as speck. Then I see there’s no use for this tiny dot to spend its small life doing things for itself. That is what I believe"
+<blockquote dir="auto">
+"When I think of god I think of earth as a very small thing. Then I think of myself hardly as speck. Then I see there’s no use for this tiny dot to spend its small life doing things for itself. That is what I believe"
+</blockquote>
 
 
 ג'ואן באאז לא רק הייתה זמרת מוכשרת, אלא גם אקטיביסטית פוליטית נלהבת. עוד בנעוריה, הושפעה עמוקות מנאום "יש לי חלום" המפורסם של מרטין לותר קינג ג'וניור, בו קרא למאבק לא אלים ולשינוי חברתי מלמטה. השראה זו הובילה אותה להשתתף במגוון מחאות, מחאות לזכויות השחורים וגם המחאות נגד מלחמת ויאטנם. 
@@ -43,14 +45,17 @@ language: "he"
 דווקא לאחר כל התקופה האקטיביסית שלה באאז קצת החליטה לשנות כיון ולהוציא את אחד מהאלבומים הגדולים שלה Diamond and rust. באז כבר הייתה עם רפרטואר מאוד מרשים כשהיא באה להוציא את האלבום הזה. והאלבום הזה הוא מאוד שונה משאר האלבומים שלה, רובו מורכב מקאברים ומחוות לגודלי אמני הFolk, ובמקום שירי מחאה הנושא לכל אורך האלבום הוא הדינמיקה שלה מול האוהבים שלה.
 
 
-> "​​The diamond and rust album, I said to myself this is not going to be a political album, let’s just do music for once. It possibly the best album I’ve ever done, and I should learn something from that. That I like the result of putting strong effort into music"
+<blockquote dir="auto">
+"​​The diamond and rust album, I said to myself this is not going to be a political album, let’s just do music for once. It possibly the best album I’ve ever done, and I should learn something from that. That I like the result of putting strong effort into music"
+</blockquote>
 
 
 השיר הראשון באלבום"Diamond and rust" שהוא גם שיר הנושא, מתחיל ישר לדבר על הפיל שבחדר, על מערכת היחסים הבעייתית שלה עם ״בובי״. כמה הערכה יש לה אליו עדין למרות כל השנים שעברו ומנגד איך הוא עדין רודף אותה. המילים האינטרוספקטיביות והמלודיה הנוקבת של באאז מושכות אותנו לעולם של מורכבות רגשית, שבו אהבה וחרטה שזורות זו בזו.
 
 
 
-> "Now you're telling me
+<blockquote dir="auto">
+"Now you're telling me
 You're not nostalgic
 Then give me another word for it
 You, who are so good with words
@@ -60,25 +65,32 @@ It's all come back too clearly
 Yes I loved you dearly
 And if you're offering me diamonds and rust
 I've alredy paid"
+</blockquote>
 
 
 אסופת השירים שבאאז החליטה לעשות להם קאבר לאלבום מעניינת מאוד. זה מין אסופה של שירי פולק שמהווה כמו איזה מין סיור להלך רוח של מיטבהאמנים באותה תקופה. בFountain of Sorrow שנכתב במקור על ידי Jackson Browne היא נותנת לו גרסה אחרת, יותר פגיעה ונותנת תחושה לשומע שהיא כתבה אותו בעצמה. Never Dreamed You'd Leave in Summer של Stevie Wonder היא נותנת לו תעצומות אחרות ועוד לאומן שנחשב בעיני רבים שצריך לשבת באותם כסאות שבהם ישב מוצרט. שעבור כל השירים האלו מה שאופף מעליהן זו התחושה של הפרידה והאהבה שהייתה ואיננה שם יותר.
 
 
-> "Fountain of sorrow, fountain of light
+<blockquote dir="auto">
+"Fountain of sorrow, fountain of light
 You've known that hollow sound of your own steps in flight"
+</blockquote>
 
 
 אחד הקאברים היפים באלבום זה לשיר Simple Twist of Fate של דילן שהפכה אותו משיר רגוע עם מלודיה עצובה, לשיר עם מקצב מהיר ואנרגיה יותר גבוהה. אולי יש בזה מין האמרה של הבן אדם בצד השני של השירים של דילן. באמצע השיר פתאום באאז יורדת לנמוכים ונשמע כאילו היא עושה חיקוי של דילן, בדיוק בחלק שבו הוא מדבר על זה שהוא מרגיש emptiness inside. 
 
 
-> "People tells me its a crime to feel to much to one person at one time”
+<blockquote dir="auto">
+"People tells me its a crime to feel to much to one person at one time”
+</blockquote>
 
 
 ואז פתאום אנחנו הופכים את התקליט ואחרי כל השירים על הפרידהיש פתאום נקודה של אור, בקאבר המושלם ל Blue sky. באאז משרה בנו תקווה מחדש לאהבה, למרות כל הפגיעות והחרא שספגה פתאום אנחנו נחשפים למידה של אופטימיות ואיזו שמחה פשוטה על מה שיש, על האהבה. 
 
 
-> "You’re my blue sky, you’re my sunny day, long you know , turn your love my way”
+<blockquote dir="auto">
+"You’re my blue sky, you’re my sunny day, long you know , turn your love my way”
+</blockquote>
 
 
 משם אנחנו נמשיך לדבר על האהבה אבל לבסוף האלבום נחתם בדואט עם Joni Mitchell הגדולה בשיר Dida שהוא פשוט הוכחה לוירטאוזיות של הזוג. היכולות הווקאליות המרשימות שלה לזמר, וגוני שמוסיפה את קולות הרקע שלה בצורה הרמונית ומושלמת שברקע הלהקה מתפקדת כמו איזו להקת גאם עם גאזשנכנס ויוצא כמין טנגו כזה שמנכיח את כל הצדדים.

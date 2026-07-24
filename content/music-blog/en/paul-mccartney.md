@@ -26,19 +26,25 @@ Nineteen Hundred and Eighty Five הוא שיר מלא אופי, אנרגטי, מ
 
 
 
-> "People pass me by on my imaginary street 
+<blockquote dir="auto">
+"People pass me by on my imaginary street 
 Ordinary people it's impossible to meet
 Holding conversations that are always incomplete
 Well, I don't know"
+</blockquote>
 
 
 הוספתי לפלייליסט את הביצועים שלו עם אמנים פופולריים אחרים כמו קניה וסטיבי וונדר, שהם לא קרובים לסגנון שלו בלשון המעטה. העובדה שמוזיקה הפכה למשהו שבו כוכבת פופ מודרני וראפר יכולים לשתף פעולה עם ביטל עושה אותי כל כך שמח. מוזיקה זה דבר חי ולראות את השילוב תמיד משובב את הלב. אגב רוב התגובות לסרטון על fourFiveSeconds  ביוטיוב היו בסגנון: 
 
 
-> "Who is this paul mccartney?? This is why I love kanye for shining light on unknown artists”
+<blockquote dir="auto">
+"Who is this paul mccartney?? This is why I love kanye for shining light on unknown artists”
+</blockquote>
 
 
-> "So brave, starting a career so late in his life… good luck Paul McCarthy”
+<blockquote dir="auto">
+"So brave, starting a career so late in his life… good luck Paul McCarthy”
+</blockquote>
 
 
 מי שמכיר את משפחת לשנו יודע שגיימס בונד הוא נכס צאן ברזל של המשפחה, לאחי הגדול ארי יש את כל הסרטים של גיימס בונד בגרסת DVD. בתור ילד אני זוכר את המשפחה שלי אובססיבית למצוא ולראות את כל הסרטים הישנים אפילו את ההזויים ביותר של רוגר מור. אחד מהדברים החשובים בסרטי גיימס בונד מעבר לQ והמצאות שלו, הנשים והאלגנטיות הבריטית, זה הסאונדטרק של הסרט. את live and let die הלחין לא אחר מאשר paul mcCartney, ששיר הנושא שלו הפך ליצירה שכנראה מוכרת הרבה יותר מהסרט עצמו. אבל, אתם בכלל מכירים את הגרסה של guns and roses לשיר הנושא.

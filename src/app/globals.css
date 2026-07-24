@@ -42,19 +42,19 @@ html[dir="rtl"] body {
   transform: translateY(-2px);
 }
 
-/* Custom Blockquote Styling matching Wix red bar design */
+/* Blockquote Styling: Automatic RTL/LTR direction & red border */
 .prose blockquote,
 blockquote {
+  unicode-bidi: plaintext;
   border-inline-start-width: 4px !important;
-  border-inline-start-color: #b91c1c !important; /* Deep Red bar like Wix */
+  border-inline-start-color: #b91c1c !important; /* Wix Red bar */
   padding-inline-start: 1.25rem !important;
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
   background-color: rgba(185, 28, 28, 0.05);
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
+  border-radius: 0.75rem;
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.75;
