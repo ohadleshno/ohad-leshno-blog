@@ -40,12 +40,16 @@ export function getAllPosts(lang: 'he' | 'en' = 'he'): PostMetaData[] {
 }
 
 export function getPostData(slug: string, lang: 'he' | 'en' = 'he'): PostDetail | null {
-  const fullPath = path.join(contentDirectory, lang, `${slug}.md`);
+  const decodedSlug = decodeURIComponent(slug);
+  let fullPath = path.join(contentDirectory, lang, `${decodedSlug}.md`);
+  if (!fs.existsSync(fullPath)) {
+    fullPath = path.join(contentDirectory, lang, `${slug}.md`);
+  }
   if (!fs.existsSync(fullPath)) {
     // Fallback to Hebrew if English doesn't exist yet
-    const fallbackPath = path.join(contentDirectory, 'he', `${slug}.md`);
+    const fallbackPath = path.join(contentDirectory, 'he', `${decodedSlug}.md`);
     if (!fs.existsSync(fallbackPath)) return null;
-    return getPostData(slug, 'he');
+    return getPostData(decodedSlug, 'he');
   }
 
   const fileContents = fs.readFileSync(fullPath, 'utf-8');

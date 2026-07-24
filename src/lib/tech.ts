@@ -39,11 +39,15 @@ export function getAllTechProjects(lang: 'he' | 'en' = 'he'): TechProjectMetaDat
 }
 
 export function getTechProjectData(slug: string, lang: 'he' | 'en' = 'he'): TechProjectDetail | null {
-  const fullPath = path.join(techDirectory, lang, `${slug}.md`);
+  const decodedSlug = decodeURIComponent(slug);
+  let fullPath = path.join(techDirectory, lang, `${decodedSlug}.md`);
   if (!fs.existsSync(fullPath)) {
-    const fallbackPath = path.join(techDirectory, 'he', `${slug}.md`);
+    fullPath = path.join(techDirectory, lang, `${slug}.md`);
+  }
+  if (!fs.existsSync(fullPath)) {
+    const fallbackPath = path.join(techDirectory, 'he', `${decodedSlug}.md`);
     if (!fs.existsSync(fallbackPath)) return null;
-    return getTechProjectData(slug, 'he');
+    return getTechProjectData(decodedSlug, 'he');
   }
 
   const fileContents = fs.readFileSync(fullPath, 'utf-8');
