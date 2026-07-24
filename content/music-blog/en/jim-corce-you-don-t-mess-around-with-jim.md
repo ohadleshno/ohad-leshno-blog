@@ -1,7 +1,7 @@
 ---
 title: "Jim Corce - You Don't Mess Around with Jim"
 slug: "jim-corce-you-don-t-mess-around-with-jim"
-excerpt: "Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially those with \"crazy\" stories...."
+excerpt: "Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially those with 'crazy' stories...."
 date: "2023-08-22T11:19:42.435Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 2

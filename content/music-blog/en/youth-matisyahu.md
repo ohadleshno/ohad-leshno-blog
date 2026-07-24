@@ -1,7 +1,7 @@
 ---
 title: "“Youth” -Matisyahu"
 slug: "youth-matisyahu"
-excerpt: "\\"Listen, if he had taken himself seriously, he would have been a superstar,\\" my brother summed up Matisyahu's performance we attended a month ago. It was one of the best shows..."
+excerpt: "'Listen, if he had taken himself seriously, he would have been a superstar,' my brother summed up Matisyahu's performance we attended a month ago. It was one of the best shows..."
 date: "2024-03-01T15:07:02.622Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 4

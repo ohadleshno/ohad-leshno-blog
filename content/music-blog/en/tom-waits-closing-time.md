@@ -1,7 +1,7 @@
 ---
 title: "Tom Waits - closing time"
 slug: "tom-waits-closing-time"
-excerpt: "This week we celebrated Valentine's Day, February 14, and I wondered: why do we call it \"Valentine\"? After all, we don't have a Day of Anger (well, there is a Day of Rage, but a request not to enter..."
+excerpt: "This week we celebrated Valentine's Day, February 14, and I wondered: why do we call it 'Valentine'? After all, we don't have a Day of Anger (well, there is a Day of Rage, but a request not to enter..."
 date: "2024-02-17T08:34:23.749Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
