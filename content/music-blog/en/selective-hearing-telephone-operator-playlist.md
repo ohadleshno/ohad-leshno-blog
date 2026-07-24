@@ -83,3 +83,5 @@ She's not one to appear in books.'
 The playlist will end with ELO's pompous performance of Telephone Line which emphasizes the power we have in this experience of waiting on the line for the defining moment. I wish all my esteemed readers a pleasant weekend that we learn to miss, get lost and find ourselves again.
 
 pleasant listening.
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/65pKOIH5nvCDtbpOasnDHF?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

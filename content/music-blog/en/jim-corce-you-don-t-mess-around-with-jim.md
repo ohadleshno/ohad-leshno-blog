@@ -1,7 +1,7 @@
 ---
 title: "Jim Corce - You Don't Mess Around with Jim"
 slug: "jim-corce-you-don-t-mess-around-with-jim"
-excerpt: "Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially those with 'crazy' stories...."
+excerpt: "Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially those with \"crazy\" stories...."
 date: "2023-08-22T11:19:42.435Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 2
@@ -68,3 +68,5 @@ But that's not the way it feels
 I feel that the album contains a collection of scenes with complex and huge stories that immediately throw you into the deep. I highly recommend listening to more songs from the guy's albums.
 
 pleasant listening
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/3L9sVl5T7UpFK6tNeEiXdy?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

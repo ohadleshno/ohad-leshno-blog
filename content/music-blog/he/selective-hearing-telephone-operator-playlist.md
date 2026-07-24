@@ -83,3 +83,5 @@ Long as she's been doin' it right"
 הפלייליסט יסתיים בביצוע הפומפוזי של ELO בTelephone Line שמדגיש את גודל העוצמה שיש לנו בחוויה הזאת של ההמתנה על הקו לרגע המכונן. אני מאחל לכל הקוראים הנכבדים שלי סופ״ש נעים שנלמד להתגעגע,ללכת לאיבוד ולמצוא את עצמנו מחדש.
 
 האזנה נעימה.
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/65pKOIH5nvCDtbpOasnDHF?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

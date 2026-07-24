@@ -1,7 +1,7 @@
 ---
 title: "“Youth” -Matisyahu"
 slug: "youth-matisyahu"
-excerpt: "'שמע, אם הוא היה לוקח את עצמו ברצינות, הוא היה סופרסטאר', סיכם אחי את ההופעה של מתיסיהו שהיינו בה לפני חודש. זה היה אחד מהמופעים הטובים..."
+excerpt: "\"שמע, אם הוא היה לוקח את עצמו ברצינות, הוא היה סופרסטאר\", סיכם אחי את ההופעה של מתיסיהו שהיינו בה לפני חודש. זה היה אחד מהמופעים הטובים..."
 date: "2024-03-01T15:07:02.622Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
@@ -47,3 +47,5 @@ If you're trying to stay high then you're bound to stay low"
 האלבום "Youth" הוא יותר מאלבום - הוא עדות לכוחה המחוללת של המוזיקה לעורר את הרוח ולהצית את הנשמה. עבורי, זו מסע של גילוי מחדש - תזכורת לחבק את הנעורים שבפנים ולהמשיך לחקור את מעמקי הזהות והאמונות שלי באומץ, כל זאת תוך כדי קבלה עצמית ואהבה עצומה לעולם שפעם הרגשתי שהוא לא שלי.
 
 שיהיה שבת שלום, והאזנה נעימה (:
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6xv4soedEKLMLzSpgWYuzf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

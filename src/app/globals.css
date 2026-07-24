@@ -94,3 +94,42 @@ blockquote {
   background-color: rgba(239, 68, 68, 0.08) !important;
   color: #f1f5f9 !important;
 }
+
+/* List Styling & BiDi Alignment */
+.prose ul {
+  list-style-type: disc !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  padding-inline-start: 2rem !important;
+}
+
+.prose ol {
+  list-style-type: decimal !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+  padding-inline-start: 2rem !important;
+}
+
+.prose li {
+  margin-top: 0.6rem !important;
+  margin-bottom: 0.6rem !important;
+  line-height: 1.85 !important;
+  font-size: 1.125rem !important;
+  color: #334155 !important;
+  unicode-bidi: plaintext;
+}
+
+html[dir="rtl"] .prose li {
+  text-align: right;
+  direction: rtl;
+}
+
+.dark .prose li {
+  color: #cbd5e1 !important;
+}
+
+/* Embeds & Media Containers */
+.prose iframe {
+  max-width: 100% !important;
+  border-radius: 0.75rem !important;
+}

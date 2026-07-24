@@ -43,3 +43,5 @@ Son of man, a man, in time you'll be״
 באופן כללי, טרזן היא דמות מעניינת מאוד שגדלה בעולם אחד אבל למעשה מחברת בין שני עולמות. אני אהיה קלישאתי ואגיד, שבכל אחד מאיתנו יש עולמות שאנחנו מחברים ביניהם, וזה היופי בסרטי דיסני שהם מצליחים להנכיח תחושה כל כך אנושית ובסיסית הקיימת בכולנו. האלבום הוא המהות של מוזיקת סרטי דיסני, מוזיקה מרגשת עם מסר מחזק ומעצים. סרטים של דיסני תמיד זורקים אותי ל"עמוקים", אולי כי הם חץ היישר לתוך הלב של כולנו. הסרט נהדר, אך השילוב של הסרט עם הפסקול הוא התעלות הרוח והנפש, וביחד הם כמו רוח מפרשים עבור ילד שרוצה לפרוץ לעולם. אשרינו שזכינו בסרטים כאלו בתור ילדים.
 
 אז הפעם אאחל לכם האזנה וצפייה מהנה
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1zszC1x9HYKxUCKVa62p7C?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

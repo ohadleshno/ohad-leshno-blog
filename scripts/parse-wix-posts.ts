@@ -86,9 +86,32 @@ function convertBlocksToMarkdown(contentStr: string): string {
 
   const { blocks = [], entityMap = {} } = contentJson;
   const lines: string[] = [];
+  let currentList: string[] = [];
+  let currentListType: 'unordered' | 'ordered' | null = null;
+
+  function flushList() {
+    if (currentList.length > 0) {
+      lines.push(currentList.join('\n'));
+      currentList = [];
+      currentListType = null;
+    }
+  }
 
   for (const block of blocks) {
     const { type, text, entityRanges } = block;
+
+    if (type === 'unordered-list-item' || type === 'ordered-list-item') {
+      const listKind = type === 'unordered-list-item' ? 'unordered' : 'ordered';
+      if (currentListType && currentListType !== listKind) {
+        flushList();
+      }
+      currentListType = listKind;
+      const prefix = listKind === 'unordered' ? '- ' : '1. ';
+      currentList.push(`${prefix}${text.trim()}`);
+      continue;
+    } else {
+      flushList();
+    }
 
     if (type === 'atomic' && entityRanges && entityRanges.length > 0) {
       const entityKey = entityRanges[0].key;
@@ -108,6 +131,11 @@ function convertBlocksToMarkdown(contentStr: string): string {
             lines.push(`<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title.replace(/"/g, '&quot;')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>`);
           } else if (videoSrc) {
             lines.push(`[Watch Video: ${title}](${videoSrc})`);
+          }
+        } else if (entity.type === 'wix-draft-plugin-html') {
+          const htmlContent = entity.data?.src || entity.data?.html || '';
+          if (htmlContent) {
+            lines.push(`<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center">${htmlContent}</div>`);
           }
         }
       }
@@ -141,6 +169,7 @@ function convertBlocksToMarkdown(contentStr: string): string {
     }
   }
 
+  flushList();
   return lines.join('\n\n').trim();
 }
 

@@ -67,3 +67,5 @@ The darkness only stay the night time in the morning it will past away״
 </blockquote>
 
 האזנה נעימה
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7j7lsExGJtBHLgDYzjclwk?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

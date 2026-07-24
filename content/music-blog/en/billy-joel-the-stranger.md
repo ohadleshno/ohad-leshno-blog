@@ -1,7 +1,7 @@
 ---
 title: "Billy Joel - the stranger"
 slug: "billy-joel-the-stranger"
-excerpt: "Today we will talk about Billy Joel, who is one of my favorite artists. His songs, such as 'Piano Man', 'Uptown Girl', 'Just the Way You Are' and 'New York..."
+excerpt: "Today we will talk about Billy Joel, who is one of my favorite artists. His songs, such as \\"Piano Man\\", \\"Uptown Girl\\", \\"Just the Way You Are\\" and \\"New York..."
 date: "2023-07-14T16:47:35.698Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 3

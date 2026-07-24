@@ -44,3 +44,5 @@ I'm such a lonely man״
 כל כך הרבה נכתב ויש עוד הרבה מה להרחיב על האלבום הזה שכולו שזור בהיסטוריה מורכבת, אהבה גדולה ומוסיקה מדהימה. האלבום הוא שרבוב של בלוז רגוע, קרבות גיטרות אימתניים ורגשות עוצמתיים כלפי האהבות בחיים, כמו שרק קלפטון יודע.
 
 האזנה נעימה
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/5iIWnMgvSM8uEBwXKsPcXM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

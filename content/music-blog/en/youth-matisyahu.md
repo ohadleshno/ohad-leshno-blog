@@ -1,7 +1,7 @@
 ---
 title: "“Youth” -Matisyahu"
 slug: "youth-matisyahu"
-excerpt: "'Listen, if he had taken himself seriously, he would have been a superstar,' my brother summed up Matisyahu's performance we attended a month ago. It was one of the best shows..."
+excerpt: "\\"Listen, if he had taken himself seriously, he would have been a superstar,\\" my brother summed up Matisyahu's performance we attended a month ago. It was one of the best shows..."
 date: "2024-03-01T15:07:02.622Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
@@ -47,3 +47,5 @@ If you're trying to stay high then you're bound to stay low"
 The album "Youth" is more than an album - it is a testimony to the generative power of music to stir the spirit and ignite the soul. For me, it's a journey of re-discovery - a reminder to embrace the youth within and continue to bravely explore the depths of my identity and beliefs, all while embracing self-acceptance and immense love for a world I once felt was not mine.
 
 Have a good Shabbat, and pleasant listening (:
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6xv4soedEKLMLzSpgWYuzf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
