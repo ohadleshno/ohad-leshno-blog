@@ -60,6 +60,21 @@ function extractYouTubeId(url: string): string {
   return '';
 }
 
+function extractFirstImage(contentStr: string, coverMediaUrl?: string): string {
+  if (coverMediaUrl) return coverMediaUrl;
+  try {
+    const json: WixPostContent = JSON.parse(contentStr);
+    for (const key in json.entityMap || {}) {
+      const entity = json.entityMap[key];
+      if (entity?.type === 'wix-draft-plugin-image') {
+        const src = entity.data?.src?.url || (entity.data?.src?.id ? `https://static.wixstatic.com/media/${entity.data.src.id}` : '');
+        if (src) return src;
+      }
+    }
+  } catch (e) {}
+  return '/hero-cover.jpeg';
+}
+
 function convertBlocksToMarkdown(contentStr: string): string {
   if (!contentStr) return '';
   let contentJson: WixPostContent;
@@ -151,7 +166,7 @@ function parseWixPosts() {
 
   for (const post of posts) {
     const slug = post.slug || post.id;
-    const coverImage = post.coverMedia?.image?.url || '/hero-cover.jpeg';
+    const coverImage = extractFirstImage(post.content, post.coverMedia?.image?.url);
     const markdownContent = convertBlocksToMarkdown(post.content);
 
     const heFrontmatter = `---

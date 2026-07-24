@@ -3,7 +3,7 @@ title: "Geva Alon -  In the morning light"
 slug: "geva-alon-in-the-morning-light"
 excerpt: "כאשר אני רוצה לשמוע מוזיקה אני פועל כמו אלגוריתם חמדן. הדבר הכי נגיש אלי שעובר את הסף שלי הוא מה שאני אשמע. אם אני בבית ויש תקליט כבר על..."
 date: "2024-05-26T20:21:55.560Z"
-coverImage: "/hero-cover.jpeg"
+coverImage: "https://static.wixstatic.com/media/cd66a9_e841ed4457774f4b975a1b27db897a5d~mv2.png"
 minutesToRead: 4
 language: "he"
 ---

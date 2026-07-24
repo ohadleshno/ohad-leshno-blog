@@ -89,25 +89,13 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
               className="group glass-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 flex flex-col justify-between p-5 hover:border-indigo-500/50 transition-all shadow-sm"
             >
               <div className="space-y-3">
-                {post.youtubeId ? (
-                  <div className="w-full h-44 sm:h-40 rounded-xl overflow-hidden bg-black relative shadow-sm border border-slate-200 dark:border-slate-800">
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${post.youtubeId}`}
-                      title={post.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowFullScreen
-                      className="w-full h-full border-0"
-                    />
-                  </div>
-                ) : post.coverImage ? (
-                  <div className="w-full h-36 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
-                    <img
-                      src={post.coverImage.replace(/^\/public/, '')}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ) : null}
+                <div className="w-full h-44 sm:h-40 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
+                  <img
+                    src={(post.coverImage || '/hero-cover.jpeg').replace(/^\/public/, '')}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
                 <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
                   {post.title}
                 </h3>
