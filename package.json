@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npx tsx scripts/parse-wix-posts.ts && next build",
+    "build": "npx tsx scripts/parse-wix-posts.ts && npx tsx scripts/generate-syndication.ts && next build",
     "start": "next start",
     "lint": "next lint",
     "parse-wix": "npx tsx scripts/parse-wix-posts.ts"

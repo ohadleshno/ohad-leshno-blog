@@ -1,0 +1,6 @@
+name = "ohad-leshno-blog"
+pages_build_output_dir = "out"
+compatibility_date = "2026-07-24"
+
+[site]
+bucket = "./out"
