@@ -1,6 +1,8 @@
 import { getAllPostSlugs, getPostData } from '@/lib/posts';
 import { notFound } from 'next/navigation';
 import { SocialShare } from '@/components/SocialShare';
+import { Comments } from '@/components/Comments';
+import { MailingList } from '@/components/MailingList';
 import { Clock, Calendar, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -78,6 +80,12 @@ export default function MusicPostDetail({
 
       {/* Social Share Buttons */}
       <SocialShare title={post.title} url={currentUrl} isHe={isHe} />
+
+      {/* Mailing List Section */}
+      <MailingList lang={lang} />
+
+      {/* Comments Section */}
+      <Comments postSlug={post.slug} lang={lang} />
     </article>
   );
 }
