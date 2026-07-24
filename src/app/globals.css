@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-gradient-light: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  --bg-card-light: rgba(255, 255, 255, 0.85);
+  --border-light: rgba(226, 232, 240, 0.8);
+  --text-main-light: #0f172a;
+  --text-muted-light: #64748b;
+
+  --bg-gradient-dark: linear-gradient(135deg, #090d16 0%, #1e1b4b 50%, #0f172a 100%);
+  --bg-card-dark: rgba(15, 23, 42, 0.75);
+  --border-dark: rgba(255, 255, 255, 0.1);
+  --text-main-dark: #f8fafc;
+  --text-muted-dark: #94a3b8;
+}
+
+body {
+  font-family: 'Inter', 'Rubik', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+html[dir="rtl"] body {
+  font-family: 'Rubik', 'Inter', sans-serif;
+}
+
+.glass-nav {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+}
