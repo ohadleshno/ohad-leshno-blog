@@ -3,7 +3,7 @@ title: "George Harrison - All Things Must Pass"
 slug: "george-harrison-all-things-must-pass"
 excerpt: "בעקבות תקופתה החגים וחג הסוכות הקרב ובא אלינו נזכרתי בשבת ישיבה שהייתה לי אי שם בשלהי קיץ 2013. הקונספט עד היום לא ברור לי עד הסוף, בגדול..."
 date: "2023-09-29T09:17:12.527Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
 language: "he"
 ---

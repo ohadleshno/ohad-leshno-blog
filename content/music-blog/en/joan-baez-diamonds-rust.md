@@ -3,7 +3,7 @@ title: "Joan Baez- Diamonds & Rust"
 slug: "joan-baez-diamonds-rust"
 excerpt: "בואו נעשה שניה ניסוי מחשבתי, דמיינו עולם של מוזיקה פשוטה, בלי סינטיסייזרים מיוחדים או גיטרות חשמליות. בלי ביטים מורכבים, בלי משחקים של 5..."
 date: "2024-05-06T22:19:08.527Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
 language: "en"
 ---

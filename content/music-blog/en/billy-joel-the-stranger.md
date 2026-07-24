@@ -3,7 +3,7 @@ title: "Billy Joel - the stranger"
 slug: "billy-joel-the-stranger"
 excerpt: "היום נדבר על בילי ג'ואל, שהוא אחד האומנים האהובים עליי. השירים שלו, כגון \"Piano Man\", \"Uptown Girl\", \"Just the Way You Are\" ו-\"New York..."
 date: "2023-07-14T16:47:35.698Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 3
 language: "en"
 ---

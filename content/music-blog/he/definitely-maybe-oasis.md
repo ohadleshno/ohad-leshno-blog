@@ -3,7 +3,7 @@ title: "Definitely Maybe - Oasis"
 slug: "definitely-maybe-oasis"
 excerpt: "היום הוא יום הולדתו ש ה40 של אחי הגדול ארי לפי לוח השנה הגרגוריאני (למניינם) , על כן אחרי כל כך הרבה זמן שלא הצלחתי לכתוב פוסט לבלוג נוצר..."
 date: "2024-02-06T06:06:41.125Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 3
 language: "he"
 ---

@@ -118,7 +118,6 @@ function convertBlocksToMarkdown(contentStr: string): string {
     } else if (type === 'header-six') {
       lines.push(`\n###### ${formattedText}\n`);
     } else if (type === 'blockquote') {
-      // Use <blockquote dir="auto"> so English blockquotes automatically render in LTR layout with left red border
       lines.push(`\n<blockquote dir="auto">\n${formattedText}\n</blockquote>\n`);
     } else {
       lines.push(`\n${formattedText}\n`);
@@ -150,7 +149,7 @@ function parseWixPosts() {
 
   for (const post of posts) {
     const slug = post.slug || post.id;
-    const coverImage = post.coverMedia?.image?.url || '/public/hero-cover.jpeg';
+    const coverImage = post.coverMedia?.image?.url || '/hero-cover.jpeg';
     const markdownContent = convertBlocksToMarkdown(post.content);
 
     const heFrontmatter = `---
@@ -188,7 +187,7 @@ ${markdownContent}
   const aboutHe = `---
 title: "אודות - אוהד לשנו"
 language: "he"
-avatar: "/public/ohad_leshno.avif"
+avatar: "/ohad_leshno.avif"
 ---
 
 # אודות אוהד לשנו
@@ -202,7 +201,7 @@ avatar: "/public/ohad_leshno.avif"
   const aboutEn = `---
 title: "About - Ohad Leshno"
 language: "en"
-avatar: "/public/ohad_leshno.avif"
+avatar: "/ohad_leshno.avif"
 ---
 
 # About Ohad Leshno

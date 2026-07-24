@@ -1,7 +1,7 @@
 ---
 title: "אודות - אוהד לשנו"
 language: "he"
-avatar: "/public/ohad_leshno.avif"
+avatar: "/ohad_leshno.avif"
 ---
 
 # אודות אוהד לשנו

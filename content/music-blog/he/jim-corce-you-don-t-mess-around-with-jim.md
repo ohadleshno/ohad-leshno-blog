@@ -3,7 +3,7 @@ title: "Jim Corce - You Don't Mess Around with Jim"
 slug: "jim-corce-you-don-t-mess-around-with-jim"
 excerpt: "היום אנחנו נדבר על אלבום מעניין מאוד שרובכם כנראה לא מכירים. מי שמכיר אותי יודע כמה אני אוהב אמני פולק, במיוחד כאלה עם סיפורים \"דפוקים\"...."
 date: "2023-08-22T11:19:42.435Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 2
 language: "he"
 ---

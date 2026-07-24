@@ -3,7 +3,7 @@ title: "Graham nash - songs for beginners"
 slug: "graham-nash-songs-for-beginners"
 excerpt: "לקראת סיום שירות החובה החלטנו ישראל ואני לעשות טיול אחים לגולדן המדינה (ארצות־הברית למניינם). היינו שבוע אצל אחי בשיקגו ושבוע אצל אחיו..."
 date: "2023-07-25T13:21:33.541Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 3
 language: "en"
 ---

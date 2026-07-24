@@ -3,7 +3,7 @@ title: "Dua Lipa - Future Nostalgia "
 slug: "dua-lipa-future-nostalgia"
 excerpt: "הסכסוך הישראלי-פלסטיני הוא בעיה קשה שרבים בישראל פוגשים אותה בשלב כזה או אחר. סער, אחד האנשים שאני הכי אוהב בעולם, הציע פתרון יצירתי:..."
 date: "2023-07-14T21:38:27.191Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 3
 language: "he"
 ---

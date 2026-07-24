@@ -3,7 +3,7 @@ title: "Tom Waits - closing time"
 slug: "tom-waits-closing-time"
 excerpt: "השבוע חגגנו את יום האהבה, 14 בפברואר, ותהיתי: למה אנחנו קוראים לו \"ולנטיין\"? הרי אין לנו יום כעס (טוב, יש יום זעם, אבל בקשה לא להכנס..."
 date: "2024-02-17T08:34:23.749Z"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
 language: "en"
 ---

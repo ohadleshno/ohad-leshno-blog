@@ -29,7 +29,7 @@ export default function AboutPage({ params }: { params: { lang: 'he' | 'en' } })
       <div className="glass-card p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 shadow-xl flex flex-col md:flex-row items-center gap-8">
         <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full overflow-hidden border-4 border-indigo-500/30 flex-shrink-0 bg-slate-100 dark:bg-slate-800 shadow-md">
           <img
-            src="/public/ohad_leshno.avif"
+            src={data.avatar ? data.avatar.replace(/^\/public/, '') : '/ohad_leshno.avif'}
             alt="Ohad Leshno"
             className="w-full h-full object-cover"
           />
