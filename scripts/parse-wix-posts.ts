@@ -183,7 +183,7 @@ ${markdownContent}
     fs.writeFileSync(path.join(musicEnDir, `${slug}.md`), enFrontmatter, 'utf-8');
   }
 
-  // Create About files with architecture & tech passion
+  // Create About files with age 29, architecture & tech passion
   const aboutHe = `---
 title: "אודות - אוהד לשנו"
 language: "he"
@@ -192,16 +192,16 @@ avatar: "/ohad_leshno.avif"
 
 # אודות אוהד לשנו
 
-שלום! קוראים לי אוהד לשנו, אני בן 26, נולדתי וגדלתי בתל אביב. ביום-יום אני מפתח תוכנה ומהנדס AI, אבל הנפש שלי חצויה בין שני עולמות מרתקים: **מוזיקה וטכנולוגיה**.
+שלום! קוראים לי אוהד לשנו, אני בן 29, נולדתי וגדלתי בתל אביב. ביום-יום אני מפתח תוכנה ומהנדס AI, אבל הלב והמחשבה שלי חצויים בין שני עולמות מרתקים: **מוזיקה וטכנולוגיה**.
 
 ### 🎸 התשוקה למוזיקה
 מגיל צעיר גיליתי את הכוח העצום של המוזיקה לגעת בנשמה ולהעביר מסרים עמוקים שאינם עוברים בשום פלטפורמה אחרת. מוזיקת רוק ופולק היא חלק בלתי נפרד מהמסע שלי — עם האנרגיה המחשמלת והרוח החופשית שלה. אמנים כמו בוב דילן והגרייטפול דד השפיעו עמוקות על טעמי המוזיקלי, עם טקסטים מחאתיים, מלודיות על-זמניות וסיפורים שנשארים בלב.
 
 ### 💻 ארכיטקטורה, פיתוח ו-AI
-כמתכנת, התשוקה שלי לא נגמרת בכתיבת קוד בלבד — אני אוהב **לתכנן ולבנות מערכות מקצה לקצה, לפצח בעיות ארכיטקטוניות מורכבות ולחקור עולמות של Generative AI והנדסת תוכנה מתקדמת**. בבלוג הזה תוכלו למצוא לצד הניתוחים המוזיקליים גם סקירות טכניות מעמיקות, תיעוד ארכיטקטוני (Design Docs), וניתוחים מעשיים של פרויקטים שבניתי.
+כמהנדס, התשוקה שלי לא נגמרת בכתיבת קוד בלבד — אני אוהב **לתכנן ולבנות מערכות מקצה לקצה, לפצח בעיות ארכיטקטוניות מורכבות ולחקור עולמות של Generative AI והנדסת תוכנה מתקדמת**. בבלוג הזה תוכלו למצוא לצד הניתוחים המוזיקליים גם סקירות טכניות מעמיקות, תיעוד ארכיטקטוני (Design Docs), וניתוחים מעשיים של פרויקטים שבניתי.
 
 ### 🌟 מה תמצאו בבלוג?
-הבלוג הזה הוא המרחב שלי לחבר בין העולמות:
+הבלוג הזה הוא המרחב שלי לחבר בין שני העולמות:
 - **ניתוחי אלבומים וסיפורים מוזיקליים**: צלילה לעומק היצירות והאמנים ששינו את פני המוזיקה.
 - **פרויקטי AI וארכיטקטורת תוכנה**: ניתוחי עומק טכניים, תכנון ארכיטקטוני ותובנות מפיתוח מערכות מתקדמות.
 
@@ -216,7 +216,7 @@ avatar: "/ohad_leshno.avif"
 
 # About Ohad Leshno
 
-Hello! My name is Ohad Leshno, I'm 26 years old, born and raised in Tel Aviv. By day, I'm a software developer and AI engineer, but my mind and heart are shared between two fascinating worlds: **Music and Technology**.
+Hello! My name is Ohad Leshno, I'm 29 years old, born and raised in Tel Aviv. By day, I'm a software developer and AI engineer, but my mind and heart are shared between two fascinating worlds: **Music and Technology**.
 
 ### 🎸 Passion for Music
 From a young age, I discovered the immense power of music to touch the soul and convey deep messages that no other medium can express. Rock and folk music have been constant companions on my journey — with their electrifying energy and free spirit. Artists like Bob Dylan and the Grateful Dead deeply influenced my musical taste with their passionate lyrics, powerful melodies, and timeless storytelling.

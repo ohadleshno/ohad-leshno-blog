@@ -6,7 +6,7 @@ avatar: "/ohad_leshno.avif"
 
 # About Ohad Leshno
 
-Hello! My name is Ohad Leshno, I'm 26 years old, born and raised in Tel Aviv. By day, I'm a software developer and AI engineer, but my mind and heart are shared between two fascinating worlds: **Music and Technology**.
+Hello! My name is Ohad Leshno, I'm 29 years old, born and raised in Tel Aviv. By day, I'm a software developer and AI engineer, but my mind and heart are shared between two fascinating worlds: **Music and Technology**.
 
 ### 🎸 Passion for Music
 From a young age, I discovered the immense power of music to touch the soul and convey deep messages that no other medium can express. Rock and folk music have been constant companions on my journey — with their electrifying energy and free spirit. Artists like Bob Dylan and the Grateful Dead deeply influenced my musical taste with their passionate lyrics, powerful melodies, and timeless storytelling.
