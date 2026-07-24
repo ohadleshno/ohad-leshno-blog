@@ -5,10 +5,10 @@ The SQL database schema definition (`supabase/schema.sql`) for creating the `com
 
 **Blocked by:** 01 — Wix JSON & About Page Migration Parser Script
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] `supabase/schema.sql` defines `comments` and `subscribers` tables with indexes on `post_slug` and `locale`.
-- [ ] Includes Row Level Security (RLS) policies for anonymous public reads and inserts on both tables.
-- [ ] `src/lib/supabase.ts` exports a configured Supabase client using `@supabase/supabase-js`.
-- [ ] Provides fallback local storage/in-memory helper when `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are not set.
-- [ ] Includes sample SQL seed script for testing locally.
+- [x] `supabase/schema.sql` defines `comments` and `subscribers` tables with indexes on `post_slug` and `locale`.
+- [x] Includes Row Level Security (RLS) policies for anonymous public reads and inserts on both tables.
+- [x] `src/lib/supabase.ts` exports a configured Supabase client using `@supabase/supabase-js`.
+- [x] Provides fallback local storage/in-memory helper when `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` are not set.
+- [x] Includes sample SQL seed script for testing locally.

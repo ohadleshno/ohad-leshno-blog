@@ -5,9 +5,9 @@ Interactive client components for guest commenting (`Comments.tsx`) and email su
 
 **Blocked by:** 04 — Markdown Article Rendering Engine & Wix Media Embeds
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] `Comments.tsx` component fetches comments for current `post_slug` and `locale`, displays formatted comment list, and provides submission form (Name + Comment) with instant optimistic update and error handling.
-- [ ] Includes optional admin moderation delete trigger (via URL secret key or localStorage admin token).
-- [ ] `MailingList.tsx` component renders newsletter subscription box with email input validation and instant subscriber save.
-- [ ] Full RTL (Hebrew) and LTR (English) localization for all input placeholders, submit buttons, and status alerts.
+- [x] `Comments.tsx` component fetches comments for current `post_slug` and `locale`, displays formatted comment list, and provides submission form (Name + Comment) with instant optimistic update and error handling.
+- [x] Includes optional admin moderation delete trigger (via URL secret key or localStorage admin token).
+- [x] `MailingList.tsx` component renders newsletter subscription box with email input validation and instant subscriber save.
+- [x] Full RTL (Hebrew) and LTR (English) localization for all input placeholders, submit buttons, and status alerts.

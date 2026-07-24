@@ -5,10 +5,10 @@ The Markdown reading engine and full article pages (`/[lang]/music/[slug]`) rend
 
 **Blocked by:** 03 — Next.js Cloudflare App Shell, i18n & Theme Provider
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Markdown parser (`gray-matter` + `remark`/`rehype` or `next-mdx-remote`) renders articles cleanly with proper typography, blockquotes, and line height.
-- [ ] Embedded YouTube videos render responsive 16:9 video player containers with thumbnails.
-- [ ] Cover images and inline Wix media render responsive image containers.
-- [ ] Reading time, publication date, and tag badges display prominently at the post header.
-- [ ] Social share buttons (WhatsApp, Twitter/X, LinkedIn, Copy Link) work on mobile and desktop.
+- [x] Markdown parser (`gray-matter` + `remark`/`rehype` or `next-mdx-remote`) renders articles cleanly with proper typography, blockquotes, and line height.
+- [x] Embedded YouTube videos render responsive 16:9 video player containers with thumbnails.
+- [x] Cover images and inline Wix media render responsive image containers.
+- [x] Reading time, publication date, and tag badges display prominently at the post header.
+- [x] Social share buttons (WhatsApp, Twitter/X, LinkedIn, Copy Link) work on mobile and desktop.

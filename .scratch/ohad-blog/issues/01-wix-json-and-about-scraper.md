@@ -5,10 +5,10 @@ A Node/TypeScript migration script (`scripts/parse-wix-posts.ts`) that reads `wi
 
 **Blocked by:** None — can start immediately.
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] `scripts/parse-wix-posts.ts` correctly parses Draft.js blocks (headers, paragraphs, blockquotes, bold/italic/underline styles).
-- [ ] Correctly converts entityMap image URLs and YouTube embeds (`https://youtu.be/...`) into responsive Markdown media embeds.
-- [ ] Generates YAML frontmatter containing `title`, `slug`, `date`, `excerpt`, `coverImage`, `minutesToRead`, and `language`.
-- [ ] Outputs parsed `.md` files under `content/music-blog/he/` and corresponding prepared English `.md` files under `content/music-blog/en/`.
-- [ ] Scrapes/extracts text from Wix About page into `content/about/he.md` and `content/about/en.md`.
+- [x] `scripts/parse-wix-posts.ts` correctly parses Draft.js blocks (headers, paragraphs, blockquotes, bold/italic/underline styles).
+- [x] Correctly converts entityMap image URLs and YouTube embeds (`https://youtu.be/...`) into responsive Markdown media embeds.
+- [x] Generates YAML frontmatter containing `title`, `slug`, `date`, `excerpt`, `coverImage`, `minutesToRead`, and `language`.
+- [x] Outputs parsed `.md` files under `content/music-blog/he/` and corresponding prepared English `.md` files under `content/music-blog/en/`.
+- [x] Scrapes/extracts text from Wix About page into `content/about/he.md` and `content/about/en.md`.

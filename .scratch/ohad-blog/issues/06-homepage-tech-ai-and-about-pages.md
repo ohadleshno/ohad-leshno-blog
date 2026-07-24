@@ -7,11 +7,11 @@
 
 **Blocked by:** 05 — Supabase Guest Comments UI & Mailing List Subscription
 
-**Status:** ready-for-agent
+**Status:** done
 
-- [ ] Home Page (`/[lang]`) hero section with personal headline ("Music, Culture & AI Engineering"), avatar photo, and quick navigation actions.
-- [ ] Home Page displays responsive grid of latest Music Blog posts with cover image, title, excerpt, date, and reading time.
-- [ ] Home Page displays top Technical AI Project cards with live demo buttons, tech stack badges (PyTorch, Next.js, Gemini, etc.), and link to design doc write-ups.
-- [ ] Home Page includes embedded Newsletter Subscription block saving emails to Supabase.
-- [ ] Technical AI Blog page (`/[lang]/tech`) and detail page (`/[lang]/tech/[slug]`) render full architecture write-ups.
-- [ ] About Me page (`/[lang]/about`) renders converted Hebrew/English About content.
+- [x] Home Page (`/[lang]`) hero section with personal headline ("Music, Culture & AI Engineering"), avatar photo, and quick navigation actions.
+- [x] Home Page displays responsive grid of latest Music Blog posts with cover image, title, excerpt, date, and reading time.
+- [x] Home Page displays top Technical AI Project cards with live demo buttons, tech stack badges (PyTorch, Next.js, Gemini, etc.), and link to design doc write-ups.
+- [x] Home Page includes embedded Newsletter Subscription block saving emails to Supabase.
+- [x] Technical AI index page (`/[lang]/tech`) and detail design docs (`/[lang]/tech/[slug]`) render cleanly.
+- [x] About Me page (`/[lang]/about`) showcases personal bio, age 29, software & AI engineering passion, and music background.
