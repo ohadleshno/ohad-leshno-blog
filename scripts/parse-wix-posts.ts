@@ -83,16 +83,16 @@ function convertBlocksToMarkdown(contentStr: string): string {
           const src = entity.data?.src?.url || (entity.data?.src?.id ? `https://static.wixstatic.com/media/${entity.data.src.id}` : '');
           const caption = entity.data?.metadata?.caption || '';
           if (src) {
-            lines.push(`\n![${caption}](${src})\n`);
+            lines.push(`<figure class="my-8"><img src="${src}" alt="${caption.replace(/"/g, '&quot;')}" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" />${caption ? `<figcaption class="text-center text-xs text-slate-500 dark:text-slate-400 mt-2 font-medium">${caption}</figcaption>` : ''}</figure>`);
           }
         } else if (entity.type === 'wix-draft-plugin-video') {
           const videoSrc = entity.data?.src || '';
           const title = entity.data?.metadata?.title || 'Video Embed';
           const videoId = extractYouTubeId(videoSrc);
           if (videoId) {
-            lines.push(`\n<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title.replace(/"/g, '&quot;')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>\n`);
+            lines.push(`<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title.replace(/"/g, '&quot;')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>`);
           } else if (videoSrc) {
-            lines.push(`\n[Watch Video: ${title}](${videoSrc})\n`);
+            lines.push(`[Watch Video: ${title}](${videoSrc})`);
           }
         }
       }
@@ -103,28 +103,30 @@ function convertBlocksToMarkdown(contentStr: string): string {
       continue;
     }
 
-    let formattedText = text;
-
     if (type === 'header-one') {
-      lines.push(`\n# ${formattedText}\n`);
+      lines.push(`# ${text.trim()}`);
     } else if (type === 'header-two') {
-      lines.push(`\n## ${formattedText}\n`);
+      lines.push(`## ${text.trim()}`);
     } else if (type === 'header-three') {
-      lines.push(`\n### ${formattedText}\n`);
+      lines.push(`### ${text.trim()}`);
     } else if (type === 'header-four') {
-      lines.push(`\n#### ${formattedText}\n`);
+      lines.push(`#### ${text.trim()}`);
     } else if (type === 'header-five') {
-      lines.push(`\n##### ${formattedText}\n`);
+      lines.push(`##### ${text.trim()}`);
     } else if (type === 'header-six') {
-      lines.push(`\n###### ${formattedText}\n`);
+      lines.push(`###### ${text.trim()}`);
     } else if (type === 'blockquote') {
-      lines.push(`\n<blockquote dir="auto">\n${formattedText}\n</blockquote>\n`);
+      lines.push(`<blockquote dir="auto">\n${text.trim()}\n</blockquote>`);
     } else {
-      lines.push(`\n${formattedText}\n`);
+      // Split text by newlines so every paragraph is separated cleanly in Markdown
+      const paragraphs = text.split('\n').map((p) => p.trim()).filter(Boolean);
+      for (const p of paragraphs) {
+        lines.push(p);
+      }
     }
   }
 
-  return lines.join('\n').trim();
+  return lines.join('\n\n').trim();
 }
 
 function parseWixPosts() {
