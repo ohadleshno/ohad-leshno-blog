@@ -76,7 +76,7 @@ export default function MusicPostDetail({
       </header>
 
       {/* Hero Cover Image (rendered only if not already in contentHtml) */}
-      {post.coverImage && !post.contentHtml.includes(post.coverImage) && (
+      {post.coverImage && !post.contentHtml.includes('<img') && !post.contentHtml.includes(post.coverImage) && (
         <div className="w-full h-72 sm:h-96 rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800 relative bg-slate-100 dark:bg-slate-900">
           <img
             src={post.coverImage}
