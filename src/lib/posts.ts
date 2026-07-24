@@ -13,6 +13,7 @@ export interface PostMetaData {
   minutesToRead: number;
   language: string;
   tags?: string[];
+  youtubeId?: string;
 }
 
 export interface PostDetail extends PostMetaData {
@@ -20,6 +21,17 @@ export interface PostDetail extends PostMetaData {
 }
 
 const contentDirectory = path.join(process.cwd(), 'content/music-blog');
+
+function extractFirstYouTubeId(content: string, frontmatterUrl?: string): string | undefined {
+  if (frontmatterUrl) {
+    const match = frontmatterUrl.match(/(?:embed\/|v=|youtu\.be\/)([^"&?\/\s]+)/);
+    if (match) return match[1];
+  }
+  const match = content.match(/youtube-nocookie\.com\/embed\/([^"&?\/\s]+)/) ||
+                content.match(/youtube\.com\/watch\?v=([^"&?\/\s]+)/) ||
+                content.match(/youtu\.be\/([^"&?\/\s]+)/);
+  return match ? match[1] : undefined;
+}
 
 export function getAllPostSlugs(lang: 'he' | 'en' = 'he'): string[] {
   const dirPath = path.join(contentDirectory, lang);
@@ -61,15 +73,19 @@ export function getPostData(slug: string, lang: 'he' | 'en' = 'he'): PostDetail 
     .processSync(content);
   const contentHtml = processedContent.toString();
 
+  const coverImage = data.coverImage ? data.coverImage.replace(/^\/public/, '') : '/hero-cover.jpeg';
+  const youtubeId = extractFirstYouTubeId(content, data.youtubeUrl || data.youtubeId);
+
   return {
     title: data.title || slug,
     slug: data.slug || slug,
     excerpt: data.excerpt || '',
     date: data.date || new Date().toISOString(),
-    coverImage: data.coverImage || '/public/hero-cover.jpeg',
+    coverImage,
     minutesToRead: data.minutesToRead || 5,
     language: data.language || lang,
     tags: data.tags || [],
+    youtubeId,
     contentHtml,
   };
 }

@@ -61,7 +61,7 @@ export function getTechProjectData(slug: string, lang: 'he' | 'en' = 'he'): Tech
     slug: data.slug || slug,
     excerpt: data.excerpt || '',
     date: data.date || new Date().toISOString(),
-    coverImage: data.coverImage || '/public/hero-cover.jpeg',
+    coverImage: data.coverImage ? data.coverImage.replace(/^\/public/, '') : '/hero-cover.jpeg',
     projectUrl: data.projectUrl || 'https://github.com/ohadleshno',
     techStack: data.techStack || ['AI', 'TypeScript'],
     language: data.language || lang,
