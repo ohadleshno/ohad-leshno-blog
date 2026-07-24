@@ -56,7 +56,7 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
         {/* Profile Avatar / Cover Image */}
         <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl flex-shrink-0 bg-indigo-50 dark:bg-indigo-950">
           <img
-            src="/public/ohad_leshno.avif"
+            src="/ohad_leshno.avif"
             alt="Ohad Leshno"
             className="w-full h-full object-cover"
           />

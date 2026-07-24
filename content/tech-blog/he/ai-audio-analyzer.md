@@ -3,7 +3,7 @@ title: "AI Audio Analyzer & Music Transcription Engine"
 slug: "ai-audio-analyzer"
 excerpt: "מערכת AI מתקדמת לניתוח אותות קול, חילוץ אקורדים ותזמור אוטומטי של יצירות מוזיקליות."
 date: "2026-06-15"
-coverImage: "/public/hero-cover.jpeg"
+coverImage: "/hero-cover.jpeg"
 projectUrl: "https://github.com/ohadleshno"
 techStack: ["PyTorch", "Librosa", "FastAPI", "Next.js", "Python"]
 language: "he"
