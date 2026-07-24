@@ -1,7 +1,7 @@
 ---
 title: "Selective Hearing - Telephone Operator Playlist"
 slug: "selective-hearing-telephone-operator-playlist"
-excerpt: "חזרתי השבוע לארץ אחרי המסע הקצר שלי בהודו, בזמן שהייתי שם לא הפסקתי לחשוב על כמה חווית הטיול במדינות עולם שלישי השתנתה במהלך השנים. אחד..."
+excerpt: "I returned to Israel this week after my short trip to India, while I was there I didn't stop thinking about how much the travel experience in third world countries has changed over the years. one..."
 date: "2023-10-06T13:23:04.604Z"
 coverImage: "https://static.wixstatic.com/media/f2fdbe1c79c64008993a030e7e0708f9.jpg"
 minutesToRead: 3
@@ -10,36 +10,36 @@ language: "en"
 
 <figure class="my-8"><img src="https://static.wixstatic.com/media/f2fdbe1c79c64008993a030e7e0708f9.jpg" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
 
-חזרתי השבוע לארץ אחרי המסע הקצר שלי בהודו, בזמן שהייתי שם לא הפסקתי לחשוב על כמה חווית הטיול במדינות עולם שלישי השתנתה במהלך השנים. אחד מהאלמנטים שהשתנו באופן דרסטי, הוא האפשרות להיות בקשר עם העולם. גם במקומות הכי נטושים ושבורים הייתה לי קליטה והייתי יכול לעשות שיחה בוואטסאפ ולעלות פוסט לבלוג בשבילכם ובאהבה. אנחנו חיים בעולם שבו אנחנו מעלים תמונות ל״ספר הפנים״ כסיכום לכל פעילות, אנחנו משתפים בסטורי כל חוויה קטנה שלנו ולא חיים כמעט את הניתוק יותר. קל לדעת איפה בן אדם נמצא רק מטביעת אצבע שלו באינטרנט, וזה רק קצה המזלג, ניתן לדעת מה השאיפות הפולטיות שלו ואיזה סוג של ירק הוא הכי אוהב. אנחנו חיים ומתועדים בצורה שתמיד מחברת אותנו אל העולם.
+I returned to Israel this week after my short trip to India, while I was there I didn't stop thinking about how much the travel experience in third world countries has changed over the years. One of the elements that has changed drastically, is the possibility of being in touch with the world. Even in the most abandoned and broken places I had reception and I could make a WhatsApp conversation and upload a blog post for you and with love. We live in a world where we upload photos to the "face book" as a summary of every activity, we share our every little experience in stories and hardly live the disconnect anymore. It's easy to know where a person is just from his fingerprint on the Internet, and that's just the tip of the iceberg, you can tell what his political ambitions are and what kind of vegetable he likes the most. We live and record in a way that always connects us to the world.
 
-אני בעל נטייה נוסטלגית לעיתים, רוב המוסיקה שאני שומע נוצרה לפני שנולדתי. אני בעל אוסף תקליטים ומשתדל לשמוע מוסיקה דרך הפטיפון כמו איזה היפסטר מזורגג. בכללי אני משתדל לקדש את החוויה האנלוגית ומוצא בה דברים אוטנטים שנעלמו מן העולם. קצת משהו בתרבות הinstant לא נותנת לנו להיות בחוסר, להיות באין ועל כן מונעת מאתנו להתגעגע ולחוות, אפילו לעיתים להנות. במהלך שהותי בהודו למדתי קצת על הבודיהזם, מאוד התחברתי לפסקה הבאה מספר הדאו:
+I have a nostalgic tendency at times, most of the music I listen to was created before I was born. I have a record collection and try to listen to music through the turntable like some crazy hipster. In general, I try to sanctify the analog experience and find in it authentic things that have disappeared from the world. A little something in the instant culture does not allow us to be in lack, to be in nothingness and therefore prevents us from missing and experiencing, even sometimes enjoying. During my stay in India I learned a little about Buddhism, I really connected to the following paragraph from the Dao book:
 
 <blockquote dir="auto">
 [2]
-״הכל תחת השמים יודעים את יפי היפה,
-ומתוך זה את המכוער;
-הכל יודעים את טיב הטוב,
-ומתוך זה את הרע.
-יש ואין נולדים זה מזה,
-קשה ושל משלימים זה את זה,
-ארוך וקצר מדגישים זה את זה,
-ארוך וקצר מדגישים זה את זה,
-קול ומשמעות תואמים זה את זה,
-אלה הם הקבוע.
-לפיכך: החכם -
-מתגורר במעשה שבאין עשיה,
-מנהיג את הלימוד שבאין מילים״
+"Everything under heaven knows the beauty of the beautiful,
+and from that the ugly;
+Everyone knows the nature of goodness,
+And from that the evil.
+There are and there are not born from each other,
+difficult and complementary to each other,
+long and short emphasize each other,
+long and short emphasize each other,
+Sound and meaning correspond to each other,
+These are the constant.
+Therefore: the wise -
+dwells in the act of not doing,
+Leader of the study that has no words"
 </blockquote>
 
-אנחנו מתחילים להעריך ולהבין דברים רק שאין לנו אותם, תופעה שאצלי פועלת בעצימות מוגברת. לפעמים אנחנו חייבים ללכת לאיבוד בשביל למצוא את עצמנו או כפי שאמר הנרי דיוויד ת׳ורו:
+We begin to appreciate and understand things only when we don't have them, a phenomenon that works with increased intensity for me. Sometimes we have to get lost to find ourselves or as Henry David Thoreau said:
 
 <blockquote dir="auto">
-״רק משאבדנו, כלומר רק משאיבדנו את העולם, אנו מתחילים למצוא את עצמו, ולגלות היכן אנו ואת מידת האינסופיות של יחסינו״
+"Only by losing ourselves, that is, only by losing the world, do we begin to find ourselves, and discover where we are and the extent of the infinity of our relationship"
 </blockquote>
 
-לכן, במוטיב של החוסר נדבר על חוויה שנעלמה מן העולם אבל מאוד מסקרנת גם היום, נדבר על מוקד טלפוני (operator בלעז) במוסיקה. אפילו כשאני הייתי צעיר, עדין היה קיים בעולם 144, מוקד שבו היה ניתן  להציג פרטים של בן אדם והיו מנסים לאתר את מספר הטלפון שלו. הוא עדין קיים, אבל,  אני לא בטוח מי משתמש בו כאשר יש את ״ספר הפנים״ וטינדר וכדומיהן. אז הפלייליסט שלנו יורכב היום משירים בעקבות הגוף המקשר הזה שנותן לנו את היכולת ליצור קשר עם הדבר הזה שאיבדנו חזרה.
+Therefore, in the motif of lack we will talk about an experience that disappeared from the world but is very intriguing even today, we will talk about a call center (operator in Leaz) in music. Even when I was young, there was still 144 in the world, a hotline where you could display a person's details and they would try to locate their phone number. It still exists, but, I'm not sure who uses it when there is the "facebook" and Tinder and the like. So our playlist today will consist of songs following this connecting body that gives us the ability to get in touch with this thing we lost back.
 
-כמובן שברוב השירים האידאה העצובה שמנסים ליצור איתה קשר היא איזו אהבה ישנה שאבדה מסיבה כזו או אחרת. אנחנו מתחילים עם Tom Waits בשירו הנפלא Martha, שם הוא מתקשר לאהובתו הישנה ומנסה  לסכם את 40 השנים שהיו בנפרד ולהתרפק ברגעים המיוחדים שהיו להם יחדיו.
+Of course, in most of the songs the sad idea they are trying to get in touch with is some old love that was lost for one reason or another. We start with Tom Waits in his wonderful song Martha, where he calls his old lover and tries to summarize the 40 years they were apart and embrace the special moments they had together.
 
 <blockquote dir="auto">
 "Operator, number please
@@ -50,7 +50,7 @@ While I fight the tears?"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/y9Mse62NFl4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-סיפור דומה קיים בשירים operator של הGrateful Dead ובשיר  Operator של Jim Corce שעליו הרחבתי כבר בפוסט שלם בבלוג. הפורטוגוניסט של השיר לא מצליח להגיע לאותה אישה מן העבר, הוא מנסה לגלות עליה מידע אבל נכשל מסיבות שונות שמעבר לכוחו. לבסוף הוא נכנע והוא מגיע למסקנה שלא מעניין אותו מה הסטטוס שלה, העיקר שהיא בסדר.
+A similar story exists in the songs operator by the Grateful Dead and the song Operator by Jim Corce, which I already expanded on in a whole blog post. The Portuguese of the song is unable to reach that woman from the past, he tries to find out information about her but fails for various reasons beyond his control. Finally he gives in and he comes to the conclusion that he is not interested in her status, the main thing is that she is fine.
 
 <blockquote dir="auto">
 "She could be hangin' 'round the steel mill
@@ -64,22 +64,22 @@ Long as she's been doin' it right"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/3MZeol_aMAM" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-כמובן שעל מנת להוסיף קדושה בעולם הוספתי ביצועים של בוב דילן ו chuck berry שגם שרים על long distance phone. הם מדברים על החוויה של ההתקשרות למישהו רחוק  והמסע שעוברים על מנת לבצע את אותה השיחה. אני ממליץ לכם לצלול בעצמכם לאותם שירים וקצת לחוות עוד פרספקטיבה קצת שונה על אותו רכיב המקשר אותנו לעולם הרחוק מאיתנו.
+Of course, in order to add sanctity to the world, I added performances by Bob Dylan and Chuck Berry who also sing on a long distance phone. They talk about the experience of calling someone far away and the journey they go through to make that call. I recommend that you dive into those songs yourself and experience a slightly different perspective on that component that connects us to the world far away from us.
 
-וכמובן מי אם לא יונתן גפן, אחד מהכותבים הגדולים שהיו כאן, שלצערנו נפטר בטרם עת השנה, כתב שיר מדהים על אותה החוויה. באלבומו עם דני ליטני ״מכתבים למערכת״, שהוא אלבום מצוין לכל דבר ועניין, אנחנו נחשפים לשיר אחת ארבע. יונתן מתקשר למוקד ומנסה לאתר מישהי שאת מספרה היה לו על קופסאות סיגריות אבל המספר נמחק. אין לו כמעט פרטים עליה, אבל הוא ממש רוצה לבקש סליחה. אנו עדים עוד פעם לאותה החוויה שמתוארת בשפתו של יונתן בצורה כל כך חזקה כמו שרק הוא יודע.  והליווי של דני והעיבוד הנפלא של מיקי גבריאלוב וחיים רומנו נותנים את האווירה הקודרת של השיחה.
+And of course who but Yonatan Geffen, one of the great writers who was here, who unfortunately passed away prematurely this year, wrote an amazing poem about that experience. In his album with Danny Litany "Letters to the System", which is an excellent album in every respect, we are exposed to the song Haht Arba. Yonatan calls the hotline and tries to locate someone whose number he had on cigarette boxes, but the number has been deleted. He has almost no details about her, but he really wants to apologize. We witness once again the same experience that is described in Jonathan's language in such a strong way as only he knows.  And Danny's accompaniment and the wonderful arrangement by Miki Gabrielov and Chaim Romano give the somber atmosphere of the conversation.
 
 <blockquote dir="auto">
-״אני רק רוצה להגיד לה סליחה, 
-ושלא הייתי צריך ושאני אדע להבא.
-לא אני לא זוכר את שם המשפחה,
- אבל בשביל זה את שם אחת ארבע.
-(אם המספר שביקשת מופיע בספר הטלפון תעלה לה שיחה זאת לירה אחת ועשרים ושתים אגורות)
-לא היא לא מופיעה בספר הטלפונים, 
-היא לא כזאת שמופיעה בספרים.״
+"I just want to say sorry to her,
+And that I didn't have to and that I would know how to bring it.
+No, I don't remember the last name.
+But that's why you're there one four.
+(If the number you requested appears in the phone book, this call will cost her one lira and twenty-two cents)
+No, she's not in the phone book.
+She's not one to appear in books.'
 </blockquote>
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/RU5AIRlc3g0" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-הפלייליסט יסתיים בביצוע הפומפוזי של ELO בTelephone Line שמדגיש את גודל העוצמה שיש לנו בחוויה הזאת של ההמתנה על הקו לרגע המכונן. אני מאחל לכל הקוראים הנכבדים שלי סופ״ש נעים שנלמד להתגעגע,ללכת לאיבוד ולמצוא את עצמנו מחדש.
+The playlist will end with ELO's pompous performance of Telephone Line which emphasizes the power we have in this experience of waiting on the line for the defining moment. I wish all my esteemed readers a pleasant weekend that we learn to miss, get lost and find ourselves again.
 
-האזנה נעימה.
+pleasant listening.

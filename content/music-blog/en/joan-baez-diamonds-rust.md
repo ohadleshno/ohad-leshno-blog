@@ -1,20 +1,20 @@
 ---
 title: "Joan Baez- Diamonds & Rust"
 slug: "joan-baez-diamonds-rust"
-excerpt: "בואו נעשה שניה ניסוי מחשבתי, דמיינו עולם של מוזיקה פשוטה, בלי סינטיסייזרים מיוחדים או גיטרות חשמליות. בלי ביטים מורכבים, בלי משחקים של 5..."
+excerpt: "Let's do a second thought experiment, imagine a world of simple music, without special synthesizers or electric guitars. No complex bits, no games of 5..."
 date: "2024-05-06T22:19:08.527Z"
 coverImage: "https://static.wixstatic.com/media/cd66a9_3d086bb65d3c49e5bcfe27941d264cbb~mv2.png"
 minutesToRead: 4
 language: "en"
 ---
 
-בואו נעשה שניה ניסוי מחשבתי, דמיינו עולם של מוזיקה פשוטה, בלי סינטיסייזרים מיוחדים או גיטרות חשמליות. בלי ביטים מורכבים, בלי משחקים של 5 שמיניות או יצירה שמורכבת ב15 רבדים עם ליווי של 100 נגנים. עולם שבו המנגינות פשוטות וקלילות, זורמות כמו נחל צלול ולא מסתבכות בקצב מסובך או מבנה מורכב. עולם שבו כלי נגינה אקוסטיים כמו גיטרה, כינור או בנג'ו שולטים, מנגינות קליטות מספרות סיפורים מרתקים, ומילים נוגעות ללב מתארות את החיים כמו שהם. האם אתם מוצאים את עצמכם בעולם כזה? האם אתם משתוקקים לפשטות, לאותנטיות, לכנות?
+Let's do a second thought experiment, imagine a world of simple music, without special synthesizers or electric guitars. No complex beats, no games of 5 eighths or a piece that consists of 15 layers accompanied by 100 musicians. A world where the melodies are simple and light, flowing like a clear stream and not entangled in a complicated rhythm or a complex structure. A world where acoustic instruments such as guitar, violin or banjo dominate, catchy melodies tell fascinating stories, and touching lyrics describe life as it is. Do you find yourself in such a world? Do you long for simplicity, authenticity, honesty?
 
-בעידן הפוסט מודרניסטי של ימינו, בו משמעות מקורית מטשטשת והכל הופך להעתק של העתק, ואנו מופצצים בלי סוף בגירויים חושיים מורכבים, עולה הצורך העמוק לחזור אל השורשים. הפולק נותן לנו מסע בזמן לעולם אחר, עולם אולי קצת יותר תמים ונקי ממניירות. הוא מחזיר אותנו בזמן, לזמן אולי קצת יותר תמים ונותן לנו מפלט מההמולה והרעש של החיים המודרניים. קצת מאפשר לנו למצוא שלווה, התבוננות וחיבור פנימי עמוק.
+In today's postmodern era, where original meaning is blurred and everything becomes a copy of a copy, and we are endlessly bombarded with complex sensory stimuli, the deep need to return to the roots arises. Folk gives us a time travel to another world, a world perhaps a little more innocent and clean of papers. It takes us back in time, to a time perhaps a little more innocent and gives us an escape from the hustle and bustle of modern life. A little allows us to find peace, contemplation and a deep inner connection.
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/IrVD0bP_ybg" title="Diamonds And Rust" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-בהיסטוריה העשירה של מוזיקת פולק, מעט שמות בולטים כמו ג'ואן באאז. ילידת סטטן איילנד, ניו יורק, לאב מקסיקני ואם אמריקאית, גדלה באאז בקהילה של קוואקרים (האלו של השיבולת שועל), קבוצה דתית המדגישה ערכים של קהילה, שוויון ופציפיזם. השפעות אלו עיצבו רבות את נושאי שיריה ופעילותה הפוליטית לאורך השנים.פריצתה הגיעה בגיל צעיר, כשהייתה בת 18 בלבד. הופעתה בפסטיבל ניופורט בשנת 1960 זכתה לשבחים רבים, ו-Time Magazine אף הכתיר אותה כאמנית הפולק המובילה של אותה תקופה. לאורך הקריירה שלה, שילבה באאז בהופעותיה ובשיריה הן מוזיקה מקורית והן עיבודים לשירים עממיים, תוך שהיא מעבירה מסרים של צדק חברתי, שלום ושוויון.
+In the rich history of folk music, few names stand out like Joan Baaz. Born in Staten Island, New York, to a Mexican father and an American mother, Baaz grew up in a Quaker community (those of the oats), a religious group that emphasizes values ​​of community, equality and pacifism. These influences greatly shaped the themes of her songs and her political activity over the years. Her breakthrough came at a young age, when she was only 18 years old. Her performance at the Newport Festival in 1960 was widely praised, and Time Magazine even named her the leading folk artist of that era. Throughout her career, Baaz has incorporated both original music and arrangements of folk songs into her performances and songs, while conveying messages of social justice, peace and equality.
 
 <figure class="my-8"><img src="https://static.wixstatic.com/media/cd66a9_3d086bb65d3c49e5bcfe27941d264cbb~mv2.png" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
 
@@ -22,21 +22,21 @@ language: "en"
 "When I think of god I think of earth as a very small thing. Then I think of myself hardly as speck. Then I see there’s no use for this tiny dot to spend its small life doing things for itself. That is what I believe"
 </blockquote>
 
-ג'ואן באאז לא רק הייתה זמרת מוכשרת, אלא גם אקטיביסטית פוליטית נלהבת. עוד בנעוריה, הושפעה עמוקות מנאום "יש לי חלום" המפורסם של מרטין לותר קינג ג'וניור, בו קרא למאבק לא אלים ולשינוי חברתי מלמטה. השראה זו הובילה אותה להשתתף במגוון מחאות, מחאות לזכויות השחורים וגם המחאות נגד מלחמת ויאטנם.
+Joan Baez was not only a talented singer, but also a passionate political activist. Even in her youth, she was deeply influenced by Martin Luther King Jr.'s famous "I have a dream" speech, in which he called for nonviolent struggle and social change from below. This inspiration led her to participate in a variety of protests, both black rights protests and anti-Vietnam War protests.
 
-בתחילת שנות ה-60, במהלך אחת מהמחאות הללו, פגשה באאז את בוב דילן, שהיה אז כוכב עולה. באאז, שכבר זכתה להכרה רחבה, נמשכה לטקסטים המחאתיים ולמוזיקה הייחודית של דילן. במרה הפכו לאחד הזוגות המפורסמים ביותר בתרבות הפופולרית וההצלחה המשותפת תרמה רבות לקריירה של שניהם. דילן, שהיה בתחילת דרכו, זכה לחשיפה משמעותית בזכות קשריו עם באאז, וביחד הפכו לאייקונים של תנועת הנגד.
+In the early 1960s, during one of these protests, Baez met Bob Dylan, who was then a rising star. Baaz, already widely recognized, was drawn to Dylan's protest lyrics and unique music. Bemara became one of the most famous couples in popular culture and the joint success contributed greatly to the careers of both. Dylan, who was at the beginning of his career, gained significant exposure thanks to his connections with Baaz, and together they became icons of the counter movement.
 
-מערכת היחסים שלהם לא החזיקה מעמד לאורך זמן. בשנת 1965 נפרדו באאז ודילן, כשברקע השינויים שחלו בקריירה של דילן, שהפך לסופרסטאר עולמי ונטש בהדרגה את המוזיקה המחאתית. למרות פרידתם, באאז המשיכה לכבד את דילן ואת יצירתו. היא ביצעה את שיריו בהופעותיה לאורך השנים, ואף התאחדו שוב בשנת 1975 עבור סיבוב הופעות משותף בשם Rolling Thunder Revue, שהונצח בסרט דוקומנטרי מאת מרטין סקורסזה שהוא אחד מהסבבי ההופעות הגדולים בהיסטוריה.
+מערכת היחסים שלהם לא החזיקה מעמד לאורך זמן. In 1965 Baaz and Dylan parted ways, amid the changes in Dylan's career, who became a global superstar and gradually abandoned protest music. Despite their separation, Baaz continued to respect Dylan and his work. She performed his songs in her concerts over the years, and even reunited in 1975 for a joint tour called the Rolling Thunder Revue, which was immortalized in a documentary film by Martin Scorsese that is one of the greatest tours in history.
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/PR5ShVsy7EM" title="Bob Dylan & Joan Baez Sing Together, 1965 [&quot;DON'T LOOK BACK&quot; OUTTAKE]" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-דווקא לאחר כל התקופה האקטיביסית שלה באאז קצת החליטה לשנות כיון ולהוציא את אחד מהאלבומים הגדולים שלה Diamond and rust. באז כבר הייתה עם רפרטואר מאוד מרשים כשהיא באה להוציא את האלבום הזה. והאלבום הזה הוא מאוד שונה משאר האלבומים שלה, רובו מורכב מקאברים ומחוות לגודלי אמני הFolk, ובמקום שירי מחאה הנושא לכל אורך האלבום הוא הדינמיקה שלה מול האוהבים שלה.
+Precisely after all her activist period Baaz decided to change direction and release one of her biggest albums Diamond and Rust. Buzz already had a very impressive repertoire when she came to release this album. And this album is very different from her other albums, most of it consists of covers and tributes to great folk artists, and instead of protest songs, the theme throughout the album is her dynamic with her lovers.
 
 <blockquote dir="auto">
 "​​The diamond and rust album, I said to myself this is not going to be a political album, let’s just do music for once. It possibly the best album I’ve ever done, and I should learn something from that. That I like the result of putting strong effort into music"
 </blockquote>
 
-השיר הראשון באלבום"Diamond and rust" שהוא גם שיר הנושא, מתחיל ישר לדבר על הפיל שבחדר, על מערכת היחסים הבעייתית שלה עם ״בובי״. כמה הערכה יש לה אליו עדין למרות כל השנים שעברו ומנגד איך הוא עדין רודף אותה. המילים האינטרוספקטיביות והמלודיה הנוקבת של באאז מושכות אותנו לעולם של מורכבות רגשית, שבו אהבה וחרטה שזורות זו בזו.
+The first song on the album "Diamond and rust" which is also the theme song, starts right away talking about the elephant in the room, about her problematic relationship with "Bobby". How much respect she still has for him despite all the years that have passed and how he still pursues her. Baaz's introspective lyrics and poignant melody draw us into a world of emotional complexity, where love and regret are intertwined.
 
 <blockquote dir="auto">
 "Now you're telling me
@@ -51,31 +51,31 @@ And if you're offering me diamonds and rust
 I've alredy paid"
 </blockquote>
 
-אסופת השירים שבאאז החליטה לעשות להם קאבר לאלבום מעניינת מאוד. זה מין אסופה של שירי פולק שמהווה כמו איזה מין סיור להלך רוח של מיטבהאמנים באותה תקופה. בFountain of Sorrow שנכתב במקור על ידי Jackson Browne היא נותנת לו גרסה אחרת, יותר פגיעה ונותנת תחושה לשומע שהיא כתבה אותו בעצמה. Never Dreamed You'd Leave in Summer של Stevie Wonder היא נותנת לו תעצומות אחרות ועוד לאומן שנחשב בעיני רבים שצריך לשבת באותם כסאות שבהם ישב מוצרט. שעבור כל השירים האלו מה שאופף מעליהן זו התחושה של הפרידה והאהבה שהייתה ואיננה שם יותר.
+Baaz's collection of songs decided to cover them for a very interesting album. It's a kind of collection of folk songs that is like a kind of tour of the mindset of the best artists of that time. In Fountain of Sorrow, originally written by Jackson Browne, she gives it a different, more vulnerable version and gives the listener the feeling that she wrote it herself. Stevie Wonder's Never Dreamed You'd Leave in Summer she gives him other petitions and more to an artist who is considered by many to sit in the same chairs where Mozart sat. that for all these songs what hovers over them is the feeling of separation and the love that was and is no longer there.
 
 <blockquote dir="auto">
 "Fountain of sorrow, fountain of light
 You've known that hollow sound of your own steps in flight"
 </blockquote>
 
-אחד הקאברים היפים באלבום זה לשיר Simple Twist of Fate של דילן שהפכה אותו משיר רגוע עם מלודיה עצובה, לשיר עם מקצב מהיר ואנרגיה יותר גבוהה. אולי יש בזה מין האמרה של הבן אדם בצד השני של השירים של דילן. באמצע השיר פתאום באאז יורדת לנמוכים ונשמע כאילו היא עושה חיקוי של דילן, בדיוק בחלק שבו הוא מדבר על זה שהוא מרגיש emptiness inside.
+One of the most beautiful covers on this album is the song Simple Twist of Fate by Dylan, which turned it from a calm song with a sad melody, to a song with a fast rhythm and higher energy. Maybe there is some kind of saying of the man on the other side of Dylan's songs. In the middle of the song Baaz suddenly goes down low and it sounds like she's imitating Dylan, exactly in the part where he talks about feeling emptiness inside.
 
 <blockquote dir="auto">
 "People tells me its a crime to feel to much to one person at one time”
 </blockquote>
 
-ואז פתאום אנחנו הופכים את התקליט ואחרי כל השירים על הפרידהיש פתאום נקודה של אור, בקאבר המושלם ל Blue sky. באאז משרה בנו תקווה מחדש לאהבה, למרות כל הפגיעות והחרא שספגה פתאום אנחנו נחשפים למידה של אופטימיות ואיזו שמחה פשוטה על מה שיש, על האהבה.
+Then suddenly we turn the record over and after all the songs on Farewell suddenly a spot of light, in the perfect cover of Blue Sky. Baaz instills in us renewed hope for love, despite all the vulnerability and shit she suddenly suffered, we are exposed to a degree of optimism and some simple joy for what is, for love.
 
 <blockquote dir="auto">
 "You’re my blue sky, you’re my sunny day, long you know , turn your love my way”
 </blockquote>
 
-משם אנחנו נמשיך לדבר על האהבה אבל לבסוף האלבום נחתם בדואט עם Joni Mitchell הגדולה בשיר Dida שהוא פשוט הוכחה לוירטאוזיות של הזוג. היכולות הווקאליות המרשימות שלה לזמר, וגוני שמוסיפה את קולות הרקע שלה בצורה הרמונית ומושלמת שברקע הלהקה מתפקדת כמו איזו להקת גאם עם גאזשנכנס ויוצא כמין טנגו כזה שמנכיח את כל הצדדים.
+From there we will continue to talk about love but finally the album was signed with a duet with the great Joni Mitchell in the song Dida which is simply proof of the pair's virtuosity. Her impressive vocal abilities as a singer, and Goni who adds her background vocals in a harmonious and perfect way that in the background the band functions like some kind of band with jazz that goes in and out like a kind of tango that destroys all sides.
 
-האלבום הזה הוא לא רק אסופת שירים יפים עם גיטרה, זה עולם שלם, מלא באנשים מיוחדים, סיפורים מרתקים ואווירה מיוחדת. השירים באלבום גורמים לך לחשוב, להרגיש ולהתחבר לעולם סביבך לחוות בצורה כנה ואותנטית את מכלול אמני הפולק בביצוע של מלאכית. אפשר לחשוב על האלבום הזה כמו על מדריך טיולים אישי. כל שיר לוקח אותך למקום אחר, מתוודע לאומן אחר וחווה רגשות חדשים ישנים.
+This album is not just a collection of beautiful songs with a guitar, it is a whole world, full of special people, fascinating stories and a special atmosphere. The songs on the album make you think, feel and connect to the world around you to experience in an honest and authentic way the ensemble of folk artists performed by Malachit. You can think of this album as a personal travel guide. Each song takes you to a different place, gets to know a different artist and experiences old new emotions.
 
-ובהקשר של יום השואה אני אחתום במנטרה שגם ברגעים הכי קשים בחיים שמעתי אותה והאמנתי בה בכל ליבי שבאמת "We shall overcome".
+And in the context of Holocaust Day, I will conclude with a mantra that even in the most difficult moments of my life I heard and believed in with all my heart that "We shall overcome".
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/RkNsEH1GD7Q" title="Joan Baez - We shall overcome" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-האזנה נעימה, שנדע רק בשורות טובות ואמן שהחטופים כבר יחזרו הביתה.
+Pleasant listening, may we only know good news and may the abductees return home already.

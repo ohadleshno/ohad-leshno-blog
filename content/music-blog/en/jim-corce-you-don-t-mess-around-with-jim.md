@@ -1,7 +1,7 @@
 ---
 title: "Jim Corce - You Don't Mess Around with Jim"
 slug: "jim-corce-you-don-t-mess-around-with-jim"
-excerpt: "היום אנחנו נדבר על אלבום מעניין מאוד שרובכם כנראה לא מכירים. מי שמכיר אותי יודע כמה אני אוהב אמני פולק, במיוחד כאלה עם סיפורים \"דפוקים\"...."
+excerpt: "Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially those with \"crazy\" stories...."
 date: "2023-08-22T11:19:42.435Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 2
@@ -10,39 +10,39 @@ language: "en"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/uZkU-DrE9P0" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-היום אנחנו נדבר על אלבום מעניין מאוד שרובכם כנראה לא מכירים. מי שמכיר אותי יודע כמה אני אוהב אמני פולק, במיוחד כאלה עם סיפורים "דפוקים". ג'ים הוא אומן פולק "על-פי הספר", הוא התחיל את הקריירה שלו בהופעות בכל הברים והמועדונים הכי דלוחים בארה"ב, התחתן ב-1966 והתגייר לאחר נישואיו. לאחר מכן החליט למכור את כל רכושו, ולעבור מניו יורק לחווה כלשהי בפנסילבניה. בכל לילה הופיע עבור 25 דולר אבל לא הצליח לשלם את כל חשבונותיו, לכן נוסף לכך עבד בעבודות מסוג של "צווארון כחול", כמו נהג משאית ומורה לגיטרה.
+Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially ones with "fucking" stories. Jim is a "by the book" folk artist, he started his career performing in all the hottest bars and clubs in the US, got married in 1966 and converted after his marriage. After that he decided to sell all his possessions, and move from New York to some farm in Pennsylvania. Every night he performed for $25 but couldn't pay all his bills, so in addition he worked in "blue collar" jobs, such as a truck driver and a teacher for the guitar
 
-ג'ים, דמות מעניינת עם סיפור חיים מטורף. בזכות דמותו הלא סטנדרטית היה מסוגל לספר ולראות דברים, שאנחנו "האנשים הרגילים" לא מצליחים להבחין בהם. לג'ים היה סוף טרגי; הוא נהרג בתאונת מטוס בגיל 30. זהו אלבום הפריצה שלו לעולם והוא אלבום מלא באוצרות.
+Jim, an interesting character with a crazy life story. Thanks to his non-standard character, he was able to tell and see things that we "ordinary people" fail to notice. Jim had a tragic end; He was killed in a plane crash at the age of 30. This is his breakthrough album into the world and it is an album full of treasures.
 
-you don't mess around with Jim − השיר הראשון שמופיע באלבום, וגם שמו של האלבום – איתו פרץ ג'ים לעולם המוזיקה. השיר מספר על תקרית במועדון פּוּל בניו⁻יורק, ג'ים הוא נוכל שמרמה מישהו בשם סְלים. סְלים לא אוהב את "המחווה", ולכן דוקר אותו למוות כדי לקבל את כספו חזרה. חבל, כולם יודעים שיש דברים
+you don't mess around with Jim - the first song that appears on the album, and also the name of the album - with which Jim broke into the world of music. The song tells about an incident at the Pool Club in New York, Jim is a crook who cheats someone named Slim. Slim doesn't like the "tribute", so he stabs him to death to get his money back. Too bad, everyone knows there are things
 
-:שלא עושים
+: that they don't
 
 <blockquote dir="auto">
 "You don't tug on Superman's cape/You don't spit into the wind/You don't pull the mask off that ol' Lone Ranger/And you don't mess around with Jim."
 </blockquote>
 
-הגיטרה בשירים של ג'ים חזקה ועם אופי וטון משלה, שמהווה כמו עוד שכבה מעל השיר. השירים מעולים ונוגעים ללב. הדבר בא לידי ביטוי במיוחד בשירים שבהם המלודיה משתלבת באופן הרמוני לחלוטין עם הסיפור. הנה כמה דוגמאות מצוינות:
+The guitar in Jim's songs is strong and has its own character and tone, which is like another layer on top of the song. The songs are excellent and touching. This is particularly evident in the songs where the melody blends perfectly harmoniously with the story. Here are some great examples:
 
-photograph and memories – שיר על זיכרונות שנשארו מאהובתו שהלכה
+photograph and memories - a song about memories left by his departed lover
 
 <blockquote dir="auto">
 "Photographs and memories
 Christmas cards you sent to me
 All that I have are these
- To remember you״
+To remember you
 </blockquote>
 
-time in a bottle – שיר אהבה יפה
+time in a bottle - a beautiful love song
 
 <blockquote dir="auto">
 "If I could save time in a bottle
 The first thing that I'd like to do
 Is to save every day till eternity passes away
-Just to spend them with you״
+Just to spend them with you
 </blockquote>
 
-A long time ago – שיר על ערב שבו האהבה גדולה, תמימה כל כך; אהבה ילדותית, טהורה, מפגש שיש בו חשש ממגע, חוסר הבנה ואיפוק
+A long time ago - a song about an evening where love is great, so innocent; Childish, pure love, a meeting in which there is fear of contact, lack of understanding and restraint
 
 <blockquote dir="auto">
 "I was so afraid to touch you
@@ -54,7 +54,7 @@ It frightens me
 And I could sleep so easy next to you”
 </blockquote>
 
-וגם בשיר operator – ג'ים מצליח לספק ולהנציח במדויק את האווירה והחוויה, שכבר לא קיימות כיום בעידן המודרני. השיר מספר על בחור שמתקשר למוקד טלפוני בשביל למצוא את המספר של אהובתו לשעבר, שעברה לגור עם חבר שלו ב-LA. הוא רוצה להתקשר להגיד לה שהוא הצליח להתגבר על אובדן הקשר, אך כאשר הוא מקבל את המספר הוא לא מצליח לקרוא אותו, כנראה שמרוב דמעות, ומודה בפני המוקדן שהוא לא יכול, ומוותר על השיחה. ג'ים קיבל את ההשראה למילות השיר במהלך שירותו הצבאי, כאשר צפה בתור של אנשים המחכים להתקשר הבייתה.
+And also in the song operator - Jim manages to accurately provide and perpetuate the atmosphere and experience, which no longer exist in the modern era. The song is about a guy who calls a call center to find the number of his ex-lover, who moved in with his friend in LA. He wants to call her to tell her that he managed to get over the loss of contact, but when he gets the number he can't read it, probably because of tears, and admits to the operator that he can't, and gives up on the call. Jim got the inspiration for the lyrics during his military service, when he watched a line of people waiting to call home.
 
 <blockquote dir="auto">
 "So I can call just to tell 'em I'm fine
@@ -62,9 +62,9 @@ And to show I've overcome the blow
 I've learned to take it well
 I only wish my words could just convince myself
 That it just wasn't real
-But that's not the way it feels״
+But that's not the way it feels
 </blockquote>
 
-אני מרגיש, שהאלבום מכיל אוסף של סצנות עם סיפורים מורכבים ועצומים שזורקים אותך מייד לעמוקים. ממליץ מאוד לשמוע עוד שירים מתוך האלבומים של הבחור.
+I feel that the album contains a collection of scenes with complex and huge stories that immediately throw you into the deep. I highly recommend listening to more songs from the guy's albums.
 
-האזנה נעימה
+pleasant listening
