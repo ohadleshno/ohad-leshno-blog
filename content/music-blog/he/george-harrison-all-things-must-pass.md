@@ -23,19 +23,19 @@ language: "he"
 מתחיל בעטיפת האלבום שמוצלמת friar park בחצר של האחוזה שקנה. שם הוא יושב לבד עם ארבעה גמדים סביבו המסמלים את הביטלס, הוא יושב לבד ומנסה להציג את השחרור מהם. ומבוטא בהמון שירים כגון Isn't it a pity (שהביטלס לא רצו אותו) שתוהה על איך יצורים אינטליגנטים יכולים לגרום אחד לשני כל כך הרבה סבל:
 
 <blockquote dir="auto">
-“Isn't it a pity?
-Now isn't it a shame?
-How we break each other's hearts and cause each other pain
-How we take each other's love without thinking anymore
-Forgetting to give back
-Isn't it a pity?”
+“<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Isn't it a pity?</a>
+<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Now isn't it a shame?</a>
+<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">How we break each other's hearts and cause each other pain</a>
+<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">How we take each other's love without thinking anymore</a>
+<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Forgetting to give back</a>
+<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Isn't it a pity?</a>”
 </blockquote>
 
 והשיר wah wah שנכתב במהלך הפסקה שלקח מה beatles במהלכי הסשן של get back, המבטא את האווירה העכורה של הלהקה באותם ימים. ממש ניתן לשמוע כמה ג'ורג עצוב על המצב של הלהקה, מדהים איך מצליח לבטא באותו הרגע כבר את הרגשות שלו בצורה כל כך כנה ויפה.
 
 דוגמה נוספת היא ב Run of the mile, לפני תחילת הסשנים של get back ב 1968, גורג נסע לבקר את הגדול מכולם ומי שהשפיע עליו רבות, בוב דילן. שם הוא פגש את the band, ג׳ורג כל כך התלהב מהסגנון המוסיקלי שלהם והשיר הוא ניסיון לכתוב בסגנון שלהם. בשיר הוא מאשים את apple crops על ההשפעה הרעה שיש להם על הלהקה.
 
-אחרי שהבנו בגדול את האטמוספרה של האלבום, עם המשבר הגדול בחייו עם פירוק הביטלס, בנוסף מות אמו והמסע שלו להודו והחיבור להארי קרישנה. כעת נוכל לצלול כעת לשירים הרוחניים יותר באלבום. ג'ורג מתעסק הרבה באלבום בקשר שלנו אל האל, הוא מתחיל עם השיר המוכר ביותר באלבום הוא כנראה באלבום my sweet lord, שיצא בהתחלה כסינגל ושבר את המצעדים. הרצון של ג'ורג בשיר הוא שנתחבר לאל כל אחד בדרכו שלו ולא משנה הפלטפורמה דתית שבה הוא משתמש. הוא משלב סגנון של שירי גוספל עם השפעות מהארי קרישנה, הוא משתמש במילים כמו ״הללויה״ ומנגד מקריא את מַהָא-מנטרה (המנטרה הגדולה). תפילה מדיטטיבית בת שש-עשרה מילים המורכבת משמותיו של אלוהים בסנסקריט. לימים ג'ורג הודה שהוא התבסס על שיר גוספל oh happy day  ולימים הפסיד בתביעה על גניבה ספרותית על השיר.
+אחרי שהבנו בגדול את האטמוספרה של האלבום, עם המשבר הגדול בחייו עם פירוק הביטלס, בנוסף מות אמו והמסע שלו להודו והחיבור להארי קרישנה. כעת נוכל לצלול כעת לשירים הרוחניים יותר באלבום. ג'ורג מתעסק הרבה באלבום בקשר שלנו אל האל, הוא מתחיל עם השיר המוכר ביותר באלבום הוא כנראה באלבום my sweet lord, שיצא בהתחלה כסינגל ושבר את המצעדים. הרצון של ג'ורג בשיר הוא שנתחבר לאל כל אחד בדרכו שלו ולא משנה הפלטפורמה דתית שבה הוא משתמש. הוא משלב סגנון של שירי גוספל עם השפעות מהארי קרישנה, הוא משתמש במילים כמו ״הללויה״ ומנגד מקריא את מַהָא-מנטרה (המנטרה הגדולה). תפילה מדיטטיבית בת שש-עשרה מילים המורכבת משמותיו של אלוהים בסנסקריט. לימים ג'ורג הודה שהוא התבסס על שיר גוספל <a href="https://www.youtube.com/watch?v=KJohGa66FJM&ab_channel=EdwinHawkinsVEVO" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">oh happy day </a> ו<a href="https://cosmicmagazine.com.au/news/the-day-george-harrison-settled-his-my-sweet-lord-plagiarism-lawsuit/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">לימים הפסיד בתביעה על גניבה ספרותית על השיר.</a>
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/KJohGa66FJM" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
@@ -46,7 +46,7 @@ Really want to see you, Lord
 But it takes so long, my Lord"
 </blockquote>
 
-והוא ממשיך בhear me lord שגם אותו הביטלס לא רצו ואפילו יש לו גרסה שלו בסשן של get back.  הוא מבקש סליחה מהאל על כל השנים שהתעלם ממנו ורק רוצה שישמע אותו ויעזור לו להתעלות. מוטיב שנמצא בהמון שירים דתיים בכל הדתות. והוא לא חס מלכתוב שיר אהבה ב what is life  עם riff הפתיחה הכל כך מושך שבו הוא כותב שיר אהבה לאל.
+והוא ממשיך בhear me lord שגם אותו הביטלס לא רצו ואפילו יש לו גרסה <a href="https://www.youtube.com/watch?v=SVhk9KiSovg&ab_channel=FranciscoBeatlesFloydGonzalez" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">שלו בסשן של get back.</a>  הוא מבקש סליחה מהאל על כל השנים שהתעלם ממנו ורק רוצה שישמע אותו ויעזור לו להתעלות. מוטיב שנמצא בהמון שירים דתיים בכל הדתות. והוא לא חס מלכתוב שיר אהבה ב what is life  עם riff הפתיחה הכל כך מושך שבו הוא כותב שיר אהבה לאל.
 
 <blockquote dir="auto">
 "Beware of sadness

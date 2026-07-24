@@ -20,7 +20,7 @@ I approached the person in charge of the music and inquired in front of him, and
 
 Nineteen Hundred and Eighty Five is a song full of character, energetic, infectious and wild. It has a pulsing synthesizer riff that very quickly sets the tone. It captures the spirit of the rock music scene of the 70s, mixing elements of rock, pop and even touches of glam rock. That's why I chose to put this song first in the playlist.
 
-After that we continue to the opening song of the album London Town - it is a song that if I probably told AI to Gennert a Paul McCartney song he would write something in his style. I also bought this album on my trip to Chicago, which I already wrote about and expanded on in the post about Graham Nash. In the playlist I put a lot of songs from the album (Famous groupies, Children Children, Deliver you children, cafe on the left bank) and I think it's simply excellent and worth hearing on its own.
+After that we continue to the opening song of the album London Town - it is a song that if I probably told AI to Gennert a Paul McCartney song he would write something in his style. I also bought this album on my trip to Chicago, about which I already wrote and expanded in a post about <a href="https://www.ohadleshno.com/post/graham-nash-songs-for-beginners" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Graham Nash</a>. In the playlist I put a lot of songs from the album (Famous groupies, Children Children, Deliver you children, cafe on the left bank) and I think it's simply excellent and worth hearing on its own.
 
 <blockquote dir="auto">
 "People pass me by on my imaginary street 
@@ -45,6 +45,6 @@ I tried to insert more songs from all kinds of Paul's albums and styles, from th
 
 pleasant listening
 
-https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530
+<a href="https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all"><a href="https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530</a></a>
 
-https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD
+<a href="https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all"><a href="https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD</a></a>

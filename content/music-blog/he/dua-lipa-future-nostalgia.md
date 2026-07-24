@@ -52,7 +52,7 @@ language: "he"
 “I wanted to make music that takes your mind away from that. I wanted to just make it a bit easier for me to get out of bed and not think about the negative things that are going on in the world all the time.”
 </blockquote>
 
-כחלק מהשקת האלבום החדש שלה דואה ליפה הופיעה ב-Tiny Desk Concert, לא נפתח אבל משום שבאותה תקופה היה סגר בעולם, היא נאלצה לבצע את ההופעה באולפן סטודיו אחר. אני חושב שגרסאות הלייב שלה מעניינות יותר מהגרסאות המקוריות שלה, כי הן מאפשרות לה להביע את עצמה בצורה אישית יותר ; זה בא לידי ביטוי במיוחד בשיר Love Again. אני אישית שמעתי את ההופעה הזאת אולי עשרות פעמים.
+כחלק מהשקת האלבום החדש שלה דואה ליפה הופיעה ב-<a href="https://www.youtube.com/watch?v=F4neLJQC1_E&ab_channel=NPRMusic" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Tiny Desk Concert</a>, לא נפתח אבל משום שבאותה תקופה היה סגר בעולם, היא נאלצה לבצע את ההופעה באולפן סטודיו אחר. אני חושב שגרסאות הלייב שלה מעניינות יותר מהגרסאות המקוריות שלה, כי הן מאפשרות לה להביע את עצמה בצורה אישית יותר ; זה בא לידי ביטוי במיוחד בשיר Love Again. אני אישית שמעתי את ההופעה הזאת אולי עשרות פעמים.
 
 האלבום Future Nostalgia הוא אלבום שעושה בדיוק את מה שאלבום בסגנון שלו אמור לעשות: מהנה, פופי, ממכר וזכור. הוא באיזה אופן מגדיר את הטרנד עבור קטגוריה חדשה (כמעט) של מוזיקת ​​טרנד.
 

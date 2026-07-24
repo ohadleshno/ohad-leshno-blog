@@ -1,7 +1,7 @@
 ---
 title: "Jim Corce - You Don't Mess Around with Jim"
 slug: "jim-corce-you-don-t-mess-around-with-jim"
-excerpt: "היום אנחנו נדבר על אלבום מעניין מאוד שרובכם כנראה לא מכירים. מי שמכיר אותי יודע כמה אני אוהב אמני פולק, במיוחד כאלה עם סיפורים \"דפוקים\"...."
+excerpt: "היום אנחנו נדבר על אלבום מעניין מאוד שרובכם כנראה לא מכירים. מי שמכיר אותי יודע כמה אני אוהב אמני פולק, במיוחד כאלה עם סיפורים 'דפוקים'...."
 date: "2023-08-22T11:19:42.435Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 2
@@ -19,7 +19,7 @@ you don't mess around with Jim − השיר הראשון שמופיע באלבו
 :שלא עושים
 
 <blockquote dir="auto">
-"You don't tug on Superman's cape/You don't spit into the wind/You don't pull the mask off that ol' Lone Ranger/And you don't mess around with Jim."
+"You don't tug on <a href="https://en.wikipedia.org/wiki/Superman" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Superman</a>'s cape/You don't spit into the wind/You don't pull the mask off that ol' <a href="https://en.wikipedia.org/wiki/Lone_Ranger" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Lone Ranger</a>/And you don't mess around with Jim."
 </blockquote>
 
 הגיטרה בשירים של ג'ים חזקה ועם אופי וטון משלה, שמהווה כמו עוד שכבה מעל השיר. השירים מעולים ונוגעים ללב. הדבר בא לידי ביטוי במיוחד בשירים שבהם המלודיה משתלבת באופן הרמוני לחלוטין עם הסיפור. הנה כמה דוגמאות מצוינות:

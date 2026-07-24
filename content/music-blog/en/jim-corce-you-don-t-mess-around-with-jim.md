@@ -1,7 +1,7 @@
 ---
 title: "Jim Corce - You Don't Mess Around with Jim"
 slug: "jim-corce-you-don-t-mess-around-with-jim"
-excerpt: "Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially those with \"crazy\" stories...."
+excerpt: "Today we will talk about a very interesting album that most of you probably don't know. Those who know me know how much I love folk artists, especially those with 'crazy' stories...."
 date: "2023-08-22T11:19:42.435Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 2
@@ -19,7 +19,7 @@ you don't mess around with Jim - the first song that appears on the album, and a
 : that they don't
 
 <blockquote dir="auto">
-"You don't tug on Superman's cape/You don't spit into the wind/You don't pull the mask off that ol' Lone Ranger/And you don't mess around with Jim."
+"You don't tug on <a href="https://en.wikipedia.org/wiki/Superman" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Superman</a>'s cape/You don't spit into the wind/You don't pull the mask off that ol' <a href="https://en.wikipedia.org/wiki/Lone_Ranger" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Lone Ranger</a>/And you don't mess around with Jim."
 </blockquote>
 
 The guitar in Jim's songs is strong and has its own character and tone, which is like another layer on top of the song. The songs are excellent and touching. This is particularly evident in the songs where the melody blends perfectly harmoniously with the story. Here are some great examples:

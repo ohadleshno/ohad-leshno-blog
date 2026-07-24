@@ -50,7 +50,7 @@ While I fight the tears?"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/y9Mse62NFl4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-A similar story exists in the songs operator by the Grateful Dead and the song Operator by Jim Corce, which I already expanded on in a whole blog post. The Portuguese of the song is unable to reach that woman from the past, he tries to find out information about her but fails for various reasons beyond his control. Finally he gives in and he comes to the conclusion that he is not interested in her status, the main thing is that she is fine.
+A similar story exists in the songs Operator by the Grateful Dead and in the song Operator by Jim Corce, which I have already expanded on In a complete blog post.</a> The Portuguese of the song is unable to reach the same woman from the past, he tries to find out information about her but fails for various reasons beyond his control. Finally he gives in and he comes to the conclusion that he is not interested in her status, the main thing is that she is fine.
 
 <blockquote dir="auto">
 "She could be hangin' 'round the steel mill

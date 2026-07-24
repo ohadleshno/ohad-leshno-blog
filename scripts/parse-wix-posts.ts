@@ -75,6 +75,33 @@ function extractFirstImage(contentStr: string, coverMediaUrl?: string): string {
   return '/hero-cover.jpeg';
 }
 
+function formatBlockText(block: WixBlock, entityMap: Record<string, WixEntity>): string {
+  let { text, entityRanges = [] } = block;
+  if (!text) return '';
+
+  const sortedRanges = [...entityRanges].sort((a, b) => b.offset - a.offset);
+
+  for (const range of sortedRanges) {
+    const entity = entityMap[String(range.key)];
+    if (entity && entity.type === 'LINK' && entity.data?.url) {
+      const url = entity.data.url;
+      const start = range.offset;
+      const end = range.offset + range.length;
+      const anchorText = text.slice(start, end);
+      const linkHtml = `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">${anchorText}</a>`;
+      text = text.slice(0, start) + linkHtml + text.slice(end);
+    }
+  }
+
+  // Auto-link plain http/https URLs not inside HTML tags/attributes
+  const urlRegex = /(?<!href=["']|src=["'])(https?:\/\/[^\s<"']+)/g;
+  text = text.replace(urlRegex, (url) => {
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">${url}</a>`;
+  });
+
+  return text.trim();
+}
+
 function convertBlocksToMarkdown(contentStr: string): string {
   if (!contentStr) return '';
   let contentJson: WixPostContent;
@@ -107,7 +134,8 @@ function convertBlocksToMarkdown(contentStr: string): string {
       }
       currentListType = listKind;
       const prefix = listKind === 'unordered' ? '- ' : '1. ';
-      currentList.push(`${prefix}${text.trim()}`);
+      const formattedItem = formatBlockText(block, entityMap);
+      currentList.push(`${prefix}${formattedItem}`);
       continue;
     } else {
       flushList();
@@ -146,23 +174,24 @@ function convertBlocksToMarkdown(contentStr: string): string {
       continue;
     }
 
+    const formattedBlockText = formatBlockText(block, entityMap);
+
     if (type === 'header-one') {
-      lines.push(`# ${text.trim()}`);
+      lines.push(`# ${formattedBlockText}`);
     } else if (type === 'header-two') {
-      lines.push(`## ${text.trim()}`);
+      lines.push(`## ${formattedBlockText}`);
     } else if (type === 'header-three') {
-      lines.push(`### ${text.trim()}`);
+      lines.push(`### ${formattedBlockText}`);
     } else if (type === 'header-four') {
-      lines.push(`#### ${text.trim()}`);
+      lines.push(`#### ${formattedBlockText}`);
     } else if (type === 'header-five') {
-      lines.push(`##### ${text.trim()}`);
+      lines.push(`##### ${formattedBlockText}`);
     } else if (type === 'header-six') {
-      lines.push(`###### ${text.trim()}`);
+      lines.push(`###### ${formattedBlockText}`);
     } else if (type === 'blockquote') {
-      lines.push(`<blockquote dir="auto">\n${text.trim()}\n</blockquote>`);
+      lines.push(`<blockquote dir="auto">\n${formattedBlockText}\n</blockquote>`);
     } else {
-      // Split text by newlines so every paragraph is separated cleanly in Markdown
-      const paragraphs = text.split('\n').map((p) => p.trim()).filter(Boolean);
+      const paragraphs = formattedBlockText.split('\n').map((p) => p.trim()).filter(Boolean);
       for (const p of paragraphs) {
         lines.push(p);
       }

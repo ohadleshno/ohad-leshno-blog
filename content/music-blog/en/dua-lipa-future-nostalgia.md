@@ -52,7 +52,7 @@ The album Future Nostalgia was released on March 27, 2020, and a few days later 
 “I wanted to make music that takes your mind away from that. I wanted to just make it a bit easier for me to get out of bed and not think about the negative things that are going on in the world all the time.”
 </blockquote>
 
-As part of the launch of her new album, Dua Lipa performed at the Tiny Desk Concert, it was not opened, but because at that time there was a lockdown in the world, she had to perform the performance in another studio. I think her live versions are more interesting than her original versions, because they allow her to express herself in a more personal way; This is particularly evident in the song Love Again. I personally heard this performance maybe dozens of times.
+As part of the launch of her new album, Dua Lipa appeared at the <a href="https://www.youtube.com/watch?v=F4neLJQC1_E&ab_channel=NPRMusic" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Tiny Desk Concert</a>, not opened but because at the same time There was a time when the world was shut down, she had to perform in another studio. I think her live versions are more interesting than her original versions, because they allow her to express herself in a more personal way; This is particularly evident in the song Love Again. I personally heard this performance maybe dozens of times.
 
 The album Future Nostalgia is an album that does exactly what an album in its style is supposed to do: fun, poppy, addictive and memorable. He kind of sets the trend for a (almost) new category of trend music.
 

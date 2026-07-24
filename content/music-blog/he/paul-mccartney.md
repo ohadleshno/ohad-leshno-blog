@@ -20,7 +20,7 @@ language: "he"
 
 Nineteen Hundred and Eighty Five הוא שיר מלא אופי, אנרגטי, מדבק ופרוע. יש לו ריף סינתיסייזר פועם שמהר מאוד מכתיב את הטון. הוא לוכד את רוח סצנת מוזיקת ​​הרוק של שנות ה-70, ומערבב אלמנטים של רוק, פופ ואפילו נגיעות של רוק גלאמי. זו הסיבה שבחרתי לשים את השיר הזה ראשון בפלייליסט.
 
-לאחר מכן אנחנו ממשיכים לשיר הפתיחה של האלבום London Town - הוא שיר שאם כנראה הייתי אומר לAI לגנרט שיר של פול מקרטני הוא היה כותב משהו בסגנון שלו. את האלבום הזה קניתי גם במסעי לשיקגו עליה כבר כתבתי והרחבתי בפוסט על גרהאם נאש. בפלייליסט שמתי המון שירים מתוך האלבום ( Famous groupies, Children Children , Deliver you children , cafe on the left bank) ואני חושב שהוא פשוט מצוין ושווה שמיעה בפני עצמו.
+לאחר מכן אנחנו ממשיכים לשיר הפתיחה של האלבום London Town - הוא שיר שאם כנראה הייתי אומר לAI לגנרט שיר של פול מקרטני הוא היה כותב משהו בסגנון שלו. את האלבום הזה קניתי גם במסעי לשיקגו עליה כבר כתבתי והרחבתי בפוסט על <a href="https://www.ohadleshno.com/post/graham-nash-songs-for-beginners" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">גרהאם נאש</a>. בפלייליסט שמתי המון שירים מתוך האלבום ( Famous groupies, Children Children , Deliver you children , cafe on the left bank) ואני חושב שהוא פשוט מצוין ושווה שמיעה בפני עצמו.
 
 <blockquote dir="auto">
 "People pass me by on my imaginary street 
@@ -45,6 +45,6 @@ Well, I don't know"
 
 האזנה נעימה
 
-https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530
+<a href="https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all"><a href="https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">https://open.spotify.com/playlist/3Ok6vmixNjt6lA7Q1aSa1F?si=a103a17b07d74530</a></a>
 
-https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD
+<a href="https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all"><a href="https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">https://music.apple.com/il/playlist/paul-mccartney/pl.u-06oxvG6CWLYaBzD</a></a>

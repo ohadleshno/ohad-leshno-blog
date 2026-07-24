@@ -50,7 +50,7 @@ While I fight the tears?"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/y9Mse62NFl4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-סיפור דומה קיים בשירים operator של הGrateful Dead ובשיר  Operator של Jim Corce שעליו הרחבתי כבר בפוסט שלם בבלוג. הפורטוגוניסט של השיר לא מצליח להגיע לאותה אישה מן העבר, הוא מנסה לגלות עליה מידע אבל נכשל מסיבות שונות שמעבר לכוחו. לבסוף הוא נכנע והוא מגיע למסקנה שלא מעניין אותו מה הסטטוס שלה, העיקר שהיא בסדר.
+סיפור דומה קיים בשירים operator של הGrateful Dead ובשיר  Operator של<a href="https://www.ohadleshno.com/post/jim-corce-you-don-t-mess-around-with-jim" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all"> Jim Corce שעליו הרחבתי כבר בפוסט שלם בבלוג.</a> הפורטוגוניסט של השיר לא מצליח להגיע לאותה אישה מן העבר, הוא מנסה לגלות עליה מידע אבל נכשל מסיבות שונות שמעבר לכוחו. לבסוף הוא נכנע והוא מגיע למסקנה שלא מעניין אותו מה הסטטוס שלה, העיקר שהיא בסדר.
 
 <blockquote dir="auto">
 "She could be hangin' 'round the steel mill
