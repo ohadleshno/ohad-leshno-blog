@@ -14,7 +14,7 @@ export function Header({ lang }: HeaderProps) {
   const isHe = lang === 'he';
 
   const otherLang = isHe ? 'en' : 'he';
-  const otherLangLabel = isHe ? 'EN 🇺🇸' : 'עברית 🇮🇱';
+  const otherLangLabel = isHe ? 'EN' : 'עברית';
 
   // Toggle path between /he/... and /en/...
   const currentPathWithoutLang = pathname.replace(/^\/(he|en)/, '');

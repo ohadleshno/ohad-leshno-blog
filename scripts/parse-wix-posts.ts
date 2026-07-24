@@ -92,7 +92,7 @@ function convertBlocksToMarkdown(contentStr: string): string {
           if (videoId) {
             lines.push(`\n<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title.replace(/"/g, '&quot;')}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>\n`);
           } else if (videoSrc) {
-            lines.push(`\n[🎥 Watch Video: ${title}](${videoSrc})\n`);
+            lines.push(`\n[Watch Video: ${title}](${videoSrc})\n`);
           }
         }
       }
@@ -183,7 +183,6 @@ ${markdownContent}
     fs.writeFileSync(path.join(musicEnDir, `${slug}.md`), enFrontmatter, 'utf-8');
   }
 
-  // Create About files with age 29, architecture & tech passion
   const aboutHe = `---
 title: "אודות - אוהד לשנו"
 language: "he"
@@ -192,20 +191,20 @@ avatar: "/ohad_leshno.avif"
 
 # אודות אוהד לשנו
 
-שלום! קוראים לי אוהד לשנו, אני בן 29, נולדתי וגדלתי בתל אביב. ביום-יום אני מפתח תוכנה ומהנדס AI, אבל הלב והמחשבה שלי חצויים בין שני עולמות מרתקים: **מוזיקה וטכנולוגיה**.
+שלום, קוראים לי אוהד לשנו, אני בן 29, נולדתי וגדלתי בתל אביב. ביום-יום אני מפתח תוכנה ומהנדס AI, אבל הלב והמחשבה שלי חצויים בין שני עולמות מרתקים: **מוזיקה וטכנולוגיה**.
 
-### 🎸 התשוקה למוזיקה
-מגיל צעיר גיליתי את הכוח העצום של המוזיקה לגעת בנשמה ולהעביר מסרים עמוקים שאינם עוברים בשום פלטפורמה אחרת. מוזיקת רוק ופולק היא חלק בלתי נפרד מהמסע שלי — עם האנרגיה המחשמלת והרוח החופשית שלה. אמנים כמו בוב דילן והגרייטפול דד השפיעו עמוקות על טעמי המוזיקלי, עם טקסטים מחאתיים, מלודיות על-זמניות וסיפורים שנשארים בלב.
+### התשוקה למוזיקה
+מגיל צעיר גיליתי את הכוח העצום של המוזיקה לגעת בנשמה ולהעביר מסרים עמוקים שאינם עוברים בשום פלטפורמה אחרת. מוזיקת רוק ופולק היא חלק בלתי נפרד מהמסע שלי עם האנרגיה המחשמלת והרוח החופשית שלה. אמנים כמו בוב דילן והגרייטפול דד השפיעו עמוקות על טעמי המוזיקלי, עם טקסטים מחאתיים, מלודיות על-זמניות וסיפורים שנשארים בלב.
 
-### 💻 ארכיטקטורה, פיתוח ו-AI
-כמהנדס, התשוקה שלי לא נגמרת בכתיבת קוד בלבד — אני אוהב **לתכנן ולבנות מערכות מקצה לקצה, לפצח בעיות ארכיטקטוניות מורכבות ולחקור עולמות של Generative AI והנדסת תוכנה מתקדמת**. בבלוג הזה תוכלו למצוא לצד הניתוחים המוזיקליים גם סקירות טכניות מעמיקות, תיעוד ארכיטקטוני (Design Docs), וניתוחים מעשיים של פרויקטים שבניתי.
+### ארכיטקטורה, פיתוח ו-AI
+כמהנדס, התשוקה שלי לא נגמרת בכתיבת קוד בלבד. אני אוהב **לתכנן ולבנות מערכות מקצה לקצה, לפצח בעיות ארכיטקטוניות מורכבות ולחקור עולמות של Generative AI והנדסת תוכנה מתקדמת**. בבלוג הזה תוכלו למצוא לצד הניתוחים המוזיקליים גם סקירות טכניות מעמיקות, תיעוד ארכיטקטוני (Design Docs), וניתוחים מעשיים של פרויקטים שבניתי.
 
-### 🌟 מה תמצאו בבלוג?
+### מה תמצאו בבלוג?
 הבלוג הזה הוא המרחב שלי לחבר בין שני העולמות:
 - **ניתוחי אלבומים וסיפורים מוזיקליים**: צלילה לעומק היצירות והאמנים ששינו את פני המוזיקה.
 - **פרויקטי AI וארכיטקטורת תוכנה**: ניתוחי עומק טכניים, תכנון ארכיטקטוני ותובנות מפיתוח מערכות מתקדמות.
 
-הצטרפו אליי למסע שבין צלילים לקוד — תודה על הביקור, מקווה שתמצאו כאן עניין והשראה!
+הצטרפו אליי למסע שבין צלילים לקוד. תודה על הביקור, מקווה שתמצאו כאן עניין והשראה.
 `;
 
   const aboutEn = `---
@@ -216,20 +215,20 @@ avatar: "/ohad_leshno.avif"
 
 # About Ohad Leshno
 
-Hello! My name is Ohad Leshno, I'm 29 years old, born and raised in Tel Aviv. By day, I'm a software developer and AI engineer, but my mind and heart are shared between two fascinating worlds: **Music and Technology**.
+Hello, my name is Ohad Leshno, I am 29 years old, born and raised in Tel Aviv. By day, I am a software developer and AI engineer, but my mind and heart are shared between two fascinating worlds: **Music and Technology**.
 
-### 🎸 Passion for Music
-From a young age, I discovered the immense power of music to touch the soul and convey deep messages that no other medium can express. Rock and folk music have been constant companions on my journey — with their electrifying energy and free spirit. Artists like Bob Dylan and the Grateful Dead deeply influenced my musical taste with their passionate lyrics, powerful melodies, and timeless storytelling.
+### Passion for Music
+From a young age, I discovered the immense power of music to touch the soul and convey deep messages that no other medium can express. Rock and folk music have been constant companions on my journey with their electrifying energy and free spirit. Artists like Bob Dylan and the Grateful Dead deeply influenced my musical taste with their passionate lyrics, powerful melodies, and timeless storytelling.
 
-### 💻 Systems, Architecture & AI
-As an engineer, my passion goes beyond writing lines of code — I love **designing end-to-end systems, solving complex architectural challenges, and researching Generative AI and advanced software design**. Alongside musical analyses, this blog features deep-dive technical write-ups, system architecture design docs, and hands-on lessons learned from building real-world software projects.
+### Systems, Architecture & AI
+As an engineer, my passion goes beyond writing lines of code. I love **designing end-to-end systems, solving complex architectural challenges, and researching Generative AI and advanced software design**. Alongside musical analyses, this blog features deep-dive technical write-ups, system architecture design docs, and hands-on lessons learned from building real-world software projects.
 
-### 🌟 What You'll Find Here
+### What You Will Find Here
 This blog is my platform to bridge both worlds:
 - **Musical Deep Dives**: Cultural and musical breakdowns of iconic albums and artists that shaped history.
 - **AI Projects & System Architecture**: Technical design documents, architectural decisions, and hands-on software engineering insights.
 
-Join me on this journey between sound and code. Thank you for stopping by, and I hope you find inspiration here!
+Join me on this journey between sound and code. Thank you for stopping by, and I hope you find inspiration here.
 `;
 
   fs.writeFileSync(path.join(aboutDir, 'he.md'), aboutHe, 'utf-8');
