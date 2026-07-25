@@ -43,7 +43,7 @@ Every LLM call costs money. Every LLM call adds latency. When a user asks "what 
 
 ### The Crawl First, Chat Later Pattern
 
-The single most important architectural decision: **never call a live pricing API during a chat**. Instead, scheduled crawlers run on Cloudflare Workers Cron every 30 minutes, scraping flight deals from SecretFlights, Torah class schedules, concert listings, sports scores from the Football API, and news from five Telegram channels.
+The single most important architectural decision: **never call a live pricing API during a chat**. Instead, scheduled crawlers run on Cloudflare Workers Cron every 30 minutes, scraping flight deals across 17 popular destinations, Torah class schedules, concert listings, sports scores, and news from five Telegram channels.
 
 All of that data gets stored in Cloudflare KV under predictable keys like `deals:latest`, `torah:places`, `concerts:latest`. When a user asks about flights to Larnaca in August, the bot reads from KV: a 2ms lookup instead of a 4 second API call.
 
@@ -52,9 +52,9 @@ flowchart TD
     CRON(["Cron trigger (every 30 min)"]) --> CRAWL["Crawler Service"]
 
     CRAWL --> NEWS["News: scrape 5 Telegram channels"]
-    CRAWL --> DEALS["Deals: scrape SecretFlights for 17 destinations"]
+    CRAWL --> DEALS["Deals: scrape flight deals for 17 destinations"]
     CRAWL --> TORAH["Torah: class schedules"]
-    CRAWL --> SPORTS["Sports: Football API scores"]
+    CRAWL --> SPORTS["Sports: live match scores"]
     CRAWL --> CONCERTS["Concerts: upcoming shows"]
 
     NEWS --> KV[("Cloudflare KV")]
