@@ -9,8 +9,6 @@ techStack: ["Cloudflare Workers", "TypeScript", "Google Gemini 2.0", "Cloudflare
 language: "en"
 ---
 
-# Building NehorAI: How to Build an AI Bot That Actually Feels Human
-
 ## What Is NehorAI
 
 NehorAI is a Hebrew language AI assistant that helps users find vacation deals, concert tickets, Torah classes, sports scores, and breaking news: all through a natural chat interface. It runs as a Telegram bot, a web chatbot embedded on [nehorai.ai](https://nehorai.ai), and as a referral based vacation deal finder.

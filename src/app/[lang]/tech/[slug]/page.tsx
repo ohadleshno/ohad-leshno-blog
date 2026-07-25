@@ -42,8 +42,8 @@ export default function TechProjectDetail({
   const currentUrl = `https://ohadleshno.com/${lang}/tech/${project.slug}`;
 
   return (
-    <div className="max-w-4xl mx-auto py-6 sm:py-10">
-      <article className="glass-card rounded-3xl border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900 shadow-xl overflow-hidden p-6 sm:p-12 space-y-8">
+    <div className="max-w-4xl mx-auto py-3 sm:py-10">
+      <article className="glass-card rounded-2xl sm:rounded-3xl border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900 shadow-xl overflow-hidden p-4 sm:p-10 space-y-5 sm:space-y-8">
         {/* Back button */}
         <Link
           href={`/${lang}/tech`}
@@ -54,29 +54,17 @@ export default function TechProjectDetail({
         </Link>
 
         {/* Header */}
-        <header className="space-y-4 pb-6 border-b border-slate-200/80 dark:border-slate-800/80">
+        <header className="space-y-3 sm:space-y-4 pb-4 sm:pb-6 border-b border-slate-200/80 dark:border-slate-800/80">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-950/60 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/80 text-xs font-semibold">
             <Cpu className="size-3.5 text-sky-600 dark:text-sky-400" />
             <span>{isHe ? 'פרויקט AI וארכיטקטורה' : 'AI & Systems Project'}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white leading-tight text-balance">
+          <h1 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white leading-snug">
             {project.title}
           </h1>
 
-          {/* Tech Stack Pills */}
-          <div className="flex flex-wrap gap-2 pt-2">
-            {project.techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-3 py-1 rounded-full text-xs font-bold bg-sky-50 text-sky-700 dark:bg-sky-950/60 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/80"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-
-          <div className="flex items-center justify-between pt-2">
+          <div className="flex items-center justify-between pt-1">
             <span className="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1.5">
               <Calendar className="size-4 text-sky-500" />
               {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')}
@@ -103,6 +91,23 @@ export default function TechProjectDetail({
         />
 
         <MermaidRenderer />
+
+        {/* Tech Stack Tags moved to bottom */}
+        <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80 space-y-2">
+          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
+            {isHe ? 'טכנולוגיות וכלים בפרויקט:' : 'Technologies & Stack:'}
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {project.techStack.map((tech) => (
+              <span
+                key={tech}
+                className="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 dark:bg-sky-950/60 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/80"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
 
         {/* Share */}
         <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80">

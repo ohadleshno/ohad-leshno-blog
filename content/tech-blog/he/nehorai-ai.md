@@ -9,8 +9,6 @@ techStack: ["Cloudflare Workers", "TypeScript", "Google Gemini 2.0", "Cloudflare
 language: "he"
 ---
 
-# בניית NehorAI: איך בונים בוט AI שבאמת מרגיש אנושי
-
 ## מה זה NehorAI
 
 NehorAI הוא עוזר AI בשפה העברית שעוזר למשתמשים למצוא דילים לחופשות, כרטיסים להופעות, שיעורי תורה, תוצאות ספורט וחדשות, הכל דרך ממשק צ'אט טבעי. המערכת רצה כבוט טלגרם, כצ'אטבוט מוטמע באתר [nehorai.ai](https://nehorai.ai), וכמוצא דילים לחופשות מבוסס Referral.

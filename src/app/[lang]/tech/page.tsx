@@ -41,6 +41,14 @@ export default function TechBlogIndex({ params }: { params: { lang: 'he' | 'en' 
             />
 
             <div className="space-y-3 pointer-events-none">
+              <div className="w-full h-44 sm:h-48 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
+                <img
+                  src={project.coverImage || '/nehorai-hero.png'}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
               <div className="flex items-center justify-between pointer-events-auto">
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                   {project.title}
