@@ -146,9 +146,9 @@ Why? Because when you ask Gemini to extract JSON parameters while also maintaini
 
 ## The Telegram News Pipeline
 
-NehorAI also runs a Telegram channel that broadcasts news summaries via the [Telegram Bot API](https://core.telegram.org/bots/api). Every 30 minutes (during active hours, 8AM to 8PM Israel time, on even hours), the crawler scrapes five Israeli Telegram news channels, filters for items from the last hour, and sends them through Gemini with the NehorAI persona to generate a street slang news summary that gets posted to the bot's own Telegram channel.
+NehorAI also runs a Telegram channel ([@nehorainews](https://t.me/nehorainews)) that broadcasts news summaries via the [Telegram Bot API](https://core.telegram.org/bots/api). Every 30 minutes (during active hours, 8AM to 8PM Israel time, on even hours), the crawler scrapes five Israeli Telegram news channels, filters for items from the last hour, and sends them through Gemini with the NehorAI persona to generate a street slang news summary that gets posted to the bot's own Telegram channel.
 
-![NehorAI Telegram News Broadcast Sample](/nehorai-telegram-news.png)
+<iframe src="https://t.me/s/nehorainews" width="100%" height="600" style="border:none;border-radius:12px;" loading="lazy" title="NehorAI Telegram News Channel Live"></iframe>
 
 At 8PM daily, it generates a "daily summary" of the top 10 stories from the last 12 hours.
 
