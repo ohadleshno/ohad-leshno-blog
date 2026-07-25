@@ -4,6 +4,7 @@ import { SocialShare } from '@/components/SocialShare';
 import { Comments } from '@/components/Comments';
 import { ExternalLink, ArrowLeft, ArrowRight, Calendar, Cpu } from 'lucide-react';
 import Link from 'next/link';
+import { MermaidRenderer } from '@/components/MermaidRenderer';
 
 export function generateStaticParams() {
   const heSlugs = getAllTechSlugs('he').flatMap((slug) => [
@@ -100,6 +101,8 @@ export default function TechProjectDetail({
           className="prose dark:prose-invert max-w-none prose-lg text-slate-800 dark:text-slate-200 leading-relaxed font-normal"
           dangerouslySetInnerHTML={{ __html: project.contentHtml }}
         />
+
+        <MermaidRenderer />
 
         {/* Share */}
         <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80">
