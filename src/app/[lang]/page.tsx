@@ -139,13 +139,19 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {techProjects.map((project) => (
-            <Link
+            <div
               key={project.slug}
-              href={`/${lang}/tech/${project.slug}`}
-              className="group glass-card rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 p-6 space-y-4 flex flex-col justify-between hover:border-sky-500/50 hover:shadow-lg transition-all cursor-pointer"
+              className="group glass-card rounded-2xl border border-slate-200/80 dark:border-slate-800/80 bg-white/70 dark:bg-slate-900/60 p-6 space-y-4 flex flex-col justify-between hover:border-sky-500/50 hover:shadow-lg transition-all relative"
             >
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
+              {/* Full Card Overlay Link */}
+              <Link
+                href={`/${lang}/tech/${project.slug}`}
+                className="absolute inset-0 z-10"
+                aria-label={project.title}
+              />
+
+              <div className="space-y-3 pointer-events-none">
+                <div className="flex items-center justify-between pointer-events-auto">
                   <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-sky-600 dark:group-hover:text-sky-400 transition-colors">
                     {project.title}
                   </h3>
@@ -154,8 +160,7 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
                       href={project.projectUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-sky-500 transition-colors z-10"
+                      className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-sky-500 transition-colors z-20 relative pointer-events-auto"
                       title="Project Link"
                     >
                       <ExternalLink className="w-4 h-4" />
@@ -185,7 +190,7 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
                   {isHe ? <ArrowLeft className="w-3.5 h-3.5" /> : <ArrowRight className="w-3.5 h-3.5" />}
                 </span>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
       </section>
