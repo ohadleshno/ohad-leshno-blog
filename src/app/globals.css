@@ -166,6 +166,53 @@ html[dir="rtl"] .prose :not(pre) > code {
   font-size: 0.9em !important;
 }
 
+/* High Contrast Mermaid Diagram Overrides */
+.mermaid-wrapper svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.mermaid-wrapper text,
+.mermaid-wrapper span,
+.mermaid-wrapper p,
+.mermaid-wrapper div,
+.mermaid-wrapper .nodeLabel,
+.mermaid-wrapper .edgeLabel,
+.mermaid-wrapper .label {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+}
+
+.mermaid-wrapper .node rect,
+.mermaid-wrapper .node circle,
+.mermaid-wrapper .node polygon,
+.mermaid-wrapper .node path {
+  fill: #1e293b !important;
+  stroke: #38bdf8 !important;
+  stroke-width: 2px !important;
+}
+
+.mermaid-wrapper .edgePath .path,
+.mermaid-wrapper .flowchart-link {
+  stroke: #38bdf8 !important;
+  stroke-width: 2.5px !important;
+}
+
+.mermaid-wrapper .marker {
+  fill: #38bdf8 !important;
+  stroke: #38bdf8 !important;
+}
+
+.mermaid-wrapper .edgeLabel {
+  background-color: #0f172a !important;
+  color: #38bdf8 !important;
+  fill: #38bdf8 !important;
+  border-radius: 6px !important;
+  padding: 2px 6px !important;
+}
+
 /* Clickable Links in Prose */
 .prose a {
   color: #4f46e5 !important; /* Indigo 600 */

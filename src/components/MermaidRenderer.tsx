@@ -16,13 +16,17 @@ export function MermaidRenderer() {
           theme: 'dark',
           themeVariables: {
             fontFamily: 'Inter, system-ui, sans-serif',
-            primaryColor: '#0f172a',
-            primaryTextColor: '#f8fafc',
-            primaryBorderColor: '#0284c7',
+            primaryColor: '#1e293b',
+            primaryTextColor: '#ffffff',
+            nodeTextColor: '#ffffff',
+            primaryBorderColor: '#38bdf8',
             lineColor: '#38bdf8',
-            secondaryColor: '#1e293b',
+            secondaryColor: '#334155',
             tertiaryColor: '#0f172a',
-            edgeLabelBackground: '#1e293b',
+            edgeLabelBackground: '#0f172a',
+            clusterBkg: '#0f172a',
+            clusterBorder: '#334155',
+            titleColor: '#ffffff',
           },
           securityLevel: 'loose',
         });
@@ -41,7 +45,7 @@ export function MermaidRenderer() {
           const uniqueId = `mermaid-svg-${i}-${Math.random().toString(36).substring(2, 9)}`;
 
           const container = document.createElement('div');
-          container.className = 'my-8 p-6 rounded-2xl bg-slate-900 border border-slate-800 shadow-2xl overflow-x-auto flex justify-center items-center text-slate-100 ltr-force';
+          container.className = 'my-8 p-6 sm:p-8 rounded-2xl bg-slate-950 border border-sky-500/30 shadow-2xl overflow-x-auto flex justify-center items-center ltr-force mermaid-wrapper';
           container.style.direction = 'ltr';
           container.setAttribute('dir', 'ltr');
 
