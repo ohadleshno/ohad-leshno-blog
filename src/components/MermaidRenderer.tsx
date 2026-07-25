@@ -14,18 +14,25 @@ export function MermaidRenderer() {
         mermaid.initialize({
           startOnLoad: false,
           theme: 'dark',
+          flowchart: {
+            htmlLabels: false, // Forces pure SVG text rendering to prevent HTML prose CSS inheritance bugs
+            useMaxWidth: true,
+            curve: 'basis',
+          },
           themeVariables: {
             fontFamily: 'Inter, system-ui, sans-serif',
             primaryColor: '#1e293b',
             primaryTextColor: '#ffffff',
             nodeTextColor: '#ffffff',
+            textColor: '#ffffff',
             primaryBorderColor: '#38bdf8',
             lineColor: '#38bdf8',
-            secondaryColor: '#334155',
+            secondaryColor: '#1e293b',
             tertiaryColor: '#0f172a',
             edgeLabelBackground: '#0f172a',
             clusterBkg: '#0f172a',
-            clusterBorder: '#334155',
+            clusterBorder: '#38bdf8',
+            defaultLinkColor: '#38bdf8',
             titleColor: '#ffffff',
           },
           securityLevel: 'loose',
@@ -45,7 +52,7 @@ export function MermaidRenderer() {
           const uniqueId = `mermaid-svg-${i}-${Math.random().toString(36).substring(2, 9)}`;
 
           const container = document.createElement('div');
-          container.className = 'my-8 p-6 sm:p-8 rounded-2xl bg-slate-950 border border-sky-500/30 shadow-2xl overflow-x-auto flex justify-center items-center ltr-force mermaid-wrapper';
+          container.className = 'my-8 p-6 sm:p-8 rounded-2xl bg-slate-950 border border-sky-500/40 shadow-2xl overflow-x-auto flex justify-center items-center ltr-force mermaid-wrapper';
           container.style.direction = 'ltr';
           container.setAttribute('dir', 'ltr');
 
