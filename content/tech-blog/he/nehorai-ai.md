@@ -43,9 +43,9 @@ NehorAI הוא עוזר AI בשפה העברית שעוזר למשתמשים ל�
 
 ### הדפוס של Crawl First, Chat Later
 
-ההחלטה הארכיטקטונית הכי חשובה: **אף פעם לא לקרוא ל API של מחירים בזמן אמת במהלך צ'אט**. במקום זאת, סורקים מתוזמנים רצים על Cloudflare Workers Cron כל 30 דקות, סורקים דילי טיסות ל 17 יעדים פופולריים, לוחות שיעורי תורה, רשימות הופעות, תוצאות ספורט, וחדשות מחמישה ערוצי טלגרם.
+ההחלטה הארכיטקטונית הכי חשובה: **אף פעם לא לקרוא ל API של מחירים בזמן אמת במהלך צ'אט**. במקום זאת, סורקים מתוזמנים רצים על [Cloudflare Workers Cron Triggers](https://developers.cloudflare.com/workers/configuration/cron-triggers/) כל 30 דקות, סורקים דילי טיסות ל 17 יעדים פופולריים, לוחות שיעורי תורה, רשימות הופעות, תוצאות ספורט, וחדשות מחמישה ערוצי טלגרם.
 
-כל הדאטה נשמר ב Cloudflare KV תחת מפתחות צפויים כמו `deals:latest`, `torah:places`, `concerts:latest`. כשמשתמש שואל על טיסות ללרנקה באוגוסט, הבוט קורא מ KV: לוקאפ של 2ms במקום קריאת API של 4 שניות.
+כל הדאטה נשמר ב [Cloudflare KV](https://developers.cloudflare.com/kv/) תחת מפתחות צפויים כמו `deals:latest`, `torah:places`, `concerts:latest`. כשמשתמש שואל על טיסות ללרנקה באוגוסט, הבוט קורא מ KV: לוקאפ של 2ms במקום קריאת API של 4 שניות.
 
 ```mermaid
 flowchart TD
@@ -68,7 +68,40 @@ flowchart TD
 
 הסורק כולל מנגנון Self Healing: אם מפתח `deals:latest` חסר ב KV בכל ריצת cron (בין אם מ cold start, eviction או תקלת deployment), נכפית סריקה יומית מלאה ללא תלות בשעה. בלי התערבות ידנית.
 
-### מנוע הגרף בשלושה שלבים
+---
+
+## ניתוח כלים: למה בחרנו בכל טכנולוגיה מול חלופות?
+
+כל שכבה טכנולוגית ב NehorAI נבחרה בקפידה כדי להשיג זמן תגובה ראשוני של פחות מ 300ms, אפס תחזוקת שרתים, ועלויות ריצה מינימליות.
+
+### 1. Cloudflare KV מול Redis (Upstash / ElastiCache) או Postgres (Supabase)
+
+- **למה KV ולא Redis / Postgres**: מסדי נתונים מסורתיים או אשכולות Redis דורשים ניהול connection pools, חיבורי VPC, וזמני השהיה של מעבר בין אזורים גיאוגרפיים. [Cloudflare KV](https://developers.cloudflare.com/kv/) הוא מסד נתונים Key-Value מבוזר גלובלית המותאם במיוחד לעומסי קריאה כבדים (נכתב פעם ב 30 דקות על ידי סורק, ונקרא אלפי פעמים על ידי משתמשים).
+- **יתרון ה Edge**: קריאות מ KV מתבצעות ישירות בשרת ה Cloudflare Edge הקרוב ביותר למשתמש (למשל POP בתל אביב), ומחזירות דאטה ב ~2ms ללא קריאה למסד נתונים מרכזי.
+- **עלות ופשטות**: אפס ניהול חיבורים, אפס עלויות שרת במצב סרק, וחיבור נייטיב ל Workers עם `env.DEAL_CACHE.get()`.
+- **מקורות ותיעוד**: [Cloudflare KV Documentation](https://developers.cloudflare.com/kv/) | [How Cloudflare KV Works](https://developers.cloudflare.com/kv/concepts/how-kv-works/)
+
+### 2. Cloudflare Workers מול AWS Lambda / Vercel Serverless
+
+- **למה Workers ולא Lambda**: קונטיינרים מסורתיים (כמו AWS Lambda או Vercel Node.js functions) סובלים מ Cold Starts של 200ms עד 2 שניות בעת הרמת קונטיינר חדש. [Cloudflare Workers](https://developers.cloudflare.com/workers/) רצים על גבי V8 Isolates עם זמן עקב שואף לאפס (<5ms).
+- **סורקים מתוזמנים מובנים**: תמיכה מובנית ב Cron Triggers מאפשרת להריץ סורקים על אותה תשתית בדיוק ללא צורך בשירותי Cron חיצוניים או AWS EventBridge.
+- **מקורות ותיעוד**: [Cloudflare Workers Docs](https://developers.cloudflare.com/workers/) | [V8 Isolates vs Containers](https://developers.cloudflare.com/workers/reference/how-workers-works/)
+
+### 3. Google Gemini 2.0 (Flash & Flash Lite) מול OpenAI GPT 4o / Claude 3.5 Sonnet
+
+- **למה Gemini ולא OpenAI / Claude**: מהירות ועלות. NehorAI נשען על שני מודלים ייעודיים: `gemini-2.0-flash-lite` למענה מהיר במיוחד (~300ms) ו `gemini-2.0-flash` לחילוץ כוונות מדויק במצב JSON והרכבת פרסונה.
+- **מצב JSON מובנה**: Gemini מספק מצב JSON Schema נוקשה בעלות נמוכה בהרבה מ GPT-4o, מה שמבטיח חילוץ פרמטרים אמין בטמפרטורה נמוכה.
+- **חיבור לחיפוש Google**: כלי Google Search Grounding מובנה מאפשר אימות נתונים בזמן אמת בשיחה כללית.
+- **מקורות ותיעוד**: [Google Gemini API Docs](https://ai.google.dev/docs) | [Gemini Models Overview](https://ai.google.dev/gemini-api/docs/models/gemini)
+
+### 4. Hono Framework מול Express.js / Fastify
+
+- **למה Hono ולא Express**: Express ו Fastify תלויים בספריות Node.js מיושנות (`http`, `stream`) שמוסיפות משקל מיותר בסביבת Edge. [Hono](https://hono.dev/) הוא פרימוורק קל משקל (<14kB) שנבנה נייטיב עבור Web Standards וסביבת Cloudflare Workers.
+- **מקורות ותיעוד**: [Hono Official Docs](https://hono.dev/) | [Hono Cloudflare Workers Getting Started](https://hono.dev/docs/getting-started/cloudflare-workers)
+
+---
+
+## מנוע הגרף בשלושה שלבים
 
 כשמשתמש שולח הודעה על דילי חופשות, הבוט לא מפעיל קריאת LLM בודדת. הוא מריץ pipeline בשלושה שלבים כאשר לכל שלב יש תפקיד ספציפי וקונפיגורציית מודל ספציפית:
 
@@ -113,7 +146,9 @@ flowchart LR
 
 ## צינור החדשות של טלגרם
 
-NehorAI גם מנהל ערוץ טלגרם שמשדר סיכומי חדשות. כל 30 דקות (בשעות פעילות, 8:00 עד 20:00 שעון ישראל, בשעות זוגיות), הסורק גורד חמישה ערוצי חדשות ישראליים בטלגרם, מסנן פריטים מהשעה האחרונה, ומעביר אותם דרך Gemini עם הפרסונה של נהורAI כדי לייצר סיכום חדשות בסלנג שמתפרסם בערוץ הטלגרם של הבוט.
+NehorAI גם מנהל ערוץ טלגרם שמשדר סיכומי חדשות דרך ה [Telegram Bot API](https://core.telegram.org/bots/api). כל 30 דקות (בשעות פעילות, 8:00 עד 20:00 שעון ישראל, בשעות זוגיות), הסורק גורד חמישה ערוצי חדשות ישראליים בטלגרם, מסנן פריטים מהשעה האחרונה, ומעביר אותם דרך Gemini עם הפרסונה של נהורAI כדי לייצר סיכום חדשות בסלנג שמתפרסם בערוץ הטלגרם של הבוט.
+
+![דוגמת שידור בערוץ החדשות של נהורAI בטלגרם](/nehorai-telegram-news.png)
 
 ב 20:00 כל יום הוא מייצר "סיכום יומי" של 10 הסיפורים המובילים מ 12 השעות האחרונות.
 
