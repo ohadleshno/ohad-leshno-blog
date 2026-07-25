@@ -111,19 +111,59 @@ Why? Because when you ask Gemini to extract JSON parameters while also maintaini
 
 ---
 
+## Personalization Without a Questionnaire
+
+Personalization does not have to begin with "where do you live?" The browser and request already carry a few useful hints: language, rough region, timezone, and local time. That is not GPS data or an exact address, but it is usually enough to make the first answer more relevant without stopping the conversation.
+
+I add those signals to the bot's context. If someone writes "find me a Torah class," NehorAI can show classes in Holon and nearby cities before listing places across the country. When the location is too vague, the bot asks a follow-up question.
+
+<figure class="article-screenshot-figure">
+  <img class="article-screenshot" src="/nehorai-personalized-torah.png" alt="NehorAI suggests Torah classes around Holon based on the user's rough location" loading="lazy" decoding="async">
+  <figcaption>A short request becomes a list of options in the relevant area.</figcaption>
+</figure>
+
+The same idea applies across a conversation. The graph remembers the destination, dates, number of travelers, and vacation style, then reuses them in the next request. The user does not need to repeat everything in every message.
+
+<figure class="article-screenshot-figure">
+  <img class="article-screenshot" src="/nehorai-personalized-deal.png" alt="NehorAI remembers the trip details and returns a personalized Bucharest deal" loading="lazy" decoding="async">
+  <figcaption>Conversation context stays available until the bot returns a bookable deal.</figcaption>
+</figure>
+
+---
+
 ## The Telegram News Pipeline
 
 NehorAI also runs a Telegram channel ([@nehorainews](https://t.me/nehorainews)) that broadcasts news summaries via the [Telegram Bot API](https://core.telegram.org/bots/api). Every 30 minutes (during active hours, 8AM to 8PM Israel time, on even hours), the crawler scrapes five Israeli Telegram news channels, filters for items from the last hour, and sends them through Gemini with the NehorAI persona to generate a street slang news summary that gets posted to the bot's own Telegram channel.
 
-<a href="https://t.me/nehorainews" target="_blank" rel="noopener noreferrer" class="telegram-channel-card">
-  <span class="telegram-channel-eyebrow">Telegram</span>
-  <span class="telegram-channel-title">@nehorainews</span>
-  <span class="telegram-channel-desc">NehorAI news channel on Telegram. Open the channel.</span>
+<a href="https://t.me/nehorainews" target="_blank" rel="noopener noreferrer" class="telegram-channel-preview" aria-label="Open the NehorAI news channel on Telegram">
+  <img src="/nehorai-telegram-channel.png" alt="Screenshot of the NehorAI news channel on Telegram" loading="lazy" decoding="async">
 </a>
 
 At 8PM daily, it generates a "daily summary" of the top 10 stories from the last 12 hours.
 
 The system tracks what was already sent using a `news:recently_sent_posts` KV key to avoid duplicate broadcasts, and stores per channel timestamps to only process genuinely new items.
+
+---
+
+## Why I Chose Each Tool
+
+I was not looking for the most fashionable stack. I wanted tools that would keep the bot fast, inexpensive, and easy to maintain.
+
+### Cloudflare KV over Redis or Postgres
+
+I considered Redis and Postgres, but they were more than this workload needed. The crawler writes data every 30 minutes, while the bot reads it repeatedly. [Cloudflare KV](https://developers.cloudflare.com/kv/) fits that pattern: reads come from a nearby edge location in about 2ms, without a database server or connection pool. Inside a Worker, the lookup is just `env.DEAL_CACHE.get()`. The [KV documentation](https://developers.cloudflare.com/kv/) and [architecture overview](https://developers.cloudflare.com/kv/concepts/how-kv-works/) explain the details.
+
+### Cloudflare Workers over AWS Lambda or Vercel Serverless
+
+I chose [Cloudflare Workers](https://developers.cloudflare.com/workers/) because I did not want a chat message waiting for a cold start. Workers start in under 5ms, compared with hundreds of milliseconds or more for container-based functions. Cron Triggers also run the crawlers on the same infrastructure, so there is no separate scheduling service. Cloudflare documents both [Workers](https://developers.cloudflare.com/workers/) and the difference between [V8 isolates and containers](https://developers.cloudflare.com/workers/reference/how-workers-works/).
+
+### Google Gemini 2.0 over OpenAI or Claude
+
+This choice was practical: Gemini was fast and inexpensive for the bot's workload. `gemini-2.0-flash-lite` returns the first acknowledgment in about 300ms, while `gemini-2.0-flash` handles intent extraction and response generation. Its JSON mode is reliable enough for structured parameters, and Google Search Grounding helps with current information. The [Gemini documentation](https://ai.google.dev/docs) and [model overview](https://ai.google.dev/gemini-api/docs/models/gemini) cover the available models.
+
+### Hono over Express or Fastify
+
+The same reasoning led me to [Hono](https://hono.dev/). Express and Fastify are excellent in Node.js, but they bring pieces I do not need at the edge. Hono is small, uses Web Standards, and works with Workers without extra adapters. Hono has a short [framework guide](https://hono.dev/) and a dedicated [Cloudflare Workers guide](https://hono.dev/docs/getting-started/cloudflare-workers).
 
 ---
 
@@ -142,3 +182,11 @@ The system tracks what was already sent using a `news:recently_sent_posts` KV ke
 ## What's Next
 
 Building a Twitter/X bot that uses the same backend infrastructure (same crawlers, same KV data, same graph engine), but posts curated deal threads and news takes instead of responding to chat messages. The persona stays the same; the distribution channel changes.
+
+---
+
+## This Is Still Not a Finished Product
+
+NehorAI is not fully polished, and that was never my main goal. I built it to learn what happens when an AI bot leaves the demo and meets real users, changing data, latency, costs, and failures.
+
+There are still rough edges, but it already works in the real world instead of being another chat window connected to a model. That is the point for me: learning through a live product how to build an AI system people can actually use.
