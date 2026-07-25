@@ -69,17 +69,6 @@ export default function TechBlogIndex({ params }: { params: { lang: 'he' | 'en' 
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 {project.excerpt}
               </p>
-
-              <div className="flex flex-wrap gap-1.5 pt-2">
-                {project.techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 rounded-md text-xs font-semibold bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
             </div>
 
             <div className="pt-4 border-t border-slate-100 dark:border-slate-800/60">

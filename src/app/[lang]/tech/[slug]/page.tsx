@@ -92,23 +92,6 @@ export default function TechProjectDetail({
 
         <MermaidRenderer />
 
-        {/* Tech Stack Tags moved to bottom */}
-        <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80 space-y-2">
-          <span className="text-xs font-semibold text-slate-500 dark:text-slate-400">
-            {isHe ? 'טכנולוגיות וכלים בפרויקט:' : 'Technologies & Stack:'}
-          </span>
-          <div className="flex flex-wrap gap-2">
-            {project.techStack.map((tech) => (
-              <span
-                key={tech}
-                className="px-2.5 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 dark:bg-sky-950/60 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/80"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-
         {/* Share */}
         <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80">
           <SocialShare title={project.title} url={currentUrl} isHe={isHe} />
