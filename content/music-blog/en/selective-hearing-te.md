@@ -1,11 +1,11 @@
 ---
 title: "Selective Hearing - Telephone Operator Playlist"
-slug: "selective-hearing-telephone-operator-playlist"
+slug: "selective-hearing-te"
 excerpt: "חזרתי השבוע לארץ אחרי המסע הקצר שלי בהודו, בזמן שהייתי שם לא הפסקתי לחשוב על כמה חווית הטיול במדינות עולם שלישי השתנתה במהלך השנים. אחד..."
 date: "2023-10-06T13:23:04.604Z"
 coverImage: "https://static.wixstatic.com/media/f2fdbe1c79c64008993a030e7e0708f9.jpg"
 minutesToRead: 3
-language: "he"
+language: "en"
 ---
 
 <figure class="my-8"><img src="https://static.wixstatic.com/media/f2fdbe1c79c64008993a030e7e0708f9.jpg" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>

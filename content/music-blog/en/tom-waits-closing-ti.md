@@ -1,11 +1,11 @@
 ---
 title: "Tom Waits - closing time"
-slug: "tom-waits-closing-time"
-excerpt: "השבוע חגגנו את יום האהבה, 14 בפברואר, ותהיתי: למה אנחנו קוראים לו 'ולנטיין'? הרי אין לנו יום כעס (טוב, יש יום זעם, אבל בקשה לא להכנס..."
+slug: "tom-waits-closing-ti"
+excerpt: "השבוע חגגנו את יום האהבה, 14 בפברואר, ותהיתי: למה אנחנו קוראים לו \"ולנטיין\"? הרי אין לנו יום כעס (טוב, יש יום זעם, אבל בקשה לא להכנס..."
 date: "2024-02-17T08:34:23.749Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
-language: "he"
+language: "en"
 ---
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/BeeK37wrBDQ" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>

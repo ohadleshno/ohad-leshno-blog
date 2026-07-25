@@ -1,0 +1,63 @@
+---
+title: "Dua Lipa - Future Nostalgia "
+slug: "dua-lipa-future-nost"
+excerpt: "הסכסוך הישראלי-פלסטיני הוא בעיה קשה שרבים בישראל פוגשים אותה בשלב כזה או אחר. סער, אחד האנשים שאני הכי אוהב בעולם, הציע פתרון יצירתי:..."
+date: "2023-07-14T21:38:27.191Z"
+coverImage: "https://static.wixstatic.com/media/cd66a9_2e7fc6a37858479eafd39e797c806cbf~mv2.jpg"
+minutesToRead: 3
+language: "en"
+---
+
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/4-NkTMyVq2c" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
+
+הסכסוך הישראלי-פלסטיני הוא בעיה קשה שרבים בישראל פוגשים אותה בשלב כזה או אחר. סער, אחד האנשים שאני הכי אוהב בעולם, הציע פתרון יצירתי: לנגן את המוזיקה של דואה ליפה בעזה
+
+ובשטחים. הוא מאמין שזה יביא שלום, כי הרי איך אפשר לריב כאשר ברקע מתנגנת מוזיקה שבהגדרתה היא
+
+טהורה. אני, וכנראה שאני בדעת מיעוט, לא בטוח אם זה יפתור את הבעיה, אבל אני חושב שזה רעיון מגניב
+
+ששווה לנסות. החלק המצחיק בכל הסיפור הזה שדואה ליפה היא הרי עוכרת ישראל, וכמילותיו של סער:
+
+״שונא עוכרי ישראל, אוהב דואה ליפה, האמביוולנטיות של האזרח הקטן״.
+
+אני, כידוע לכם בהגדרה, מישהו שהוא פוץ, ובמיוחד במוזיקה שלו. לכן זה מפתיע, שאני כותב על אומנית כל
+
+כך ״רגילה״ כמו דואה ליפה. עם זאת, אם אני נכנס לעומקה של המוזיקה שלה, אז אני מוצא שיש בה רובד אחר שבאמת מייצר משהו נעים וכיפי. Future Nostalgia הוא אלבום שכולו שילוב בין מוזיקת פופ של שנות ה-80 לבין מוזיקה עתידנית, ולכן השם Future Nostalgia. לופה תיארה אותו כ״אלבום פופ נוסטלגי שמרגיש כמו שיעור ריקוד״ היא שאבה את ההשראה שלה מהמוזיקה של שנות ה-80, כדי ליצור צליל שירגיש מוכר וחדשני באותה המידה.
+
+השירים Don't Start Now, Physical  ו -Break My Heart הם כולם סינגלים ראויים ביותר, עם לחנים קליטים שיישארו בראש במשך שבועות לאחר ההאזנה. הסינתיסייזר שנמצא ברבים משירי Future Nostalgia הוא המפתח להחזרת האווירה של שנות ה-80. שירים אחרים כמו Levitating, Hallucinate, Pretty Please, Cool ו-Good in Bed, הם כולם גם כן בעלי לחנים מרגשים שיגרמו לך לרקוד, ויישמעו עדיין "חדשים" במובנים מסוימים, גם לאחר ההאזנה מרובה. השירים שתיארתי כאן, מתארים באופן קולקטיבי את הצד האסתטי והמרגש של האהבה:
+
+<blockquote dir="auto">
+"Who needs to go to sleep when I got you next to me?"
+</blockquote>
+
+ומנגד את האופי ההרסני של האהבה.
+
+<blockquote dir="auto">
+"You broke my heart / And now I'm picking up the pieces"
+</blockquote>
+
+נוסף לכך הבלדה הפופית Boys Will Be Boys בוחנת באופן עוצמתי את נושא ההעצמה הנשית, בתקופה של גבריות רעילה ושל הטרדות מתמשכת בקהילה המודרנית שלנו.
+
+<blockquote dir="auto">
+“It’s second nature to walk home before the sun goes down / And put your keys between your knuckles when there’s boys around,”
+</blockquote>
+
+הנקודה שלה ברורה, בנות צריכות להתבגר הרבה יותר מהר מהחברים הגברים שלהן, שיכולים בעיקר להישאר חסרי מודעות לאלימות בעולם עד גיל מאוחר יותר, בעוד שחברותיהן הנשים פורצות את בועות הילדות שלהן על ידי עצות להגנה עצמית.
+
+אני לא חושב שזה שיר נהדר ברמה המוזיקלית, אבל אני מעריך את הניסיון שלה להעביר מסר בעל משמעות. זה חשוב לשמוע שיר שמדבר על נושאים חשובים ולא רק על סקס, כסף ומכוניות.
+
+האלבום Future Nostalgia יצא ב-27 במרץ 2020 , וכמה ימים לאחר מכן העולם נכנס לסגר בעקבות מגפת הקורונה. באופן די אירוני, המטרה של האלבום הייתה ליצור מוזיקה שמייצרת אסקפיזים על בעיות העולם. דואה ליפה אמרה, שהיא רצתה ליצור אלבום שיגרום לאנשים לרקוד ולשכוח מהצרות שלהם לזמן מה.
+
+<blockquote dir="auto">
+“I wanted to make music that takes your mind away from that. I wanted to just make it a bit easier for me to get out of bed and not think about the negative things that are going on in the world all the time.”
+</blockquote>
+
+כחלק מהשקת האלבום החדש שלה דואה ליפה הופיעה ב-<a href="https://www.youtube.com/watch?v=F4neLJQC1_E&ab_channel=NPRMusic" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Tiny Desk Concert</a>, לא נפתח אבל משום שבאותה תקופה היה סגר בעולם, היא נאלצה לבצע את ההופעה באולפן סטודיו אחר. אני חושב שגרסאות הלייב שלה מעניינות יותר מהגרסאות המקוריות שלה, כי הן מאפשרות לה להביע את עצמה בצורה אישית יותר ; זה בא לידי ביטוי במיוחד בשיר Love Again. אני אישית שמעתי את ההופעה הזאת אולי עשרות פעמים.
+
+האלבום Future Nostalgia הוא אלבום שעושה בדיוק את מה שאלבום בסגנון שלו אמור לעשות: מהנה, פופי, ממכר וזכור. הוא באיזה אופן מגדיר את הטרנד עבור קטגוריה חדשה (כמעט) של מוזיקת ​​טרנד.
+
+אני ממליץ בחום על האלבום לכל מי שאוהב פופ. זהו אלבום נהדר, שבטוח יעשה לכם טוב על הלב. הפוסט הזה כולו מוקדש לסער יעקב פנאני האגדה בחייו שבמקרה יש לו יום הולדת היום. (מלא מזל טוב אוהב מלא)
+
+<figure class="my-8"><img src="https://static.wixstatic.com/media/cd66a9_2e7fc6a37858479eafd39e797c806cbf~mv2.jpg" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
+
+האזנה נעימה

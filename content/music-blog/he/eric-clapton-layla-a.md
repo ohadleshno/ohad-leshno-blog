@@ -1,6 +1,6 @@
 ---
 title: "Eric Clapton - Layla and Other Assorted Love Songs"
-slug: "eric-clapton-layla-and-other-assorted-love-songs"
+slug: "eric-clapton-layla-a"
 excerpt: "אני זוכר נסיעה חזרה מהבסיס, לקחתי טרמפ עם מישהי למקום שבו החניתי את הרכב. בתקופה הזו הרכב שלי היה חסום והייתי צריך להחנות אותו מחוץ..."
 date: "2023-09-19T17:56:51.296Z"
 coverImage: "/hero-cover.jpeg"

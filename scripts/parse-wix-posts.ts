@@ -216,6 +216,8 @@ function parseWixPosts() {
   const musicEnDir = path.join(process.cwd(), 'content/music-blog/en');
   const aboutDir = path.join(process.cwd(), 'content/about');
 
+  fs.rmSync(musicHeDir, { recursive: true, force: true });
+  fs.rmSync(musicEnDir, { recursive: true, force: true });
   fs.mkdirSync(musicHeDir, { recursive: true });
   fs.mkdirSync(musicEnDir, { recursive: true });
   fs.mkdirSync(aboutDir, { recursive: true });
@@ -223,7 +225,10 @@ function parseWixPosts() {
   console.log(`Processing ${posts.length} Wix blog posts...`);
 
   for (const post of posts) {
-    const slug = post.slug || post.id;
+    let slug = post.slug || post.id;
+    if (slug.length > 20) {
+      slug = slug.substring(0, 20).replace(/-+$/, '');
+    }
     const coverImage = extractFirstImage(post.content, post.coverMedia?.image?.url);
     const markdownContent = convertBlocksToMarkdown(post.content);
 

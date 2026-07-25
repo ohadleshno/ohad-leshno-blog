@@ -1,11 +1,11 @@
 ---
 title: "Billy Joel - the stranger"
-slug: "billy-joel-the-stranger"
-excerpt: "היום נדבר על בילי ג'ואל, שהוא אחד האומנים האהובים עליי. השירים שלו, כגון 'Piano Man', 'Uptown Girl', 'Just the Way You Are' ו-'New York..."
+slug: "billy-joel-the-stran"
+excerpt: "היום נדבר על בילי ג'ואל, שהוא אחד האומנים האהובים עליי. השירים שלו, כגון \"Piano Man\", \"Uptown Girl\", \"Just the Way You Are\" ו-\"New York..."
 date: "2023-07-14T16:47:35.698Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 3
-language: "he"
+language: "en"
 ---
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/DglOd7Wdueg" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>

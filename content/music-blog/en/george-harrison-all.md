@@ -1,11 +1,11 @@
 ---
 title: "George Harrison - All Things Must Pass"
-slug: "george-harrison-all-things-must-pass"
+slug: "george-harrison-all"
 excerpt: "בעקבות תקופתה החגים וחג הסוכות הקרב ובא אלינו נזכרתי בשבת ישיבה שהייתה לי אי שם בשלהי קיץ 2013. הקונספט עד היום לא ברור לי עד הסוף, בגדול..."
 date: "2023-09-29T09:17:12.527Z"
 coverImage: "/hero-cover.jpeg"
 minutesToRead: 4
-language: "he"
+language: "en"
 ---
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/QWV4pFV5nX4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
