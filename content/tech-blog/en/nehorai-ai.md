@@ -17,7 +17,7 @@ NehorAI is a Hebrew-language AI assistant that helps users find vacation deals, 
 
 The core idea: instead of browsing five different websites to plan a weekend getaway, you just tell NehorAI "I want to fly somewhere warm in August" and it comes back with flight prices, hotel options, and booking links -- all in the same conversational tone as your friend from the neighborhood.
 
-![PLACEHOLDER: Screenshot of NehorAI chat interface on nehorai.ai showing a vacation deal conversation](/nehorai-hero.png)
+<iframe src="https://nehorai.ai" width="100%" height="600" style="border:none;border-radius:12px;" loading="lazy" title="NehorAI live demo"></iframe>
 
 ---
 

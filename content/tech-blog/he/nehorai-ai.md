@@ -17,7 +17,7 @@ NehorAI הוא עוזר AI בשפה העברית שעוזר למשתמשים ל�
 
 הרעיון המרכזי: במקום לגלוש בחמישה אתרים שונים כדי לתכנן סופ"ש, פשוט אומרים לנהורAI "אני רוצה לטוס למקום חם באוגוסט" והוא חוזר עם מחירי טיסות, אפשרויות מלון ולינקים להזמנה -- הכל באותו טון שיחה כמו חבר מהשכונה.
 
-![PLACEHOLDER: צילום מסך של ממשק הצ'אט של NehorAI באתר nehorai.ai שמראה שיחה על דיל לחופשה](/nehorai-hero.png)
+<iframe src="https://nehorai.ai" width="100%" height="600" style="border:none;border-radius:12px;" loading="lazy" title="NehorAI הדגמה חיה"></iframe>
 
 ---
 
