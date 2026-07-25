@@ -20,6 +20,8 @@ const config: Config = {
       },
       fontFamily: {
         hebrew: ['Rubik', 'Assistant', 'sans-serif'],
+        display: ['Fraunces', 'Rubik', 'serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
       },
     },
   },

@@ -2,7 +2,7 @@ import { getAllTechSlugs, getTechProjectData } from '@/lib/tech';
 import { notFound } from 'next/navigation';
 import { SocialShare } from '@/components/SocialShare';
 import { Comments } from '@/components/Comments';
-import { ExternalLink, ArrowLeft, ArrowRight, Calendar, Cpu } from 'lucide-react';
+import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { MermaidRenderer } from '@/components/MermaidRenderer';
 
@@ -43,30 +43,28 @@ export default function TechProjectDetail({
 
   return (
     <div className="max-w-4xl mx-auto py-3 sm:py-10">
-      <article className="glass-card rounded-2xl sm:rounded-3xl border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900 shadow-xl overflow-hidden p-4 sm:p-10 space-y-5 sm:space-y-8">
+      <article className="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm overflow-hidden p-4 sm:p-10 space-y-5 sm:space-y-8">
         {/* Back button */}
         <Link
           href={`/${lang}/tech`}
-          className="inline-flex items-center gap-1.5 text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline"
+          className="inline-flex items-center gap-1.5 text-xs font-semibold text-neutral-600 dark:text-neutral-400 hover:text-rose-600 dark:hover:text-rose-400 transition-colors uppercase tracking-wider"
         >
-          {isHe ? <ArrowRight className="size-4" /> : <ArrowLeft className="size-4" />}
+          {isHe ? <ArrowRight className="size-3.5" /> : <ArrowLeft className="size-3.5" />}
           {isHe ? 'חזרה לכל פרויקטי ה-AI' : 'Back to All AI Projects'}
         </Link>
 
         {/* Header */}
-        <header className="space-y-3 sm:space-y-4 pb-4 sm:pb-6 border-b border-slate-200/80 dark:border-slate-800/80">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-50 text-sky-700 dark:bg-sky-950/60 dark:text-sky-300 border border-sky-200/80 dark:border-sky-800/80 text-xs font-semibold">
-            <Cpu className="size-3.5 text-sky-600 dark:text-sky-400" />
-            <span>{isHe ? 'פרויקט AI וארכיטקטורה' : 'AI & Systems Project'}</span>
+        <header className="space-y-3 sm:space-y-4 pb-4 sm:pb-6 border-b border-neutral-200 dark:border-neutral-800">
+          <div className="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold">
+            {isHe ? 'פרויקט AI וארכיטקטורה' : 'AI & Systems Project'}
           </div>
 
-          <h1 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white leading-snug">
+          <h1 className="font-display text-2xl sm:text-4xl lg:text-5xl font-semibold text-neutral-900 dark:text-neutral-50 leading-snug">
             {project.title}
           </h1>
 
           <div className="flex items-center justify-between pt-1">
-            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium flex items-center gap-1.5">
-              <Calendar className="size-4 text-sky-500" />
+            <span className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium">
               {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')}
             </span>
 
@@ -75,7 +73,7 @@ export default function TechProjectDetail({
                 href={project.projectUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-4 py-2 rounded-xl text-xs font-bold bg-sky-600 text-white hover:bg-sky-700 transition-colors inline-flex items-center gap-1.5 shadow-sm"
+                className="px-4 py-2 rounded-lg text-xs font-medium bg-neutral-900 dark:bg-neutral-100 text-white dark:text-neutral-900 hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors inline-flex items-center gap-1.5 shadow-sm"
               >
                 <ExternalLink className="size-3.5" />
                 {isHe ? 'מעבר לפרויקט' : 'View Live Project'}
@@ -86,14 +84,14 @@ export default function TechProjectDetail({
 
         {/* Markdown Content */}
         <div
-          className="prose dark:prose-invert max-w-none prose-lg text-slate-800 dark:text-slate-200 leading-relaxed font-normal"
+          className="prose dark:prose-invert max-w-none text-neutral-800 dark:text-neutral-200 leading-relaxed font-normal"
           dangerouslySetInnerHTML={{ __html: project.contentHtml }}
         />
 
         <MermaidRenderer />
 
         {/* Share */}
-        <div className="pt-6 border-t border-slate-200/80 dark:border-slate-800/80">
+        <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800">
           <SocialShare title={project.title} url={currentUrl} isHe={isHe} />
         </div>
 

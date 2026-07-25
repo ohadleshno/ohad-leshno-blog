@@ -68,37 +68,6 @@ flowchart TD
 
 ---
 
-## ניתוח כלים: למה בחרנו בכל טכנולוגיה מול חלופות?
-
-כל שכבה טכנולוגית ב NehorAI נבחרה בקפידה כדי להשיג זמן תגובה ראשוני של פחות מ 300ms, אפס תחזוקת שרתים, ועלויות ריצה מינימליות.
-
-### 1. Cloudflare KV מול Redis (Upstash / ElastiCache) או Postgres (Supabase)
-
-- **למה KV ולא Redis / Postgres**: מסדי נתונים מסורתיים או אשכולות Redis דורשים ניהול connection pools, חיבורי VPC, וזמני השהיה של מעבר בין אזורים גיאוגרפיים. [Cloudflare KV](https://developers.cloudflare.com/kv/) הוא מסד נתונים Key-Value מבוזר גלובלית המותאם במיוחד לעומסי קריאה כבדים (נכתב פעם ב 30 דקות על ידי סורק, ונקרא אלפי פעמים על ידי משתמשים).
-- **יתרון ה Edge**: קריאות מ KV מתבצעות ישירות בשרת ה Cloudflare Edge הקרוב ביותר למשתמש (למשל POP בתל אביב), ומחזירות דאטה ב ~2ms ללא קריאה למסד נתונים מרכזי.
-- **עלות ופשטות**: אפס ניהול חיבורים, אפס עלויות שרת במצב סרק, וחיבור נייטיב ל Workers עם `env.DEAL_CACHE.get()`.
-- **מקורות ותיעוד**: [Cloudflare KV Documentation](https://developers.cloudflare.com/kv/) | [How Cloudflare KV Works](https://developers.cloudflare.com/kv/concepts/how-kv-works/)
-
-### 2. Cloudflare Workers מול AWS Lambda / Vercel Serverless
-
-- **למה Workers ולא Lambda**: קונטיינרים מסורתיים (כמו AWS Lambda או Vercel Node.js functions) סובלים מ Cold Starts של 200ms עד 2 שניות בעת הרמת קונטיינר חדש. [Cloudflare Workers](https://developers.cloudflare.com/workers/) רצים על גבי V8 Isolates עם זמן עקב שואף לאפס (<5ms).
-- **סורקים מתוזמנים מובנים**: תמיכה מובנית ב Cron Triggers מאפשרת להריץ סורקים על אותה תשתית בדיוק ללא צורך בשירותי Cron חיצוניים או AWS EventBridge.
-- **מקורות ותיעוד**: [Cloudflare Workers Docs](https://developers.cloudflare.com/workers/) | [V8 Isolates vs Containers](https://developers.cloudflare.com/workers/reference/how-workers-works/)
-
-### 3. Google Gemini 2.0 (Flash & Flash Lite) מול OpenAI GPT 4o / Claude 3.5 Sonnet
-
-- **למה Gemini ולא OpenAI / Claude**: מהירות ועלות. NehorAI נשען על שני מודלים ייעודיים: `gemini-2.0-flash-lite` למענה מהיר במיוחד (~300ms) ו `gemini-2.0-flash` לחילוץ כוונות מדויק במצב JSON והרכבת פרסונה.
-- **מצב JSON מובנה**: Gemini מספק מצב JSON Schema נוקשה בעלות נמוכה בהרבה מ GPT-4o, מה שמבטיח חילוץ פרמטרים אמין בטמפרטורה נמוכה.
-- **חיבור לחיפוש Google**: כלי Google Search Grounding מובנה מאפשר אימות נתונים בזמן אמת בשיחה כללית.
-- **מקורות ותיעוד**: [Google Gemini API Docs](https://ai.google.dev/docs) | [Gemini Models Overview](https://ai.google.dev/gemini-api/docs/models/gemini)
-
-### 4. Hono Framework מול Express.js / Fastify
-
-- **למה Hono ולא Express**: Express ו Fastify תלויים בספריות Node.js מיושנות (`http`, `stream`) שמוסיפות משקל מיותר בסביבת Edge. [Hono](https://hono.dev/) הוא פרימוורק קל משקל (<14kB) שנבנה נייטיב עבור Web Standards וסביבת Cloudflare Workers.
-- **מקורות ותיעוד**: [Hono Official Docs](https://hono.dev/) | [Hono Cloudflare Workers Getting Started](https://hono.dev/docs/getting-started/cloudflare-workers)
-
----
-
 ## מנוע הגרף בשלושה שלבים
 
 כשמשתמש שולח הודעה על דילי חופשות, הבוט לא מפעיל קריאת LLM בודדת. הוא מריץ pipeline בשלושה שלבים כאשר לכל שלב יש תפקיד ספציפי וקונפיגורציית מודל ספציפית:
@@ -142,15 +111,59 @@ flowchart LR
 
 ---
 
+## תוכן אישי בלי למלא שאלון
+
+לא כל פרסונליזציה צריכה להתחיל ב"איפה אתה גר?". הדפדפן והבקשה כבר נותנים כמה רמזים שימושיים: שפה, אזור כללי, אזור זמן והשעה המקומית. אלה לא נתוני GPS ולא כתובת מדויקת, אבל לרוב זה מספיק כדי לתת תשובה הרבה יותר רלוונטית בלי לעצור את השיחה.
+
+אני מכניס את הרמזים האלה ל context של הבוט. אם מישהו כותב "תמצא לי שיעור תורה", נהורAI יכול להציג קודם שיעורים בחולון ובערים קרובות במקום לשלוח רשימה מכל הארץ. אם המיקום לא מספיק ברור, רק אז הבוט שואל שאלה נוספת.
+
+<figure class="article-screenshot-figure">
+  <img class="article-screenshot" src="/nehorai-personalized-torah.png" alt="נהורAI מציע שיעורי תורה באזור חולון לפי המיקום הכללי של המשתמש" loading="lazy" decoding="async">
+  <figcaption>בקשה קצרה הופכת להצעות באזור הרלוונטי, בלי שאלון מקדים.</figcaption>
+</figure>
+
+אותו עיקרון עובד גם לאורך השיחה. הגרף שומר את היעד, התאריכים, מספר הנוסעים וסגנון החופשה, ואז משתמש בהם בבקשה הבאה. המשתמש לא צריך לחזור בכל הודעה על כל מה שכבר אמר.
+
+<figure class="article-screenshot-figure">
+  <img class="article-screenshot" src="/nehorai-personalized-deal.png" alt="נהורAI זוכר את פרטי החופשה ומחזיר דיל מותאם לבוקרשט" loading="lazy" decoding="async">
+  <figcaption>הקשר מהשיחה נשמר עד להצגת דיל שאפשר להזמין.</figcaption>
+</figure>
+
+---
+
 ## צינור החדשות של טלגרם
 
 NehorAI גם מנהל ערוץ טלגרם ([@nehorainews](https://t.me/nehorainews)) שמשדר סיכומי חדשות דרך ה [Telegram Bot API](https://core.telegram.org/bots/api). כל 30 דקות (בשעות פעילות, 8:00 עד 20:00 שעון ישראל, בשעות זוגיות), הסורק גורד חמישה ערוצי חדשות ישראליים בטלגרם, מסנן פריטים מהשעה האחרונה, ומעביר אותם דרך Gemini עם הפרסונה של נהורAI כדי לייצר סיכום חדשות בסלנג שמתפרסם בערוץ הטלגרם של הבוט.
 
-<iframe src="https://t.me/s/nehorainews" width="100%" height="600" style="border:none;border-radius:12px;" loading="lazy" title="ערוץ החדשות של נהורAI בטלגרם לייב"></iframe>
+<a href="https://t.me/nehorainews" target="_blank" rel="noopener noreferrer" class="telegram-channel-preview" aria-label="פתיחת ערוץ החדשות של נהורAI בטלגרם">
+  <img src="/nehorai-telegram-channel.png" alt="צילום מסך מערוץ החדשות של נהורAI בטלגרם" loading="lazy" decoding="async">
+</a>
 
 ב 20:00 כל יום הוא מייצר "סיכום יומי" של 10 הסיפורים המובילים מ 12 השעות האחרונות.
 
 המערכת עוקבת אחרי מה שכבר נשלח דרך מפתח KV של `news:recently_sent_posts` כדי למנוע שידורים כפולים, ושומרת timestamps לכל ערוץ כדי לעבד רק פריטים חדשים באמת.
+
+---
+
+## ניתוח כלים: למה בחרתי בכל טכנולוגיה?
+
+לא חיפשתי את הכלים הכי נוצצים, אלא את אלה שישאירו את הבוט מהיר, זול וקל לתחזוקה.
+
+### Cloudflare KV מול Redis או Postgres
+
+בהתחלה שקלתי Redis או Postgres, אבל הם היו יותר מדי בשביל מה שהבוט צריך. הסורק כותב דאטה פעם בחצי שעה, והבוט בעיקר קורא אותו שוב ושוב. [Cloudflare KV](https://developers.cloudflare.com/kv/) יושב בול על הדפוס הזה: הקריאה מגיעה מה Edge הקרוב ולוקחת בערך 2ms, בלי שרת ובלי connection pools. מתוך Worker זאת בסך הכל קריאה ל `env.DEAL_CACHE.get()`. אפשר לקרוא עוד ב [תיעוד של KV](https://developers.cloudflare.com/kv/) וב [הסבר על הדרך שבה הוא עובד](https://developers.cloudflare.com/kv/concepts/how-kv-works/).
+
+### Cloudflare Workers מול AWS Lambda או Vercel Serverless
+
+בחרתי ב [Cloudflare Workers](https://developers.cloudflare.com/workers/) כי לא רציתי שהודעת צ'אט תחכה ל cold start. Workers עולים בדרך כלל בפחות מ 5ms, לעומת מאות מילישניות ולפעמים יותר בפונקציות מבוססות קונטיינר. גם הסורקים רצים שם עם Cron Triggers, אז לא צריך להחזיק עוד שירות רק בשביל התזמון. יש עוד פרטים ב [תיעוד של Workers](https://developers.cloudflare.com/workers/) ובהשוואה בין [V8 Isolates לקונטיינרים](https://developers.cloudflare.com/workers/reference/how-workers-works/).
+
+### Google Gemini 2.0 מול OpenAI או Claude
+
+כאן ההחלטה הייתה די פרקטית: Gemini היה מהיר וזול יותר למשימות של הבוט. `gemini-2.0-flash-lite` נותן את התגובה הראשונית בכ 300ms, ו `gemini-2.0-flash` מטפל בחילוץ הכוונה ובניית התשובה. מצב JSON שלו יציב מספיק בשביל להחזיר פרמטרים מסודרים, ו Google Search Grounding עוזר כשצריך לבדוק מידע עדכני. אפשר להשוות בין המודלים ב [תיעוד של Gemini](https://ai.google.dev/docs) וב [סקירת המודלים](https://ai.google.dev/gemini-api/docs/models/gemini).
+
+### Hono מול Express או Fastify
+
+אותו היגיון הוביל אותי ל [Hono](https://hono.dev/). Express ו Fastify מעולים ב Node.js, אבל ב Edge הם מביאים איתם דברים שאני לא צריך. Hono קטן, עובד עם Web Standards ומתחבר ל Workers בלי התאמות מיוחדות. למי שרוצה לנסות, יש [תיעוד קצר וברור](https://hono.dev/) וגם [מדריך ל Cloudflare Workers](https://hono.dev/docs/getting-started/cloudflare-workers).
 
 ---
 
@@ -169,3 +182,11 @@ NehorAI גם מנהל ערוץ טלגרם ([@nehorainews](https://t.me/nehoraine
 ## מה הלאה
 
 בניית בוט טוויטר/X שמשתמש באותה תשתית backend (אותם סורקים, אותו דאטה ב KV, אותו מנוע גרף), אבל מפרסם threads של דילים וסיכומי חדשות במקום לענות להודעות צ'אט. הפרסונה נשארת; ערוץ ההפצה משתנה.
+
+---
+
+## זה עדיין לא מוצר גמור
+
+NehorAI עדיין לא מוצר מלוטש, וזה גם לא היה היעד הראשי שלי. בניתי אותו כדי ללמוד מה קורה כשבוט AI יוצא מהדמו ופוגש משתמשים אמיתיים, דאטה שמשתנה, זמני תגובה, עלויות ותקלות.
+
+יש עוד קצוות לשייף, אבל כבר עכשיו זה בוט שעובד בעולם האמיתי ולא רק חלון צ'אט שמחובר למודל. מבחינתי זה כל העניין: להבין דרך מוצר חי איך בונים מערכת AI שאנשים באמת יכולים להשתמש בה.

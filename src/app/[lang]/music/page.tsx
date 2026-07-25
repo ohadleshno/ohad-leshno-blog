@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
-import { Clock, Calendar, Disc } from 'lucide-react';
 
 export function generateStaticParams() {
   return [{ lang: 'he' }, { lang: 'en' }];
@@ -12,18 +11,17 @@ export default function MusicBlogIndex({ params }: { params: { lang: 'he' | 'en'
   const posts = getAllPosts(lang);
 
   return (
-    <div className="space-y-8 py-6">
+    <div className="space-y-10 py-6">
       {/* Header Banner */}
-      <div className="glass-card p-8 rounded-3xl border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900 shadow-lg space-y-3">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800/80 text-xs font-semibold">
-          <Disc className="size-3.5 text-indigo-600 dark:text-indigo-400" />
-          <span>{isHe ? 'מוזיקה • תרבות • אלבומים' : 'Music • Culture • Albums'}</span>
+      <div className="py-8 border-b border-neutral-200 dark:border-neutral-800 space-y-3">
+        <div className="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold">
+          {isHe ? 'מוזיקה • תרבות • אלבומים' : 'Music • Culture • Albums'}
         </div>
 
-        <h1 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white sm:text-4xl text-balance">
+        <h1 className="font-display text-4xl sm:text-5xl font-semibold text-neutral-900 dark:text-neutral-50 tracking-tight">
           {isHe ? 'בלוג מוזיקה ותרבות' : 'Music & Culture Blog'}
         </h1>
-        <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed text-pretty">
+        <p className="text-base sm:text-lg text-neutral-600 dark:text-neutral-400 font-light leading-relaxed max-w-2xl">
           {isHe
             ? 'מאמרים, ניתוחי אלבומים ומחשבות על מוזיקה ישראלית ועולמית'
             : 'Essays, album breakdowns, and musical insights.'}
@@ -31,39 +29,37 @@ export default function MusicBlogIndex({ params }: { params: { lang: 'he' | 'en'
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/${lang}/music/${post.slug}`}
-            className="group glass-card rounded-2xl overflow-hidden border border-slate-200/80 dark:border-slate-800/80 bg-white dark:bg-slate-900 flex flex-col justify-between p-5 hover:border-indigo-500/50 transition-all shadow-sm hover:shadow-xl"
+            className="group flex flex-col justify-between p-5 rounded-2xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 hover:border-neutral-400 dark:hover:border-neutral-600 transition-all shadow-sm space-y-4"
           >
             <div className="space-y-3">
-              <div className="w-full h-48 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 relative">
+              <div className="w-full h-48 rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 relative">
                 <img
                   src={(post.coverImage || '/hero-cover.jpeg').replace(/^\/public/, '')}
                   alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 />
               </div>
-              <h2 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors line-clamp-2">
+              <div className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">
+                {new Date(post.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')} • {post.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
+              </div>
+              <h2 className="font-display text-xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors line-clamp-2">
                 {post.title}
               </h2>
               {post.excerpt && (
-                <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-3 leading-relaxed">
+                <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 line-clamp-3 leading-relaxed">
                   {post.excerpt}
                 </p>
               )}
             </div>
 
-            <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-500 pt-4 mt-4 border-t border-slate-100 dark:border-slate-800/60">
-              <span className="flex items-center gap-1">
-                <Calendar className="size-3.5" />
-                {new Date(post.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')}
-              </span>
-              <span className="flex items-center gap-1">
-                <Clock className="size-3.5" />
-                {post.minutesToRead} {isHe ? 'דק׳ קריאה' : 'min read'}
+            <div className="pt-3 border-t border-neutral-100 dark:border-neutral-800">
+              <span className="text-xs font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
+                {isHe ? 'קריאת המאמר המלא ←' : 'Read Full Essay →'}
               </span>
             </div>
           </Link>

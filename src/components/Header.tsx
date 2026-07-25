@@ -52,58 +52,54 @@ export function Header({ lang }: HeaderProps) {
       href: `/${lang}/music`,
       mobileLabel: isHe ? 'מוזיקה' : 'Music',
       desktopLabel: isHe ? 'בלוג מוזיקה' : 'Music Blog',
-      icon: <Music className="w-3.5 h-3.5 inline me-1 flex-shrink-0" />,
     },
     {
       href: `/${lang}/tech`,
       mobileLabel: 'AI',
       desktopLabel: isHe ? 'בלוג AI' : 'AI & Tech',
-      icon: <Cpu className="w-3.5 h-3.5 inline me-1 flex-shrink-0" />,
     },
     {
       href: `/${lang}/about`,
       mobileLabel: isHe ? 'אודות' : 'About',
       desktopLabel: isHe ? 'אודות' : 'About Me',
-      icon: <User className="w-3.5 h-3.5 inline me-1 flex-shrink-0" />,
     },
   ];
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full glass-nav border-b border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-950/80 transition-transform duration-300 ease-in-out ${
+      className={`sticky top-0 z-50 w-full border-b border-neutral-200/80 dark:border-neutral-800/80 bg-neutral-50/90 dark:bg-neutral-950/90 backdrop-blur-md transition-transform duration-300 ease-in-out ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-2 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-1 sm:gap-2">
+      <div className="max-w-6xl mx-auto px-3 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-1 sm:gap-2">
         {/* Brand Logo */}
         <Link
           href={`/${lang}`}
-          className="flex items-center gap-1.5 font-bold text-xs sm:text-base text-slate-900 dark:text-white hover:opacity-90 transition-opacity flex-shrink-0 whitespace-nowrap"
+          className="flex items-center gap-2 text-slate-900 dark:text-white hover:opacity-80 transition-opacity flex-shrink-0 whitespace-nowrap"
         >
           <img
             src="/logo.png"
             alt="Ohad Leshno"
-            className="w-6 h-6 sm:w-8 sm:h-8 rounded-md sm:rounded-lg object-cover shadow-sm flex-shrink-0"
+            className="w-6 h-6 sm:w-7 sm:h-7 rounded object-cover flex-shrink-0"
           />
-          <span className="truncate">{isHe ? 'אוהד לשנו' : 'Ohad Leshno'}</span>
+          <span className="font-display font-semibold text-sm sm:text-lg tracking-tight truncate">{isHe ? 'אוהד לשנו' : 'Ohad Leshno'}</span>
         </Link>
 
         {/* Navigation links & Utilities */}
         <div className="flex items-center gap-1 sm:gap-3 flex-shrink-0">
-          <nav className="flex items-center gap-0.5 sm:gap-2">
+          <nav className="flex items-center gap-1 sm:gap-4">
             {navLinks.map((link) => {
               const isActive = pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-1.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-colors whitespace-nowrap inline-flex items-center ${
+                  className={`px-1.5 sm:px-2 py-1 text-xs sm:text-sm font-medium transition-colors whitespace-nowrap inline-flex items-center relative ${
                     isActive
-                      ? 'bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 font-semibold'
-                      : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800/60'
+                      ? 'text-rose-600 dark:text-rose-400 font-semibold underline underline-offset-8 decoration-2'
+                      : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100'
                   }`}
                 >
-                  {link.icon}
                   <span className="sm:hidden">{link.mobileLabel}</span>
                   <span className="hidden sm:inline">{link.desktopLabel}</span>
                 </Link>
@@ -111,11 +107,11 @@ export function Header({ lang }: HeaderProps) {
             })}
           </nav>
 
-          <div className="flex items-center gap-1 sm:gap-2 border-s border-slate-200 dark:border-slate-800 ps-1 sm:ps-3 flex-shrink-0">
+          <div className="flex items-center gap-1 sm:gap-2 border-s border-neutral-200 dark:border-neutral-800 ps-1.5 sm:ps-3 flex-shrink-0">
             {/* Language Selector */}
             <Link
               href={switchLangPath}
-              className="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md text-xs font-semibold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors whitespace-nowrap"
+              className="px-2 py-0.5 rounded text-xs font-medium border border-neutral-200 dark:border-neutral-800 text-neutral-700 dark:text-neutral-300 hover:border-neutral-400 dark:hover:border-neutral-600 transition-colors whitespace-nowrap"
             >
               {otherLangLabel}
             </Link>

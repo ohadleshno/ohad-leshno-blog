@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --bg-gradient-light: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  --bg-card-light: rgba(255, 255, 255, 0.85);
-  --border-light: rgba(226, 232, 240, 0.8);
-  --text-main-light: #0f172a;
-  --text-muted-light: #64748b;
+  --bg-gradient-light: #faf9f6;
+  --bg-card-light: #ffffff;
+  --border-light: #e5e5e0;
+  --text-main-light: #171717;
+  --text-muted-light: #737373;
 
-  --bg-gradient-dark: linear-gradient(135deg, #090d16 0%, #1e1b4b 50%, #0f172a 100%);
-  --bg-card-dark: rgba(15, 23, 42, 0.75);
-  --border-dark: rgba(255, 255, 255, 0.1);
-  --text-main-dark: #f8fafc;
-  --text-muted-dark: #94a3b8;
+  --bg-gradient-dark: #121212;
+  --bg-card-dark: #1a1a1a;
+  --border-dark: #262626;
+  --text-main-dark: #f5f5f5;
+  --text-muted-dark: #a3a3a3;
 }
 
 body {
@@ -27,19 +27,21 @@ html[dir="rtl"] body {
   font-family: 'Rubik', 'Inter', sans-serif;
 }
 
+.font-display {
+  font-family: 'Fraunces', 'Rubik', serif;
+}
+
 .glass-nav {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  /* Clean sticky navigation background */
+  background-color: rgba(250, 249, 246, 0.9);
+}
+
+.dark .glass-nav {
+  background-color: rgba(18, 18, 18, 0.9);
 }
 
 .glass-card {
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
-}
-
-.glass-card:hover {
-  transform: translateY(-3px);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Responsive Article Typography & Reading Experience */
@@ -212,49 +214,155 @@ html[dir="rtl"] .prose li {
   color: #cbd5e1 !important;
 }
 
+/* Remove Tailwind typography default backtick quotes */
+.prose code::before,
+.prose code::after {
+  content: "" !important;
+}
+
 /* Code Blocks & Inline Code Alignment */
 .prose pre,
-.prose code,
-pre,
-code,
 .ltr-force {
   direction: ltr !important;
   text-align: left !important;
   unicode-bidi: isolate !important;
 }
 
-/* Inline code tags inside RTL prose */
-html[dir="rtl"] .prose :not(pre) > code {
+/* Compact inline-code badges for prose */
+.prose :not(pre) > code,
+:not(pre) > code {
   direction: ltr !important;
-  display: inline-block;
+  display: inline !important;
   unicode-bidi: isolate !important;
-  padding: 0.15em 0.4em !important;
-  border-radius: 0.375rem !important;
-  font-size: 0.85em !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.8em !important;
+  font-weight: 500 !important;
+  line-height: inherit !important;
+  padding: 0.05em 0.3em !important;
+  margin: 0 0.08em !important;
+  border-radius: 0.25rem !important;
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: none !important;
+  vertical-align: baseline !important;
 }
 
-/* High Contrast Mermaid Diagram Overrides */
+.dark .prose :not(pre) > code,
+.dark :not(pre) > code {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+/* Mermaid diagrams follow the site theme and scroll instead of shrinking
+   below a readable size on narrow screens. */
+.mermaid-wrapper {
+  color: #171717 !important;
+  background-color: #faf9f6;
+  border-color: #e5e5e0 !important;
+  box-shadow: 0 1px 2px rgb(23 23 23 / 0.04);
+  scrollbar-width: thin;
+  scrollbar-color: #a3a3a3 transparent;
+}
+
+.mermaid-wrapper:focus-visible {
+  outline: 2px solid #737373;
+  outline-offset: 2px;
+}
+
+.dark .mermaid-wrapper {
+  color: #f5f5f5 !important;
+  background-color: #1a1a1a;
+  border-color: #262626 !important;
+  scrollbar-color: #737373 transparent;
+}
+
 .mermaid-wrapper svg {
-  max-width: 100% !important;
+  width: calc(var(--mermaid-zoom, 1) * 100%) !important;
+  min-width: 0;
+  max-width: none !important;
   height: auto !important;
+  background-color: transparent !important;
 }
 
 .mermaid-wrapper svg text,
 .mermaid-wrapper svg tspan,
-.mermaid-wrapper svg span,
-.mermaid-wrapper svg div,
-.mermaid-wrapper svg p,
 .mermaid-wrapper .nodeLabel,
-.mermaid-wrapper .edgeLabel,
-.mermaid-wrapper .label,
 .mermaid-wrapper .label text,
-.mermaid-wrapper .label tspan {
-  color: #ffffff !important;
-  fill: #ffffff !important;
-  font-weight: 700 !important;
-  font-size: 13px !important;
+.mermaid-wrapper .label tspan,
+.mermaid-wrapper .label,
+.mermaid-wrapper foreignObject,
+.mermaid-wrapper foreignObject div,
+.mermaid-wrapper foreignObject span,
+.mermaid-wrapper foreignObject p,
+.mermaid-wrapper .nodeLabel p,
+.mermaid-wrapper .nodeLabel span,
+.mermaid-wrapper .label p,
+.mermaid-wrapper .label span {
+  color: #171717 !important;
+  fill: #171717 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  padding: 0 !important;
   opacity: 1 !important;
   visibility: visible !important;
+  background: transparent !important;
+}
+
+.dark .mermaid-wrapper svg text,
+.dark .mermaid-wrapper svg tspan,
+.dark .mermaid-wrapper .nodeLabel,
+.dark .mermaid-wrapper .label,
+.dark .mermaid-wrapper foreignObject,
+.dark .mermaid-wrapper foreignObject div,
+.dark .mermaid-wrapper foreignObject span,
+.dark .mermaid-wrapper foreignObject p {
+  color: #f5f5f5 !important;
+  fill: #f5f5f5 !important;
+}
+
+.mermaid-wrapper .edgeLabel,
+.mermaid-wrapper .edgeLabel text,
+.mermaid-wrapper .edgeLabel tspan,
+.mermaid-wrapper .edgeLabel span,
+.mermaid-wrapper .edgeLabel p,
+.mermaid-wrapper .edgeLabel div {
+  color: #525252 !important;
+  fill: #525252 !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.dark .mermaid-wrapper .edgeLabel,
+.dark .mermaid-wrapper .edgeLabel text,
+.dark .mermaid-wrapper .edgeLabel tspan,
+.dark .mermaid-wrapper .edgeLabel span,
+.dark .mermaid-wrapper .edgeLabel p,
+.dark .mermaid-wrapper .edgeLabel div {
+  color: #d4d4d4 !important;
+  fill: #d4d4d4 !important;
+}
+
+.mermaid-wrapper .edgeLabel rect,
+.mermaid-wrapper .edgeLabel polygon,
+.mermaid-wrapper .edgeLabel .label-container {
+  fill: #faf9f6 !important;
+  stroke: #e5e5e0 !important;
+  stroke-width: 1px !important;
+}
+
+.dark .mermaid-wrapper .edgeLabel rect,
+.dark .mermaid-wrapper .edgeLabel polygon,
+.dark .mermaid-wrapper .edgeLabel .label-container {
+  fill: #1a1a1a !important;
+  stroke: #404040 !important;
 }
 
 .mermaid-wrapper .node rect,
@@ -262,33 +370,223 @@ html[dir="rtl"] .prose :not(pre) > code {
 .mermaid-wrapper .node polygon,
 .mermaid-wrapper .node path,
 .mermaid-wrapper .node .label-container {
-  fill: #1e293b !important;
-  stroke: #38bdf8 !important;
-  stroke-width: 2px !important;
+  fill: #ffffff !important;
+  stroke: #a3a3a3 !important;
+  stroke-width: 1.5px !important;
   opacity: 1 !important;
+}
+
+.dark .mermaid-wrapper .node rect,
+.dark .mermaid-wrapper .node circle,
+.dark .mermaid-wrapper .node polygon,
+.dark .mermaid-wrapper .node path,
+.dark .mermaid-wrapper .node .label-container {
+  fill: #262626 !important;
+  stroke: #737373 !important;
 }
 
 .mermaid-wrapper .edgePath .path,
 .mermaid-wrapper .flowchart-link,
 .mermaid-wrapper path.link {
-  stroke: #38bdf8 !important;
-  stroke-width: 2.5px !important;
+  stroke: #737373 !important;
+  stroke-width: 2px !important;
 }
 
 .mermaid-wrapper .marker,
 .mermaid-wrapper [id*="pointEnd"] {
-  fill: #38bdf8 !important;
-  stroke: #38bdf8 !important;
+  fill: #737373 !important;
+  stroke: #737373 !important;
 }
 
-.mermaid-wrapper .edgeLabel,
-.mermaid-wrapper .edgeLabel text,
-.mermaid-wrapper .edgeLabel tspan,
-.mermaid-wrapper .edgeLabel rect {
+.dark .mermaid-wrapper .edgePath .path,
+.dark .mermaid-wrapper .flowchart-link,
+.dark .mermaid-wrapper path.link {
+  stroke: #a3a3a3 !important;
+}
+
+.dark .mermaid-wrapper .marker,
+.dark .mermaid-wrapper [id*="pointEnd"] {
+  fill: #a3a3a3 !important;
+  stroke: #a3a3a3 !important;
+}
+
+.mermaid-zoom-controls {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .mermaid-wrapper {
+    padding: 0.75rem !important;
+    touch-action: pan-x pan-y;
+  }
+
+  .mermaid-zoom-controls {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    width: max-content;
+    align-items: center;
+    gap: 0.25rem;
+    margin-bottom: 0.75rem;
+    padding: 0.25rem;
+    border: 1px solid #e5e5e0;
+    border-radius: 0.5rem;
+    background-color: rgb(255 255 255 / 0.96);
+  }
+
+  .dark .mermaid-zoom-controls {
+    border-color: #404040;
+    background-color: rgb(38 38 38 / 0.96);
+  }
+
+  .mermaid-zoom-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 0;
+    border-radius: 0.375rem;
+    background-color: transparent;
+    color: #171717;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .mermaid-zoom-button:focus-visible {
+    outline: 2px solid #737373;
+    outline-offset: 1px;
+  }
+
+  .mermaid-zoom-button:disabled {
+    color: #a3a3a3;
+  }
+
+  .dark .mermaid-zoom-button {
+    color: #f5f5f5;
+  }
+
+  .dark .mermaid-zoom-button:disabled {
+    color: #737373;
+  }
+
+  .mermaid-zoom-value {
+    min-width: 3.5rem;
+    color: #525252;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+  }
+
+  .dark .mermaid-zoom-value {
+    color: #d4d4d4;
+  }
+}
+
+/* Telegram channel preview card used in markdown embeds */
+.telegram-channel-card {
+  display: block !important;
+  margin: 1.75rem 0 !important;
+  padding: 1rem 1.25rem !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid #e2e8f0 !important;
+  background-color: #f8fafc !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+  word-break: normal !important;
+}
+
+.telegram-channel-card:hover {
+  border-color: #94a3b8 !important;
+  background-color: #f1f5f9 !important;
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.dark .telegram-channel-card {
+  border-color: #334155 !important;
   background-color: #0f172a !important;
-  fill: #0f172a !important;
-  color: #38bdf8 !important;
+}
+
+.dark .telegram-channel-card:hover {
+  border-color: #64748b !important;
+  background-color: #1e293b !important;
+}
+
+.telegram-channel-card .telegram-channel-eyebrow {
+  display: block;
+  font-size: 0.75rem !important;
   font-weight: 600 !important;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b !important;
+  margin: 0 0 0.35rem 0 !important;
+}
+
+.dark .telegram-channel-card .telegram-channel-eyebrow {
+  color: #94a3b8 !important;
+}
+
+.telegram-channel-card .telegram-channel-title {
+  display: block;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  color: #0f172a !important;
+  margin: 0 0 0.25rem 0 !important;
+  line-height: 1.4 !important;
+}
+
+.dark .telegram-channel-card .telegram-channel-title {
+  color: #f8fafc !important;
+}
+
+.telegram-channel-card .telegram-channel-desc {
+  display: block;
+  font-size: 0.95rem !important;
+  font-weight: 400 !important;
+  color: #475569 !important;
+  margin: 0 !important;
+  line-height: 1.5 !important;
+}
+
+.dark .telegram-channel-card .telegram-channel-desc {
+  color: #cbd5e1 !important;
+}
+
+.telegram-channel-preview {
+  display: block !important;
+  margin: 1.75rem 0 !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  text-decoration: none !important;
+  word-break: normal !important;
+  background-color: #f8fafc;
+}
+
+.telegram-channel-preview:hover {
+  border-color: #94a3b8 !important;
+}
+
+.telegram-channel-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+  border-radius: 0 !important;
+}
+
+.dark .telegram-channel-preview {
+  border-color: #334155 !important;
+  background-color: #0f172a;
+}
+
+.dark .telegram-channel-preview:hover {
+  border-color: #64748b !important;
 }
 
 /* Clickable Links in Prose */
@@ -312,10 +610,50 @@ html[dir="rtl"] .prose :not(pre) > code {
   color: #a5b4fc !important;
 }
 
+/* Channel cards must not inherit prose link indigo/underline */
+.prose a.telegram-channel-card,
+.prose a.telegram-channel-card:hover,
+.prose a.telegram-channel-preview,
+.prose a.telegram-channel-preview:hover {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-weight: inherit !important;
+  word-break: normal !important;
+}
+
 /* Embeds & Media Containers */
 .prose iframe {
   max-width: 100% !important;
   border-radius: 0.75rem !important;
+}
+
+.prose .article-screenshot-figure {
+  margin: 2rem 0 !important;
+}
+
+.prose .article-screenshot {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 !important;
+  border: 1px solid #e5e5e0;
+  border-radius: 0.75rem;
+}
+
+.prose .article-screenshot-figure figcaption {
+  margin-top: 0.75rem;
+  color: #737373;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.dark .prose .article-screenshot {
+  border-color: #404040;
+}
+
+.dark .prose .article-screenshot-figure figcaption {
+  color: #a3a3a3;
 }
 
 /* About Page -- Rich Section Cards & Accent Bullets */

@@ -13,27 +13,35 @@ export function MermaidRenderer() {
 
         mermaid.initialize({
           startOnLoad: false,
-          theme: 'dark',
+          theme: 'base',
           flowchart: {
-            htmlLabels: false, // Forces pure SVG text rendering to prevent HTML prose CSS inheritance bugs
+            htmlLabels: true,
             useMaxWidth: true,
             curve: 'basis',
           },
           themeVariables: {
             fontFamily: 'Inter, system-ui, sans-serif',
-            primaryColor: '#1e293b',
-            primaryTextColor: '#ffffff',
-            nodeTextColor: '#ffffff',
-            textColor: '#ffffff',
-            primaryBorderColor: '#38bdf8',
-            lineColor: '#38bdf8',
-            secondaryColor: '#1e293b',
-            tertiaryColor: '#0f172a',
-            edgeLabelBackground: '#0f172a',
-            clusterBkg: '#0f172a',
-            clusterBorder: '#38bdf8',
-            defaultLinkColor: '#38bdf8',
-            titleColor: '#ffffff',
+            fontSize: '16px',
+            background: '#faf9f6',
+            primaryColor: '#ffffff',
+            primaryTextColor: '#171717',
+            nodeTextColor: '#171717',
+            textColor: '#171717',
+            primaryBorderColor: '#a3a3a3',
+            lineColor: '#737373',
+            secondaryColor: '#ffffff',
+            tertiaryColor: '#faf9f6',
+            secondaryTextColor: '#171717',
+            tertiaryTextColor: '#171717',
+            edgeLabelBackground: '#faf9f6',
+            clusterBkg: '#faf9f6',
+            clusterBorder: '#a3a3a3',
+            defaultLinkColor: '#737373',
+            titleColor: '#171717',
+            mainBkg: '#ffffff',
+            nodeBorder: '#a3a3a3',
+            actorTextColor: '#171717',
+            labelTextColor: '#171717',
           },
           securityLevel: 'loose',
         });
@@ -52,14 +60,72 @@ export function MermaidRenderer() {
           const uniqueId = `mermaid-svg-${i}-${Math.random().toString(36).substring(2, 9)}`;
 
           const container = document.createElement('div');
-          container.className = 'my-8 p-6 sm:p-8 rounded-2xl bg-slate-950 border border-sky-500/40 shadow-2xl overflow-x-auto flex justify-center items-center ltr-force mermaid-wrapper';
+          container.className = 'my-8 p-4 sm:p-6 rounded-xl border overflow-x-auto ltr-force mermaid-wrapper';
           container.style.direction = 'ltr';
           container.setAttribute('dir', 'ltr');
+          container.setAttribute('role', 'region');
+          container.setAttribute('aria-label', 'Zoomable diagram');
+          container.tabIndex = 0;
 
           try {
             const { svg } = await mermaid.render(uniqueId, code);
             if (isMounted) {
               container.innerHTML = svg;
+              const isRtl = document.documentElement.dir === 'rtl';
+              const toolbar = document.createElement('div');
+              const zoomValue = document.createElement('span');
+              const zoomOut = document.createElement('button');
+              const zoomIn = document.createElement('button');
+              let zoom = 1;
+
+              toolbar.className = 'mermaid-zoom-controls';
+              toolbar.setAttribute('role', 'group');
+              toolbar.setAttribute('aria-label', isRtl ? 'פקדי הגדלה לתרשים' : 'Diagram zoom controls');
+
+              zoomOut.type = 'button';
+              zoomOut.className = 'mermaid-zoom-button';
+              zoomOut.textContent = '−';
+              zoomOut.setAttribute('aria-label', isRtl ? 'הקטנת התרשים' : 'Zoom out');
+
+              zoomValue.className = 'mermaid-zoom-value';
+              zoomValue.setAttribute('aria-live', 'polite');
+
+              zoomIn.type = 'button';
+              zoomIn.className = 'mermaid-zoom-button';
+              zoomIn.textContent = '+';
+              zoomIn.setAttribute('aria-label', isRtl ? 'הגדלת התרשים' : 'Zoom in');
+
+              const updateZoom = () => {
+                container.style.setProperty('--mermaid-zoom', String(zoom));
+                zoomValue.textContent = `${Math.round(zoom * 100)}%`;
+                zoomOut.disabled = zoom === 1;
+                zoomIn.disabled = zoom === 3;
+              };
+
+              const centerDiagram = () => {
+                requestAnimationFrame(() => {
+                  container.scrollTo({
+                    left: (container.scrollWidth - container.clientWidth) / 2,
+                    behavior: 'smooth',
+                  });
+                });
+              };
+
+              zoomOut.addEventListener('click', () => {
+                zoom = Math.max(1, zoom - 0.5);
+                updateZoom();
+                centerDiagram();
+              });
+
+              zoomIn.addEventListener('click', () => {
+                zoom = Math.min(3, zoom + 0.5);
+                updateZoom();
+                centerDiagram();
+              });
+
+              toolbar.append(zoomOut, zoomValue, zoomIn);
+              container.prepend(toolbar);
+              updateZoom();
               pre.replaceWith(container);
             }
           } catch (renderError) {

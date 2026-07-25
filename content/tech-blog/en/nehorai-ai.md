@@ -68,37 +68,6 @@ The crawler includes a self healing mechanism: if the `deals:latest` key is miss
 
 ---
 
-## Tool Rationale: Why We Chose Our Stack Over Alternatives
-
-Every architectural layer in NehorAI was selected to optimize for sub 300ms initial response times, zero server maintenance, and minimal runtime cost.
-
-### 1. Cloudflare KV over Redis (Upstash / ElastiCache) or Postgres (Supabase)
-
-- **Why KV over Redis / Postgres**: Traditional databases or Redis clusters require managing connection pools, VPC peering, or VPC latency over regional boundaries. [Cloudflare KV](https://developers.cloudflare.com/kv/) is a globally distributed key value store designed specifically for read heavy workloads (written once per 30 minutes by crawlers, read thousands of times by users).
-- **The Edge Advantage**: KV reads happen directly at the Cloudflare edge location nearest to the user (e.g. Tel Aviv edge POP), returning cached payloads in ~2ms without a single database hop.
-- **Cost & Simplicity**: Zero connection management, zero idle database compute costs, and native binding to Workers with `env.DEAL_CACHE.get()`.
-- **References**: [Cloudflare KV Documentation](https://developers.cloudflare.com/kv/) | [Cloudflare KV Architecture & Performance](https://developers.cloudflare.com/kv/concepts/how-kv-works/)
-
-### 2. Cloudflare Workers over AWS Lambda / Vercel Serverless
-
-- **Why Workers over Lambda**: Traditional serverless containers (like AWS Lambda or Vercel Node.js functions) suffer from cold starts of 200ms to 2s when a container needs to spawn. [Cloudflare Workers](https://developers.cloudflare.com/workers/) run on V8 isolates with near zero cold start overhead (<5ms).
-- **Native Scheduled Triggers**: Built-in Cron support allows running crawler jobs on the exact same infrastructure without needing separate AWS EventBridge or External Cron services.
-- **References**: [Cloudflare Workers Docs](https://developers.cloudflare.com/workers/) | [V8 Isolates vs Containers](https://developers.cloudflare.com/workers/reference/how-workers-works/)
-
-### 3. Google Gemini 2.0 (Flash & Flash Lite) over OpenAI GPT 4o / Claude 3.5 Sonnet
-
-- **Why Gemini over OpenAI / Claude**: Cost and speed. NehorAI relies on two distinct models: `gemini-2.0-flash-lite` for ultra fast quick mode acknowledgments (~300ms latency) and `gemini-2.0-flash` for high accuracy intent extraction and persona generation.
-- **Structured JSON Mode**: Gemini provides strict JSON schema mode at a fraction of the cost of GPT-4o, making low temperature intent parsing highly reliable.
-- **Search Grounding**: Built in Google Search tool integration allows fetching real time web verification when fallback standard chat is triggered.
-- **References**: [Google Gemini API Docs](https://ai.google.dev/docs) | [Gemini Models Overview](https://ai.google.dev/gemini-api/docs/models/gemini)
-
-### 4. Hono Framework over Express.js / Fastify
-
-- **Why Hono over Express**: Express and Fastify rely on Node.js native primitives (`http`, `stream`) that add unnecessary polyfill weight on edge environments. [Hono](https://hono.dev/) is an ultra lightweight (<14kB) web framework built natively for Web Standards and Cloudflare Workers runtime.
-- **References**: [Hono Official Docs](https://hono.dev/) | [Hono Cloudflare Workers Getting Started](https://hono.dev/docs/getting-started/cloudflare-workers)
-
----
-
 ## The Three Node Graph Engine
 
 When a user sends a message about vacation deals, the bot doesn't just fire a single LLM call. It runs a three stage pipeline where each stage has a specific job and a specific model configuration:
@@ -146,7 +115,11 @@ Why? Because when you ask Gemini to extract JSON parameters while also maintaini
 
 NehorAI also runs a Telegram channel ([@nehorainews](https://t.me/nehorainews)) that broadcasts news summaries via the [Telegram Bot API](https://core.telegram.org/bots/api). Every 30 minutes (during active hours, 8AM to 8PM Israel time, on even hours), the crawler scrapes five Israeli Telegram news channels, filters for items from the last hour, and sends them through Gemini with the NehorAI persona to generate a street slang news summary that gets posted to the bot's own Telegram channel.
 
-<iframe src="https://t.me/s/nehorainews" width="100%" height="600" style="border:none;border-radius:12px;" loading="lazy" title="NehorAI Telegram News Channel Live"></iframe>
+<a href="https://t.me/nehorainews" target="_blank" rel="noopener noreferrer" class="telegram-channel-card">
+  <span class="telegram-channel-eyebrow">Telegram</span>
+  <span class="telegram-channel-title">@nehorainews</span>
+  <span class="telegram-channel-desc">NehorAI news channel on Telegram. Open the channel.</span>
+</a>
 
 At 8PM daily, it generates a "daily summary" of the top 10 stories from the last 12 hours.
 
