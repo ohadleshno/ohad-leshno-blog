@@ -78,9 +78,12 @@ export function Header({ lang }: HeaderProps) {
           className="flex items-center gap-2 text-slate-900 dark:text-white hover:opacity-80 transition-opacity flex-shrink-0 whitespace-nowrap"
         >
           <img
-            src="/logo.png"
-            alt="Ohad Leshno"
-            className="w-6 h-6 sm:w-7 sm:h-7 rounded object-cover flex-shrink-0"
+            src="/logo-icon.png"
+            alt=""
+            width={28}
+            height={28}
+            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-contain flex-shrink-0"
+            aria-hidden="true"
           />
           <span className="font-display font-semibold text-sm sm:text-lg tracking-tight truncate">{isHe ? 'אוהד לשנו' : 'Ohad Leshno'}</span>
         </Link>

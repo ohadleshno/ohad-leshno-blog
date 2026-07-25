@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "npx tsx scripts/parse-wix-posts.ts && npx tsx scripts/generate-syndication.ts && next build",
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name=ohad-leshno-blog",
     "start": "next start",
     "lint": "next lint",
     "parse-wix": "npx tsx scripts/parse-wix-posts.ts"
