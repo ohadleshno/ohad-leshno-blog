@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllTechProjects } from '@/lib/tech';
 import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
@@ -5,6 +6,51 @@ import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 export function generateStaticParams() {
   return [{ lang: 'he' }, { lang: 'en' }];
 }
+
+export function generateMetadata({ params }: { params: { lang: 'he' | 'en' } }): Metadata {
+  const lang = params.lang || 'he';
+  const isHe = lang === 'he';
+
+  const title = isHe ? 'בלוג AI ופרויקטים טכנולוגיים' : 'AI Engineering & Projects';
+  const description = isHe
+    ? 'מסמכי ארכיטקטורה, פרויקטים פתוחים ומחקר במערכות בינה מלאכותית (AI) מאת אוהד לשנו.'
+    : 'Architecture design documents, open source projects, and AI systems research by Ohad Leshno.';
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://ohadleshno.com/${lang}/tech`,
+      languages: {
+        he: 'https://ohadleshno.com/he/tech',
+        en: 'https://ohadleshno.com/en/tech',
+      },
+    },
+    openGraph: {
+      title: `${title} | Ohad Leshno`,
+      description,
+      url: `https://ohadleshno.com/${lang}/tech`,
+      siteName: 'Ohad Leshno Blog',
+      locale: isHe ? 'he_IL' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: 'https://ohadleshno.com/nehorai-hero.webp',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | Ohad Leshno`,
+      description,
+      images: ['https://ohadleshno.com/nehorai-hero.webp'],
+    },
+  };
+}
+
 
 export default function TechBlogIndex({ params }: { params: { lang: 'he' | 'en' } }) {
   const lang = params.lang || 'he';
@@ -43,7 +89,7 @@ export default function TechBlogIndex({ params }: { params: { lang: 'he' | 'en' 
             <div className="space-y-4 pointer-events-none">
               <div className="w-full h-48 sm:h-52 rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 relative">
                 <img
-                  src={project.coverImage || '/nehorai-hero.png'}
+                  src={project.coverImage || '/nehorai-hero.webp'}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 />

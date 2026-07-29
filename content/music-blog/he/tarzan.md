@@ -3,7 +3,7 @@ title: "Tarzan"
 slug: "tarzan"
 excerpt: "אני, מי שלא מכיר, חנון גאה שגדל על כל הקלישאות הכי גנריות של חנונים. אוהב את הביטלס היה בונה לגו של Star Wars, שיחק בכל משחק מחשב שהיה..."
 date: "2023-09-06T04:55:50.672Z"
-coverImage: "/hero-cover.jpeg"
+coverImage: "/hero-cover.webp"
 minutesToRead: 3
 language: "he"
 ---

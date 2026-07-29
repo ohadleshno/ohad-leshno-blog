@@ -73,7 +73,7 @@ export function getPostData(slug: string, lang: 'he' | 'en' = 'he'): PostDetail 
     .processSync(content);
   const contentHtml = processedContent.toString();
 
-  const coverImage = data.coverImage ? data.coverImage.replace(/^\/public/, '') : '/hero-cover.jpeg';
+  const coverImage = data.coverImage ? data.coverImage.replace(/^\/public/, '') : '/hero-cover.webp';
   const youtubeId = extractFirstYouTubeId(content, data.youtubeUrl || data.youtubeId);
 
   return {

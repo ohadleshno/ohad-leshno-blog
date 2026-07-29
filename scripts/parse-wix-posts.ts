@@ -60,19 +60,29 @@ function extractYouTubeId(url: string): string {
   return '';
 }
 
+function formatImageUrl(url?: string): string {
+  if (!url) return '/hero-cover.webp';
+  if (url.includes('wixstatic.com/media/')) {
+    const rawName = url.split('wixstatic.com/media/')[1].split('~')[0];
+    const base = rawName.replace(/\.(png|jpg|jpeg|avif)$/i, '');
+    return `/images/wix/${base}.webp`;
+  }
+  return url.replace(/\.(png|jpg|jpeg|avif)$/i, '.webp');
+}
+
 function extractFirstImage(contentStr: string, coverMediaUrl?: string): string {
-  if (coverMediaUrl) return coverMediaUrl;
+  if (coverMediaUrl) return formatImageUrl(coverMediaUrl);
   try {
     const json: WixPostContent = JSON.parse(contentStr);
     for (const key in json.entityMap || {}) {
       const entity = json.entityMap[key];
       if (entity?.type === 'wix-draft-plugin-image') {
         const src = entity.data?.src?.url || (entity.data?.src?.id ? `https://static.wixstatic.com/media/${entity.data.src.id}` : '');
-        if (src) return src;
+        if (src) return formatImageUrl(src);
       }
     }
   } catch (e) {}
-  return '/hero-cover.jpeg';
+  return '/hero-cover.webp';
 }
 
 function formatBlockText(block: WixBlock, entityMap: Record<string, WixEntity>): string {
@@ -266,7 +276,7 @@ ${markdownContent}
   const aboutHe = `---
 title: "אודות - אוהד לשנו"
 language: "he"
-avatar: "/ohad_leshno.avif"
+avatar: "/ohad_leshno.webp"
 ---
 
 # אודות אוהד לשנו
@@ -290,7 +300,7 @@ avatar: "/ohad_leshno.avif"
   const aboutEn = `---
 title: "About - Ohad Leshno"
 language: "en"
-avatar: "/ohad_leshno.avif"
+avatar: "/ohad_leshno.webp"
 ---
 
 # About Ohad Leshno

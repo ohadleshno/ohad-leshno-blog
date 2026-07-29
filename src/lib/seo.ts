@@ -12,7 +12,7 @@ export function constructMetadata({
   title,
   description,
   url,
-  image = 'https://ohadleshno.com/hero-cover.jpeg',
+  image = 'https://ohadleshno.com/hero-cover.webp',
   type = 'website',
 }: MetadataProps) {
   return {

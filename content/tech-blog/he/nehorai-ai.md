@@ -1,9 +1,9 @@
 ---
-title: "בניית NehorAI — איך בונים בוט AI שבאמת מרגיש אנושי"
+title: "בניית NehorAI: איך בונים בוט AI שבאמת מרגיש אנושי"
 slug: "nehorai-ai"
 excerpt: "הסיפור מאחורי בניית עוזר AI בעברית על Cloudflare Workers: איך להשיג דאטה בזמן אמת, לגרום לו לדבר כמו בן אדם אמיתי, ולשמור על latency נמוך."
 date: "2026-03-15"
-coverImage: "/nehorai-hero.png"
+coverImage: "/nehorai-hero.webp"
 projectUrl: "https://nehorai.ai"
 techStack: ["Cloudflare Workers", "TypeScript", "Google Gemini 2.0", "Cloudflare KV", "Telegram Bot API", "Cron Crawlers"]
 language: "he"
@@ -182,6 +182,42 @@ NehorAI גם מנהל ערוץ טלגרם ([@nehorainews](https://t.me/nehoraine
 ## מה הלאה
 
 בניית בוט טוויטר/X שמשתמש באותה תשתית backend (אותם סורקים, אותו דאטה ב KV, אותו מנוע גרף), אבל מפרסם threads של דילים וסיכומי חדשות במקום לענות להודעות צ'אט. הפרסונה נשארת; ערוץ ההפצה משתנה.
+
+---
+
+## ה-Flow המלא של המערכת
+
+התרשים הזה עוקב אחרי הנתיב הלוגי של כל chat request, מהרגע שהוא מגיע ועד ה-reply הסופי. הוא גם מראה איך ה-crawlers ברקע שומרים את הדאטה טרי באופן עצמאי.
+
+```mermaid
+flowchart TD
+    REQ["Chat Request"] --> EXTRACT["Extract Browser Data\n(location, timezone, time)"]
+    EXTRACT --> REGEX{"Keyword Match\n(external data related?)"}
+
+    REGEX -->|"no"| GENERAL["General LLM Chat\n(with location + time context)"]
+    GENERAL --> REPLY["Final Reply"]
+
+    REGEX -->|"yes (slow path)"| SPLIT["Two parallel calls"]
+    SPLIT -->|"call 1"| QUICK["Fast Reply\n(lightweight model, ~300ms)"]
+    SPLIT -->|"call 2"| INTENT["Node 1: Intent Extraction\n(structured JSON)"]
+
+    QUICK --> SHOW["User sees quick reply"]
+
+    INTENT --> KVLOOKUP["Node 2: KV Cache Lookup"]
+    KVLOOKUP -->|"read"| KV[("Cloudflare KV")]
+    KVLOOKUP --> COMPILE["Node 3: Compile Response\n(inject persona + booking links)"]
+    COMPILE --> REPLY
+    REPLY -->|"replaces quick reply"| SHOW
+
+    CRON(["Cron Trigger (every 30 min)"]) --> CRAWLERS["Crawlers"]
+    CRAWLERS -->|"flights, events,\nnews, sports, torah"| KV
+```
+
+ה-flow מתחלק לשני cycles עצמאיים:
+
+**Request cycle.** הודעת chat נכנסת. המערכת מחלצת browser data (מיקום משוער, timezone, שעה מקומית) ומריצה regex check על מילות מפתח. אם ההודעה לא צריכה דאטה חיצוני, היא עוברת ישר ל-LLM עם context של מיקום וזמן ומחזירה תשובה ישירה. אם היא כן צריכה דאטה חיצוני (ה-slow path), הקליינט שולח שתי קריאות במקביל: קריאה אחת ל-fast model קל שמחזיר acknowledgment מיידי למשתמש, והקריאה השנייה מריצה את ה-graph בשלושה nodes (extract intent, lookup דאטה מהקאש ב-KV, ו-compile תשובה עם persona ולינקים להזמנה). כשה-graph מסיים, ה-reply הסופי מחליף את ה-quick acknowledgment.
+
+**Data cycle.** כל 30 דקות, crawlers מתוזמנים סורקים דילי טיסות, אירועים, תוצאות ספורט, שיעורי תורה וחדשות. הכל נכתב ל-Cloudflare KV כדי שה-request cycle יקרא דאטה טרי ב-milliseconds בלי לקרוא ל-live pricing API במהלך צ'אט.
 
 ---
 

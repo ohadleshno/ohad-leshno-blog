@@ -3,7 +3,7 @@ title: "“Youth” -Matisyahu"
 slug: "youth-matisyahu"
 excerpt: "\"שמע, אם הוא היה לוקח את עצמו ברצינות, הוא היה סופרסטאר\", סיכם אחי את ההופעה של מתיסיהו שהיינו בה לפני חודש. זה היה אחד מהמופעים הטובים..."
 date: "2024-03-01T15:07:02.622Z"
-coverImage: "/hero-cover.jpeg"
+coverImage: "/hero-cover.webp"
 minutesToRead: 4
 language: "en"
 ---

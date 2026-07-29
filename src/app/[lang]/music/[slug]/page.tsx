@@ -1,7 +1,9 @@
+import type { Metadata } from 'next';
 import { getAllPostSlugs, getPostData } from '@/lib/posts';
 import { notFound } from 'next/navigation';
 import { SocialShare } from '@/components/SocialShare';
 import { Comments } from '@/components/Comments';
+import { LikeButton } from '@/components/LikeButton';
 import { MailingList } from '@/components/MailingList';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
@@ -26,6 +28,60 @@ export function generateStaticParams() {
   return Array.from(uniqueMap.values());
 }
 
+export function generateMetadata({
+  params,
+}: {
+  params: { lang: 'he' | 'en'; slug: string };
+}): Metadata {
+  const lang = params.lang || 'he';
+  const isHe = lang === 'he';
+  const post = getPostData(params.slug, lang);
+
+  if (!post) {
+    return { title: 'Post Not Found' };
+  }
+
+  const coverImageUrl = post.coverImage
+    ? (post.coverImage.startsWith('http') ? post.coverImage : `https://ohadleshno.com${post.coverImage.replace(/^\/public/, '')}`)
+    : 'https://ohadleshno.com/hero-cover.webp';
+
+  const canonicalUrl = `https://ohadleshno.com/${lang}/music/${post.slug}`;
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        he: `https://ohadleshno.com/he/music/${post.slug}`,
+        en: `https://ohadleshno.com/en/music/${post.slug}`,
+      },
+    },
+    openGraph: {
+      title: `${post.title} | Ohad Leshno`,
+      description: post.excerpt,
+      url: canonicalUrl,
+      siteName: 'Ohad Leshno Blog',
+      locale: isHe ? 'he_IL' : 'en_US',
+      type: 'article',
+      publishedTime: post.date,
+      authors: ['Ohad Leshno'],
+      images: [
+        {
+          url: coverImageUrl,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${post.title} | Ohad Leshno`,
+      description: post.excerpt,
+      images: [coverImageUrl],
+    },
+  };
+}
+
 export default function MusicPostDetail({
   params,
 }: {
@@ -41,8 +97,31 @@ export default function MusicPostDetail({
 
   const currentUrl = `https://ohadleshno.com/${lang}/music/${post.slug}`;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.excerpt,
+    datePublished: post.date,
+    author: {
+      '@type': 'Person',
+      name: 'Ohad Leshno',
+      url: 'https://ohadleshno.com',
+    },
+    url: currentUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': currentUrl,
+    },
+  };
+
   return (
     <div className="max-w-4xl mx-auto py-6 sm:py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <article className="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm overflow-hidden p-6 sm:p-12 space-y-8">
         {/* Back button */}
         <Link
@@ -90,9 +169,10 @@ export default function MusicPostDetail({
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
 
-        {/* Social Share Buttons */}
-        <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800">
+        {/* Social Share & Like Buttons */}
+        <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <SocialShare title={post.title} url={currentUrl} isHe={isHe} />
+          <LikeButton postSlug={post.slug} lang={lang} />
         </div>
 
         {/* Mailing List Section */}

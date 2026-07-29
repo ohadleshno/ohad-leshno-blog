@@ -1,4 +1,4 @@
--- Supabase Database Schema for Ohad Leshno Blog
+-- Supabase Database Schema & RLS Policies for Ohad Leshno Blog
 
 -- 1. Comments Table
 CREATE TABLE IF NOT EXISTS public.comments (
@@ -10,21 +10,18 @@ CREATE TABLE IF NOT EXISTS public.comments (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
--- Index for fast lookup by post and locale
 CREATE INDEX IF NOT EXISTS idx_comments_post_locale ON public.comments (post_slug, locale);
 
--- Enable Row Level Security (RLS)
+-- Enable RLS & Set Public Access Policies
 ALTER TABLE public.comments ENABLE ROW LEVEL SECURITY;
 
--- Allow public read access to comments
-CREATE POLICY "Allow public read access to comments" 
-ON public.comments FOR SELECT 
-USING (true);
+DROP POLICY IF EXISTS "Allow public read access to comments" ON public.comments;
+DROP POLICY IF EXISTS "Allow public insert access to comments" ON public.comments;
+DROP POLICY IF EXISTS "Allow public delete access to comments" ON public.comments;
 
--- Allow public insert access to comments
-CREATE POLICY "Allow public insert access to comments" 
-ON public.comments FOR INSERT 
-WITH CHECK (true);
+CREATE POLICY "Allow public read access to comments" ON public.comments FOR SELECT TO public USING (true);
+CREATE POLICY "Allow public insert access to comments" ON public.comments FOR INSERT TO public WITH CHECK (true);
+CREATE POLICY "Allow public delete access to comments" ON public.comments FOR DELETE TO public USING (true);
 
 -- 2. Subscribers Table (Mailing List)
 CREATE TABLE IF NOT EXISTS public.subscribers (
@@ -33,18 +30,52 @@ CREATE TABLE IF NOT EXISTS public.subscribers (
     created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
 
--- Index for subscriber email lookup
 CREATE INDEX IF NOT EXISTS idx_subscribers_email ON public.subscribers (email);
 
--- Enable RLS
 ALTER TABLE public.subscribers ENABLE ROW LEVEL SECURITY;
 
--- Allow public insert access for email subscriptions
-CREATE POLICY "Allow public insert access to subscribers" 
-ON public.subscribers FOR INSERT 
-WITH CHECK (true);
+DROP POLICY IF EXISTS "Allow public insert access to subscribers" ON public.subscribers;
+CREATE POLICY "Allow public insert access to subscribers" ON public.subscribers FOR INSERT TO public WITH CHECK (true);
 
--- Sample Data (Optional Seed)
-INSERT INTO public.comments (post_slug, locale, author_name, content) 
-VALUES ('billy-joel-the-stranger', 'he', 'יוסי', 'כתיבה נפלאה וניתוח מרתק של האלבום!')
-ON CONFLICT DO NOTHING;
+-- 3. Post Likes Table (Strictly 1-like per anonymous visitor_id)
+CREATE TABLE IF NOT EXISTS public.post_likes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    post_slug TEXT NOT NULL,
+    locale VARCHAR(10) NOT NULL DEFAULT 'he',
+    visitor_id TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+    CONSTRAINT unique_post_visitor_like UNIQUE (post_slug, locale, visitor_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_post_likes ON public.post_likes (post_slug, locale);
+
+ALTER TABLE public.post_likes ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Allow public read access to post_likes" ON public.post_likes;
+DROP POLICY IF EXISTS "Allow public insert access to post_likes" ON public.post_likes;
+DROP POLICY IF EXISTS "Allow public delete access to post_likes" ON public.post_likes;
+
+CREATE POLICY "Allow public read access to post_likes" ON public.post_likes FOR SELECT TO public USING (true);
+CREATE POLICY "Allow public insert access to post_likes" ON public.post_likes FOR INSERT TO public WITH CHECK (true);
+CREATE POLICY "Allow public delete access to post_likes" ON public.post_likes FOR DELETE TO public USING (true);
+
+-- 4. Comment Likes Table (Strictly 1-like per anonymous visitor_id)
+CREATE TABLE IF NOT EXISTS public.comment_likes (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    comment_id TEXT NOT NULL,
+    visitor_id TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
+    CONSTRAINT unique_comment_visitor_like UNIQUE (comment_id, visitor_id)
+);
+
+CREATE INDEX IF NOT EXISTS idx_comment_likes ON public.comment_likes (comment_id);
+
+ALTER TABLE public.comment_likes ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Allow public read access to comment_likes" ON public.comment_likes;
+DROP POLICY IF EXISTS "Allow public insert access to comment_likes" ON public.comment_likes;
+DROP POLICY IF EXISTS "Allow public delete access to comment_likes" ON public.comment_likes;
+
+CREATE POLICY "Allow public read access to comment_likes" ON public.comment_likes FOR SELECT TO public USING (true);
+CREATE POLICY "Allow public insert access to comment_likes" ON public.comment_likes FOR INSERT TO public WITH CHECK (true);
+CREATE POLICY "Allow public delete access to comment_likes" ON public.comment_likes FOR DELETE TO public USING (true);

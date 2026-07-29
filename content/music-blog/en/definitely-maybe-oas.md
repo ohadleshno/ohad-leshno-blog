@@ -3,7 +3,7 @@ title: "Definitely Maybe - Oasis"
 slug: "definitely-maybe-oas"
 excerpt: "היום הוא יום הולדתו ש ה40 של אחי הגדול ארי לפי לוח השנה הגרגוריאני (למניינם) , על כן אחרי כל כך הרבה זמן שלא הצלחתי לכתוב פוסט לבלוג נוצר..."
 date: "2024-02-06T06:06:41.125Z"
-coverImage: "https://static.wixstatic.com/media/cd66a9_d42feb96fe654c7986b3e263a4288ca2~mv2.png"
+coverImage: "/images/wix/cd66a9_d42feb96fe654c7986b3e263a4288ca2.webp"
 minutesToRead: 3
 language: "en"
 ---
@@ -26,4 +26,4 @@ language: "en"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/4wXjHwpYza7sCw1vKKSfOm?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
 
-<figure class="my-8"><img src="https://static.wixstatic.com/media/cd66a9_d42feb96fe654c7986b3e263a4288ca2~mv2.png" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
+<figure class="my-8"><img src="/images/wix/cd66a9_d42feb96fe654c7986b3e263a4288ca2.webp" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>

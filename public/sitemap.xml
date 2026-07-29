@@ -1,173 +1,535 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ohadleshno.com/he</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he" />
   </url>
   <url>
     <loc>https://ohadleshno.com/en</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music</loc>
     <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/tech</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/tech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/about</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/about" />
   </url>
-  
+  <url>
+    <loc>https://ohadleshno.com/en/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/about" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/about" />
+  </url>
   <url>
     <loc>https://ohadleshno.com/he/music/billy-joel-the-stran</loc>
     <lastmod>2023-07-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/billy-joel-the-stran" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/billy-joel-the-stran" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/billy-joel-the-stran" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/definitely-maybe-oas</loc>
     <lastmod>2024-02-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/definitely-maybe-oas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/definitely-maybe-oas" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/definitely-maybe-oas" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/dua-lipa-future-nost</loc>
     <lastmod>2023-07-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/dua-lipa-future-nost" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/dua-lipa-future-nost" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/dua-lipa-future-nost" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/eric-clapton-layla-a</loc>
     <lastmod>2023-09-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/eric-clapton-layla-a" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/eric-clapton-layla-a" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/eric-clapton-layla-a" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/george-harrison-all</loc>
     <lastmod>2023-09-29</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/george-harrison-all" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/george-harrison-all" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/george-harrison-all" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/geva-alon-in-the-mor</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/geva-alon-in-the-mor" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/geva-alon-in-the-mor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/geva-alon-in-the-mor" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/graham-nash-songs-fo</loc>
     <lastmod>2023-07-25</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/graham-nash-songs-fo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/graham-nash-songs-fo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/graham-nash-songs-fo" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/jim-corce-you-don-t</loc>
     <lastmod>2023-08-22</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/jim-corce-you-don-t" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/jim-corce-you-don-t" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/jim-corce-you-don-t" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/joan-baez-diamonds-r</loc>
     <lastmod>2024-05-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/joan-baez-diamonds-r" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/joan-baez-diamonds-r" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/joan-baez-diamonds-r" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/paul-mccartney</loc>
     <lastmod>2023-08-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/paul-mccartney" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/paul-mccartney" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/paul-mccartney" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/selective-hearing-te</loc>
     <lastmod>2023-10-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/selective-hearing-te" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/selective-hearing-te" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/selective-hearing-te" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/tarzan</loc>
     <lastmod>2023-09-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/tarzan" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/tarzan" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/tarzan" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/tom-waits-closing-ti</loc>
     <lastmod>2024-02-17</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/tom-waits-closing-ti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/tom-waits-closing-ti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/tom-waits-closing-ti" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/youth-matisyahu</loc>
     <lastmod>2024-03-01</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/youth-matisyahu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/youth-matisyahu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/youth-matisyahu" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/אירוויזיון</loc>
     <lastmod>2024-05-08</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/אירוויזיון" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/אירוויזיון" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/אירוויזיון" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/המלצות-1</loc>
     <lastmod>2024-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/המלצות-1" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/המלצות-1" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/המלצות-1" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/המלצות-2</loc>
     <lastmod>2024-04-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/המלצות-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/המלצות-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/המלצות-2" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/יוני-רכטר-התכוונות</loc>
     <lastmod>2023-08-26</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/יוני-רכטר-התכוונות" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/יוני-רכטר-התכוונות" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/יוני-רכטר-התכוונות" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/יזהר-אשדות-ריקוד-קטן</loc>
     <lastmod>2023-08-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/יזהר-אשדות-ריקוד-קטן" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/יזהר-אשדות-ריקוד-קטן" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/יזהר-אשדות-ריקוד-קטן" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/פלייליסט-שירים-על-הג</loc>
     <lastmod>2023-09-13</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/פלייליסט-שירים-על-הג" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/פלייליסט-שירים-על-הג" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/פלייליסט-שירים-על-הג" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/פרידה</loc>
     <lastmod>2024-04-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/פרידה" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/פרידה" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/פרידה" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/רבותי-ההיסטוריה-חוזר</loc>
     <lastmod>2025-01-09</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/רבותי-ההיסטוריה-חוזר" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/רבותי-ההיסטוריה-חוזר" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/רבותי-ההיסטוריה-חוזר" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/שלומי-שבן-שלומי-שבן</loc>
     <lastmod>2023-07-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/שלומי-שבן-שלומי-שבן" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/שלומי-שבן-שלומי-שבן" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/שלומי-שבן-שלומי-שבן" />
   </url>
   <url>
     <loc>https://ohadleshno.com/he/music/שמיעה-סלקטיבית-פלייל</loc>
     <lastmod>2023-08-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/שמיעה-סלקטיבית-פלייל" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/שמיעה-סלקטיבית-פלייל" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/שמיעה-סלקטיבית-פלייל" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/billy-joel-the-stran</loc>
+    <lastmod>2023-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/billy-joel-the-stran" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/billy-joel-the-stran" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/billy-joel-the-stran" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/definitely-maybe-oas</loc>
+    <lastmod>2024-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/definitely-maybe-oas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/definitely-maybe-oas" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/definitely-maybe-oas" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/dua-lipa-future-nost</loc>
+    <lastmod>2023-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/dua-lipa-future-nost" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/dua-lipa-future-nost" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/dua-lipa-future-nost" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/eric-clapton-layla-a</loc>
+    <lastmod>2023-09-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/eric-clapton-layla-a" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/eric-clapton-layla-a" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/eric-clapton-layla-a" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/george-harrison-all</loc>
+    <lastmod>2023-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/george-harrison-all" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/george-harrison-all" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/george-harrison-all" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/geva-alon-in-the-mor</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/geva-alon-in-the-mor" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/geva-alon-in-the-mor" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/geva-alon-in-the-mor" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/graham-nash-songs-fo</loc>
+    <lastmod>2023-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/graham-nash-songs-fo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/graham-nash-songs-fo" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/graham-nash-songs-fo" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/jim-corce-you-don-t</loc>
+    <lastmod>2023-08-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/jim-corce-you-don-t" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/jim-corce-you-don-t" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/jim-corce-you-don-t" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/joan-baez-diamonds-r</loc>
+    <lastmod>2024-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/joan-baez-diamonds-r" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/joan-baez-diamonds-r" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/joan-baez-diamonds-r" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/paul-mccartney</loc>
+    <lastmod>2023-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/paul-mccartney" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/paul-mccartney" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/paul-mccartney" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/selective-hearing-te</loc>
+    <lastmod>2023-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/selective-hearing-te" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/selective-hearing-te" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/selective-hearing-te" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/tarzan</loc>
+    <lastmod>2023-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/tarzan" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/tarzan" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/tarzan" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/tom-waits-closing-ti</loc>
+    <lastmod>2024-02-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/tom-waits-closing-ti" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/tom-waits-closing-ti" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/tom-waits-closing-ti" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/youth-matisyahu</loc>
+    <lastmod>2024-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/youth-matisyahu" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/youth-matisyahu" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/youth-matisyahu" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/אירוויזיון</loc>
+    <lastmod>2024-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/אירוויזיון" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/אירוויזיון" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/אירוויזיון" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/המלצות-1</loc>
+    <lastmod>2024-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/המלצות-1" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/המלצות-1" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/המלצות-1" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/המלצות-2</loc>
+    <lastmod>2024-04-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/המלצות-2" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/המלצות-2" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/המלצות-2" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/יוני-רכטר-התכוונות</loc>
+    <lastmod>2023-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/יוני-רכטר-התכוונות" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/יוני-רכטר-התכוונות" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/יוני-רכטר-התכוונות" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/יזהר-אשדות-ריקוד-קטן</loc>
+    <lastmod>2023-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/יזהר-אשדות-ריקוד-קטן" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/יזהר-אשדות-ריקוד-קטן" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/יזהר-אשדות-ריקוד-קטן" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/פלייליסט-שירים-על-הג</loc>
+    <lastmod>2023-09-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/פלייליסט-שירים-על-הג" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/פלייליסט-שירים-על-הג" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/פלייליסט-שירים-על-הג" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/פרידה</loc>
+    <lastmod>2024-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/פרידה" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/פרידה" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/פרידה" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/רבותי-ההיסטוריה-חוזר</loc>
+    <lastmod>2025-01-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/רבותי-ההיסטוריה-חוזר" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/רבותי-ההיסטוריה-חוזר" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/רבותי-ההיסטוריה-חוזר" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/שלומי-שבן-שלומי-שבן</loc>
+    <lastmod>2023-07-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/שלומי-שבן-שלומי-שבן" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/שלומי-שבן-שלומי-שבן" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/שלומי-שבן-שלומי-שבן" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/music/שמיעה-סלקטיבית-פלייל</loc>
+    <lastmod>2023-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/music/שמיעה-סלקטיבית-פלייל" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/music/שמיעה-סלקטיבית-פלייל" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/music/שמיעה-סלקטיבית-פלייל" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/he/tech/ai-audio-analyzer</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/ai-audio-analyzer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/ai-audio-analyzer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/ai-audio-analyzer" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/he/tech/nehorai-ai</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/nehorai-ai" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/nehorai-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/nehorai-ai" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/tech/ai-audio-analyzer</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/ai-audio-analyzer" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/ai-audio-analyzer" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/ai-audio-analyzer" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/tech/nehorai-ai</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/nehorai-ai" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/nehorai-ai" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/nehorai-ai" />
   </url>
 </urlset>

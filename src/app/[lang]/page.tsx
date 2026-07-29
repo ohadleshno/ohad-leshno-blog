@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
 import { getAllTechProjects } from '@/lib/tech';
@@ -6,6 +7,53 @@ import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 
 export function generateStaticParams() {
   return [{ lang: 'he' }, { lang: 'en' }];
+}
+
+export function generateMetadata({ params }: { params: { lang: 'he' | 'en' } }): Metadata {
+  const lang = params.lang || 'he';
+  const isHe = lang === 'he';
+
+  const title = isHe
+    ? 'אוהד לשנו | בלוג מוזיקה, תרבות והנדסת AI'
+    : 'Ohad Leshno | Music, Culture & AI Engineering Blog';
+  const description = isHe
+    ? 'הבלוג של אוהד לשנו - מאמרי מוזיקה ותרבות, ניתוח אלבומים, ומחקר בהנדסת מערכות בינה מלאכותית (AI).'
+    : 'Ohad Leshno’s Blog - Music and culture essays, album analyses, and AI systems engineering research.';
+
+  return {
+    title,
+    description,
+    keywords: ['אוהד לשנו', 'Ohad Leshno', 'בלוג מוזיקה ותרבות', 'הנדסת AI', 'מערכות בינה מלאכותית', 'תרבות', 'מוזיקה ישראלית', 'AI Engineering Blog', 'Music Analysis'],
+    alternates: {
+      canonical: `https://ohadleshno.com/${lang}`,
+      languages: {
+        he: 'https://ohadleshno.com/he',
+        en: 'https://ohadleshno.com/en',
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `https://ohadleshno.com/${lang}`,
+      siteName: 'Ohad Leshno Blog',
+      locale: isHe ? 'he_IL' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: 'https://ohadleshno.com/ohad_leshno.webp',
+          width: 800,
+          height: 800,
+          alt: 'Ohad Leshno',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['https://ohadleshno.com/ohad_leshno.webp'],
+    },
+  };
 }
 
 export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) {
@@ -17,8 +65,30 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
   const sideMusicPosts = musicPosts.slice(1);
   const techProjects = getAllTechProjects(lang).slice(0, 2);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Ohad Leshno Blog',
+    alternateName: 'הבלוג של אוהד לשנו',
+    url: `https://ohadleshno.com/${lang}`,
+    author: {
+      '@type': 'Person',
+      name: 'Ohad Leshno',
+      url: 'https://ohadleshno.com',
+      jobTitle: 'AI Engineer & Culture Researcher',
+    },
+    description: isHe
+      ? 'ניתוח מוזיקלי ותרבותי לצד מחקר והנדסת מערכות בינה מלאכותית.'
+      : 'Deep musical and cultural analysis meets software engineering and AI systems.',
+  };
+
   return (
     <div className="space-y-20 py-6 sm:py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero Banner Section */}
       <section className="py-6 sm:py-12 border-b border-neutral-200 dark:border-neutral-800 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         <div className="md:col-span-8 space-y-6">
@@ -57,8 +127,13 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
         <div className="md:col-span-4 flex justify-center md:justify-end">
           <div className="w-48 h-56 sm:w-60 sm:h-72 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 shadow-md bg-neutral-100 dark:bg-neutral-900 relative">
             <img
-              src="/ohad_leshno.avif"
+              src="/ohad_leshno.webp"
               alt="Ohad Leshno"
+              width={240}
+              height={288}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>
@@ -89,8 +164,13 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
             >
               <div className="w-full h-64 sm:h-80 rounded-2xl overflow-hidden border border-neutral-200 dark:border-neutral-800 bg-neutral-100 dark:bg-neutral-900">
                 <img
-                  src={(featuredMusic.coverImage || '/hero-cover.jpeg').replace(/^\/public/, '')}
+                  src={(featuredMusic.coverImage || '/hero-cover.webp').replace(/^\/public/, '')}
                   alt={featuredMusic.title}
+                  width={640}
+                  height={320}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 />
               </div>
@@ -119,8 +199,12 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
               >
                 <div className="w-full sm:w-32 h-32 sm:h-28 rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 flex-shrink-0">
                   <img
-                    src={(post.coverImage || '/hero-cover.jpeg').replace(/^\/public/, '')}
+                    src={(post.coverImage || '/hero-cover.webp').replace(/^\/public/, '')}
                     alt={post.title}
+                    width={128}
+                    height={112}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -174,8 +258,12 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
               <div className="space-y-4 pointer-events-none">
                 <div className="w-full h-48 sm:h-52 rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 relative">
                   <img
-                    src={project.coverImage || '/nehorai-hero.png'}
+                    src={project.coverImage || '/nehorai-hero.webp'}
                     alt={project.title}
+                    width={500}
+                    height={208}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                   />
                 </div>

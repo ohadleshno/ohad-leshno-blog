@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { saveLocalSubscriber } from '@/lib/supabase';
+import { saveSubscriber } from '@/lib/supabase';
 import { Mail, CheckCircle2 } from 'lucide-react';
 
 interface MailingListProps {
@@ -14,12 +14,12 @@ export function MailingList({ lang }: MailingListProps) {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes('@')) return;
 
     setLoading(true);
-    saveLocalSubscriber(email.trim());
+    await saveSubscriber(email.trim());
     setLoading(false);
     setSubmitted(true);
   };

@@ -1,9 +1,55 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllPosts } from '@/lib/posts';
 
 export function generateStaticParams() {
   return [{ lang: 'he' }, { lang: 'en' }];
 }
+
+export function generateMetadata({ params }: { params: { lang: 'he' | 'en' } }): Metadata {
+  const lang = params.lang || 'he';
+  const isHe = lang === 'he';
+
+  const title = isHe ? 'בלוג מוזיקה ותרבות' : 'Music & Culture Blog';
+  const description = isHe
+    ? 'מאמרים, ניתוחי אלבומים ומחשבות על מוזיקה ישראלית ועולמית מאת אוהד לשנו.'
+    : 'Music essays, album breakdowns, and cultural insights by Ohad Leshno.';
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `https://ohadleshno.com/${lang}/music`,
+      languages: {
+        he: 'https://ohadleshno.com/he/music',
+        en: 'https://ohadleshno.com/en/music',
+      },
+    },
+    openGraph: {
+      title: `${title} | Ohad Leshno`,
+      description,
+      url: `https://ohadleshno.com/${lang}/music`,
+      siteName: 'Ohad Leshno Blog',
+      locale: isHe ? 'he_IL' : 'en_US',
+      type: 'website',
+      images: [
+        {
+          url: 'https://ohadleshno.com/hero-cover.webp',
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${title} | Ohad Leshno`,
+      description,
+      images: ['https://ohadleshno.com/hero-cover.webp'],
+    },
+  };
+}
+
 
 export default function MusicBlogIndex({ params }: { params: { lang: 'he' | 'en' } }) {
   const lang = params.lang || 'he';
@@ -39,7 +85,7 @@ export default function MusicBlogIndex({ params }: { params: { lang: 'he' | 'en'
             <div className="space-y-3">
               <div className="w-full h-48 rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800 relative">
                 <img
-                  src={(post.coverImage || '/hero-cover.jpeg').replace(/^\/public/, '')}
+                  src={(post.coverImage || '/hero-cover.webp').replace(/^\/public/, '')}
                   alt={post.title}
                   className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                 />

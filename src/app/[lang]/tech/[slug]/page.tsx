@@ -1,7 +1,9 @@
+import type { Metadata } from 'next';
 import { getAllTechSlugs, getTechProjectData } from '@/lib/tech';
 import { notFound } from 'next/navigation';
 import { SocialShare } from '@/components/SocialShare';
 import { Comments } from '@/components/Comments';
+import { LikeButton } from '@/components/LikeButton';
 import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { MermaidRenderer } from '@/components/MermaidRenderer';
@@ -26,6 +28,60 @@ export function generateStaticParams() {
   return Array.from(uniqueMap.values());
 }
 
+export function generateMetadata({
+  params,
+}: {
+  params: { lang: 'he' | 'en'; slug: string };
+}): Metadata {
+  const lang = params.lang || 'he';
+  const isHe = lang === 'he';
+  const project = getTechProjectData(params.slug, lang);
+
+  if (!project) {
+    return { title: 'Project Not Found' };
+  }
+
+  const coverImageUrl = project.coverImage
+    ? (project.coverImage.startsWith('http') ? project.coverImage : `https://ohadleshno.com${project.coverImage.replace(/^\/public/, '')}`)
+    : 'https://ohadleshno.com/nehorai-hero.webp';
+
+  const canonicalUrl = `https://ohadleshno.com/${lang}/tech/${project.slug}`;
+
+  return {
+    title: project.title,
+    description: project.excerpt,
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        he: `https://ohadleshno.com/he/tech/${project.slug}`,
+        en: `https://ohadleshno.com/en/tech/${project.slug}`,
+      },
+    },
+    openGraph: {
+      title: `${project.title} | Ohad Leshno`,
+      description: project.excerpt,
+      url: canonicalUrl,
+      siteName: 'Ohad Leshno Blog',
+      locale: isHe ? 'he_IL' : 'en_US',
+      type: 'article',
+      publishedTime: project.date,
+      authors: ['Ohad Leshno'],
+      images: [
+        {
+          url: coverImageUrl,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${project.title} | Ohad Leshno`,
+      description: project.excerpt,
+      images: [coverImageUrl],
+    },
+  };
+}
+
 export default function TechProjectDetail({
   params,
 }: {
@@ -41,8 +97,31 @@ export default function TechProjectDetail({
 
   const currentUrl = `https://ohadleshno.com/${lang}/tech/${project.slug}`;
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: project.title,
+    description: project.excerpt,
+    datePublished: project.date,
+    author: {
+      '@type': 'Person',
+      name: 'Ohad Leshno',
+      url: 'https://ohadleshno.com',
+    },
+    url: currentUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': currentUrl,
+    },
+  };
+
   return (
     <div className="max-w-4xl mx-auto py-3 sm:py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <article className="rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm overflow-hidden p-4 sm:p-10 space-y-5 sm:space-y-8">
         {/* Back button */}
         <Link
@@ -90,9 +169,10 @@ export default function TechProjectDetail({
 
         <MermaidRenderer />
 
-        {/* Share */}
-        <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800">
+        {/* Share & Like */}
+        <div className="pt-6 border-t border-neutral-200 dark:border-neutral-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <SocialShare title={project.title} url={currentUrl} isHe={isHe} />
+          <LikeButton postSlug={project.slug} lang={lang} />
         </div>
 
         {/* Comments */}

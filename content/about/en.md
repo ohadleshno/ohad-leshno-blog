@@ -1,7 +1,7 @@
 ---
 title: "About - Ohad Leshno"
 language: "en"
-avatar: "/ohad_leshno.avif"
+avatar: "/ohad_leshno.webp"
 ---
 
 # About Ohad Leshno

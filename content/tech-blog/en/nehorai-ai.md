@@ -3,7 +3,7 @@ title: "Building NehorAI — How to Build an AI Bot That Actually Feels Human"
 slug: "nehorai-ai"
 excerpt: "The story of building a Hebrew language AI assistant on Cloudflare Workers: how to get real time data, make it talk like a real person, and keep latency under control."
 date: "2026-03-15"
-coverImage: "/nehorai-hero.png"
+coverImage: "/nehorai-hero.webp"
 projectUrl: "https://nehorai.ai"
 techStack: ["Cloudflare Workers", "TypeScript", "Google Gemini 2.0", "Cloudflare KV", "Telegram Bot API", "Cron Crawlers"]
 language: "en"
@@ -182,6 +182,42 @@ The same reasoning led me to [Hono](https://hono.dev/). Express and Fastify are 
 ## What's Next
 
 Building a Twitter/X bot that uses the same backend infrastructure (same crawlers, same KV data, same graph engine), but posts curated deal threads and news takes instead of responding to chat messages. The persona stays the same; the distribution channel changes.
+
+---
+
+## The Full System Flow
+
+This diagram traces the logical path of every chat request, from the moment it arrives to the final reply. It also shows how the background crawlers keep the data fresh independently.
+
+```mermaid
+flowchart TD
+    REQ["Chat Request"] --> EXTRACT["Extract Browser Data\n(location, timezone, time)"]
+    EXTRACT --> REGEX{"Keyword Match\n(external data related?)"}
+
+    REGEX -->|"no"| GENERAL["General LLM Chat\n(with location + time context)"]
+    GENERAL --> REPLY["Final Reply"]
+
+    REGEX -->|"yes (slow path)"| SPLIT["Two parallel calls"]
+    SPLIT -->|"call 1"| QUICK["Fast Reply\n(lightweight model, ~300ms)"]
+    SPLIT -->|"call 2"| INTENT["Node 1: Intent Extraction\n(structured JSON)"]
+
+    QUICK --> SHOW["User sees quick reply"]
+
+    INTENT --> KVLOOKUP["Node 2: KV Cache Lookup"]
+    KVLOOKUP -->|"read"| KV[("Cloudflare KV")]
+    KVLOOKUP --> COMPILE["Node 3: Compile Response\n(inject persona + booking links)"]
+    COMPILE --> REPLY
+    REPLY -->|"replaces quick reply"| SHOW
+
+    CRON(["Cron Trigger (every 30 min)"]) --> CRAWLERS["Crawlers"]
+    CRAWLERS -->|"flights, events,\nnews, sports, torah"| KV
+```
+
+The flow breaks down into two independent cycles:
+
+**Request cycle.** A chat message arrives. The system extracts browser data (rough location, timezone, local time) and runs a keyword regex check. If the message does not need external data, it goes straight to the LLM with location and time context and replies directly. If it does need external data (the slow path), the client fires two calls in parallel: one hits a fast lightweight model to give the user an instant acknowledgment, while the other runs the three node graph (extract intent, look up cached data from KV, compile a persona response with booking links). When the graph finishes, the full reply replaces the quick acknowledgment.
+
+**Data cycle.** Every 30 minutes, scheduled crawlers scrape flight deals, event listings, sports scores, Torah class schedules, and news. All of it gets written to Cloudflare KV so the request cycle reads fresh data in milliseconds without ever calling a live pricing API during chat.
 
 ---
 

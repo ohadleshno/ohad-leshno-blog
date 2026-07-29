@@ -3,7 +3,7 @@ title: "Dua Lipa - Future Nostalgia "
 slug: "dua-lipa-future-nost"
 excerpt: "הסכסוך הישראלי-פלסטיני הוא בעיה קשה שרבים בישראל פוגשים אותה בשלב כזה או אחר. סער, אחד האנשים שאני הכי אוהב בעולם, הציע פתרון יצירתי:..."
 date: "2023-07-14T21:38:27.191Z"
-coverImage: "https://static.wixstatic.com/media/cd66a9_2e7fc6a37858479eafd39e797c806cbf~mv2.jpg"
+coverImage: "/images/wix/cd66a9_2e7fc6a37858479eafd39e797c806cbf.webp"
 minutesToRead: 3
 language: "en"
 ---
@@ -58,6 +58,6 @@ language: "en"
 
 אני ממליץ בחום על האלבום לכל מי שאוהב פופ. זהו אלבום נהדר, שבטוח יעשה לכם טוב על הלב. הפוסט הזה כולו מוקדש לסער יעקב פנאני האגדה בחייו שבמקרה יש לו יום הולדת היום. (מלא מזל טוב אוהב מלא)
 
-<figure class="my-8"><img src="https://static.wixstatic.com/media/cd66a9_2e7fc6a37858479eafd39e797c806cbf~mv2.jpg" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
+<figure class="my-8"><img src="/images/wix/cd66a9_2e7fc6a37858479eafd39e797c806cbf.webp" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
 
 האזנה נעימה

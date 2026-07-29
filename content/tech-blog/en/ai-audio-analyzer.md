@@ -3,7 +3,7 @@ title: "AI Audio Analyzer & Music Transcription Engine"
 slug: "ai-audio-analyzer"
 excerpt: "Deep learning pipeline for audio signal processing, harmonic chord extraction, and automatic musical transcription."
 date: "2026-06-15"
-coverImage: "/hero-cover.jpeg"
+coverImage: "/hero-cover.webp"
 projectUrl: "https://github.com/ohadleshno"
 techStack: ["PyTorch", "Librosa", "FastAPI", "Next.js", "Python"]
 language: "en"
