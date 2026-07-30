@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "he"
 ---
 
-<figure class="my-8"><img src="/images/wix/cd66a9_d9497a8ce11f4607a6b9388dd80dbba5.webp" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
+<figure class="my-8"><img src="https://static.wixstatic.com/media/cd66a9_d9497a8ce11f4607a6b9388dd80dbba5~mv2.jpg" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
 
 היום במקום לכתוב על אלבום בודד, אני אכתוב על פלייליסט שהכנתי שסובב סביב הסר ג׳יימס פול מקרטני בעקבות הודעתו על צאתו לסיבוב הופעות נוסף בגיל 81(!). הפלייליסט מורכב רק מהיצירות מקריירת הסולו של הסר מכיון שאני מאמין שאת רוב היצירות שלו על ציפורים שחורות מהביטלס אתם כבר מכירים.
 

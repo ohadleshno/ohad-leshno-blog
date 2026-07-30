@@ -16,12 +16,15 @@ export function MermaidRenderer() {
           theme: 'base',
           flowchart: {
             htmlLabels: true,
-            useMaxWidth: true,
+            useMaxWidth: false,
             curve: 'basis',
+            nodeSpacing: 30,
+            rankSpacing: 35,
+            padding: 8,
           },
           themeVariables: {
             fontFamily: 'Inter, system-ui, sans-serif',
-            fontSize: '16px',
+            fontSize: '14px',
             background: '#faf9f6',
             primaryColor: '#ffffff',
             primaryTextColor: '#171717',

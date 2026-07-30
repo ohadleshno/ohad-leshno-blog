@@ -8,7 +8,7 @@ minutesToRead: 3
 language: "en"
 ---
 
-<figure class="my-8"><img src="/images/wix/f2fdbe1c79c64008993a030e7e0708f9.webp" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
+<figure class="my-8"><img src="https://static.wixstatic.com/media/f2fdbe1c79c64008993a030e7e0708f9.jpg" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
 
 חזרתי השבוע לארץ אחרי המסע הקצר שלי בהודו, בזמן שהייתי שם לא הפסקתי לחשוב על כמה חווית הטיול במדינות עולם שלישי השתנתה במהלך השנים. אחד מהאלמנטים שהשתנו באופן דרסטי, הוא האפשרות להיות בקשר עם העולם. גם במקומות הכי נטושים ושבורים הייתה לי קליטה והייתי יכול לעשות שיחה בוואטסאפ ולעלות פוסט לבלוג בשבילכם ובאהבה. אנחנו חיים בעולם שבו אנחנו מעלים תמונות ל״ספר הפנים״ כסיכום לכל פעילות, אנחנו משתפים בסטורי כל חוויה קטנה שלנו ולא חיים כמעט את הניתוק יותר. קל לדעת איפה בן אדם נמצא רק מטביעת אצבע שלו באינטרנט, וזה רק קצה המזלג, ניתן לדעת מה השאיפות הפולטיות שלו ואיזה סוג של ירק הוא הכי אוהב. אנחנו חיים ומתועדים בצורה שתמיד מחברת אותנו אל העולם.
 

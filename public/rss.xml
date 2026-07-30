@@ -7,11 +7,11 @@
   <language>he-IL</language>
   
   <item>
-    <title><![CDATA[AI Audio Analyzer & Music Transcription Engine]]></title>
-    <link>https://ohadleshno.com/he/tech/ai-audio-analyzer</link>
-    <description><![CDATA[מערכת AI מתקדמת לניתוח אותות קול, חילוץ אקורדים ותזמור אוטומטי של יצירות מוזיקליות.]]></description>
-    <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
-    <guid>https://ohadleshno.com/he/tech/ai-audio-analyzer</guid>
+    <title><![CDATA[מה זה Agent, מה זה Workflow, ולמה 90% מה-Agents הם בעצם Workflows]]></title>
+    <link>https://ohadleshno.com/he/tech/agents-vs-workflows</link>
+    <description><![CDATA[כולם רצים לבנות AI Agents אוטונומיים. אבל לתת ל-LLM לקבל כל מיקרו-החלטה בלולאה זה יקר, איטי ולא אמין. הנה למה המערכות הטובות ביותר הן Workflows ולא Agents.]]></description>
+    <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/agents-vs-workflows</guid>
   </item>
   <item>
     <title><![CDATA[בניית NehorAI: איך בונים בוט AI שבאמת מרגיש אנושי]]></title>

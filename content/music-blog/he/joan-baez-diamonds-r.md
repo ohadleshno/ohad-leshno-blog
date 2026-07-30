@@ -16,7 +16,7 @@ language: "he"
 
 בהיסטוריה העשירה של מוזיקת פולק, מעט שמות בולטים כמו ג'ואן באאז. ילידת סטטן איילנד, ניו יורק, לאב מקסיקני ואם אמריקאית, גדלה באאז בקהילה של קוואקרים (האלו של השיבולת שועל), קבוצה דתית המדגישה ערכים של קהילה, שוויון ופציפיזם. השפעות אלו עיצבו רבות את נושאי שיריה ופעילותה הפוליטית לאורך השנים.פריצתה הגיעה בגיל צעיר, כשהייתה בת 18 בלבד. הופעתה בפסטיבל ניופורט בשנת 1960 זכתה לשבחים רבים, ו-Time Magazine אף הכתיר אותה כאמנית הפולק המובילה של אותה תקופה. לאורך הקריירה שלה, שילבה באאז בהופעותיה ובשיריה הן מוזיקה מקורית והן עיבודים לשירים עממיים, תוך שהיא מעבירה מסרים של צדק חברתי, שלום ושוויון.
 
-<figure class="my-8"><img src="/images/wix/cd66a9_3d086bb65d3c49e5bcfe27941d264cbb.webp" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
+<figure class="my-8"><img src="https://static.wixstatic.com/media/cd66a9_3d086bb65d3c49e5bcfe27941d264cbb~mv2.png" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
 
 <blockquote dir="auto">
 "When I think of god I think of earth as a very small thing. Then I think of myself hardly as speck. Then I see there’s no use for this tiny dot to spend its small life doing things for itself. That is what I believe"
