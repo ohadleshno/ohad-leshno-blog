@@ -8,6 +8,7 @@ import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { MermaidRenderer } from '@/components/MermaidRenderer';
 import { RelatedPosts } from '@/components/RelatedPosts';
+import { PageStatsBadge } from '@/components/PageStatsBadge';
 
 export function generateStaticParams() {
   const heSlugs = getAllTechSlugs('he').flatMap((slug) => [
@@ -143,10 +144,13 @@ export default function TechProjectDetail({
             {project.title}
           </h1>
 
-          <div className="flex items-center justify-between pt-1">
-            <span className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium">
-              {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')}
-            </span>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1">
+            <div className="flex items-center gap-3">
+              <span className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium">
+                {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')}
+              </span>
+              <PageStatsBadge postSlug={project.slug} lang={lang} />
+            </div>
 
             {project.projectUrl && (
               <a

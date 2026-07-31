@@ -6,6 +6,7 @@ import { Comments } from '@/components/Comments';
 import { LikeButton } from '@/components/LikeButton';
 import { MailingList } from '@/components/MailingList';
 import { RelatedPosts } from '@/components/RelatedPosts';
+import { PageStatsBadge } from '@/components/PageStatsBadge';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -143,13 +144,16 @@ export default function MusicPostDetail({
             {post.title}
           </h1>
 
-          <div className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium pt-1">
-            {new Date(post.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
-            })}{' '}
-            • {post.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
+          <div className="flex flex-wrap items-center gap-3 text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium pt-1">
+            <span>
+              {new Date(post.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}{' '}
+              • {post.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
+            </span>
+            <PageStatsBadge postSlug={post.slug} lang={lang} />
           </div>
         </header>
 

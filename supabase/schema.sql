@@ -79,3 +79,26 @@ DROP POLICY IF EXISTS "Allow public delete access to comment_likes" ON public.co
 CREATE POLICY "Allow public read access to comment_likes" ON public.comment_likes FOR SELECT TO public USING (true);
 CREATE POLICY "Allow public insert access to comment_likes" ON public.comment_likes FOR INSERT TO public WITH CHECK (true);
 CREATE POLICY "Allow public delete access to comment_likes" ON public.comment_likes FOR DELETE TO public USING (true);
+
+-- 5. Page Analytics Table (Tracks page views and dwell time)
+CREATE TABLE IF NOT EXISTS public.page_analytics (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    visitor_id TEXT NOT NULL,
+    path TEXT NOT NULL,
+    post_slug TEXT,
+    locale VARCHAR(10) NOT NULL DEFAULT 'he',
+    duration_seconds INTEGER NOT NULL DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_page_analytics_slug ON public.page_analytics (post_slug, locale);
+CREATE INDEX IF NOT EXISTS idx_page_analytics_path ON public.page_analytics (path);
+
+ALTER TABLE public.page_analytics ENABLE ROW LEVEL SECURITY;
+
+DROP POLICY IF EXISTS "Allow public insert access to page_analytics" ON public.page_analytics;
+DROP POLICY IF EXISTS "Allow public read access to page_analytics" ON public.page_analytics;
+
+CREATE POLICY "Allow public insert access to page_analytics" ON public.page_analytics FOR INSERT TO public WITH CHECK (true);
+CREATE POLICY "Allow public read access to page_analytics" ON public.page_analytics FOR SELECT TO public USING (true);
+

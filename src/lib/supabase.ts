@@ -367,3 +367,101 @@ export const toggleCommentLike = async (
     userLiked: localLikes.includes(visitorId),
   };
 };
+
+// --- Page Analytics & Dwell Time Tracking ---
+
+export interface PageAnalyticsRecord {
+  path: string;
+  postSlug?: string;
+  locale: string;
+  durationSeconds: number;
+}
+
+export interface AnalyticsSummary {
+  totalViews: number;
+  avgDurationSeconds: number;
+  totalDurationSeconds: number;
+}
+
+const LOCAL_ANALYTICS_KEY = 'ohad_blog_local_analytics';
+
+export const recordPageAnalytics = async (record: PageAnalyticsRecord): Promise<boolean> => {
+  const visitorId = getVisitorId();
+  if (record.durationSeconds <= 0) return false;
+
+  if (supabase) {
+    try {
+      const { error } = await supabase.from('page_analytics').insert([
+        {
+          visitor_id: visitorId,
+          path: record.path,
+          post_slug: record.postSlug || null,
+          locale: record.locale,
+          duration_seconds: record.durationSeconds,
+        },
+      ]);
+      if (!error) return true;
+      console.error('Error inserting page analytics:', error.message);
+    } catch (err) {
+      console.error('Failed to record page analytics:', err);
+    }
+  }
+
+  // Local storage fallback
+  if (typeof window !== 'undefined') {
+    try {
+      const raw = localStorage.getItem(LOCAL_ANALYTICS_KEY);
+      const items: Array<PageAnalyticsRecord & { visitorId: string; timestamp: string }> = raw
+        ? JSON.parse(raw)
+        : [];
+      items.push({
+        ...record,
+        visitorId,
+        timestamp: new Date().toISOString(),
+      });
+      localStorage.setItem(LOCAL_ANALYTICS_KEY, JSON.stringify(items.slice(-200)));
+      return true;
+    } catch (e) {}
+  }
+  return false;
+};
+
+export const fetchPageAnalyticsSummary = async (
+  postSlug: string,
+  locale: string
+): Promise<AnalyticsSummary> => {
+  if (supabase) {
+    try {
+      const { data, error } = await supabase
+        .from('page_analytics')
+        .select('duration_seconds')
+        .eq('post_slug', postSlug)
+        .eq('locale', locale);
+
+      if (!error && data && data.length > 0) {
+        const totalViews = data.length;
+        const totalDurationSeconds = data.reduce((acc, r) => acc + (r.duration_seconds || 0), 0);
+        const avgDurationSeconds = Math.round(totalDurationSeconds / totalViews);
+        return { totalViews, avgDurationSeconds, totalDurationSeconds };
+      }
+    } catch (err) {
+      console.error('Error fetching page analytics summary:', err);
+    }
+  }
+
+  let localItems: Array<PageAnalyticsRecord & { visitorId: string }> = [];
+  if (typeof window !== 'undefined') {
+    try {
+      const raw = localStorage.getItem(LOCAL_ANALYTICS_KEY);
+      const items: Array<PageAnalyticsRecord & { visitorId: string }> = raw ? JSON.parse(raw) : [];
+      localItems = items.filter((i) => i.postSlug === postSlug && i.locale === locale);
+    } catch (e) {}
+  }
+
+  const totalViews = localItems.length;
+  const totalDurationSeconds = localItems.reduce((acc, r) => acc + (r.durationSeconds || 0), 0);
+  const avgDurationSeconds = totalViews > 0 ? Math.round(totalDurationSeconds / totalViews) : 0;
+
+  return { totalViews, avgDurationSeconds, totalDurationSeconds };
+};
+
