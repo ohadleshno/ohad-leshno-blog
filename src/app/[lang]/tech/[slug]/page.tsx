@@ -7,6 +7,7 @@ import { LikeButton } from '@/components/LikeButton';
 import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { MermaidRenderer } from '@/components/MermaidRenderer';
+import { RelatedPosts } from '@/components/RelatedPosts';
 
 export function generateStaticParams() {
   const heSlugs = getAllTechSlugs('he').flatMap((slug) => [
@@ -174,6 +175,9 @@ export default function TechProjectDetail({
           <SocialShare title={project.title} url={currentUrl} isHe={isHe} />
           <LikeButton postSlug={project.slug} lang={lang} />
         </div>
+
+        {/* Related Projects */}
+        <RelatedPosts currentSlug={project.slug} lang={lang} category="tech" />
 
         {/* Comments */}
         <Comments postSlug={project.slug} lang={lang} />

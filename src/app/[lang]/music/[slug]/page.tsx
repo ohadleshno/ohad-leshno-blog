@@ -5,6 +5,7 @@ import { SocialShare } from '@/components/SocialShare';
 import { Comments } from '@/components/Comments';
 import { LikeButton } from '@/components/LikeButton';
 import { MailingList } from '@/components/MailingList';
+import { RelatedPosts } from '@/components/RelatedPosts';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -177,6 +178,9 @@ export default function MusicPostDetail({
 
         {/* Mailing List Section */}
         <MailingList lang={lang} />
+
+        {/* Related Posts */}
+        <RelatedPosts currentSlug={post.slug} lang={lang} category="music" />
 
         {/* Comments Section */}
         <Comments postSlug={post.slug} lang={lang} />
