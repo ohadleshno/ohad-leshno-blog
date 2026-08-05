@@ -1,5 +1,5 @@
 ---
-title: "Building NehorAI — How to Build an AI Bot That Actually Feels Human"
+title: "Building NehorAI: How to Build an AI Bot That Actually Feels Human"
 slug: "nehorai-ai"
 excerpt: "The story of building a Hebrew language AI assistant on Cloudflare Workers: how to get real time data, make it talk like a real person, and keep latency under control."
 date: "2026-03-15"

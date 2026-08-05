@@ -1,7 +1,7 @@
 ---
-title: "Billy Joel - the stranger"
+title: "Billy Joel: The Stranger"
 slug: "billy-joel-the-stran"
-excerpt: "היום נדבר על בילי ג'ואל, שהוא אחד האומנים האהובים עליי. השירים שלו, כגון \"Piano Man\", \"Uptown Girl\", \"Just the Way You Are\" ו-\"New York..."
+excerpt: "Today we will talk about Billy Joel, one of my favorite artists. His songs such as Piano Man, Uptown Girl, Just the Way You Are, and New York State of Mind are widely recognized."
 date: "2023-07-14T16:47:35.698Z"
 coverImage: "/hero-cover.webp"
 minutesToRead: 3
@@ -10,28 +10,28 @@ language: "en"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/DglOd7Wdueg" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-היום נדבר על בילי ג'ואל, שהוא אחד האומנים האהובים עליי. השירים שלו, כגון "Piano Man", "Uptown Girl", "Just the Way You Are" ו-"New York State of Mind", הם מוכרים מאוד כולם. הם פופולריים עד כדי כך שהסיכוי שלא נחשפתם אליהם קלוש. אני יודע שמקצת האנשים יכולים לחשוב שזה קצת בסיסי לאהוב זמר פופ קלאסי, שבקלות אפשר לראות בו את שלמה ארצי של ארצות הברית, שבמקום להופיע בקיסריה הוא מופיע בMadison Square Garden. אבל אני חושב שהוא אומן מעניין מאוד, ועם כל כך הרבה נופך. אף שלשירים של ג'ואל מבנה פופ קלאסי, הם מורכבים ביותר ומרובי רבדים. הם מלאים בפרטים קטנים שמעמיקים את המשמעות שלהם.
+Today we will talk about Billy Joel, one of my favorite artists. His songs such as "Piano Man", "Uptown Girl", "Just the Way You Are", and "New York State of Mind" are widely recognized. They are so popular that the chance you haven't been exposed to them is slim. I know some people might think it is a bit basic to love a classic pop singer who could easily be viewed as the Shlomi Artzi of the United States, performing at Madison Square Garden instead of Caesarea. But I think he is a very interesting artist with immense depth. Although Joel's songs have a classic pop structure, they are complex and multi-layered, filled with small details that deepen their meaning.
 
-אני נוהג לבחור מכל אומן אלבום שמציג אותו בדרך הכי מדויקת בעיניי, אך במקרה הנוכחי אני מתקשה להכריע בין שני אלבומים. האחד הוא אלבומו הראשון של billy joel, והשני – אלבומו המוכר ביותר – The Stranger. לבסוף, אחרי הרבה התלבטות, בחרתי באלבום The Stranger, כי הוא אכן  גולת הכותרת של יצירתו. The Stranger הוא אלבום האולפן השישי של בילי ג'ואל, והוא יצא לאור ב-1977. האלבום מכר מעל עשרה מיליון עותקים, והוא אחד האלבומים הנמכרים ביותר בכל הזמנים. האלבום מציג את רבגוניותו של ג'ואל, את יכולותיו לספר סיפורים, ואת כישרונו המוזיקלי הבלתי-מעורער. מתחילתו ועד סופו הוא מרתק את המאזינים במילותיו הנלהבות, במלודיות הזכירות וביצירתיות שלו.
+I usually choose one album from each artist that represents them most accurately in my eyes, but in this case I struggled to decide between two albums. One is Billy Joel's debut album, and the second, his most famous album, The Stranger. Finally, after much deliberation, I chose The Stranger because it is indeed the crowning achievement of his work. The Stranger is Billy Joel's sixth studio album, released in 1977. The album sold over ten million copies and is one of the best-selling albums of all time. The album demonstrates Joel's versatility, storytelling ability, and undeniable musical talent. From beginning to end it captivates listeners with passionate lyrics, memorable melodies, and creativity.
 
-האלבום נפתח בשיר האיקוני "Movin' Out (Anthony's Song)", שיר בעל אנרגיה הגבוהה, שמעיד  על הצפוי לאחריו. קטעי הפסנתר הקליטים והטקסטים על חלומותיו של המעמד הפועל תופסים מייד את תשומת הלב של המאזין. הביצוע הקולי הדינמי של ג'ואל מצליח להביא לביטוי את התסכול והנחישות של הפרוטגוניסט של השיר.
+The album opens with the iconic song "Movin' Out (Anthony's Song)", a high-energy track that signals what follows. Catchy piano parts and lyrics about working class dreams immediately capture the listener's attention. Joel's dynamic vocal performance successfully expresses the frustration and determination of the song's protagonist.
 
-הטקסטים של ג'ואל באלבום כולו נוגעים במגוון נושאים – אהבה, מערכות יחסים, והמאבקים בחיי היום-יום. יכולתו לספר סיפורים בולטת בשירים דוגמת "Scenes from an Italian Restaurant", שיר שמורכב ממיני-אפוסים, שלוקח את המאזין למסע נוסטלגי דרך שלבים שונים במערכת יחסים. המעברים בין שלושת החלקים המובהקים של השיר חלקים, ומדגימים את יכולתו של ג'ואל לרקום נרטיבים משכנעים במוזיקה שלו.
+Joel's lyrics throughout the album touch on a variety of themes: love, relationships, and daily struggles. His storytelling ability stands out in songs like "Scenes from an Italian Restaurant", a song composed of mini-epics taking the listener on a nostalgic journey through different stages of a relationship. The transitions between the three distinct parts of the song are smooth, demonstrating Joel's ability to weave compelling narratives into his music.
 
-דוגמה נוספת ליכולת האדירה שלו היא השיר "Vienna". ג'ואל הוא גם כותב שירים מצוין. הוא מסוגל לבטא רגשות מורכבים במילים פשוטות וקולחות. באמצעות המנגינה המהפנטת והמילים המתבוננות פנימה, השיר מזכיר למאזינים להאט, לאמץ את מסע החיים ולמצוא איזון. הפסנתר המלנכולי בפתיחה קובע את הטון המחשבתי, בעוד שירתו של ג'ואל מעבירה מסר חזק על האטת הקצב החיונית בחיינו. מילות השיר המטפוריות מעודדות סבלנות וסיפוק, ומזכירות לנו להעריך את ההווה ולמצוא הגשמה בקצב שלנו. מסר חשוב זה בא לביטוי במשפטים חודרים:
+Another example of his immense talent is the song "Vienna". Joel is a superb songwriter, capable of expressing complex emotions in simple, flowing words. Through its mesmerizing melody and introspective lyrics, the song reminds listeners to slow down, embrace life's journey, and find balance. The melancholic opening piano sets a thoughtful tone, while Joel's vocals convey a powerful message about the vital need to pace ourselves. The metaphorical lyrics encourage patience and contentment, reminding us to appreciate the present and find fulfillment at our own speed. This important message is expressed in piercing lines:
 
 <blockquote dir="auto">
 "You've got your passion, you’ve got your pride. But don't you know that only fools are satisfied?"
 </blockquote>
 
-החשיפה הראשונה שלי לבילי ג'ואל די מביכה. הכרתי אותו דרך צפייה בסדרה Glee . Glee היא דרמת תיכון על מקהלה של בית ספר שמתכוננת להתחרות בתחרות המחוזית. בסדרה מבצעות הדמויות עיבודים מחודשים לשירים פופולריים. באחד הפרקים ביצעה הדמות קורט פגן את השיר "Only the Good Die Young", ובאופן אירוני, השחקן שגילם את קורט, קורי מונטיטיו, נפטר ב-2015.
+My first exposure to Billy Joel is rather embarrassing. I discovered him by watching the TV show Glee. Glee is a high school drama about a school choir preparing for regional competitions. In the show, characters perform revamped arrangements of popular songs. In one episode, the character Kurt Hummel performed "Only the Good Die Young", and ironically, the actor Cory Monteith who starred in the show passed away in 2013.
 
-את העובדה שביילי גואל יהודי גיליתי בדרך אגב: הדמות בסדרה, קורבן, אמרה באותה סצנה שהוא ממשיך ברצף של לשיר רק שירים של זמרים יהודים. לאחר בירור קצר גיליתי שבילי גואל אכן יהודי, וכי  גדל בברוקלין. אז גם כאן הקשר היהודי חזק ונשמר.
+I discovered that Billy Joel is Jewish quite by accident: a character in the show mentioned in that scene that he was continuing a streak of singing songs by Jewish artists. After a brief check, I found that Billy Joel is indeed Jewish, raised in Brooklyn. So here too the Jewish connection is strong.
 
-השיר הוא שיר השנוי במחלוקת, שמשלב אלמנטים של רוק ושל gospel, והטקסטים המהפכניים שלו עוררו סערה עם צאתם. ג'ואל ניגש ללא פחד לנושא הדת, ומציג פרספקטיבה מעוררת מחשבה. האנרגיה של השיר מדבקת, מה שכמעט מאלץ את המאזין להצרף לשירה.
+The song itself is a controversial track combining elements of rock and gospel, and its provocative lyrics sparked a storm upon release. Joel fearlessly approaches the subject of religion, presenting a thought-provoking perspective. The energy of the song is infectious, almost compelling the listener to sing along.
 
-האלבום נחתם בשיר "Everybody Has a Dream", בלדה נוגעת ללב, החוקרת את החוויה האנושית האוניברסלית של שאיפה ותקווה לעתיד. מילותיו המתבוננות פנימה של ג'ואל מזכירות לשומע שהחלומות הם חלק חיוני מהאנושיות שלנו, והאינטנסיביות ההדרגתית של השיר, המלווה בליווי עשיר, מוסיפה עומק לקומפוזיציה. השיר משמש סיכום יפהפה לאלבום, המאגד נושאים כגון אהבה, גילוי עצמי, וחשיבות הדבֵקות בחלומות למרות הקשיים.
+The album concludes with "Everybody Has a Dream", a touching ballad exploring the universal human experience of aspiration and hope for the future. Joel's introspective words remind the listener that dreams are an essential part of our humanity, and the gradual intensity of the song accompanied by rich orchestration adds depth to the composition. The song serves as a beautiful summary for the album, bringing together themes of love, self-discovery, and the importance of holding onto dreams despite difficulties.
 
-מבחינה מוזיקלית, "The Stranger" הוא עבודה מופת בכתיבת שירים ובעיצוב. כישורי הפסנתר של ג'ואל בולטים בחזית יצירתו, אך האלבום משלב גם אלמנטים של רוק, פופ, ג'אז ואפילו השפעות לטיניות. לדעתי בילי ג'ואל הוא אחד האומנים החשובים והמשפיעים ביותר במוזיקה המודרנית. הוא הצליח ליצור מוזיקה שנאהבת על ידי אנשים בכל העולם.
+Musically, "The Stranger" is a masterpiece in songwriting and production. Joel's piano skills are at the forefront of his work, but the album also incorporates elements of rock, pop, jazz, and even Latin influences. In my view, Billy Joel is one of the most important and influential artists in modern music, creating music beloved by people around the world.
 
-האזנה נעימה.
+Enjoy the music.

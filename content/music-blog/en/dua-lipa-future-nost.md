@@ -1,7 +1,7 @@
 ---
-title: "Dua Lipa - Future Nostalgia "
+title: "Dua Lipa: Future Nostalgia"
 slug: "dua-lipa-future-nost"
-excerpt: "הסכסוך הישראלי-פלסטיני הוא בעיה קשה שרבים בישראל פוגשים אותה בשלב כזה או אחר. סער, אחד האנשים שאני הכי אוהב בעולם, הציע פתרון יצירתי:..."
+excerpt: "The Israeli-Palestinian conflict is a complex issue that many in Israel encounter at some point. Saar, one of my favorite people in the world, suggested a creative solution."
 date: "2023-07-14T21:38:27.191Z"
 coverImage: "/images/wix/cd66a9_2e7fc6a37858479eafd39e797c806cbf.webp"
 minutesToRead: 3
@@ -10,54 +10,46 @@ language: "en"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/4-NkTMyVq2c" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-הסכסוך הישראלי-פלסטיני הוא בעיה קשה שרבים בישראל פוגשים אותה בשלב כזה או אחר. סער, אחד האנשים שאני הכי אוהב בעולם, הציע פתרון יצירתי: לנגן את המוזיקה של דואה ליפה בעזה
+The Israeli-Palestinian conflict is a complex issue that many in Israel encounter at some point. Saar, one of my favorite people in the world, suggested a creative solution: playing Dua Lipa's music in Gaza and the territories. He believes it will bring peace, because how can anyone fight when pure music plays in the background? I (and I am likely in the minority) am not sure if it will solve the issue, but I think it is a cool idea worth trying. The funny part of this story is that Dua Lipa has criticized Israel, leading Saar to comment:
 
-ובשטחים. הוא מאמין שזה יביא שלום, כי הרי איך אפשר לריב כאשר ברקע מתנגנת מוזיקה שבהגדרתה היא
+"Hating anti-Israel figures, loving Dua Lipa: the ambivalence of the average citizen."
 
-טהורה. אני, וכנראה שאני בדעת מיעוט, לא בטוח אם זה יפתור את הבעיה, אבל אני חושב שזה רעיון מגניב
+I am, as you know, snobbish when it comes to music. So it is surprising that I am writing about a mainstream pop artist like Dua Lipa. However, when I dive into her music, I find a layer that generates something pleasant and fun. Future Nostalgia is an album combining 80s pop music with futuristic production, hence the title. Lipa described it as "a nostalgic pop album that feels like a dance class". She drew inspiration from 80s music to create a sound that feels both familiar and fresh.
 
-ששווה לנסות. החלק המצחיק בכל הסיפור הזה שדואה ליפה היא הרי עוכרת ישראל, וכמילותיו של סער:
-
-״שונא עוכרי ישראל, אוהב דואה ליפה, האמביוולנטיות של האזרח הקטן״.
-
-אני, כידוע לכם בהגדרה, מישהו שהוא פוץ, ובמיוחד במוזיקה שלו. לכן זה מפתיע, שאני כותב על אומנית כל
-
-כך ״רגילה״ כמו דואה ליפה. עם זאת, אם אני נכנס לעומקה של המוזיקה שלה, אז אני מוצא שיש בה רובד אחר שבאמת מייצר משהו נעים וכיפי. Future Nostalgia הוא אלבום שכולו שילוב בין מוזיקת פופ של שנות ה-80 לבין מוזיקה עתידנית, ולכן השם Future Nostalgia. לופה תיארה אותו כ״אלבום פופ נוסטלגי שמרגיש כמו שיעור ריקוד״ היא שאבה את ההשראה שלה מהמוזיקה של שנות ה-80, כדי ליצור צליל שירגיש מוכר וחדשני באותה המידה.
-
-השירים Don't Start Now, Physical  ו -Break My Heart הם כולם סינגלים ראויים ביותר, עם לחנים קליטים שיישארו בראש במשך שבועות לאחר ההאזנה. הסינתיסייזר שנמצא ברבים משירי Future Nostalgia הוא המפתח להחזרת האווירה של שנות ה-80. שירים אחרים כמו Levitating, Hallucinate, Pretty Please, Cool ו-Good in Bed, הם כולם גם כן בעלי לחנים מרגשים שיגרמו לך לרקוד, ויישמעו עדיין "חדשים" במובנים מסוימים, גם לאחר ההאזנה מרובה. השירים שתיארתי כאן, מתארים באופן קולקטיבי את הצד האסתטי והמרגש של האהבה:
+Tracks like "Don't Start Now", "Physical", and "Break My Heart" are worthy singles with catchy melodies that remain in your head for weeks. The synthesizers featured across Future Nostalgia are key to recapturing that 80s atmosphere. Other tracks like "Levitating", "Hallucinate", "Pretty Please", "Cool", and "Good in Bed" feature exciting melodies that get you dancing, sounding fresh even after repeated listens. These tracks collectively explore the aesthetic and emotional sides of love:
 
 <blockquote dir="auto">
 "Who needs to go to sleep when I got you next to me?"
 </blockquote>
 
-ומנגד את האופי ההרסני של האהבה.
+And conversely, the destructive side of love:
 
 <blockquote dir="auto">
 "You broke my heart / And now I'm picking up the pieces"
 </blockquote>
 
-נוסף לכך הבלדה הפופית Boys Will Be Boys בוחנת באופן עוצמתי את נושא ההעצמה הנשית, בתקופה של גבריות רעילה ושל הטרדות מתמשכת בקהילה המודרנית שלנו.
+Additionally, the pop ballad "Boys Will Be Boys" powerfully examines female empowerment in an era of toxic masculinity and ongoing harassment.
 
 <blockquote dir="auto">
-“It’s second nature to walk home before the sun goes down / And put your keys between your knuckles when there’s boys around,”
+"It's second nature to walk home before the sun goes down / And put your keys between your knuckles when there's boys around,"
 </blockquote>
 
-הנקודה שלה ברורה, בנות צריכות להתבגר הרבה יותר מהר מהחברים הגברים שלהן, שיכולים בעיקר להישאר חסרי מודעות לאלימות בעולם עד גיל מאוחר יותר, בעוד שחברותיהן הנשים פורצות את בועות הילדות שלהן על ידי עצות להגנה עצמית.
+Her point is clear: girls are forced to mature much faster than male peers who can remain unaware of worldly dangers until a later age, while female friends burst their childhood bubbles through self-defense advice.
 
-אני לא חושב שזה שיר נהדר ברמה המוזיקלית, אבל אני מעריך את הניסיון שלה להעביר מסר בעל משמעות. זה חשוב לשמוע שיר שמדבר על נושאים חשובים ולא רק על סקס, כסף ומכוניות.
+I don't think it is a musically extraordinary song, but I appreciate her attempt to convey a meaningful message. It is important to hear pop songs addressing real issues rather than just money and cars.
 
-האלבום Future Nostalgia יצא ב-27 במרץ 2020 , וכמה ימים לאחר מכן העולם נכנס לסגר בעקבות מגפת הקורונה. באופן די אירוני, המטרה של האלבום הייתה ליצור מוזיקה שמייצרת אסקפיזים על בעיות העולם. דואה ליפה אמרה, שהיא רצתה ליצור אלבום שיגרום לאנשים לרקוד ולשכוח מהצרות שלהם לזמן מה.
+Future Nostalgia was released on March 27, 2020, and a few days later the world entered lockdowns due to COVID. Ironically, the album aimed to create musical escapism from world problems. Dua Lipa stated she wanted to make an album that would make people dance and forget their troubles for a while:
 
 <blockquote dir="auto">
-“I wanted to make music that takes your mind away from that. I wanted to just make it a bit easier for me to get out of bed and not think about the negative things that are going on in the world all the time.”
+"I wanted to make music that takes your mind away from that. I wanted to just make it a bit easier for me to get out of bed and not think about the negative things that are going on in the world all the time."
 </blockquote>
 
-כחלק מהשקת האלבום החדש שלה דואה ליפה הופיעה ב-<a href="https://www.youtube.com/watch?v=F4neLJQC1_E&ab_channel=NPRMusic" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Tiny Desk Concert</a>, לא נפתח אבל משום שבאותה תקופה היה סגר בעולם, היא נאלצה לבצע את ההופעה באולפן סטודיו אחר. אני חושב שגרסאות הלייב שלה מעניינות יותר מהגרסאות המקוריות שלה, כי הן מאפשרות לה להביע את עצמה בצורה אישית יותר ; זה בא לידי ביטוי במיוחד בשיר Love Again. אני אישית שמעתי את ההופעה הזאת אולי עשרות פעמים.
+As part of the album launch, Dua Lipa performed a <a href="https://www.youtube.com/watch?v=F4neLJQC1_E&ab_channel=NPRMusic" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Tiny Desk Concert</a> (home edition during lockdown). I find her live versions more intriguing than studio recordings because they allow her to express herself more personally, especially on "Love Again". I personally listened to that performance dozens of times.
 
-האלבום Future Nostalgia הוא אלבום שעושה בדיוק את מה שאלבום בסגנון שלו אמור לעשות: מהנה, פופי, ממכר וזכור. הוא באיזה אופן מגדיר את הטרנד עבור קטגוריה חדשה (כמעט) של מוזיקת ​​טרנד.
+Future Nostalgia achieves exactly what an album in its genre should: enjoyable, poppy, addictive, and memorable. In many ways it defined a trend for modern pop music.
 
-אני ממליץ בחום על האלבום לכל מי שאוהב פופ. זהו אלבום נהדר, שבטוח יעשה לכם טוב על הלב. הפוסט הזה כולו מוקדש לסער יעקב פנאני האגדה בחייו שבמקרה יש לו יום הולדת היום. (מלא מזל טוב אוהב מלא)
+I highly recommend the album to anyone who enjoys pop music. This post is dedicated to Saar Yaakov Fanani on his birthday!
 
 <figure class="my-8"><img src="https://static.wixstatic.com/media/cd66a9_2e7fc6a37858479eafd39e797c806cbf~mv2.jpg" alt="" class="w-full h-auto rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 object-cover max-h-[550px]" /></figure>
 
-האזנה נעימה
+Enjoy the music.

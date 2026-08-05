@@ -7,6 +7,55 @@
   <language>he-IL</language>
   
   <item>
+    <title><![CDATA[Context Layer #1: למה ה-Agent שלך נכשל]]></title>
+    <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-1</link>
+    <description><![CDATA[בבסיסם, AI Agents הם פשוט לולאת LLM העטופה ב-Context וב-Tools. גלה למה ה-Context Layer הוא צוואר הבקבוק האמיתי של ביצועי Agent, ולמה איכות ה-Context חשובה בהרבה מ-Planning אוטונומי.]]></description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-1</guid>
+  </item>
+  <item>
+    <title><![CDATA[Context Layer #2: Evals, Evals, Evals]]></title>
+    <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-2</link>
+    <description><![CDATA[לפני שנכנסים לבניית Data Pipelines או Context Abstractions מורכבים, חייבים לענות על שאלה אחת מרכזית: איך מודדים מה באמת אפקטיבי? גלה את 4 רמות ה-Evals לבניית Context Layer מונחה ביצועים.]]></description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-2</guid>
+  </item>
+  <item>
+    <title><![CDATA[Context Layer #3: ארכיטקטורת 4 השכבות]]></title>
+    <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-3</link>
+    <description><![CDATA[למד כיצד לארגן Context Layer בארבע שכבות פונקציונליות מול תרחיש CRM מציאותי: נתונים גולמיים, נתונים אנליטיים, אותות מעובדים מראש וזיכרון סמנטי.]]></description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-3</guid>
+  </item>
+  <item>
+    <title><![CDATA[Context Layer #4: הזרמת דאטה תפעולי בזמן אמת]]></title>
+    <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-4</link>
+    <description><![CDATA[בצע צלילה טכנית עמוקה לשכבה 1. למד כיצד צינורות Ingestion בזמן אמת, מידול Domain ואינדקסים ייעודיים מאחדים נתונים תפעוליים מכל הספקים עבור AI Agents.]]></description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-4</guid>
+  </item>
+  <item>
+    <title><![CDATA[Context Layer #5: חישוב מראש של אינטליגנציה אנליטית]]></title>
+    <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-5</link>
+    <description><![CDATA[צלילה טכנית לשכבה 2. למד כיצד חישוב מראש של Rollups סטטיסטיים, Baselines של p50/p90 Response Latency ויחסי ARR Triage באמצעות Apache Spark ו-dbt מעצימים AI Agents.]]></description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-5</guid>
+  </item>
+  <item>
+    <title><![CDATA[Context Layer #6: דאטה מעובד מראש ו-Multimodal OCR]]></title>
+    <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-6</link>
+    <description><![CDATA[צלילה טכנית לשכבה 3. למד כיצד חילוץ פיצ'רים אסינכרוני, כלכלת Batch, Sentiment Tagging ופרסור Multimodal OCR של PDF ותמונות מבטלים Latency של מודלים בזמן ריצה.]]></description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-6</guid>
+  </item>
+  <item>
+    <title><![CDATA[Context Layer #7: המוח (זיכרון סמנטי ו-Graph RAG)]]></title>
+    <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-7</link>
+    <description><![CDATA[שלוט בשכבה 4. למד כיצד זיכרון ארגוני, התאמת קול ה-Persona, חיפוש סמנטי היברידי ומיפוי ישויות ב-Graph RAG משלימים את ה-Context Layer.]]></description>
+    <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-7</guid>
+  </item>
+  <item>
     <title><![CDATA[מה זה Agent, מה זה Workflow, ולמה 90% מה-Agents הם בעצם Workflows]]></title>
     <link>https://ohadleshno.com/he/tech/agents-vs-workflows</link>
     <description><![CDATA[כולם רצים לבנות AI Agents אוטונומיים. אבל לתת ל-LLM לקבל כל מיקרו-החלטה בלולאה זה יקר, איטי ולא אמין. הנה למה המערכות הטובות ביותר הן Workflows ולא Agents.]]></description>

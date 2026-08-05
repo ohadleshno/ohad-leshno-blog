@@ -1,7 +1,7 @@
 ---
-title: "George Harrison - All Things Must Pass"
+title: "George Harrison: All Things Must Pass"
 slug: "george-harrison-all"
-excerpt: "בעקבות תקופתה החגים וחג הסוכות הקרב ובא אלינו נזכרתי בשבת ישיבה שהייתה לי אי שם בשלהי קיץ 2013. הקונספט עד היום לא ברור לי עד הסוף, בגדול..."
+excerpt: "With the upcoming holiday season, I recalled a yeshiva Sabbath I attended back in late summer 2013."
 date: "2023-09-29T09:17:12.527Z"
 coverImage: "/hero-cover.webp"
 minutesToRead: 4
@@ -10,32 +10,32 @@ language: "en"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/QWV4pFV5nX4" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-בעקבות תקופתה החגים וחג הסוכות הקרב ובא אלינו נזכרתי בשבת ישיבה שהייתה לי אי שם בשלהי קיץ 2013. הקונספט עד היום לא ברור לי עד הסוף, בגדול נסענו לאיזו פנימיה להתארח בשבת כל השכבות הבוגרות של הישיבה התיכונית.על הנייר נשמע כיף, כל החברים נשארים בשבת ביחד באיזה מקום דלוח עם אוכל בינוני, מה כבר יכול להיות רע? הבעיה היא שהמסגרת מלאה בהמון תכנים לא מעניינים שאתה חייב להיות בהם. אחד מהם זה סעודה שלישית, למי שלא מכיר בשבת אמורים לעשות שלוש ארוחות, בערב אחרי ערבית, ביום אחרי שחרית ואחרונה לפני השקיעה. הרבה דתיים אימצו את המנהג לעשות ארוחה קטנה יחסית בסעודה שלישית ולשיר שירים דתיים.
+With the upcoming holiday season, I recalled a yeshiva Sabbath I attended back in late summer 2013. The concept remains unclear to me to this day: essentially all upper classes of our high school yeshiva traveled to stay at a boarding school over Sabbath. On paper it sounds fun: friends spending Shabbat together in a modest venue with average food. What could go wrong? The issue was that the schedule was packed with uninteresting content you were required to attend. One item was Seudah Shlishit (the third meal). For those unfamiliar, religious custom dictates three meals on Shabbat: Friday night, Saturday morning, and late Saturday afternoon before sunset. Many observant Jews adopt the custom of a small third meal accompanied by religious songs.
 
-אני עם המושפעות והתסביכים שלי, היה לי תמיד נורא קשה להתחבר לכל הטקסים הדתיים. תמיד בתפילות רק חיכיתי שהזמן יעבור, לא התחברתי לטקסטים והרגשתי תמיד נורא עלוב ומרוחק. באותה שבת ישיבה, היה מופע של שאלות ותשובות מול ראש הישיבה, מן פלטפורמה לשאול שאלות קשות לכאורה.
+With my own complexities, I always struggled to connect with religious rituals. During prayers I simply waited for time to pass, feeling distant from the texts. On that yeshiva Sabbath, there was a Q&A session with the yeshiva head, a platform to ask supposedly tough questions.
 
-שאלו את כל השאלות הגנריות: ״איפה אלוהים היה בשואה?״ , ״האם יש בחירה חופשית?״ ותמיד היה לנו איזה אחד בשכבה שאמר שסבתא שלו ראתה שד ושאל: ״האם שדים קיימים?״. אני גם עליתי למגרש, ובאופן קצת מתריס שאלתי שאלה על הסעודה השלישית בסגנון: ״למה אנחנו צריכים לסבול עם שירים גרועים כל שבת?״. השאלה גררה אחריה דיון קדחתני שבו המסקנה של הדיון הייתה שזו הדרך האידיאלית ואני רק עדיין לא מספיק מחובר אליה בשביל להבין את זה. אני לא בטוח מה ניסיתי להשיג מאותה שאלה, כי ידעתי כבר מה תהיה התשובה, אבל נראה לי רציתי להגיד לעצמי שאני לא מתאים לשם, העולם הזה לא מתאים לי.
+People asked generic questions: "Where was God during the Holocaust?", "Is there free will?", and there was always someone asking if demons exist. I stepped up and provocatively asked a question about the third meal: "Why do we have to suffer through terrible songs every Shabbat?" The question sparked intense debate, concluding that this was the ideal path and I simply wasn't connected enough to understand it yet. I wasn't sure what I sought from asking, knowing the answer beforehand, but perhaps I wanted to tell myself I didn't belong there.
 
-בחור מהשכבה מעלי שאני לא הייתי בקשר איתו עד אותה נקודה ניגש אלי אחרי הדיון ואמר: ״שמע זה לא שהם טועים, אבל כשאני שומע עידן עמדי אני יותר מחובר לבורא״. אז כן כמובן שאפשר וצריך לרדת עליו על העידן עמדי, אבל הנקודה שלו ברורה. לקח לי כמה שנים להגיע לתובנה היותר עמוקה הזאת לאחר שכל חיי חשבתי שאני לא בן אדם ״רוחני״. לימים הבנתי שהמסע הרוחני שלי מתבטא בדרכים אחרות, על אחת מהן נדבר היום. האלבום של האריסון all things must pass הוא מסע רוחני המשלב בין תרבות המזרח למערב כמו שרק ביטל כמו ג'ורג האריסון יודע לעשות. אבל לפני שנצלול לחלק הרוחני קודם נעשה סקירה קצרה על האלבום והרקע שלו.
+An older student I had never spoken to approached me afterward and said: "Listen, it's not that they're wrong, but when I listen to Idan Amedi I feel more connected to the Creator." While one can joke about Idan Amedi, his point was clear. It took me years to reach a deeper understanding after considering myself non-spiritual. Over time I realized my spiritual journey manifests in other ways, one of which we explore today. George Harrison's album "All Things Must Pass" is a spiritual journey blending Eastern and Western culture as only a Beatle like Harrison could do. Before diving into the spiritual aspect, let's review the album's context.
 
-זהו אלבום הסולו הראשון שלו שנכתב אחרי פירוק הביטלס ב1970, והוא מכיל המון רפרנסים לפירוק שלהם.
+This was Harrison's first solo album written after The Beatles disbanded in 1970, containing numerous references to their breakup.
 
-מתחיל בעטיפת האלבום שמוצלמת friar park בחצר של האחוזה שקנה. שם הוא יושב לבד עם ארבעה גמדים סביבו המסמלים את הביטלס, הוא יושב לבד ומנסה להציג את השחרור מהם. ומבוטא בהמון שירים כגון Isn't it a pity (שהביטלס לא רצו אותו) שתוהה על איך יצורים אינטליגנטים יכולים לגרום אחד לשני כל כך הרבה סבל:
+It begins with the album cover shot at Friar Park in the gardens of his estate. He sits alone surrounded by four garden gnomes symbolizing the Beatles, presenting his independence from them. This is expressed in songs like "Isn't It a Pity" (rejected by the Beatles), which ponders how intelligent beings cause each other suffering:
 
 <blockquote dir="auto">
-“<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Isn't it a pity?</a>
-<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Now isn't it a shame?</a>
-<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">How we break each other's hearts and cause each other pain</a>
-<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">How we take each other's love without thinking anymore</a>
-<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Forgetting to give back</a>
-<a href="https://genius.com/6524172/George-harrison-isnt-it-a-pity/Isnt-it-a-pity-now-isnt-it-a-shame-how-we-break-each-others-hearts-and-cause-each-other-pain-how-we-take-each-others-love-without-thinking-anymore-forgetting-to-give-back-isnt-it-a-pity" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">Isn't it a pity?</a>”
+"Isn't it a pity?
+Now isn't it a shame?
+How we break each other's hearts and cause each other pain
+How we take each other's love without thinking anymore
+Forgetting to give back
+Isn't it a pity?"
 </blockquote>
 
-והשיר wah wah שנכתב במהלך הפסקה שלקח מה beatles במהלכי הסשן של get back, המבטא את האווירה העכורה של הלהקה באותם ימים. ממש ניתן לשמוע כמה ג'ורג עצוב על המצב של הלהקה, מדהים איך מצליח לבטא באותו הרגע כבר את הרגשות שלו בצורה כל כך כנה ויפה.
+The song "Wah-Wah" was written during a break he took from the Beatles during the Get Back sessions, capturing the tense atmosphere of the band at the time. You can hear George's sadness over the band's state, expressing his feelings honestly.
 
-דוגמה נוספת היא ב Run of the mile, לפני תחילת הסשנים של get back ב 1968, גורג נסע לבקר את הגדול מכולם ומי שהשפיע עליו רבות, בוב דילן. שם הוא פגש את the band, ג׳ורג כל כך התלהב מהסגנון המוסיקלי שלהם והשיר הוא ניסיון לכתוב בסגנון שלהם. בשיר הוא מאשים את apple crops על ההשפעה הרעה שיש להם על הלהקה.
+Another example is "Run of the Mill". Before the Get Back sessions in 1968, George visited Bob Dylan, who influenced him greatly. There he met The Band, and George was so thrilled by their musical style that the song was an attempt to write in their style, while criticizing Apple Corps for their negative impact on the Beatles.
 
-אחרי שהבנו בגדול את האטמוספרה של האלבום, עם המשבר הגדול בחייו עם פירוק הביטלס, בנוסף מות אמו והמסע שלו להודו והחיבור להארי קרישנה. כעת נוכל לצלול כעת לשירים הרוחניים יותר באלבום. ג'ורג מתעסק הרבה באלבום בקשר שלנו אל האל, הוא מתחיל עם השיר המוכר ביותר באלבום הוא כנראה באלבום my sweet lord, שיצא בהתחלה כסינגל ושבר את המצעדים. הרצון של ג'ורג בשיר הוא שנתחבר לאל כל אחד בדרכו שלו ולא משנה הפלטפורמה דתית שבה הוא משתמש. הוא משלב סגנון של שירי גוספל עם השפעות מהארי קרישנה, הוא משתמש במילים כמו ״הללויה״ ומנגד מקריא את מַהָא-מנטרה (המנטרה הגדולה). תפילה מדיטטיבית בת שש-עשרה מילים המורכבת משמותיו של אלוהים בסנסקריט. לימים ג'ורג הודה שהוא התבסס על שיר גוספל <a href="https://www.youtube.com/watch?v=KJohGa66FJM&ab_channel=EdwinHawkinsVEVO" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">oh happy day </a> ו<a href="https://cosmicmagazine.com.au/news/the-day-george-harrison-settled-his-my-sweet-lord-plagiarism-lawsuit/" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">לימים הפסיד בתביעה על גניבה ספרותית על השיר.</a>
+Having understood the album's atmosphere, amid his personal crisis with the Beatles' split, his mother's passing, his trip to India, and connection to Hare Krishna, we can dive into the spiritual tracks. George focuses heavily on our connection to the divine. The album's most famous track is "My Sweet Lord", initially released as a single that topped charts worldwide. George's desire in the song is for everyone to connect to God in their own way, regardless of religious platform. He blends gospel music with Hare Krishna influences, combining words like "Hallelujah" with the Sanskrit Hare Krishna mantra. Later George acknowledged basing the song on the gospel track "Oh Happy Day" and lost a copyright lawsuit over structural similarities.
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/KJohGa66FJM" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
@@ -46,7 +46,7 @@ Really want to see you, Lord
 But it takes so long, my Lord"
 </blockquote>
 
-והוא ממשיך בhear me lord שגם אותו הביטלס לא רצו ואפילו יש לו גרסה <a href="https://www.youtube.com/watch?v=SVhk9KiSovg&ab_channel=FranciscoBeatlesFloydGonzalez" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">שלו בסשן של get back.</a>  הוא מבקש סליחה מהאל על כל השנים שהתעלם ממנו ורק רוצה שישמע אותו ויעזור לו להתעלות. מוטיב שנמצא בהמון שירים דתיים בכל הדתות. והוא לא חס מלכתוב שיר אהבה ב what is life  עם riff הפתיחה הכל כך מושך שבו הוא כותב שיר אהבה לאל.
+He continues in "Hear Me Lord" (also rejected by the Beatles, with a demo version existing from the Get Back sessions). He asks forgiveness for years of neglect, wanting God to hear him and help him elevate, a motif common to religious music across faiths. And he doesn't shy from writing a love song to the divine in "What Is Life", featuring a captivating opening riff.
 
 <blockquote dir="auto">
 "Beware of sadness
@@ -55,17 +55,17 @@ Make you sore and what is more
 That is not what we are here for"
 </blockquote>
 
-ואפילו באלבום כזה רציני שמכיל את התפוצצות המוחלטת של ג'ורג אנחנו מוצאים את עצמו נחשפים לקצת הומור עצמי בשיר I dig love. שבו האריסון פשוט שר על איך הוא אוהב את איבר המין הגברי. איך הוא אוהב אותו על הבוקר, איך הוא אוהב אותו כל ערב והוא פשוט רוצה שנדע את זה.
+Even on such a serious album representing George's creative explosion, we encounter self-deprecating humor in "I Dig Love", where Harrison sings playfully about love and affection.
 
-בהוצאה המקורית האלבום היה מחלוק לשלושה אלבומים, האלבום השלישי הוא אוסף של קטעי גאם שכנראה באים כקונטרה עוד פעם לביטלס והשיטה הסופר סכמטית שלהם שעיצבה את הפופ לעד. הוא בא לשבור להרעיד אותנו להיות א-פורמלי ולהגיד לנו Thanks for the Pepperoni.
+In its original release the album was divided into three LPs, the third being a collection of jam tracks serving as a counterweight to the Beatles' structured pop formula, shaking things up with "Thanks for the Pepperoni".
 
-לבסוף נציין את השיר שמבחינתי הוא גולת הכותרת של האלבום, all things must pass, עוד ניסיון של ג'ורג לכתוב שיר בסגנון של the band, האריסון כותב בצורה שלא תבייש כותבים כמו דילן. הוא מזכיר לנו את האמת הכל כך פשוטה שאנחנו תמיד מנסים לברוח ממנה, בסוף הכל חולף. הדברים הרעים, הדברים הטובים כולם בסוף חולפים ובניהם גם אנחנו.
+Finally, we highlight the title track "All Things Must Pass", another attempt by George to write in The Band's style, with lyrics rivaling Dylan. He reminds us of a simple truth we often evade: in the end, everything passes. The bad things, the good things, all eventually pass, and so do we.
 
 <blockquote dir="auto">
-"All things must pass, so I must be on my way 
-The darkness only stay the night time in the morning it will past away״
+"All things must pass, so I must be on my way
+The darkness only stays the nighttime in the morning it will pass away"
 </blockquote>
 
-האזנה נעימה
+Enjoy the music.
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/7j7lsExGJtBHLgDYzjclwk?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>

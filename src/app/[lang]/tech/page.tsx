@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getAllTechProjects } from '@/lib/tech';
-import { ExternalLink, ArrowLeft, ArrowRight } from 'lucide-react';
+import { ExternalLink, ArrowLeft, ArrowRight, BookOpen } from 'lucide-react';
+import { PlaylistCard } from '@/components/PlaylistCard';
 
 export function generateStaticParams() {
   return [{ lang: 'he' }, { lang: 'en' }];
@@ -72,6 +73,18 @@ export default function TechBlogIndex({ params }: { params: { lang: 'he' | 'en' 
             : 'Architecture design documents, open projects, and AI systems research.'}
         </p>
       </div>
+
+      {/* Series Subjects Section */}
+      <section className="space-y-4 pb-6 border-b border-neutral-200 dark:border-neutral-800">
+        <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-rose-600 dark:text-rose-400 font-bold">
+          <BookOpen className="size-4" />
+          <span>{isHe ? 'נושאים נבחרים' : 'Featured Subjects'}</span>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 pt-2">
+          <PlaylistCard seriesId="context-layer" lang={lang} />
+        </div>
+      </section>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {projects.map((project) => (

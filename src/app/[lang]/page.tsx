@@ -83,14 +83,14 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
   };
 
   return (
-    <div className="space-y-20 py-6 sm:py-12">
+    <div className="space-y-12 sm:space-y-20 py-1 sm:py-6">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
       {/* Hero Banner Section */}
-      <section className="py-6 sm:py-12 border-b border-neutral-200 dark:border-neutral-800 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <section className="pb-6 pt-1 sm:py-12 border-b border-neutral-200 dark:border-neutral-800 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-center">
         <div className="md:col-span-8 space-y-6">
           <div className="text-xs uppercase tracking-widest text-neutral-500 dark:text-neutral-400 font-semibold">
             {isHe ? 'מוזיקה • תרבות • הנדסת AI' : 'Music • Culture • AI Engineering'}

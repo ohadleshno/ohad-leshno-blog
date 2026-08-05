@@ -75,17 +75,17 @@ export function Header({ lang }: HeaderProps) {
         {/* Brand Logo */}
         <Link
           href={`/${lang}`}
-          className="flex items-center gap-2 text-slate-900 dark:text-white hover:opacity-80 transition-opacity flex-shrink-0 whitespace-nowrap"
+          className="flex items-center gap-2.5 text-slate-900 dark:text-white hover:opacity-80 transition-opacity flex-shrink-0 whitespace-nowrap"
         >
           <img
             src="/logo-icon.webp"
             alt="Ohad Leshno Logo"
-            width={28}
-            height={28}
-            className="w-6 h-6 sm:w-7 sm:h-7 rounded-full object-contain flex-shrink-0"
+            width={40}
+            height={40}
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-contain flex-shrink-0"
             aria-hidden="true"
           />
-          <span className="font-display font-semibold text-sm sm:text-lg tracking-tight truncate">{isHe ? 'אוהד לשנו' : 'Ohad Leshno'}</span>
+          <span className="font-display font-semibold text-base sm:text-lg tracking-tight truncate">{isHe ? 'אוהד לשנו' : 'Ohad Leshno'}</span>
         </Link>
 
         {/* Navigation links & Utilities */}
