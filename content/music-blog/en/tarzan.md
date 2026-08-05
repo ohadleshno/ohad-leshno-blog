@@ -1,7 +1,7 @@
 ---
-title: "Tarzan"
+title: "Tarzan: Soundtrack Analysis"
 slug: "tarzan"
-excerpt: "אני, מי שלא מכיר, חנון גאה שגדל על כל הקלישאות הכי גנריות של חנונים. אוהב את הביטלס היה בונה לגו של Star Wars, שיחק בכל משחק מחשב שהיה..."
+excerpt: "For those who don't know me, I am a proud nerd raised on generic nerd clichés: I love the Beatles, built Star Wars Lego, played video games, and adore Disney films."
 date: "2023-09-06T04:55:50.672Z"
 coverImage: "/hero-cover.webp"
 minutesToRead: 3
@@ -10,38 +10,38 @@ language: "en"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/EfHLHdSxQA0" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-אני, מי שלא מכיר, חנון גאה שגדל על כל הקלישאות הכי גנריות של חנונים. אוהב את הביטלס היה בונה לגו של Star Wars, שיחק בכל משחק מחשב שהיה אפשר למצוא, וכמובן הייתה גם אהבתי הגדולה לסרטי דיסני. לכן, זה מתבקש שאבחר לפחות באלבום פסקול אחד של סרטי דיסני. לאחר התלבטות קשה ומריבות עם "עצמי הקטן בראש" על איזה אלבום כדאי שאכתוב, הצלחתי להגיע למסקנה שעליי לבחור באלבום של Tarzan.
+For those who don't know me, I am a proud nerd raised on generic nerd clichés: I love the Beatles, built Star Wars Lego, played video games, and adore Disney films. Naturally I had to choose at least one Disney soundtrack album. After much internal debate, I concluded that Tarzan was the one to pick.
 
-במהלך השירות הצבאי היינו שומעים אותו בתדירות גבוהה, שהייתה כמעט גורמת לאופק לרצות לזרוק את המחשב מוזיקה שלנו מהחלון לאיילון; איכשהו הרדיו במשרד ניגן תמיד את האלבום הזה. אני זוכר שכשהייתי ילד צפיתי בסרט טרזן במשך תקופה, כמעט בכל ערב. כיום, הסרט הזה מחזיר אותי אל רגעי התמימות ואל הרגשות העזים כמו שרק סרט קולנוע טוב מצליח לעשות.
+During military service we listened to it frequently, almost driving my desk mate Ofek to throw our music computer out the window onto Ayalon Highway: somehow the office radio constantly played this soundtrack. As a kid I watched Tarzan almost every evening. Today the movie brings back innocent moments and intense emotions as only great cinema can.
 
-הפסקול נכתב על ידי פיל קולינס, שהיה המתופף של להקת ג'נסיס. יסלחו לי כל אוהבי הפרוג, אבל אני אישית אוהב את הלהקה גם אחרי שפיטר גבריאל עזב וקולינס הפך לסולן שלה. אבא שלי מעריץ גדול של קולינס, והוא מאשים אות תמיד איך בגללי אף פעם הוא לא היה בהופעה שלו כי הם נאלצו לעזוב את ההופעה באמצע שלו כשהייתי בן שנתיים כי לא סמכו על אחותי, הבייביסיטרית שלי, שתצליח לטפל בי.
+The soundtrack was composed by Phil Collins, drummer and frontman for Genesis. Progressive rock purists may disagree, but I love Genesis even after Peter Gabriel left and Collins took over lead vocals. My dad is a huge Phil Collins fan and jokingly blames me for never attending his concert because my parents had to leave his show when I was two years old because they couldn't trust my sister, my babysitter, to handle me.
 
-הסרט מתחיל בסצנת הפתיחה של טרזן והוריו. הם ניצלים ממש בשנייה האחרונה מסירה טובעת שעלתה באש ומגיעים לעבר  חוף מבטחים, אי שבו חיות גורילות. לאחר שניצלו, ההורים של טרזן מקימים בית־עץ באי כדי לחיות בו בשלום, אך לפתע טוויסט בעלילה, פניו של האנטגוניסט הראשון שלנו, הנמר סבור, מופיע בקדמת המסך. קאט קדימה, ובסרט רואים ילד נטוש שהוריו, כנראה, נהרגו על ידי סבור. כל קטע הפתיחה מלווה בשיר Two worlds שמשתלב בצורה מושלמת, והמוסיקה מכניסה את הצופים לאווירה המדהימה של הסרט. זו סצנה שחרוטה לי היטב במוח; את כל הפסקה הזאת אני כותב אפילו מבלי שאצפה בסצנה שוב. כשמשהו הוא כל כך חזק, הוא נצרב עמוק בתודעה.
+The movie opens with Tarzan's parents escaping a burning ship at the last second, reaching a safe shore populated by gorillas. After escaping, his parents build a treehouse to live in peace, but suddenly a plot twist occurs as the antagonist, Sabor the leopard, appears. Cutting forward, we see an abandoned infant whose parents were killed by Sabor. The opening sequence is accompanied by "Two Worlds", which fits seamlessly and immerses viewers in the film's atmosphere. This scene is etched in my memory: I am writing this paragraph without rewatching it because when art is that powerful, it burns into your consciousness.
 
-השיר השני באלבום  You'll be in my heart הוא יפה, רגיש וחודר ללב. שיר קצר שמצליח להעביר מסר, שבמשך חיים שלמים הורים מנסים להעביר לילדים שלהם. ההבנה שיש תמיד מישהו שם בשבילך, ושלא משנה מה יקרה ─ הוא יאהב אותך.
+The second track, "You'll Be in My Heart", is tender, sensitive, and deeply moving: a short song conveying the message parents spend a lifetime trying to impart to their children. The understanding that someone is always there for you, and no matter what happens, they will love you.
 
-כל כך נקי מכל המניירות, הוא פשוט שיר אהבה לילד:
+Free of pretension, it is simply a love letter to a child:
 
 <blockquote dir="auto">
-"Cause you'll be in my heart
+"'Cause you'll be in my heart
 Yes, you'll be in my heart
 From this day on
-Now and forever more״
+Now and forever more"
 </blockquote>
 
-והשיר הבא  Son of man הוא עוד קטע מעבר שמציג את ההתפתחות של טרזן מילד למבוגר. השיר מלא במוטיבים ועצות לילד המתפתח, מילות השיר אומרות לילד: אל דאגה הכל יהיה בסדר, אתה תצליח, אתה תוכל להיות כל מה שתרצה ואפילו יותר ממה שחלמת עליו. כילד, ההורים שלי דאגו תמיד להעביר לי את אותו המסר: לא משנה מה תרצה אתה תצליח, הכל תלוי בך. כמה יופי יש באמונה הזאת וכמה כוח היא נותנת.
+The track "Son of Man" marks Tarzan's transition from childhood to adulthood. The song offers encouragement: don't worry, everything will be alright, you will succeed, and you can be anything you dream of. As a child, my parents instilled that same belief in me: whatever you want to achieve is within reach if you work for it. There is beauty and strength in that trust.
 
 <blockquote dir="auto">
 "Son of man, look to the sky
 Lift your spirit, set it free
 Some day you'll walk tall with pride
-Son of man, a man, in time you'll be״
+Son of man, a man, in time you'll be"
 </blockquote>
 
-השיר האחרון שאתייחס אליו הוא Strangers like me, שיר המפגש בין טרזן לג׳יין. טרזן מגלה מחדש את הדברים שהם הוא, הכל נראה לו כל כך בעל משמעות, אבל הוא לא מצליח להבין אותם. למעשה, טרזן הוא מישהו שנחשף לעולם שלם שתמיד היה בתוכו, והוא רק צריך שיושיטו לו יד ויראו לו מחדש את העולם.
+The final song I will highlight is "Strangers Like Me", depicting Tarzan's meeting with Jane. Tarzan discovers humanity, encountering a world that existed inside him all along, needing only a hand to guide him.
 
-באופן כללי, טרזן היא דמות מעניינת מאוד שגדלה בעולם אחד אבל למעשה מחברת בין שני עולמות. אני אהיה קלישאתי ואגיד, שבכל אחד מאיתנו יש עולמות שאנחנו מחברים ביניהם, וזה היופי בסרטי דיסני שהם מצליחים להנכיח תחושה כל כך אנושית ובסיסית הקיימת בכולנו. האלבום הוא המהות של מוזיקת סרטי דיסני, מוזיקה מרגשת עם מסר מחזק ומעצים. סרטים של דיסני תמיד זורקים אותי ל"עמוקים", אולי כי הם חץ היישר לתוך הלב של כולנו. הסרט נהדר, אך השילוב של הסרט עם הפסקול הוא התעלות הרוח והנפש, וביחד הם כמו רוח מפרשים עבור ילד שרוצה לפרוץ לעולם. אשרינו שזכינו בסרטים כאלו בתור ילדים.
+Tarzan is a fascinating character raised in one world while bridging two. To be cliché: each of us bridges different worlds, and Disney's magic lies in capturing that universal human condition. The soundtrack embodies Disney music: emotionally uplifting with an empowering message. Disney movies hit straight to the heart, and paired with Phil Collins' soundtrack, the combination lifts the spirit like wind in a child's sails. We were fortunate to grow up with such films.
 
-אז הפעם אאחל לכם האזנה וצפייה מהנה
+Enjoy the music and watching.
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/1zszC1x9HYKxUCKVa62p7C?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
