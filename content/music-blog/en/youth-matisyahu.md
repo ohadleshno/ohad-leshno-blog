@@ -1,7 +1,7 @@
 ---
-title: "Youth: Matisyahu"
+title: "“Youth” -Matisyahu"
 slug: "youth-matisyahu"
-excerpt: "If he took himself seriously, he would be a superstar, my brother summarized after attending Matisyahu's concert a month ago."
+excerpt: "\"שמע, אם הוא היה לוקח את עצמו ברצינות, הוא היה סופרסטאר\", סיכם אחי את ההופעה של מתיסיהו שהיינו בה לפני חודש. זה היה אחד מהמופעים הטובים..."
 date: "2024-03-01T15:07:02.622Z"
 coverImage: "/hero-cover.webp"
 minutesToRead: 4
@@ -10,7 +10,7 @@ language: "en"
 
 <div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 bg-black"><div class="relative w-full pb-[56.25%]"><iframe src="https://www.youtube-nocookie.com/embed/pjSsV4iLdjs" title="Video Embed" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="absolute top-0 left-0 w-full h-full border-0"></iframe></div></div>
 
-"Listen, if he took himself seriously, he would be a superstar," my brother summarized after attending Matisyahu's concert a month ago. It was one of the finest live shows I have witnessed. I had never seen anyone so natural on stage, completely effortless while captivating the crowd and generating a spiritual experience for two hours. Human ears can barely decipher half the fast reggae rap lyrics he delivers, but amidst the messages he projects, he hits straight to the heart. Even "One Day", a song so familiar, functions in that setting as a sincere prayer. Matisyahu arrived in Israel during difficult times to perform a benefit concert for hostages' families, a meaningful gesture.
+"שמע, אם הוא היה לוקח את עצמו ברצינות, הוא היה סופרסטאר", סיכם אחי את ההופעה של מתיסיהו שהיינו בה לפני חודש. זה היה אחד מהמופעים הטובים שראיתי בחיי. מעולם לא ראיתי מישהו כל כך טבעי על הבמה, כל כך לא מתאמץ ובו-זמנית כובש את כל עולמך ובמשך שעתיים מצליח לייצר חוויה רוחנית אחרת. כמובן שעדיין לא נוצרה אוזן אנושית שיכולה להבין אפילו חצי מהמלמולים של ראפ הרגאיי שלו, אבל פה ושם בין עשרות המסרים שהוא יורה לאוויר, הוא מצליח לירות חץ ישר ללב ולפתוח אותו לרווחה. אפילו "One Day", שיר כל כך קלישאתי ומרוחק, מצליח באותה סיטואציה לתפקד כמו תפילה כנה וחזקה מהמקום הכי טהור. מתיסיהו הגיע לארץ בתקופה לא פשוטה ועשה מופע שהכנסותיו הלכו למשפחות החטופים - אקט שמאוד לא מובן בעיני, במיוחד לאחר המסע שהוא עבר. (<a href="https://www.ynet.co.il/entertainment/article/b1a5mllyp" target="_blank" rel="noopener noreferrer" class="text-indigo-600 dark:text-indigo-400 underline hover:text-indigo-500 font-medium break-all">ביקורת על המופע</a>)
 
 <blockquote dir="auto">
 "All my life, I've been waitin' for
@@ -19,11 +19,11 @@ That we don't wanna fight no more
 There'll be no more wars, and our children will play"
 </blockquote>
 
-Whenever I recall my Bar Mitzvah, I think the ceremony is unusual. Why should a 13-year-old hold an event at Kfar Maccabiah inviting 500 of his parents' friends? Personally I didn't feel age 13 was when I became a man. The whole event felt strange to me. As part of planning, we hired a DJ who asked me for my musical taste, handing me a list of 2000 songs to pick from. I picked 50 songs based solely on whether I had heard them before. What 13-year-old has developed musical taste beyond Green Day at best? Realizing my limitations, I consulted my sister. She noted 90 percent of my choices were music human ears couldn't tolerate. Disliking the DJ's list, she built her own while suggesting various artists, one of whom was Matisyahu. I rejected him because he was Hasidic: why would I want Hasidic music at my Bar Mitzvah? Even then I connected more to the Beatles than traditional religious singers, viewing Hasidic music as distant.
+תמיד כשאני נזכר בבר מצווה שלי, אני חושב שהטקס הזה סופר מוזר. למה ילד בן 13 צריך לעשות אירוע בכפר המכביה ולהזמין 500 חברים של ההורים? אישית, לא הרגשתי שגיל 13 הוא הגיל שבו הפכתי "לגבר" וקיבלתי עלי "עול תורה ומצוות". כל האירוע הזה מוזר מאוד בעיני, אבל נשים את זה בצד. כחלק מהאירוע, הזמנו דיג'יי והוא שאל אותי, כנער הבר מצווה, מה הסגנון המוזיקלי שלי. הוא הביא לי רשימה של כ-2000 שירים וביקש שאבחר. בחרתי כ-50 שירים, כשהקו המנחה היה האם אי פעם שמעתי אותם. איזה ילד בן 13 יש לו באמת טעם מוזיקלי שלא מסתכם בגרין די, במקרה הטוב? בגלל ההבנה העמוקה שאני לא מבין, הלכתי להתייעצות עם אחותי. היא אמרה שלפחות 90% מהשירים שבחרתי הם בגדר מוזיקה שהאוזן האנושית "לא יכולה להכיל" (בדיעבד, אני חושב ש-120% מהם לא הייתי מוכן לשמוע היום). היא לא אהבה בכלל את הרשימה שהוא הביא לי והחליטה ליצור משלה, תוך כדי שהיא מציעה לי פה ושם כל מיני דברים. אחד מהאמנים שהיא הציעה היה מתיסיהו. אוטומטית פסלתי אותו על הסף כי הוא "חרדי". מה אני צריך מוזיקה חסידית בבר מצווה שלי? כבר אז הרגשתי יותר חיבור לביטלס מאשר לשוואקי. מאוד סלדתי ממוזיקה חסידית. היא נתפסה בעיני כנחותה, כי היא יצגה תרבות נחותה. מצחיק כמה הניתוק מהתפיסה הדתית המסורתית תפס מקום כבר אז, בצורה מאוד ילדותית.
 
-Matisyahu, born Matthew Paul Miller in Pennsylvania to a secular Jewish family, opened himself to Orthodox Judaism during adolescence. Eventually, toward the end of his studies at The New School, he embraced religious observance alongside classmate and musical partner saxophonist Daniel Zamir. Following unprecedented success as a Hasidic artist gaining international acclaim, Matisyahu later evolved his path, choosing to shave his beard and embark on a new personal journey. One remarkable aspect of Matisyahu's music is its ability to bridge cultural boundaries and unite diverse listeners. Whether an observant Hasid or a reggae fan, his music speaks to the soul with a message of hope, resilience, and awakening.
+מת'יסיהו, במקור מתיו פול מילר, נולד בפנסילבניה למשפחה יהודית חילונית אמריקאית. בגיל ההתבגרות החליט לראשונה להיפתח ליהדות האורתודוקסית והחל בתהליך של חזרה בתשובה. לבסוף, לקראת סוף לימודיו בניו סקול, החליט לחזור בתשובה באופן רשמי, במקביל לתהליך שעבר חברו ללימודים ושותפו המוזיקלי בעתיד, הסקסופוניסט דניאל זמיר. לאחר הצלחה חסרת תקדים, במהלכה הפך לאחד מהאמנים החרדים היחידים שקיבלו הכרה בינלאומית, עבר מת'יסיהו תהליך הפוך והחליט להצטלם ללא הזקן ולהודיע על דרכו החדשה של יציאה מהדת. אחד ההיבטים המדהימים ביותר במוזיקה של מת'יסיהו הוא היכולת שלו לחצות גבולות תרבותיים ולאחד מאזינים מכל קצוות החברה. בין אם אתה חסיד אדוק או רסטאפרי שמת על בוב מארלי, יש משהו במוזיקה של מת'יסיהו שמדבר לנשמה - מסר אוניברסלי של תקווה, חוסן והתעוררות רוחנית.
 
-"Youth" is not only a rich blend of musical styles but also a seamless fusion of two worlds: reggae rhythms and Hasidic spiritual tradition. Matisyahu navigates these worlds skilfully, respecting both traditions while creating a harmonious blend reflecting human experience. Reggae beats merge with Jewish motifs, crafting a soundscape both catchy and thought-provoking. Tracks like "Fire of Heaven / Altar of Earth" transport us where spirituality meets youth energy. There is urgency in Matisyahu's delivery that ignites passion, urging listeners to embrace identity. Tracks like "Jerusalem" remind me of cultural roots that shaped me, allowing me to reconnect from a fresh perspective. Yet amidst pulsating beats, quiet introspection shines in "What I'm Fighting For" and "WP", confronting doubts and fears.
+"Youth" הוא לא רק שילוב עשיר של סגנונות מוזיקליים, אלא גם מיזוג חלק בין שני עולמות לכאורה נפרדים: הקצבים התוססים של תרבות הרגאיי והרוחניות העמוקה של המסורת החסידית היהודית. דרך המוזיקה שלו, מת'יסיהו מנווט בין עולמות אלה ביד אמן, מעניק לכל אחד מהם כבוד ויראה עמוקים, ויוצר שילוב הרמוני שמדבר אל החוויה האנושית הכלל-אנושית. מת׳יסיהו משלב באופן הרמוני מקצבי רגאיי עם מוטיבים יהודיים, ויוצר נוף סאונד שממכר ומעורר מחשבה כאחד. הצבתם זה לצד זה של האלמנטים הללו אינה נועדה לדלל אף אחת מהמסורות, אלא דווקא לשפר ולהעשיר אותן, ולהדגיש את הדמיון הטבוע ביניהן.ל "Fire of Heaven/Altar of Earth", לוקח אותנו לממלכה שבה רוחניות משתלבת עם האנרגיה הגולמית של הנעורים. יש דחיפות בקולו של מת׳יסיהו, להט שמדליק אש בתוכך, דוחק אותך לחבק את הזהות שלך בתשוקה חסרת בושה. וגם בשירים הבאים כמו "Jerusalem" אני מוצא תזכורת למורשת התרבותית העשירה שעיצבה אותי. גם אם היום נלקחה למקום אחר דרכו אני מסוגל להפתח והלסתכל עליה בעיניים אחרות ולהתחבר מחדש. ועם זאת, בין הקצבים הפועמים והשירות הנלהבות, יש רגעים של התבוננות שקטה. "What I'm Fighting For" ו-"WP" מזמינים לצלול עמוק אל תוך חביוני הנשמה, להתמודד עם הפחדים והספקות פנים אל פנים. ברגעים אלו של פגיעות, אני פתאום מוצא כוח - לא בתשובות אלא באומץ לשאול את השאלות ולהתמודד איתן.
 
 <blockquote dir="auto">
 "What I'm fighting for
@@ -34,7 +34,7 @@ With the brother's coming home at last
 Fighting together for light"
 </blockquote>
 
-A highlight of the album, "King Without a Crown", captures the essence of Matisyahu's live performances: raw crowd energy merging with passionate vocals. At its core, it is an anthem of self-discovery and empowerment. Matisyahu's intense delivery urges listeners to embrace inner strength and rise above hardships. The infectious groove makes it a classic that continues to inspire global audiences.
+אחד משיאי האלבום, "King Without a Crown", לוכד את תמצית ההופעות החיות של מת'יסיהו: האנרגיה הגולמית של הקהל מתמזגת עם השירה הנלהבת של האמן. זהו אולי אחד השירים האייקוניים ביותר של מת'יסיהו, ויש לכך סיבה טובה. בגרעין שלו, הוא המנון מרגש של גילוי עצמי והעצמה. הקולות הנלהבים והמילים החודרות של מת'יסיהו נוגעים עמוק, דוחקים את המאזינים לחבק את כוחם הפנימי ולהתעלות על קשיים. הגרוב המדבק והמסר העולה של השיר הופכים אותו לקלאסיקה חסרת זמן שממשיכה להעניק השראה לקהל ברחבי העולם.
 
 <blockquote dir="auto">
 "Strip away the layers and reveal your soul
@@ -44,8 +44,8 @@ You want to live the fast life but your brain moves slow
 If you're trying to stay high then you're bound to stay low"
 </blockquote>
 
-The album "Youth" is a testament to music's power to ignite the spirit. For me it represents a journey of rediscovery: a reminder to embrace inner youth and explore identity and beliefs with courage, self-acceptance, and love for the world.
+האלבום "Youth" הוא יותר מאלבום - הוא עדות לכוחה המחוללת של המוזיקה לעורר את הרוח ולהצית את הנשמה. עבורי, זו מסע של גילוי מחדש - תזכורת לחבק את הנעורים שבפנים ולהמשיך לחקור את מעמקי הזהות והאמונות שלי באומץ, כל זאת תוך כדי קבלה עצמית ואהבה עצומה לעולם שפעם הרגשתי שהוא לא שלי.
 
-Shabbat Shalom and happy listening!
+שיהיה שבת שלום, והאזנה נעימה (:
 
-<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6xv4soedEKLMLzSpgWYuzf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" loading="lazy"></iframe></div>
+<div class="my-8 overflow-hidden rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 flex justify-center"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/6xv4soedEKLMLzSpgWYuzf?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
