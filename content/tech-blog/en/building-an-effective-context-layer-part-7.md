@@ -4,7 +4,7 @@ title: "Context Layer #7: The Brain (Graph RAG & Memory)"
 slug: "building-an-effective-context-layer-part-7"
 excerpt: "Master Layer 4. Discover how organizational memory, persona voice alignment, hybrid vector search, and Graph RAG entity linking complete the Context Layer for AI Agents."
 date: "2026-08-01"
-coverImage: "/context-layer-bulldozer-shovel.png"
+coverImage: "/context-layer-semantic-memory-graph.png"
 projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Vector Search", "Graph RAG", "Python"]
 language: "en"
@@ -18,7 +18,7 @@ seriesOrder: 7
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-bulldozer-shovel.png" alt="Layer 4 Semantic Memory & Graph RAG" class="article-screenshot" />
+  <img src="/context-layer-semantic-memory-graph.png" alt="Layer 4 Semantic Memory & Graph RAG" class="article-screenshot" />
   <figcaption>Layer 4 Semantic Memory: Long-term organizational memory, persona voice alignment, hybrid vector search, and Graph RAG entity links.</figcaption>
 </figure>
 

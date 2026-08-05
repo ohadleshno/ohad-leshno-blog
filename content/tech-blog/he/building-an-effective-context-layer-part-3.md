@@ -4,7 +4,7 @@ title: "Context Layer #3: ארכיטקטורת 4 השכבות"
 slug: "building-an-effective-context-layer-part-3"
 excerpt: "למד כיצד לארגן Context Layer בארבע שכבות פונקציונליות מול תרחיש CRM מציאותי: נתונים גולמיים, נתונים אנליטיים, אותות מעובדים מראש וזיכרון סמנטי."
 date: "2026-08-01"
-coverImage: "/context-layer-cover.png"
+coverImage: "/context-layer-4-layer-architecture.png"
 projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "Apache Airflow", "SQL", "Vector Search"]
 language: "he"
@@ -18,7 +18,7 @@ seriesOrder: 3
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-cover.png" alt="ארכיטקטורת ה-Context ב-4 שכבות" class="article-screenshot" />
+  <img src="/context-layer-4-layer-architecture.png" alt="ארכיטקטורת ה-Context ב-4 שכבות" class="article-screenshot" />
   <figcaption>מבנה 4 השכבות הפונקציונליות: דאטה תפעולי גולמי, מטריקות אנליטיות, אותות מעובדים מראש וזיכרון סמנטי.</figcaption>
 </figure>
 

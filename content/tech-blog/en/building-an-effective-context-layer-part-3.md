@@ -4,7 +4,7 @@ title: "Context Layer #3: The 4 Layer Architecture Blueprint"
 slug: "building-an-effective-context-layer-part-3"
 excerpt: "Learn how to structure a Context Layer into four functional layers around a real-world CRM scenario: Raw Data, Analytical Data, Preprocessed Signals, and Semantic High-Level Memory."
 date: "2026-08-01"
-coverImage: "/context-layer-cover.png"
+coverImage: "/context-layer-4-layer-architecture.png"
 projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "Apache Airflow", "SQL", "Vector Search"]
 language: "en"
@@ -18,7 +18,7 @@ seriesOrder: 3
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-cover.png" alt="The 4-Layer Context Architecture" class="article-screenshot" />
+  <img src="/context-layer-4-layer-architecture.png" alt="The 4-Layer Context Architecture" class="article-screenshot" />
   <figcaption>Overview of the 4 functional layers: Raw Operational Data, Analytical Metrics, Preprocessed Signals, and Semantic Memory.</figcaption>
 </figure>
 
