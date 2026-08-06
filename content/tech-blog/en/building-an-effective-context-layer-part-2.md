@@ -291,4 +291,4 @@ For deep dives into production evaluation frameworks and online observability, e
 
 Once you have established your evaluation suite and identified your primary bottlenecks, you are ready to build context abstractions that directly move the needle.
 
-In [Part 3: Data Engineering Tools & Layered Architectures](/en/tech/building-an-effective-context-layer-part-3), we dive into the technical blueprints for building high-impact operational and analytical context pipelines using Apache Spark, Airflow, and SQL.
+In [Part 3: The 4-Layer Context Layer Architecture Blueprint](/en/tech/building-an-effective-context-layer-part-3), we dive into the core infrastructure architecture and explore how to design a multi-layered data foundation for AI Agents.

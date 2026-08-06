@@ -291,4 +291,4 @@ flowchart TD
 
 ברגע שבנית את מערך ה-Evaluation שלך וזיהית את צווארי הבקבוק המרכזיים, אתה מוכן לבנות Context Abstractions שמשנות באופן ישיר את התוצאות.
 
-ב-[חלק 3: ארכיטקטורת נתונים בשכבות וכלים מתקדמים](/he/tech/building-an-effective-context-layer-part-3), נצלול לבניית צינורות נתונים תפעוליים ואנליטיים באמצעות Apache Spark, Airflow ו-SQL.
+ב-[חלק 3: ארכיטקטורת 4 השכבות של ה-Context Layer](/he/tech/building-an-effective-context-layer-part-3), נצלול לארכיטקטורת התשתית המלאה ונבין איך לבנות Data Layer רב-שכבתי עבור AI Agents.
