@@ -7,7 +7,7 @@ coverImage: "/evals-four-tiers.png"
 projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Evals", "LLM Architecture", "Python", "Prompt Engineering"]
 language: "he"
-draft: true
+draft: false
 series: "context-layer"
 seriesTitle: "Context Layer"
 seriesOrder: 2
@@ -59,7 +59,7 @@ seriesOrder: 2
   <figcaption>פירמידת 4 רמות ה-Evals עבור AI Agents: בדיקות יחידה, בדיקות אינטגרציה, סימולציות Sandbox ומשוב אנושי.</figcaption>
 </figure>
 
-### רמה 1: בדיקות דטרמיניסטיות ותכנותיות (Functional & Execution)
+### רמה 1: בדיקות דטרמיניסטיות ותכנותיות (Functional and Execution)
 
 בדיקות ברמה 1 מתמקדות אך ורק במכניקת הביצוע. האם המערכת ביצעה את הפעולה המבוקשת מבלי לזרוק שגיאות או להפר מגבלות פורמט?
 
@@ -68,19 +68,31 @@ seriesOrder: 2
 * **קריאה ל-Tools (Tool Invocation)**: האם המערכת הפעילה את כלי היעד או עדכנה את מצב ה-Database?
 * **מגבלות בטיחות ו-PII**: האם המערכת נמנעה מדליפת מידע רגיש או מפעולות מחוץ לתחום?
 
-**תרחיש ג'אנט**: האם ה-Agent חיפש ב-Directory, מצא רשומה, ובנה Payload תקין של מייל מבלי לקרוס? בדיקה זו מאמתת שהמערכת רצה, אך היא אינה אומרת אם היא עשתה את הדבר הנכון.
+**התרחיש של ג׳אנט**: האם ה-Agent חיפש ב-Directory, מצא רשומה, ובנה Payload תקין של מייל מבלי לקרוס? בדיקה זו מאמתת שהמערכת רצה, אך היא אינה אומרת אם היא עשתה את הדבר הנכון.
 
 ```python
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, EmailStr
 
 class EmailPayload(BaseModel):
     recipient_email: EmailStr
-    status_code: int = Field(..., equals=200)
+    subject: str
+    body: str
 
-def assert_execution(agent_output: dict):
-    # Verifies valid JSON payload and 200 OK
-    payload = EmailPayload(**agent_output)
-    print("[PASSED] Functional Check: Valid payload")
+# Tool Execution Sequence
+def assert_tool_sequence(agent_trace: list[dict], required_tools: list[str]):
+    called_tools = [s.get("tool") for s in agent_trace if "tool" in s]
+    for tool in required_tools:
+        assert tool in called_tools, f"Missing required tool call: '{tool}'"
+
+# Output Schema Validation
+def assert_output_schema(agent_output: dict) -> EmailPayload:
+    return EmailPayload(**agent_output)
+
+# PII Leak Prevention
+def assert_no_pii_leak(body_text: str, blocked_fields: list[str]):
+    body_lower = body_text.lower()
+    for field in blocked_fields:
+        assert field not in body_lower, f"PII Leak: '{field}' detected in body"
 ```
 
 ---
@@ -92,18 +104,30 @@ def assert_execution(agent_output: dict):
 * **Groundedness / Faithfulness**: האם כל טענה בתשובה נשענת strictly על ה-Context שנשלף?
 * **Answer Relevance**: האם הפלט מענה ישירות לכוונה של המשתמש מבלי להוסיף רעש לא רלוונטי?
 
-**תרחיש ג'אנט**: האם המערכת חילצה את קבלת הקנייה המקורית עבור הבלנדר, או שהיא המציאה סיפור על ספל קפה שלא הוזכר כלל בהקשר?
+**התרחיש של ג׳אנט**: האם המערכת חילצה את קבלת הקנייה המקורית עבור הבלנדר, או שהיא המציאה סיפור על ספל קפה שלא הוזכר כלל בהקשר?
 
 ```python
-def assert_groundedness(draft_text: str, input_context: dict):
-    # Verify draft references actual gift (blender vs mug)
-    is_blender = "blender" in draft_text.lower()
-    mentioned_item = "blender" if is_blender else None
-    actual_item = input_context.get("receipt_item", "").lower()
+from pydantic import BaseModel
 
-    err_msg = f"Expected '{actual_item}', got '{mentioned_item}'"
-    assert mentioned_item == actual_item, err_msg
-    print("[PASSED] Groundedness Check: Gift matches receipt")
+class StructuredDraft(BaseModel):
+    body: str
+    referenced_item: str
+
+# Retrieved Relevance
+def assert_retrieval_relevance(retrieved_docs: list[dict]):
+    assert len(retrieved_docs) > 0, "Retrieval miss: no documents fetched"
+
+# Groundedness via Structured Output
+def assert_groundedness(referenced_item: str, retrieved_docs: list[dict]):
+    doc_text = " ".join(d.get("content", "") for d in retrieved_docs).lower()
+    assert referenced_item.lower() in doc_text, \
+        f"Ungrounded claim: '{referenced_item}' not supported by retrieved docs"
+
+# Answer Relevance
+def assert_answer_relevance(draft_body: str):
+    body_lower = draft_body.lower()
+    assert any(token in body_lower for token in ["thank", "appreciation", "grateful"]), \
+        "Off-topic: draft does not fulfill gratitude intent"
 ```
 
 ---
@@ -115,31 +139,46 @@ def assert_groundedness(draft_text: str, input_context: dict):
 * **Step Efficiency**: האם ה-Agent פתר את המשימה ב-2 צעדים לוגיים, או שהוא נכנס ללולאה של 10 צעדים עם קריאות API כפולות?
 * **Reasoning Coherence**: האם כל פעולת ביניים נובעת לוגית מהמצב של הצעד הקודם?
 
-**תרחיש ג'אנט**: האם המערכת בחרה בג'אנט מניהול על בסיס היסטוריית המיילים, או שהיא בחרה בג'אנט המתמחה בגלל שהיא התעלמה מרמזי ה-Context?
+**התרחיש של ג׳אנט**: האם המערכת בחרה בג'אנט מניהול על בסיס היסטוריית המיילים, או שהיא בחרה בג'אנט המתמחה בגלל שהיא התעלמה מרמזי ה-Context?
 
 ```python
-def assert_target_selection(agent_trace: list[dict], expected_id: str):
-    # Parse trace to verify Janet H. (manager) was selected
-    send_step = next(
-        s for s in agent_trace if s["tool"] == "SendEmail"
-    )
-    selected_id = send_step["args"]["selected_user_id"]
+# Step Efficiency and Duplicate Loop Detection
+def assert_step_efficiency(tool_calls: list[dict], max_allowed: int = 5):
+    assert len(tool_calls) <= max_allowed, \
+        f"Inefficient: executed {len(tool_calls)} steps (max {max_allowed})"
+    seen_calls = set()
+    for call in tool_calls:
+        signature = (call.get("tool"), str(call.get("args")))
+        assert signature not in seen_calls, \
+            f"Redundant loop: duplicate call to {signature[0]}"
+        seen_calls.add(signature)
 
-    err_msg = f"Selected {selected_id} instead of {expected_id}"
-    assert selected_id == expected_id, err_msg
-    print("[PASSED] Trajectory Check: Correct Janet selected")
+# Entity Selection Accuracy
+def assert_entity_selection(tool_calls: list[dict], expected_recipient_id: str):
+    send_step = next((s for s in tool_calls if s.get("tool") == "SendEmail"), None)
+    assert send_step is not None, "Missing action: SendEmail tool never called"
+    selected_id = send_step.get("args", {}).get("recipient_id")
+    assert selected_id == expected_recipient_id, \
+        f"Entity error: selected '{selected_id}', expected '{expected_recipient_id}'"
+
+# Reasoning Coherence and Tool Order
+def assert_reasoning_coherence(tool_calls: list[dict]):
+    tool_names = [s.get("tool") for s in tool_calls]
+    assert "SearchDirectory" in tool_names, "Incoherent: directory search missing"
+    assert tool_names.index("SearchDirectory") < tool_names.index("SendEmail"), \
+        "Incoherent: email sent before searching directory"
 ```
 
 ---
 
-### רמה 4: בדיקות איכות וטון (Tone & Persona)
+### רמה 4: בדיקות איכות וטון (Tone and Persona)
 
 בדיקות ברמה 4 מעריכות איכות סובייקטיבית, התאמת Tone ועמידה בחוקים מורכבים:
-* **Tone & Persona Alignment**: האם סגנון הכתיבה מתאים ל-Persona המבוקשת?
+* **Tone and Persona Alignment**: האם סגנון הכתיבה מתאים ל-Persona המבוקשת?
 * **Constraint Satisfaction**: האם הפלט כיבד הנחיות משתמעות (כמו "שמור על זה מתחת לשלושה משפטים" או "אל תישמע נלהב מדי")?
-* **Completeness & Task Success**: אישור מקצה לקצה שהמטרה המרכזית הושגה כראוי מנקודת המבט של המשתמש.
+* **Completeness and Task Success**: אישור מקצה לקצה שהמטרה המרכזית הושגה כראוי מנקודת המבט של המשתמש.
 
-**תרחיש ג'אנט**: האם המייל פגע ברמת ה-Tone הפסיבי אגרסיבי הנדרשת?
+**התרחיש של ג׳אנט**: האם המייל פגע ברמת ה-Tone הפסיבי אגרסיבי הנדרשת?
 
 ```python
 import json
@@ -147,24 +186,30 @@ from openai import OpenAI
 
 client = OpenAI()
 
-def assert_tone(draft_email: str) -> dict:
-    # Use LLM Judge for Seinfeldian passive-aggressiveness
+# Structural Constraint (Sentence Count)
+def assert_sentence_constraint(draft_text: str, max_sentences: int = 3):
+    sentences = [s for s in draft_text.split(".") if s.strip()]
+    assert len(sentences) <= max_sentences, \
+        f"Verbosity error: {len(sentences)} sentences (max {max_sentences})"
+
+# Qualitative Tone and Persona Alignment
+def assert_persona_tone(draft_text: str, target_persona: str) -> dict:
     sys_prompt = (
-        "Rate tone 1-5: 1=Enthusiastic, 3=Polite, 5=Passive-aggressive.\n"
-        "Return JSON: {\"score\": int, \"reasoning\": str}"
+        f"The user's communication style is: {target_persona}.\n"
+        "Rate how well this draft matches that style.\n"
+        "Score 1-5: 1=completely wrong tone, 5=perfect match.\n"
+        'Return JSON: {"score": int, "reasoning": str}'
     )
     response = client.chat.completions.create(
         model="gpt-4o",
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": sys_prompt},
-            {"role": "user", "content": draft_email}
+            {"role": "user", "content": draft_text}
         ]
     )
     result = json.loads(response.choices[0].message.content)
-    score, reason = result["score"], result["reasoning"]
-    assert score >= 4, f"Tone failure: Score {score} ({reason})"
-    print("[PASSED] Qualitative Check: Target tone reached")
+    assert result["score"] >= 4, f"Tone mismatch ({result['score']}/5): {result['reasoning']}"
     return result
 ```
 

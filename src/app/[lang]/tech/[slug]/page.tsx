@@ -10,6 +10,7 @@ import { MermaidRenderer } from '@/components/MermaidRenderer';
 import { RelatedPosts } from '@/components/RelatedPosts';
 import { DraftGuard } from '@/components/DraftGuard';
 import { SeriesBannerNav } from '@/components/SeriesBannerNav';
+import { LanguageBanner } from '@/components/LanguageBanner';
 
 export function generateStaticParams() {
   const heSlugs = getAllTechSlugs('he').flatMap((slug) => [
@@ -183,6 +184,9 @@ export default function TechProjectDetail({
             )}
           </div>
         </header>
+
+        {/* Language Switcher Banner */}
+        <LanguageBanner category="tech" slug={project.slug} lang={lang} />
 
         {/* Markdown Content */}
         <div

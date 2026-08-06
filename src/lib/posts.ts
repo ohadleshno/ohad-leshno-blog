@@ -35,9 +35,24 @@ function extractFirstYouTubeId(content: string, frontmatterUrl?: string): string
   return match ? match[1] : undefined;
 }
 
+function decodeHtmlEntities(str: string): string {
+  return str
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#x27;/g, "'")
+    .replace(/&#x26;/g, '&')
+    .replace(/&#x3C;/gi, '<')
+    .replace(/&#x3E;/gi, '>')
+    .replace(/&#(\d+);/g, (_, dec) => String.fromCharCode(Number(dec)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, hex) => String.fromCharCode(parseInt(hex, 16)));
+}
+
 function processCodeBlocks(htmlContent: string): string {
   return htmlContent.replace(/<pre><code(?:\s+class="language-([^"]+)")?>([\s\S]*?)<\/code><\/pre>/g, (match, lang, code) => {
-    const trimmedCode = code.trim();
+    const decodedCode = decodeHtmlEntities(code);
+    const trimmedCode = decodedCode.trim();
 
     // Preserve Mermaid diagram code blocks for client-side rendering
     if (
@@ -49,17 +64,11 @@ function processCodeBlocks(htmlContent: string): string {
       trimmedCode.startsWith('erDiagram') ||
       trimmedCode.startsWith('classDiagram')
     ) {
-      return `<pre><code class="language-mermaid">${code}</code></pre>`;
+      return `<pre><code class="language-mermaid">${decodedCode}</code></pre>`;
     }
 
-    const rawCode = code
-      .replace(/&lt;/g, '<')
-      .replace(/&gt;/g, '>')
-      .replace(/&amp;/g, '&')
-      .replace(/&quot;/g, '"');
-
     const language = (lang && hljs.getLanguage(lang)) ? lang : 'plaintext';
-    const highlightedHtml = hljs.highlight(rawCode, { language }).value;
+    const highlightedHtml = hljs.highlight(decodedCode, { language }).value;
 
     return `<div class="code-block-wrapper my-4 rounded-xl overflow-hidden border border-neutral-200 dark:border-neutral-800/60 bg-[#0d1117] shadow-sm dark:shadow-none text-left font-mono text-sm leading-relaxed" dir="ltr">
       <div class="code-block-header flex items-center justify-between px-4 py-2 bg-[#161b22] border-b border-neutral-700/40 text-xs font-mono text-neutral-400 uppercase tracking-widest select-none">

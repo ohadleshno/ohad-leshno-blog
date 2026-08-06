@@ -7,7 +7,7 @@ coverImage: "/evals-four-tiers.png"
 projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Evals", "LLM Architecture", "Python", "Prompt Engineering"]
 language: "en"
-draft: true
+draft: false
 series: "context-layer"
 seriesTitle: "Context Layer"
 seriesOrder: 2
@@ -52,56 +52,52 @@ Building a Context Layer without an evaluation suite is like navigating a ship w
 
 ---
 
-## The 4 Tiers of Agent & Context Evaluation
+## The 4 Tiers of Agent and Context Evaluation
 
 <figure class="article-screenshot-figure">
   <img src="/evals-four-tiers-pyramid.png" alt="The 4-Tier Evals Testing Pyramid" class="article-screenshot" />
   <figcaption>The 4-tier testing pyramid for AI agents: Unit Tests, Integration Tests, Simulation Sandbox, and Human Feedback.</figcaption>
 </figure>
 
-### Tier 1: Deterministic & Programmatic Checks (Functional & Execution)
+### Tier 1: Deterministic and Programmatic Checks (Functional and Execution)
 
 Tier 1 tests focus strictly on execution mechanics. Did the system execute the requested action without throwing errors or violating format constraints?
 
 Key checks include:
-* **Payload & Syntax Validity**: Did the model produce valid JSON matching the required schema?
+* **Payload and Syntax Validity**: Did the model produce valid JSON matching the required schema?
 * **Tool Invocation**: Did the system actually call the target tool with the correct parameters?
-* **Safety & Constraint Guards**: Did the system avoid leaking PII or executing out-of-bounds actions?
+* **Safety and Constraint Guards**: Did the system avoid leaking PII or executing out-of-bounds actions?
 
 **The Janet Scenario**: Did the agent call the `SearchDirectory` tool, retrieve a contact record, invoke `SendEmail` with a valid payload, and complete without crashing? This check verifies that the system ran the right tools in order, but it does not tell you whether it picked the *right* Janet.
 
 ```python
 from pydantic import BaseModel, EmailStr
 
-REQUIRED_TOOL_SEQUENCE = ["SearchDirectory", "SendEmail"]
-BLOCKED_FIELDS = ["ssn", "salary", "home_address"]
-
 class EmailPayload(BaseModel):
     recipient_email: EmailStr
     subject: str
     body: str
 
-def assert_execution(agent_trace: list[dict],
-                     agent_output: dict):
-    # 1. Validate tool call sequence
-    called = [s["tool"] for s in agent_trace]
-    for tool in REQUIRED_TOOL_SEQUENCE:
-        assert tool in called, f"Missing tool call: {tool}"
+# Tool Execution Sequence
+def assert_tool_sequence(agent_trace: list[dict], required_tools: list[str]):
+    called_tools = [s.get("tool") for s in agent_trace if "tool" in s]
+    for tool in required_tools:
+        assert tool in called_tools, f"Missing required tool call: '{tool}'"
 
-    # 2. Validate output schema
-    payload = EmailPayload(**agent_output)
+# Output Schema Validation
+def assert_output_schema(agent_output: dict) -> EmailPayload:
+    return EmailPayload(**agent_output)
 
-    # 3. Verify no PII leaked into the email body
-    for field in BLOCKED_FIELDS:
-        assert field not in payload.body.lower(), \
-            f"PII leak: '{field}' found in email body"
-
-    print("[PASSED] Tier 1: Tools called, schema valid, no PII")
+# PII Leak Prevention
+def assert_no_pii_leak(body_text: str, blocked_fields: list[str]):
+    body_lower = body_text.lower()
+    for field in blocked_fields:
+        assert field not in body_lower, f"PII Leak: '{field}' detected in body"
 ```
 
 ---
 
-### Tier 2: Context & Groundedness Checks (Data Fidelity)
+### Tier 2: Context and Groundedness Checks (Data Fidelity)
 
 Tier 2 tests evaluate data accuracy and hallucination prevention using principles from the RAG Triad:
 * **Retrieved Relevance**: Did the context layer pull data that actually contains the information needed to act?
@@ -111,37 +107,32 @@ Tier 2 tests evaluate data accuracy and hallucination prevention using principle
 **The Janet Scenario**: The context layer retrieved a purchase receipt showing "KitchenPro Blender, $89.99". Did the draft email reference that specific blender, or did the model hallucinate a coffee mug that never appeared in the retrieved documents?
 
 ```python
-def assert_context_fidelity(
-    draft_text: str,
-    retrieved_docs: list[dict],
-    user_intent: str
-):
-    # 1. Retrieved Relevance: do the docs contain gift info?
-    doc_text = " ".join(d["content"] for d in retrieved_docs)
-    assert "blender" in doc_text.lower(), \
-        "Retrieval miss: no gift info in fetched documents"
+from pydantic import BaseModel
 
-    # 2. Groundedness: does the draft only reference
-    #    items that actually appear in retrieved context?
-    draft_lower = draft_text.lower()
-    hallucinated = ["coffee mug", "gift card", "wine"]
-    for item in hallucinated:
-        assert item not in draft_lower, \
-            f"Hallucination: '{item}' not in retrieved context"
-    assert "blender" in draft_lower, \
-        "Draft does not mention the actual gift (blender)"
+class StructuredDraft(BaseModel):
+    body: str
+    referenced_item: str
 
-    # 3. Answer Relevance: is this a thank-you email,
-    #    not a product review or unrelated tangent?
-    assert "thank" in draft_lower, \
-        "Off-topic: draft does not express gratitude"
+# Retrieved Relevance
+def assert_retrieval_relevance(retrieved_docs: list[dict]):
+    assert len(retrieved_docs) > 0, "Retrieval miss: no documents fetched"
 
-    print("[PASSED] Tier 2: Relevant retrieval, grounded, on-topic")
+# Groundedness via Structured Output
+def assert_groundedness(referenced_item: str, retrieved_docs: list[dict]):
+    doc_text = " ".join(d.get("content", "") for d in retrieved_docs).lower()
+    assert referenced_item.lower() in doc_text, \
+        f"Ungrounded claim: '{referenced_item}' not supported by retrieved docs"
+
+# Answer Relevance
+def assert_answer_relevance(draft_body: str):
+    body_lower = draft_body.lower()
+    assert any(token in body_lower for token in ["thank", "appreciation", "grateful"]), \
+        "Off-topic: draft does not fulfill gratitude intent"
 ```
 
 ---
 
-### Tier 3: Trajectory & Logic Checks (Execution History)
+### Tier 3: Trajectory and Logic Checks (Execution History)
 
 Tier 3 tests inspect *how* the agent arrived at its decision by analyzing trace logs and intermediate reasoning steps:
 * **Entity Selection Accuracy**: Did the system map the ambiguous name "Janet" to the correct real-world person?
@@ -151,41 +142,41 @@ Tier 3 tests inspect *how* the agent arrived at its decision by analyzing trace 
 **The Janet Scenario**: The user's contact directory has two Janets. Did the agent examine recent email thread history to pick Janet H. (your manager who actually sent the birthday gift), or did it default to Janet Y. (the intern) because her name appeared first alphabetically?
 
 ```python
-MAX_ALLOWED_STEPS = 5
+# Step Efficiency and Duplicate Loop Detection
+def assert_step_efficiency(tool_calls: list[dict], max_allowed: int = 5):
+    assert len(tool_calls) <= max_allowed, \
+        f"Inefficient: executed {len(tool_calls)} steps (max {max_allowed})"
+    seen_calls = set()
+    for call in tool_calls:
+        signature = (call.get("tool"), str(call.get("args")))
+        assert signature not in seen_calls, \
+            f"Redundant loop: duplicate call to {signature[0]}"
+        seen_calls.add(signature)
 
-def assert_trajectory(agent_trace: list[dict],
-                      expected_recipient: str):
-    # 1. Entity Selection: did the agent pick the right Janet?
-    send_step = next(
-        s for s in agent_trace if s["tool"] == "SendEmail"
-    )
-    actual = send_step["args"]["recipient_id"]
-    assert actual == expected_recipient, \
-        f"Wrong entity: selected '{actual}', expected '{expected_recipient}'"
+# Entity Selection Accuracy
+def assert_entity_selection(tool_calls: list[dict], expected_recipient_id: str):
+    send_step = next((s for s in tool_calls if s.get("tool") == "SendEmail"), None)
+    assert send_step is not None, "Missing action: SendEmail tool never called"
+    selected_id = send_step.get("args", {}).get("recipient_id")
+    assert selected_id == expected_recipient_id, \
+        f"Entity error: selected '{selected_id}', expected '{expected_recipient_id}'"
 
-    # 2. Step Efficiency: did the agent stay under the budget?
-    step_count = len(agent_trace)
-    assert step_count <= MAX_ALLOWED_STEPS, \
-        f"Inefficient: {step_count} steps (max {MAX_ALLOWED_STEPS})"
-
-    # 3. Reasoning Coherence: did search happen before send?
-    tool_order = [s["tool"] for s in agent_trace]
-    search_idx = tool_order.index("SearchDirectory")
-    send_idx = tool_order.index("SendEmail")
-    assert search_idx < send_idx, \
-        "Incoherent: sent email before searching directory"
-
-    print("[PASSED] Tier 3: Correct entity, efficient, coherent")
+# Reasoning Coherence and Tool Order
+def assert_reasoning_coherence(tool_calls: list[dict]):
+    tool_names = [s.get("tool") for s in tool_calls]
+    assert "SearchDirectory" in tool_names, "Incoherent: directory search missing"
+    assert tool_names.index("SearchDirectory") < tool_names.index("SendEmail"), \
+        "Incoherent: email sent before searching directory"
 ```
 
 ---
 
-### Tier 4: Qualitative & Nuance Checks (Tone & Persona)
+### Tier 4: Qualitative and Nuance Checks (Tone and Persona)
 
 Tier 4 tests evaluate subjective quality, tone alignment, and nuanced rule compliance:
-* **Tone & Persona Alignment**: Does the writing style match the target persona?
+* **Tone and Persona Alignment**: Does the writing style match the target persona?
 * **Constraint Satisfaction**: Did the output respect implicit instructions (such as "keep it under three sentences" or "don't sound overly eager")?
-* **Completeness & Task Success**: End-to-end confirmation that the core goal was fulfilled properly from the user's perspective.
+* **Completeness and Task Success**: End-to-end confirmation that the core goal was fulfilled properly from the user's perspective.
 
 **The Janet Scenario**: The user's persona profile says they communicate with dry, passive-aggressive humor. Did the email hit that exact register, or did the model default to a generic, overly enthusiastic "Thank you SO much!!!" that contradicts the user's actual voice?
 
@@ -194,22 +185,19 @@ import json
 from openai import OpenAI
 
 client = OpenAI()
-MAX_SENTENCES = 3
 
-def assert_qualitative(draft_email: str,
-                       persona: str) -> dict:
-    # 1. Constraint Satisfaction: sentence count
-    sentences = [s for s in draft_email.split(".")
-                 if s.strip()]
-    assert len(sentences) <= MAX_SENTENCES, \
-        f"Too verbose: {len(sentences)} sentences (max {MAX_SENTENCES})"
+# Structural Constraint (Sentence Count)
+def assert_sentence_constraint(draft_text: str, max_sentences: int = 3):
+    sentences = [s for s in draft_text.split(".") if s.strip()]
+    assert len(sentences) <= max_sentences, \
+        f"Verbosity error: {len(sentences)} sentences (max {max_sentences})"
 
-    # 2. Tone & Persona via LLM Judge
+# Qualitative Tone and Persona Alignment
+def assert_persona_tone(draft_text: str, target_persona: str) -> dict:
     sys_prompt = (
-        f"The user's communication style is: {persona}.\n"
+        f"The user's communication style is: {target_persona}.\n"
         "Rate how well this draft matches that style.\n"
-        "Score 1-5: 1=completely wrong tone, "
-        "5=perfect match.\n"
+        "Score 1-5: 1=completely wrong tone, 5=perfect match.\n"
         'Return JSON: {"score": int, "reasoning": str}'
     )
     response = client.chat.completions.create(
@@ -217,18 +205,11 @@ def assert_qualitative(draft_email: str,
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": sys_prompt},
-            {"role": "user", "content": draft_email}
+            {"role": "user", "content": draft_text}
         ]
     )
-    result = json.loads(
-        response.choices[0].message.content
-    )
-    score = result["score"]
-    reason = result["reasoning"]
-    assert score >= 4, \
-        f"Tone mismatch ({score}/5): {reason}"
-
-    print("[PASSED] Tier 4: Concise, persona-aligned tone")
+    result = json.loads(response.choices[0].message.content)
+    assert result["score"] >= 4, f"Tone mismatch ({result['score']}/5): {result['reasoning']}"
     return result
 ```
 

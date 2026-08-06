@@ -8,6 +8,7 @@ import { MailingList } from '@/components/MailingList';
 import { RelatedPosts } from '@/components/RelatedPosts';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { LanguageBanner } from '@/components/LanguageBanner';
 
 export function generateStaticParams() {
   const heSlugs = getAllPostSlugs('he').flatMap((slug) => [
@@ -163,6 +164,9 @@ export default function MusicPostDetail({
             />
           </div>
         )}
+
+        {/* Language Switcher Banner */}
+        <LanguageBanner category="music" slug={post.slug} lang={lang} />
 
         {/* Article HTML Content */}
         <div
