@@ -273,7 +273,7 @@ Now that you know how to test your system, how do you determine what to build fi
 
 Before writing code for a new context feature, you should be able to state:
 
-> *"If I build this specific entity resolution tool, our overall trajectory accuracy score will increase by 30%."*
+> If I build this specific entity resolution tool, our overall trajectory accuracy score will increase by 30%.
 
 If you cannot make that statement backed by evaluation data, you are wasting your engineering time building unvalidated infrastructure.
 
