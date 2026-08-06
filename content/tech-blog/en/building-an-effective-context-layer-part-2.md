@@ -271,7 +271,11 @@ Now that you know how to test your system, how do you determine what to build fi
 2. **Run Baseline Evaluations**: Execute your current system against this test benchmark and record baseline scores across all four evaluation tiers.
 3. **Prioritize Bottlenecks**: Identify which tier exhibits the lowest score or the highest risk for your specific product goals.
 
-Before writing code for a new context feature, you should be able to state: *"If I build this specific entity resolution tool, our overall trajectory accuracy score will increase by 30%."* If you cannot make that statement backed by evaluation data, you are wasting your engineering time building unvalidated infrastructure.
+Before writing code for a new context feature, you should be able to state:
+
+> *"If I build this specific entity resolution tool, our overall trajectory accuracy score will increase by 30%."*
+
+If you cannot make that statement backed by evaluation data, you are wasting your engineering time building unvalidated infrastructure.
 
 ---
 
