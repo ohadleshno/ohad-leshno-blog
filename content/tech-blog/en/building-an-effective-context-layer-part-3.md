@@ -4,7 +4,7 @@ title: "Context Layer #3: The 4 Layer Architecture Blueprint"
 slug: "building-an-effective-context-layer-part-3"
 excerpt: "Learn how to structure a Context Layer into four functional layers around a real-world CRM scenario: Raw Data, Analytical Data, Preprocessed Signals, and Semantic High-Level Memory."
 date: "2026-08-01"
-coverImage: "/context-layer-4-layer-architecture.png"
+coverImage: "/context-layer-4-layer-architecture.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "Apache Airflow", "SQL", "Vector Search"]
 language: "en"
 series: "context-layer"
@@ -17,7 +17,7 @@ seriesOrder: 3
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-4-layer-architecture.png" alt="The 4-Layer Context Architecture" class="article-screenshot" />
+  <img src="/context-layer-4-layer-architecture.webp" alt="The 4-Layer Context Architecture" class="article-screenshot" />
   <figcaption>Overview of the 4 functional layers: Raw Operational Data, Analytical Metrics, Preprocessed Signals, and Semantic Memory.</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ This naive plug-and-play approach breaks down in production due to five major pr
 ## Show Me the Money
 
 <figure class="article-screenshot-figure">
-  <img src="/show-me-the-money-meme.png" alt="Jerry Maguire Show Me The Money Meme" class="article-screenshot" />
+  <img src="/show-me-the-money-meme.webp" alt="Jerry Maguire Show Me The Money Meme" class="article-screenshot" />
   <figcaption>The ultimate goal of a Context Layer: demonstrating concrete quantitative ROI and production reliability over theoretical claims.</figcaption>
 </figure>
 
@@ -197,7 +197,7 @@ Many architectural patterns have attempted to solve this challenge. A prominent 
 
 <figure class="article-screenshot-figure">
   <a href="https://x.com/karpathy/status/2039805659525644595" target="_blank" rel="noopener noreferrer">
-    <img src="/karpathy-llm-wiki-post.png" alt="Andrej Karpathy's post on LLM Knowledge Bases and compiling personal knowledge bases" class="article-screenshot" />
+    <img src="/karpathy-llm-wiki-post.webp" alt="Andrej Karpathy's post on LLM Knowledge Bases and compiling personal knowledge bases" class="article-screenshot" />
   </a>
   <figcaption>Andrej Karpathy proposing LLMs as personal knowledge base compilers, continuously synthesizing raw inputs into structured wiki pages.</figcaption>
 </figure>

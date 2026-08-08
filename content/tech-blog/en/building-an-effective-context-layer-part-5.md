@@ -4,7 +4,7 @@ title: "Context Layer #5: Precomputing Analytical Intelligence"
 slug: "building-an-effective-context-layer-part-5"
 excerpt: "Explore Layer 2 in detail. Learn how pre-computing statistical rollups, p50/p90 response latencies, and ARR triage ratios with Apache Spark and dbt empowers AI Agents to make business decisions."
 date: "2026-08-01"
-coverImage: "/layer2-batch-pipeline.png"
+coverImage: "/layer2-batch-pipeline.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "dbt", "SQL", "PostgreSQL"]
 language: "en"
 series: "context-layer"
@@ -37,7 +37,7 @@ Pre-computed analytical metrics unlock an entirely new class of agent capabiliti
 * **Silence Detection**: Calculating p50 (median) and p90 response latency baselines per contact. If Janet's p50 response latency is 72 hours, a 48 hour pause is normal behavior. If her p50 is 2 hours, 48 hours of silence is a critical anomaly that triggers an alert.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-silence-detection.png" alt="Contact Response Latency Silence Detection Chart" class="article-screenshot" />
+  <img src="/layer2-silence-detection.webp" alt="Contact Response Latency Silence Detection Chart" class="article-screenshot" />
   <figcaption>Silence detection using contact response latency baselines: comparing current silence against historical p50 and p90 response times.</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ Pre-computed analytical metrics unlock an entirely new class of agent capabiliti
 * **ARR Triage and Effort Allocation**: Computing the ratio of an account's ARR relative to the company's median (p50) account ARR. If this account is worth $10,000 ARR while the company p50 benchmark is $100,000 ARR, and the client is sending 15 complex feature requests, the agent should recommend standard product features instead of custom engineering effort.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-arr-triage-matrix.png" alt="Account ARR Triage Decision Matrix" class="article-screenshot" />
+  <img src="/layer2-arr-triage-matrix.webp" alt="Account ARR Triage Decision Matrix" class="article-screenshot" />
   <figcaption>ARR triage decision matrix: evaluating account ARR relative to company benchmarks to allocate engineering effort efficiently.</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ The most powerful benefit of Layer 2 is that it shifts the agent from **reactive
 ## What Tools Do I Need?
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-batch-pipeline.png" alt="Batch Data Engineering Pipeline with Spark and dbt" class="article-screenshot" />
+  <img src="/layer2-batch-pipeline.webp" alt="Batch Data Engineering Pipeline with Spark and dbt" class="article-screenshot" />
   <figcaption>Batch data engineering pipeline: leveraging Apache Spark and dbt to aggregate historical operational metrics for the Context Layer.</figcaption>
 </figure>
 

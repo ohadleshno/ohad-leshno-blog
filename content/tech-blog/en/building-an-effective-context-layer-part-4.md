@@ -4,7 +4,7 @@ title: "Context Layer #4: Ingesting Raw Operational Data"
 slug: "building-an-effective-context-layer-part-4"
 excerpt: "Master Layer 1 data engineering. Learn how real-time ingestion pipelines, domain modeling, and dedicated indices unify multi-vendor operational data for AI Agents."
 date: "2026-08-01"
-coverImage: "/layer1-vendor-agnostic-model.png"
+coverImage: "/layer1-vendor-agnostic-model.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "PostgreSQL", "Elasticsearch", "Redis", "Kafka"]
 language: "en"
 series: "context-layer"
@@ -36,7 +36,7 @@ When you invest in a well structured domain model for your raw operational data,
 * **Agent Tooling Foundation**: Every AI Agent tool call (contact lookup, thread search, message fetch) queries your operational store directly with sub-15ms latency instead of 3 to 5 second vendor API round trips.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer1-janet-unified-inbox.png" alt="Janet's Unified CRM Communication Timeline" class="article-screenshot" />
+  <img src="/layer1-janet-unified-inbox.webp" alt="Janet's Unified CRM Communication Timeline" class="article-screenshot" />
   <figcaption>Janet's unified CRM communication timeline: consolidating Gmail, WhatsApp, and call logs into a single vendor-agnostic feed.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ When you invest in a well structured domain model for your raw operational data,
 This is perhaps the most important architectural benefit: once your domain model speaks in **messages**, **contacts**, and **threads** instead of Gmail threads, WhatsApp chats, and Twilio call logs, adding a new vendor becomes trivial. Next quarter when the product team wants to integrate Outlook or Slack, you write a new ingestion adapter and normalize into the same schema. **Your agent does not change at all.** It already knows how to query messages; it does not care where they came from.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer1-vendor-agnostic-model.png" alt="Vendor-Agnostic Domain Schema Normalization" class="article-screenshot" />
+  <img src="/layer1-vendor-agnostic-model.webp" alt="Vendor-Agnostic Domain Schema Normalization" class="article-screenshot" />
   <figcaption>Normalizing multi-vendor payloads (Gmail, WhatsApp, Twilio) into unified domain models: Messages, Contacts, and Threads.</figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ The key insight is that a well structured operational store turns your data into
 Think about this the way you would approach a [system design interview](https://github.com/donnemartin/system-design-primer). You need to answer three core questions about your data:
 
 <figure class="article-screenshot-figure">
-  <img src="/layer1-system-design-whiteboard.png" alt="Event-Driven AI Context Architecture" class="article-screenshot" />
+  <img src="/layer1-system-design-whiteboard.webp" alt="Event-Driven AI Context Architecture" class="article-screenshot" />
   <figcaption>Event-driven system design architecture: webhooks, ingestion workers, PostgreSQL operational store, and indexing strategies.</figcaption>
 </figure>
 

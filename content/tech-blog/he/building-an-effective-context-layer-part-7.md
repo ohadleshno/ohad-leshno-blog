@@ -4,7 +4,7 @@ title: "Context Layer #7: המוח (זיכרון סמנטי ו-Graph RAG)"
 slug: "building-an-effective-context-layer-part-7"
 excerpt: "שלוט בשכבה 4. למד כיצד זיכרון ארגוני, התאמת קול ה-Persona, חיפוש סמנטי היברידי ומיפוי ישויות ב-Graph RAG משלימים את ה-Context Layer."
 date: "2026-08-01"
-coverImage: "/context-layer-semantic-memory-graph.png"
+coverImage: "/context-layer-semantic-memory-graph.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Vector Search", "Graph RAG", "Python"]
 language: "he"
 series: "context-layer"
@@ -17,7 +17,7 @@ seriesOrder: 7
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-semantic-memory-graph.png" alt="שכבה 4 זיכרון סמנטי ו-Graph RAG" class="article-screenshot" />
+  <img src="/context-layer-semantic-memory-graph.webp" alt="שכבה 4 זיכרון סמנטי ו-Graph RAG" class="article-screenshot" />
   <figcaption>שכבה 4: זיכרון ארגוני לטווח ארוך, התאמת voice ל-Persona, חיפוש סמנטי היברידי ומיפוי ישויות Graph RAG.</figcaption>
 </figure>
 

@@ -4,7 +4,7 @@ title: "Context Layer #4: הזרמת דאטה תפעולי בזמן אמת"
 slug: "building-an-effective-context-layer-part-4"
 excerpt: "בצע צלילה טכנית עמוקה לשכבה 1. למד כיצד צינורות Ingestion בזמן אמת, מידול Domain ואינדקסים ייעודיים מאחדים נתונים תפעוליים מכל הספקים עבור AI Agents."
 date: "2026-08-01"
-coverImage: "/layer1-vendor-agnostic-model.png"
+coverImage: "/layer1-vendor-agnostic-model.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "PostgreSQL", "Elasticsearch", "Redis", "Kafka"]
 language: "he"
 series: "context-layer"
@@ -36,7 +36,7 @@ seriesOrder: 4
 * **בסיס לכלי Agent**: כל קריאת Tool של ה-AI Agent (שליפת איש קשר, חיפוש בשרשרת, שליפת הודעה) פונה למאגר התפעולי ישירות עם השהיה של פחות מ-15 מילי-שניות, במקום 3 עד 5 שניות של Round Trip ל-APIs של ספקים.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer1-janet-unified-inbox.png" alt="ציר זמן תקשורת מאוחד ב-CRM של ג'אנט" class="article-screenshot" />
+  <img src="/layer1-janet-unified-inbox.webp" alt="ציר זמן תקשורת מאוחד ב-CRM של ג'אנט" class="article-screenshot" />
   <figcaption>ציר זמן תקשורת מאוחד ב-CRM של ג'אנט: ריכוז אימיילים מ-Gmail, הודעות WhatsApp ויומני שיחות בפיד אחד.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ seriesOrder: 4
 זהו אולי היתרון הארכיטקטוני החשוב ביותר: ברגע שמודל ה-Domain שלכם מדבר ב-**הודעות**, **אנשי קשר** ו-**שרשראות** במקום Gmail threads, WhatsApp chats ו-Twilio call logs, הוספת ספק חדש הופכת לטריוויאלית. ברבעון הבא כשצוות המוצר רוצה לשלב Outlook או Slack, כותבים Ingestion Adapter חדש ומנרמלים לאותו Schema. **ה-Agent שלכם לא משתנה בכלל.** הוא כבר יודע לתשאל הודעות; לא אכפת לו מאיפה הן הגיעו.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer1-vendor-agnostic-model.png" alt="נרמול נתוני ספקים למודל Domain אחיד" class="article-screenshot" />
+  <img src="/layer1-vendor-agnostic-model.webp" alt="נרמול נתוני ספקים למודל Domain אחיד" class="article-screenshot" />
   <figcaption>נרמול נתוני ספקים מרובים למודל Domain אחיד: הודעות, אנשי קשר ושרשראות שיחה בלתי תלויים בספק.</figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ seriesOrder: 4
 חשבו על זה כמו שהייתם ניגשים ל-[System Design Interview](https://github.com/donnemartin/system-design-primer). צריך לענות על שלוש שאלות מרכזיות לגבי הנתונים:
 
 <figure class="article-screenshot-figure">
-  <img src="/layer1-system-design-whiteboard.png" alt="ארכיטקטורת System Design תפעולית מונעת אירועים" class="article-screenshot" />
+  <img src="/layer1-system-design-whiteboard.webp" alt="ארכיטקטורת System Design תפעולית מונעת אירועים" class="article-screenshot" />
   <figcaption>ארכיטקטורת System Design תפעולית מונעת אירועים: Webhooks, עיבוד Ingestion, מסד נתונים PostgreSQL ואסטרטגיות אינדוקס.</figcaption>
 </figure>
 

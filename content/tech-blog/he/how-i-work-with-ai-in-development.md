@@ -3,13 +3,13 @@ title: "איך אני עובד עם AI בפיתוח תוכנה"
 slug: "how-i-work-with-ai-in-development"
 excerpt: "פיתוח תוכנה עם AI הוא לא להאציל משימות לפרומפט. הוא עוסק בהסטת הפוקוס מכתיבת סינטקס למפרטים מפורטים, קריאת קוד, Context Layer ולולאות משוב מהירות."
 date: "2026-08-06"
-coverImage: "/ai-dev-cover.png"
+coverImage: "/ai-dev-cover.webp"
 techStack: ["AI Development", "Software Architecture", "TDD", "Prompt Engineering", "Cursor", "Developer Experience"]
 language: "he"
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-cover.png" alt="סביבת עבודה של מפתח המנהלת לולאות משוב ומפרטי AI" class="article-screenshot" />
+  <img src="/ai-dev-cover.webp" alt="סביבת עבודה של מפתח המנהלת לולאות משוב ומפרטי AI" class="article-screenshot" />
   <figcaption>פיתוח תוכנה native ל-AI מתמקד במפרטים, אימות אוטומטי ולולאות משוב מהירות במקום ביצירת קוד פסיבית.</figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ language: "he"
 במקרים רבים, לעשות debugging לקוד שנוצר על ידי AI לוקח יותר זמן מאשר כתיבתו מאפס. Refactoring הופך לכואב, והבנת הלוגיקה, במיוחד כשהיא ספציפית ל-domain, הופכת לקשה עוד יותר. ככל שאתה מתרחק מהלוגיקה של עצמך, ככה קשה יותר לסמוך על הקוד.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-problem-almost-right.png" alt="מפתח מביט בשגיאת קוד עם סימן קריאה" class="article-screenshot" />
+  <img src="/ai-problem-almost-right.webp" alt="מפתח מביט בשגיאת קוד עם סימן קריאה" class="article-screenshot" />
   <figcaption>AI מגיע קרוב לפתרון, אבל המעבר מ-80 אחוז ל-100 אחוז איטי יותר מאשר כתיבה בעצמך.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ AI מצוין בלהביא אותך ל-80 אחוז. אבל כשאתה נותן �
 אחת הבעיות הסמויות היא שה-workflow הופך למקוטע. אתה מחכה. אתה לבוהה בספינר של טעינה. כמה זמן תיקח התשובה? בינתיים, אתה לא עושה כלום או מנסה לעשות context switching למשימה אחרת.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-problem-slow-process.png" alt="מפתח מחכה לספינר טעינה" class="article-screenshot" />
+  <img src="/ai-problem-slow-process.webp" alt="מפתח מחכה לספינר טעינה" class="article-screenshot" />
   <figcaption>המתנה לתשובות מודל איטיות כופה context switching, ושוברת את הפוקוס והמומנטום של המפתח.</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ AI מצוין בלהביא אותך ל-80 אחוז. אבל כשאתה נותן �
 זה היה החלק הכי פחות צפוי עבורי. כשאתה מסתמך יותר מדי על AI, אתה מפסיק בהדרגה להיות המחבר של הקוד שלך; אתה הופך ל-reviewer. והמרחק הזה משמעותי.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-problem-lose-touch.png" alt="מפתח בטלפון יושב מעבר לקיר מנותק מסך הקוד" class="article-screenshot" />
+  <img src="/ai-problem-lose-touch.webp" alt="מפתח בטלפון יושב מעבר לקיר מנותק מסך הקוד" class="article-screenshot" />
   <figcaption>הסתמכות מוחלטת על AI מנתקת אותך מההחלטות וה-tradeoffs, והופכת אותך לזר במערכת של עצמך.</figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ AI מצוין בלהביא אותך ל-80 אחוז. אבל כשאתה נותן �
 במערכות בעלות ערך גבוה, כשלים ארכיטקטוניים יקרים מאוד ל-refactoring לאחר ה-deployment. התאם את הרצינות ההנדסית ישירות לעלות הכישלון.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-cost-of-change.png" alt="השוואה בין אתר סטטי בסיכון נמוך לבין ארכיטקטורת CRM מורכבת" class="article-screenshot" />
+  <img src="/ai-dev-cost-of-change.webp" alt="השוואה בין אתר סטטי בסיכון נמוך לבין ארכיטקטורת CRM מורכבת" class="article-screenshot" />
   <figcaption>התאם את הרצינות ההנדסית לעלות הכישלון. אתרים סטטיים דורשים פוקוס מוצרי, בעוד מערכות מורכבות דורשות guardrails קשיחים.</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ AI מצוין בלהביא אותך ל-80 אחוז. אבל כשאתה נותן �
 כשהתוכנית שלך בטון, מודלי AI פועלים כמו כלי דיוק ולא כמו קוביות משחק בלתי צפויות.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-planning-specs.png" alt="מסמך תכנון ארכיטקטורה ומפרטים מובנה" class="article-screenshot" />
+  <img src="/ai-dev-planning-specs.webp" alt="מסמך תכנון ארכיטקטורה ומפרטים מובנה" class="article-screenshot" />
   <figcaption>השקעה במסמכי תכנון, מידול domain ומפרטים ברורים הופכת את יצירת הקוד ב-AI לדטרמיניסטית.</figcaption>
 </figure>
 
@@ -192,7 +192,7 @@ test("should process order successfully", async () => {
 בלי לקרוא את הקוד שנוצר, אתה מניח שיש לך כיסוי בדיקות חזק בעוד שבפועל בנית תחושת ביטחון כוזבת.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-code-review.png" alt="מפתח סוקר קוד ותופס שאילתת דאטהבייס ללא פגינציה" class="article-screenshot" />
+  <img src="/ai-dev-code-review.webp" alt="מפתח סוקר קוד ותופס שאילתת דאטהבייס ללא פגינציה" class="article-screenshot" />
   <figcaption>הסתמכות עיוורת על AI PRs מכניסה באגים שקטים ו-assertions מזויפים. קריאת קוד חיונית כדי לתפוס צווארי בקבוק לפני deployment.</figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ test("should process order successfully", async () => {
 אם ה-repository שלך מכיל abstractions מבולבלים, לוגיקה כפולה וטיפול גרוע בשגיאות, ה-AI יעתיק את ההרגלים הרעים האלו וייצר עוד זבל. מהצד השני, אם תשמור על הקודבייס נקי כל יום, ה-AI ישכפל את הסטנדרטים הגבוהים שלך.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-garden-codebase.png" alt="מפתח מתחזק גינת קוד דיגיטלית הגדלה מתוך מחשב נייד" class="article-screenshot" />
+  <img src="/ai-dev-garden-codebase.webp" alt="מפתח מתחזק גינת קוד דיגיטלית הגדלה מתוך מחשב נייד" class="article-screenshot" />
   <figcaption>תחזוקת גינת הקודבייס באופן יומי מונעת ג'ונגל בלתי ניתן לתחזוקה. ה-AI מעתיק את התבניות הקיימות שהוא רואה.</figcaption>
 </figure>
 
@@ -225,7 +225,7 @@ test("should process order successfully", async () => {
 * **בדיקות ברמה גבוהה**: תעבור מעבר ל-mocks שבירים לעבר סביבות אינטגרציה אמיתיות כמו Testcontainers. הרצת בדיקות מציאותיות מבטיחה שהפונקציונליות הקיימת נשארת שלמה.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-skills-flywheel.png" alt="מחזור משוב של כישורי הנדסה מצטברים" class="article-screenshot" />
+  <img src="/ai-dev-skills-flywheel.webp" alt="מחזור משוב של כישורי הנדסה מצטברים" class="article-screenshot" />
   <figcaption>כל הערת review צריכה להפוך לקובץ skill מתמשך ב-repository, ומורידה את מחזורי המשוב לאורך זמן.</figcaption>
 </figure>
 
@@ -245,7 +245,7 @@ test("should process order successfully", async () => {
 * **להפסיק ללמד מחדש את ה-frameworks הפנימיים (בניית LLM wiki)**: הצוות שלי מסתמך על כלים פנימיים ו-frameworks ייחודיים. הפסקתי להקליד את אותם חוקים מבניים בכל פרומפט ובניתי בסיס ידע מתמשך (באמצעות קבצי skill ב-repository ו-LLM wiki פנימי). כשל-agent יש גישה קבועה לתבניות הארכיטקטורה של החברה, הוא כותב קוד ברמת production כבר בניסיון הראשון.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-context-layer.png" alt="סביבת עבודה של מפתח המציגה לוגים של MCP, stack traces ב-Datadog ו-LLM wiki פנימי" class="article-screenshot" />
+  <img src="/ai-dev-context-layer.webp" alt="סביבת עבודה של מפתח המציגה לוגים של MCP, stack traces ב-Datadog ו-LLM wiki פנימי" class="article-screenshot" />
   <figcaption>ציוד AI agents בכלים של MCP ל-telemetry בשידור חי ובסיס ידע פנימי מתמשך מאפשר debugging בדיוק גבוה ותאימות ל-frameworks.</figcaption>
 </figure>
 
@@ -271,7 +271,7 @@ test("should process order successfully", async () => {
 * **ביטול Context Switching**: הניצחון הגדול ביותר הוא פסיכולוגי. כזמני התגובה יורדים לשניות, אתה כבר לא מרגיש דחף לפתוח כרטיסיה אחרת או לג'נגל בין טיקטים בזמן ההמתנה. אתה נשאר ממוקד לחלוטין במשימה בודדת, מסיים אותה לחלוטין, ועובר ישירות למשימה הבאה.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-feedback-loop.png" alt="ארכיטקטורת לולאות משוב במהירות גבוהה" class="article-screenshot" />
+  <img src="/ai-dev-feedback-loop.webp" alt="ארכיטקטורת לולאות משוב במהירות גבוהה" class="article-screenshot" />
   <figcaption>לולאות משוב במהירות גבוהה משלבות יצירת AI מהירה עם מריצי טסטים אוטומטיים ו-scanners לסקירת קוד עבור אימות תת-שנייתי.</figcaption>
 </figure>
 

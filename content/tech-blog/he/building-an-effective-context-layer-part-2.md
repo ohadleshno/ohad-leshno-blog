@@ -3,7 +3,7 @@ title: "Context Layer #2: Evals, Evals, Evals"
 slug: "building-an-effective-context-layer-part-2"
 excerpt: "לפני שנכנסים לבניית Data Pipelines או Context Abstractions מורכבים, חייבים לענות על שאלה אחת מרכזית: איך מודדים מה באמת אפקטיבי? גלה את 4 רמות ה-Evals לבניית Context Layer מונחה ביצועים."
 date: "2026-08-01"
-coverImage: "/evals-four-tiers.png"
+coverImage: "/evals-four-tiers.webp"
 techStack: ["AI Agents", "Context Layer", "Evals", "LLM Architecture", "Python", "Prompt Engineering"]
 language: "he"
 draft: false
@@ -17,7 +17,7 @@ seriesOrder: 2
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-four-tiers.png" alt="4 רמות ה-Evals עבור AI Agents" class="article-screenshot" />
+  <img src="/evals-four-tiers.webp" alt="4 רמות ה-Evals עבור AI Agents" class="article-screenshot" />
   <figcaption>מערך ה-Evals ב-4 רמות: מבחני יחידה, בדיקות אינטגרציה, סימולציות Sandbox ומשוב אנושי.</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ seriesOrder: 2
 אנחנו לא הולכים לבזבז כאן זמן על דיונים תיאורטיים במדדים בסיסיים כמו Precision ו-Recall או מושגי יסוד שכל אחד מכיר. במקום זאת, המטרה של הסעיף הזה היא להנחות אותך בפרקטיקה ההנדסית הממשית: **מה** הדברים הספציפיים והמעשיים שאתה באמת חייב לבדוק (מבנה ה-Payload, התנהגות ה-Trace, ומכניקת ה-Context) כדי לוודא שאיכות ה-Context Layer שלך עובדת ב-Production.
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-four-tiers-pyramid.png" alt="פירמידת 4 רמות ה-Evals עבור AI Agents" class="article-screenshot" />
+  <img src="/evals-four-tiers-pyramid.webp" alt="פירמידת 4 רמות ה-Evals עבור AI Agents" class="article-screenshot" />
   <figcaption>פירמידת 4 רמות ה-Evals עבור AI Agents: בדיקות יחידה, בדיקות אינטגרציה, סימולציות Sandbox ומשוב אנושי.</figcaption>
 </figure>
 
@@ -237,7 +237,7 @@ def assert_authorship_authenticity(draft_text: str, writing_samples: list[str]) 
 חיבור כל ארבע הרמות יחד עבור תרחיש המייל לג'אנט יוצר מטריצת Evaluation שלמה:
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-metrics-dashboard.png" alt="Dashboard של מטריקות הערכה עבור Context Layer" class="article-screenshot" />
+  <img src="/evals-metrics-dashboard.webp" alt="Dashboard של מטריקות הערכה עבור Context Layer" class="article-screenshot" />
   <figcaption>מטריצת הערכה ומעקב עבור Context Layer: מדדי Precision, Recall, Latency וחיסכון בעלויות Tokens.</figcaption>
 </figure>
 
@@ -281,7 +281,7 @@ flowchart TD
 ## מאיפה מתחילים? פיתוח מונחה Benchmark Simulation
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-benchmark-simulation.png" alt="פיתוח מונחה Benchmark Simulation: גיבוש Baseline ומדידת אימפקט לפני בניית כלים" class="article-screenshot" />
+  <img src="/evals-benchmark-simulation.webp" alt="פיתוח מונחה Benchmark Simulation: גיבוש Baseline ומדידת אימפקט לפני בניית כלים" class="article-screenshot" />
   <figcaption>פיתוח מונחה Benchmark Simulation: גיבוש Baseline ומדידת אימפקט לפני בניית כלים.</figcaption>
 </figure>
 

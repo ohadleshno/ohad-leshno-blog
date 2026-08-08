@@ -118,14 +118,14 @@ flowchart LR
 אני מכניס את הרמזים האלה ל context של הבוט. אם מישהו כותב "תמצא לי שיעור תורה", נהורAI יכול להציג קודם שיעורים בחולון ובערים קרובות במקום לשלוח רשימה מכל הארץ. אם המיקום לא מספיק ברור, רק אז הבוט שואל שאלה נוספת.
 
 <figure class="article-screenshot-figure">
-  <img class="article-screenshot" src="/nehorai-personalized-torah.png" alt="נהורAI מציע שיעורי תורה באזור חולון לפי המיקום הכללי של המשתמש" loading="lazy" decoding="async">
+  <img class="article-screenshot" src="/nehorai-personalized-torah.webp" alt="נהורAI מציע שיעורי תורה באזור חולון לפי המיקום הכללי של המשתמש" loading="lazy" decoding="async">
   <figcaption>בקשה קצרה הופכת להצעות באזור הרלוונטי, בלי שאלון מקדים.</figcaption>
 </figure>
 
 אותו עיקרון עובד גם לאורך השיחה. הגרף שומר את היעד, התאריכים, מספר הנוסעים וסגנון החופשה, ואז משתמש בהם בבקשה הבאה. המשתמש לא צריך לחזור בכל הודעה על כל מה שכבר אמר.
 
 <figure class="article-screenshot-figure">
-  <img class="article-screenshot" src="/nehorai-personalized-deal.png" alt="נהורAI זוכר את פרטי החופשה ומחזיר דיל מותאם לבוקרשט" loading="lazy" decoding="async">
+  <img class="article-screenshot" src="/nehorai-personalized-deal.webp" alt="נהורAI זוכר את פרטי החופשה ומחזיר דיל מותאם לבוקרשט" loading="lazy" decoding="async">
   <figcaption>הקשר מהשיחה נשמר עד להצגת דיל שאפשר להזמין.</figcaption>
 </figure>
 
@@ -136,7 +136,7 @@ flowchart LR
 NehorAI גם מנהל ערוץ טלגרם ([@nehorainews](https://t.me/nehorainews)) שמשדר סיכומי חדשות דרך ה [Telegram Bot API](https://core.telegram.org/bots/api). כל 30 דקות (בשעות פעילות, 8:00 עד 20:00 שעון ישראל, בשעות זוגיות), הסורק גורד חמישה ערוצי חדשות ישראליים בטלגרם, מסנן פריטים מהשעה האחרונה, ומעביר אותם דרך Gemini עם הפרסונה של נהורAI כדי לייצר סיכום חדשות בסלנג שמתפרסם בערוץ הטלגרם של הבוט.
 
 <a href="https://t.me/nehorainews" target="_blank" rel="noopener noreferrer" class="telegram-channel-preview" aria-label="פתיחת ערוץ החדשות של נהורAI בטלגרם">
-  <img src="/nehorai-telegram-channel.png" alt="צילום מסך מערוץ החדשות של נהורAI בטלגרם" loading="lazy" decoding="async">
+  <img src="/nehorai-telegram-channel.webp" alt="צילום מסך מערוץ החדשות של נהורAI בטלגרם" loading="lazy" decoding="async">
 </a>
 
 ב 20:00 כל יום הוא מייצר "סיכום יומי" של 10 הסיפורים המובילים מ 12 השעות האחרונות.

@@ -4,7 +4,7 @@ title: "Context Layer #6: דאטה מעובד מראש ו-Multimodal OCR"
 slug: "building-an-effective-context-layer-part-6"
 excerpt: "צלילה טכנית לשכבה 3. למד כיצד חילוץ פיצ'רים אסינכרוני, כלכלת Batch, Sentiment Tagging ופרסור Multimodal OCR של PDF ותמונות מבטלים Latency של מודלים בזמן ריצה."
 date: "2026-08-01"
-coverImage: "/layer3-model-task-matching.png"
+coverImage: "/layer3-model-task-matching.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Kafka", "OCR", "Multimodal AI", "Python"]
 language: "he"
 series: "context-layer"
@@ -37,7 +37,7 @@ seriesOrder: 6
 הסתכלו על [טבלת התמחור של AWS Bedrock](https://aws.amazon.com/bedrock/pricing/):
 
 <figure class="article-screenshot-figure">
-  <img src="/bedrock-batch-pricing.png" alt="מודלים של Anthropic ב-AWS Bedrock, המציגים תמחור Standard מול Batch והנחות Prompt Cache" class="article-screenshot" />
+  <img src="/bedrock-batch-pricing.webp" alt="מודלים של Anthropic ב-AWS Bedrock, המציגים תמחור Standard מול Batch והנחות Prompt Cache" class="article-screenshot" />
   <figcaption>מבנה תמחור של מודלי Anthropic ב-AWS Bedrock: השוואת תמחור Standard מול Batch Inference והנחות Prompt Caching.</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ Batch Inference מציע **הנחה של 50% על תמחור טוקנים** בת
 בצינור Batch אופליין, אפשר להתאים **מודלים קלים ומתמחים** למשימות חילוץ ספציפיות, במקום לנתב כל שאילתה דרך Frontier Model יקר. מודל סיווג קטן מטפל ב-Sentiment Tagging בצורה מושלמת. מודל Vision מתמחה מחלץ נתונים טבלאיים מ-PDFs בזול ומהר יותר מ-Claude או GPT-4 כלליים. לא צריכים מודל של $15 למיליון טוקנים כדי לענות "האם האימייל הזה כועס?"
 
 <figure class="article-screenshot-figure">
-  <img src="/layer3-model-task-matching.png" alt="ניתוב משימות חכם למודלים מתאימים מול ניתוב נאיבי" class="article-screenshot" />
+  <img src="/layer3-model-task-matching.webp" alt="ניתוב משימות חכם למודלים מתאימים מול ניתוב נאיבי" class="article-screenshot" />
   <figcaption>ניתוב משימות חכם למודלים מתאימים: התאמת מודלים קלים ומתמחים למשימות חילוץ ספציפיות במקום מודלי ענק יקרים.</figcaption>
 </figure>
 

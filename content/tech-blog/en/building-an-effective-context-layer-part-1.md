@@ -3,7 +3,7 @@ title: "Context Layer #1: Why Your Agent Fails"
 slug: "building-an-effective-context-layer-part-1"
 excerpt: "At their core, AI agents are just LLM loops wrapped in context and tools. Discover why the context layer is the true bottleneck of agent performance, and why context quality matters more than unconstrained planning."
 date: "2026-08-01"
-coverImage: "/context-layer-what-is-it.png"
+coverImage: "/context-layer-what-is-it.webp"
 techStack: ["AI Agents", "Context Layer", "LLM Systems", "System Architecture", "TypeScript", "Prompt Engineering"]
 language: "en"
 draft: false
@@ -12,7 +12,7 @@ seriesTitle: "Context Layer"
 seriesOrder: 1
 ---
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-what-is-it.png" alt="Architecture of an AI Agent Context Layer" class="article-screenshot" />
+  <img src="/context-layer-what-is-it.webp" alt="Architecture of an AI Agent Context Layer" class="article-screenshot" />
   <figcaption>Architecture of an AI Agent Context Layer, funneling fragmented raw data sources into clean, structured context for the core execution loop.</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ This is exactly how the first wave of autonomous agents was built. You treat the
 In practice, this approach consistently breaks in production. As explored in depth in [Agents vs Workflows](/en/tech/agents-vs-workflows), letting an LLM decide every micro-step leads to severe reliability issues.
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-bulldozer-shovel.png" alt="Raw LLM without Context vs LLM with Structured Context Layer" class="article-screenshot" />
+  <img src="/context-layer-bulldozer-shovel.webp" alt="Raw LLM without Context vs LLM with Structured Context Layer" class="article-screenshot" />
   <figcaption>Visual comparison: An unconstrained raw LLM stuck in data clutter vs. an LLM powered by a structured Context Layer extracting clear business value.</figcaption>
 </figure>
 
@@ -95,7 +95,7 @@ Whether a human or an AI handles this task, executing it well requires resolving
 * What tone should the message use?
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-cover.png" alt="Shovel vs D9 Bulldozer Heavy Tooling" class="article-screenshot" />
+  <img src="/context-layer-cover.webp" alt="Shovel vs D9 Bulldozer Heavy Tooling" class="article-screenshot" />
   <figcaption>Transitioning from raw primitive tools to high-leverage context architecture: like upgrading from a hand shovel to a D9 bulldozer.</figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ Give a human worker primitive tools and vague information, and their output will
 So what does this look like in practice? Let us return to the Janet email scenario and examine three architectural approaches:
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-janet-photo.png" alt="Office Desk with Scattered Letters and Context Notes" class="article-screenshot" />
+  <img src="/context-layer-janet-photo.webp" alt="Office Desk with Scattered Letters and Context Notes" class="article-screenshot" />
   <figcaption>Navigating scattered unindexed emails versus curated entity resolution in production.</figcaption>
 </figure>
 

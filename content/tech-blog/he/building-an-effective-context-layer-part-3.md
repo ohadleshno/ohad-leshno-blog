@@ -4,7 +4,7 @@ title: "Context Layer #3: ארכיטקטורת 4 השכבות"
 slug: "building-an-effective-context-layer-part-3"
 excerpt: "למד כיצד לארגן Context Layer בארבע שכבות פונקציונליות מול תרחיש CRM מציאותי: נתונים גולמיים, נתונים אנליטיים, אותות מעובדים מראש וזיכרון סמנטי."
 date: "2026-08-01"
-coverImage: "/context-layer-4-layer-architecture.png"
+coverImage: "/context-layer-4-layer-architecture.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "Apache Airflow", "SQL", "Vector Search"]
 language: "he"
 series: "context-layer"
@@ -17,7 +17,7 @@ seriesOrder: 3
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-4-layer-architecture.png" alt="ארכיטקטורת ה-Context ב-4 שכבות" class="article-screenshot" />
+  <img src="/context-layer-4-layer-architecture.webp" alt="ארכיטקטורת ה-Context ב-4 שכבות" class="article-screenshot" />
   <figcaption>מבנה 4 השכבות הפונקציונליות: דאטה תפעולי גולמי, מטריקות אנליטיות, אותות מעובדים מראש וזיכרון סמנטי.</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ flowchart TD
 ## תראה לי את הכסף
 
 <figure class="article-screenshot-figure">
-  <img src="/show-me-the-money-meme.png" alt="Meme של תראה לי את הכסף" class="article-screenshot" />
+  <img src="/show-me-the-money-meme.webp" alt="Meme של תראה לי את הכסף" class="article-screenshot" />
   <figcaption>המטרה המרכזית של Context Layer: הצגת ROI כמותי וביצועים קונקרטיים ב-Production במקום הבטחות תיאורטיות.</figcaption>
 </figure>
 
@@ -199,7 +199,7 @@ flowchart TD
 
 <figure class="article-screenshot-figure">
   <a href="https://x.com/karpathy/status/2039805659525644595" target="_blank" rel="noopener noreferrer">
-    <img src="/karpathy-llm-wiki-post.png" alt="הפוסט של אנדריי קרפתי בנושא LLM Knowledge Bases וניהול מאגרי ידע אישיים" class="article-screenshot" />
+    <img src="/karpathy-llm-wiki-post.webp" alt="הפוסט של אנדריי קרפתי בנושא LLM Knowledge Bases וניהול מאגרי ידע אישיים" class="article-screenshot" />
   </a>
   <figcaption>הצעתו של אנדריי קרפתי לניהול מאגרי ידע מבוססי LLM, המאגדים מידע גולמי באופן רציף לתוך דפי Wiki מובנים.</figcaption>
 </figure>

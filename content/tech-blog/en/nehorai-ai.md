@@ -118,14 +118,14 @@ Personalization does not have to begin with "where do you live?" The browser and
 I add those signals to the bot's context. If someone writes "find me a Torah class," NehorAI can show classes in Holon and nearby cities before listing places across the country. When the location is too vague, the bot asks a follow-up question.
 
 <figure class="article-screenshot-figure">
-  <img class="article-screenshot" src="/nehorai-personalized-torah.png" alt="NehorAI suggests Torah classes around Holon based on the user's rough location" loading="lazy" decoding="async">
+  <img class="article-screenshot" src="/nehorai-personalized-torah.webp" alt="NehorAI suggests Torah classes around Holon based on the user's rough location" loading="lazy" decoding="async">
   <figcaption>A short request becomes a list of options in the relevant area.</figcaption>
 </figure>
 
 The same idea applies across a conversation. The graph remembers the destination, dates, number of travelers, and vacation style, then reuses them in the next request. The user does not need to repeat everything in every message.
 
 <figure class="article-screenshot-figure">
-  <img class="article-screenshot" src="/nehorai-personalized-deal.png" alt="NehorAI remembers the trip details and returns a personalized Bucharest deal" loading="lazy" decoding="async">
+  <img class="article-screenshot" src="/nehorai-personalized-deal.webp" alt="NehorAI remembers the trip details and returns a personalized Bucharest deal" loading="lazy" decoding="async">
   <figcaption>Conversation context stays available until the bot returns a bookable deal.</figcaption>
 </figure>
 
@@ -136,7 +136,7 @@ The same idea applies across a conversation. The graph remembers the destination
 NehorAI also runs a Telegram channel ([@nehorainews](https://t.me/nehorainews)) that broadcasts news summaries via the [Telegram Bot API](https://core.telegram.org/bots/api). Every 30 minutes (during active hours, 8AM to 8PM Israel time, on even hours), the crawler scrapes five Israeli Telegram news channels, filters for items from the last hour, and sends them through Gemini with the NehorAI persona to generate a street slang news summary that gets posted to the bot's own Telegram channel.
 
 <a href="https://t.me/nehorainews" target="_blank" rel="noopener noreferrer" class="telegram-channel-preview" aria-label="Open the NehorAI news channel on Telegram">
-  <img src="/nehorai-telegram-channel.png" alt="Screenshot of the NehorAI news channel on Telegram" loading="lazy" decoding="async">
+  <img src="/nehorai-telegram-channel.webp" alt="Screenshot of the NehorAI news channel on Telegram" loading="lazy" decoding="async">
 </a>
 
 At 8PM daily, it generates a "daily summary" of the top 10 stories from the last 12 hours.

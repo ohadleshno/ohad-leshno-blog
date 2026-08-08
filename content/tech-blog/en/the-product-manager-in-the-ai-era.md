@@ -3,7 +3,7 @@ title: "Product Managers in the AI Era: Why Micro-Tactics Fail and Deep Technica
 slug: "product-manager-in-the-ai-era"
 excerpt: "In the age of LLMs, product managers who rely on copying SaaS UI funnels are getting left behind. To build real AI products, PMs must understand model limits, design for failure modes, and bridge the gap between client pain and LLM capabilities."
 date: "2026-08-08"
-coverImage: "/ai-problem-almost-right.png"
+coverImage: "/ai-problem-almost-right.webp"
 techStack: ["Product Management", "AI Engineering", "LLM Systems", "UX Design", "System Architecture"]
 language: "en"
 draft: true
@@ -34,7 +34,7 @@ In the age of AI, that copycat playbook is completely broken.
 
 A glaring bottleneck in modern software product management is that many PMs are not technical enough to operate in an LLM-driven world. They still excel at identifying customer pain and profiling the ICP. However, when it comes to designing solutions, their thinking remains trapped in a legacy box. They try to apply standard SaaS UI patterns to a technology that is fundamentally probabilistic, context-bound, and prone to edge-case failures.
 
-![AI Solutions Almost Right](/ai-problem-almost-right.png)
+![AI Solutions Almost Right](/ai-problem-almost-right.webp)
 
 Because these PMs do not understand how an LLM functions under the hood, they treat it like a magical black box. They assume that if an idea sounds logical in human prose, an AI model will magically execute it flawlessly in production. 
 

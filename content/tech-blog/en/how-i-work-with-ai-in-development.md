@@ -3,13 +3,13 @@ title: "How I Work With AI in Software Development"
 slug: "how-i-work-with-ai-in-development"
 excerpt: "AI coding is not about delegating software engineering to a prompt. It is about shifting focus from typing syntax to heavy specification, code reading, compounding skill layers, and rapid feedback loops."
 date: "2026-08-06"
-coverImage: "/ai-dev-cover.png"
+coverImage: "/ai-dev-cover.webp"
 techStack: ["AI Development", "Software Architecture", "TDD", "Prompt Engineering", "Cursor", "Developer Experience"]
 language: "en"
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-cover.png" alt="Developer workstation managing AI feedback loops and specifications" class="article-screenshot" />
+  <img src="/ai-dev-cover.webp" alt="Developer workstation managing AI feedback loops and specifications" class="article-screenshot" />
   <figcaption>AI-native software engineering focuses on specification, automated verification, and rapid feedback loops rather than passive code generation.</figcaption>
 </figure>
 
@@ -32,7 +32,7 @@ Before diving into the system that fixed my workflow, it helps to break down the
 In many cases, debugging AI-generated code ends up being more time-consuming than writing it manually. Refactoring becomes painful, and understanding the logic, especially when it is domain-specific, can be even harder. The further you get from your own logic, the harder it is to trust the code.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-problem-almost-right.png" alt="Developer staring at code error with exclamation mark" class="article-screenshot" />
+  <img src="/ai-problem-almost-right.webp" alt="Developer staring at code error with exclamation mark" class="article-screenshot" />
   <figcaption>AI gets close to the solution, but getting from 80 percent to 100 percent is often slower than writing it yourself.</figcaption>
 </figure>
 
@@ -45,7 +45,7 @@ AI is very good at getting you to 80 percent. But when you give it too much cont
 One of the more subtle problems is that the workflow becomes disjointed. You wait. You stare at a loading spinner. How long will a response take? In the meantime, you are either doing nothing or trying to context switch into another task.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-problem-slow-process.png" alt="Developer waiting at loading spinner with floating context switching thoughts" class="article-screenshot" />
+  <img src="/ai-problem-slow-process.webp" alt="Developer waiting at loading spinner with floating context switching thoughts" class="article-screenshot" />
   <figcaption>Waiting for slow model responses forces context switching, breaking developer momentum and focus.</figcaption>
 </figure>
 
@@ -56,7 +56,7 @@ Some people manage this by multitasking, juggling several tickets in parallel. P
 This one was the most unexpected for me. When you rely too much on AI, you gradually stop being the author of your code; you become the reviewer. And that distance matters.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-problem-lose-touch.png" alt="Developer on phone sitting across a wall detached from code screen" class="article-screenshot" />
+  <img src="/ai-problem-lose-touch.webp" alt="Developer on phone sitting across a wall detached from code screen" class="article-screenshot" />
   <figcaption>Relying completely on AI separates you from the decisions and tradeoffs, making you a stranger to your own system.</figcaption>
 </figure>
 
@@ -102,7 +102,7 @@ The architectural stakes here are radically different:
 In high-value systems, architectural flaws are extremely expensive to refactor after deployment. Match your engineering rigor directly to the cost of failure.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-cost-of-change.png" alt="Comparison between low-risk static website and complex multi-channel CRM architecture" class="article-screenshot" />
+  <img src="/ai-dev-cost-of-change.webp" alt="Comparison between low-risk static website and complex multi-channel CRM architecture" class="article-screenshot" />
   <figcaption>Match your engineering rigor to the cost of failure. Simple static sites require product focus, while complex AI CRMs demand strict security and architectural guardrails.</figcaption>
 </figure>
 
@@ -133,7 +133,7 @@ You can watch the complete video discussion here on YouTube: [How I Work With AI
 When your plan is concrete, AI models act like precision tools rather than unpredictable dice rolls.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-planning-specs.png" alt="Structured software architecture and specification planning document" class="article-screenshot" />
+  <img src="/ai-dev-planning-specs.webp" alt="Structured software architecture and specification planning document" class="article-screenshot" />
   <figcaption>Investing in upfront planning documents, domain modeling, and clear specifications makes AI code generation deterministic.</figcaption>
 </figure>
 
@@ -192,7 +192,7 @@ test("should process order successfully", async () => {
 Without reading the generated code, you assume your feature has robust test coverage when, in reality, you have built a false sense of security.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-code-review.png" alt="Developer reviewing code and catching an unpaginated database query" class="article-screenshot" />
+  <img src="/ai-dev-code-review.webp" alt="Developer reviewing code and catching an unpaginated database query" class="article-screenshot" />
   <figcaption>Relying blindly on AI PRs introduces silent bugs and fake test assertions. Reading generated code is essential to catch bottlenecks before deployment.</figcaption>
 </figure>
 
@@ -203,7 +203,7 @@ Working with AI is like mentoring a junior developer. AI models heavily mimic ex
 If your repository contains messy abstractions, duplicated logic, and poor error handling, the AI will copy those bad habits and generate more garbage. Conversely, if you keep your codebase clean every single day, the AI will replicate your high standards.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-garden-codebase.png" alt="Developer maintaining a digital codebase garden growing out of a laptop" class="article-screenshot" />
+  <img src="/ai-dev-garden-codebase.webp" alt="Developer maintaining a digital codebase garden growing out of a laptop" class="article-screenshot" />
   <figcaption>Maintaining your codebase garden daily prevents unmaintainable jungles. AI copies the existing patterns it sees in your repository.</figcaption>
 </figure>
 
@@ -225,7 +225,7 @@ Automation and guardrails form the backbone of this strategy:
 * **Testing, Testing, Testing**: Comprehensive testing ensures nothing breaks in production. Move beyond fragile, shallow mocks toward high-fidelity testing environments like Testcontainers. When you have realistic integration tests, you know existing functionality remains intact, even if newly generated code needs minor tweaking.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-skills-flywheel.png" alt="Compounding engineering skills feedback cycle" class="article-screenshot" />
+  <img src="/ai-dev-skills-flywheel.webp" alt="Compounding engineering skills feedback cycle" class="article-screenshot" />
   <figcaption>Every review comment should be converted into a persistent repository skill file, driving review feedback cycles down over time.</figcaption>
 </figure>
 
@@ -245,7 +245,7 @@ Here are the two environment changes that transformed how my agents execute:
 * **Stop re-teaching your internal frameworks (build an LLM wiki)**: My team relies on custom internal tools and proprietary frameworks. I stopped typing the same structural rules into every prompt and built a persistent knowledge base instead (using repository skill files and an internal LLM wiki). When the agent has permanent access to your company's architectural patterns, it writes production-grade code on the first attempt.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-context-layer.png" alt="Developer workstation showing MCP telemetry logs, Datadog stack traces, and an internal LLM wiki" class="article-screenshot" />
+  <img src="/ai-dev-context-layer.webp" alt="Developer workstation showing MCP telemetry logs, Datadog stack traces, and an internal LLM wiki" class="article-screenshot" />
   <figcaption>Equipping AI agents with MCP tools for live telemetry and a persistent internal knowledge base enables high-accuracy debugging and framework compliance.</figcaption>
 </figure>
 
@@ -271,7 +271,7 @@ Using high-speed models unlocks two massive operational advantages:
 * **Eliminating context switching**: The biggest win is psychological. When response times drop to seconds, you no longer feel compelled to open another tab or juggle multiple tickets while waiting. You stay fully focused on a single task, finish it completely, and move directly to the next one.
 
 <figure class="article-screenshot-figure">
-  <img src="/ai-dev-feedback-loop.png" alt="High speed AI feedback loop architecture" class="article-screenshot" />
+  <img src="/ai-dev-feedback-loop.webp" alt="High speed AI feedback loop architecture" class="article-screenshot" />
   <figcaption>A high-speed feedback loop pairs fast AI generation with automated test runners and code review scanners for sub-second verification.</figcaption>
 </figure>
 

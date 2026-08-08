@@ -3,7 +3,7 @@ title: "Context Layer #1: למה ה-Agent שלך נכשל"
 slug: "building-an-effective-context-layer-part-1"
 excerpt: "בבסיסם, AI Agents הם פשוט לולאת LLM העטופה ב-Context וב-Tools. גלה למה ה-Context Layer הוא צוואר הבקבוק האמיתי של ביצועי Agent, ולמה איכות ה-Context חשובה בהרבה מ-Planning אוטונומי."
 date: "2026-08-01"
-coverImage: "/context-layer-what-is-it.png"
+coverImage: "/context-layer-what-is-it.webp"
 techStack: ["AI Agents", "Context Layer", "LLM Systems", "System Architecture", "TypeScript", "Prompt Engineering"]
 language: "he"
 draft: false
@@ -12,7 +12,7 @@ seriesTitle: "Context Layer"
 seriesOrder: 1
 ---
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-what-is-it.png" alt="ארכיטקטורת Context Layer עבור AI Agent" class="article-screenshot" />
+  <img src="/context-layer-what-is-it.webp" alt="ארכיטקטורת Context Layer עבור AI Agent" class="article-screenshot" />
   <figcaption>ארכיטקטורת Context Layer עבור AI Agent, המרכזת מקורות מידע מבוזרים ל-Context מובנה ונקי עבור לולאת הביצוע המרכזית.</figcaption>
 </figure>
 
@@ -55,7 +55,7 @@ flowchart TD
 בפועל, הגישה הזו נשברת שוב ושוב במערכות Production. כפי שהורחב במאמר [Agents vs Workflows](/he/tech/agents-vs-workflows), מתן אפשרות ל-LLM לקבוע כל מיקרו-צעד מוביל לבעיות אמינות קשות.
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-bulldozer-shovel.png" alt="LLM ללא Context מול LLM עם Context Layer מובנה" class="article-screenshot" />
+  <img src="/context-layer-bulldozer-shovel.webp" alt="LLM ללא Context מול LLM עם Context Layer מובנה" class="article-screenshot" />
   <figcaption>השוואה חזותית: LLM ללא Context התקוע בעומס נתונים מול LLM המועצם על ידי Context Layer מובנה המפיק ערך עסקי ברור.</figcaption>
 </figure>
 
@@ -95,7 +95,7 @@ flowchart TD
 * באיזה Tone כדאי לכתוב את ההודעה?
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-cover.png" alt="את חפירה מול דחפור D9 כבד" class="article-screenshot" />
+  <img src="/context-layer-cover.webp" alt="את חפירה מול דחפור D9 כבד" class="article-screenshot" />
   <figcaption>מעבר מכלים פרימיטיביים לארכיטקטורת Context רבת עוצמה: כמו מעבר מאת חפירה ידנית לדחפור D9 כבד.</figcaption>
 </figure>
 
@@ -108,7 +108,7 @@ flowchart TD
 אז איך זה נראה בפועל? נחזור לתרחיש המייל לג'אנט ונבחן שלוש גישות ארכיטקטוניות:
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-janet-photo.png" alt="שולחן עבודה עם מכתבים ופתקים עמוסים" class="article-screenshot" />
+  <img src="/context-layer-janet-photo.webp" alt="שולחן עבודה עם מכתבים ופתקים עמוסים" class="article-screenshot" />
   <figcaption>ניווט בין מיילים מפוזרים ולא מאונדקסים לבין Context Curation ממוקד ב-Production.</figcaption>
 </figure>
 

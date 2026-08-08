@@ -3,7 +3,7 @@ title: "Context Layer #2: Evals, Evals, Evals"
 slug: "building-an-effective-context-layer-part-2"
 excerpt: "Before writing custom data pipelines or context abstractions, you must answer one core question: How do you measure what is effective? Discover the 4 tiers of agent evaluation and benchmark-driven context engineering."
 date: "2026-08-01"
-coverImage: "/evals-four-tiers.png"
+coverImage: "/evals-four-tiers.webp"
 techStack: ["AI Agents", "Context Layer", "Evals", "LLM Architecture", "Python", "Prompt Engineering"]
 language: "en"
 draft: false
@@ -17,7 +17,7 @@ seriesOrder: 2
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-four-tiers.png" alt="The 4 Tiers of Agent Evaluation" class="article-screenshot" />
+  <img src="/evals-four-tiers.webp" alt="The 4 Tiers of Agent Evaluation" class="article-screenshot" />
   <figcaption>The 4-tier evaluation framework: Unit tests, integration assertions, simulation sandbox, and human feedback loops.</figcaption>
 </figure>
 
@@ -58,7 +58,7 @@ We are not going to spend time here reviewing textbook definitions of precision,
 When constructing your testing pipeline, the primary strategy is to test every level while prioritizing low-cost, fast, deterministic checks first. Rely as heavily as possible on programmatic assertions (Tier 1 and Tier 2) for format, tool calls, and retrieval grounding. Reserve expensive LLM-as-a-judge evaluators strictly for subjective quality and nuance, running them against a well-calibrated golden dataset.
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-four-tiers-pyramid.png" alt="The 4-Tier Evals Testing Pyramid" class="article-screenshot" />
+  <img src="/evals-four-tiers-pyramid.webp" alt="The 4-Tier Evals Testing Pyramid" class="article-screenshot" />
   <figcaption>The 4-tier testing pyramid for AI agents: Deterministic checks, context & trajectory logic, qualitative LLM judges, and human ground truth.</figcaption>
 </figure>
 
@@ -207,7 +207,7 @@ def assert_human_ground_truth_accuracy(
 ### The Evaluation Summary Matrix
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-metrics-dashboard.png" alt="Context Layer Evaluation Metrics Dashboard" class="article-screenshot" />
+  <img src="/evals-metrics-dashboard.webp" alt="Context Layer Evaluation Metrics Dashboard" class="article-screenshot" />
   <figcaption>Context Layer evaluation metrics dashboard tracking precision, recall, p90 latency, and token cost savings.</figcaption>
 </figure>
 
@@ -253,7 +253,7 @@ Testing only the final email masks why a failure occurred. Was it a retrieval fa
 ## Where to Start: Benchmark Simulation & Eval-Driven Development
 
 <figure class="article-screenshot-figure">
-  <img src="/evals-benchmark-simulation.png" alt="Benchmark Data Simulation Workstation" class="article-screenshot" />
+  <img src="/evals-benchmark-simulation.webp" alt="Benchmark Data Simulation Workstation" class="article-screenshot" />
   <figcaption>Benchmark simulation driven development: establishing baselines before building custom tools.</figcaption>
 </figure>
 

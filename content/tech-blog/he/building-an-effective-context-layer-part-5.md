@@ -4,7 +4,7 @@ title: "Context Layer #5: חישוב מראש של אינטליגנציה אנל
 slug: "building-an-effective-context-layer-part-5"
 excerpt: "צלילה טכנית לשכבה 2. למד כיצד חישוב מראש של Rollups סטטיסטיים, Baselines של p50/p90 Response Latency ויחסי ARR Triage באמצעות Apache Spark ו-dbt מעצימים AI Agents."
 date: "2026-08-01"
-coverImage: "/layer2-batch-pipeline.png"
+coverImage: "/layer2-batch-pipeline.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "dbt", "SQL", "PostgreSQL"]
 language: "he"
 series: "context-layer"
@@ -37,7 +37,7 @@ AI Agent לא יכול לחשב p50 Response Latencies, מהירויות עסק�
 * **זיהוי שתיקה (Silence Detection)**: חישוב Baselines של p50 (חציון) ו-p90 Response Latency לכל איש קשר. אם ה-p50 Response Latency של ג'אנט הוא 72 שעות, הפסקה של 48 שעות היא התנהגות רגילה. אם ה-p50 שלה הוא 2 שעות, 48 שעות שתיקה היא אנומליה קריטית שמפעילה התראה.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-silence-detection.png" alt="תרשים זיהוי שתיקה לפי Response Latency היסטורי" class="article-screenshot" />
+  <img src="/layer2-silence-detection.webp" alt="תרשים זיהוי שתיקה לפי Response Latency היסטורי" class="article-screenshot" />
   <figcaption>תרשים זיהוי שתיקה לפי Response Latency היסטורי: השוואת השתיקה הנוכחית מול מדדי p50 ו-p90 של איש הקשר.</figcaption>
 </figure>
 
@@ -46,7 +46,7 @@ AI Agent לא יכול לחשב p50 Response Latencies, מהירויות עסק�
 * **ARR Triage והקצאת מאמץ**: חישוב היחס בין ה-ARR של חשבון ל-ARR החציוני (p50) של החברה. אם החשבון הזה שווה $10,000 ARR בעוד ה-p50 Benchmark של החברה הוא $100,000 ARR, והלקוח שולח 15 בקשות פיצ'רים מורכבות, ה-Agent צריך להמליץ על פיצ'רים סטנדרטיים של המוצר במקום מאמץ הנדסי מותאם אישית.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-arr-triage-matrix.png" alt="מטריצת קבלת החלטות עבור ARR Triage" class="article-screenshot" />
+  <img src="/layer2-arr-triage-matrix.webp" alt="מטריצת קבלת החלטות עבור ARR Triage" class="article-screenshot" />
   <figcaption>מטריצת קבלת החלטות עבור ARR Triage: הערכת ה-ARR של החשבון ביחס למדדי ייחוס כדי לתעדף משאבי טיפול.</figcaption>
 </figure>
 
@@ -61,7 +61,7 @@ AI Agent לא יכול לחשב p50 Response Latencies, מהירויות עסק�
 ## אילו כלים אני צריך?
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-batch-pipeline.png" alt="צינור Data Engineering באצוות עם Spark ו-dbt" class="article-screenshot" />
+  <img src="/layer2-batch-pipeline.webp" alt="צינור Data Engineering באצוות עם Spark ו-dbt" class="article-screenshot" />
   <figcaption>צינור עיבוד Data Engineering באצוות: ניצול Apache Spark ו-dbt לחישוב מראש של מטריקות אנליטיות עבור ה-Context Layer.</figcaption>
 </figure>
 

@@ -4,7 +4,7 @@ title: "Context Layer #7: The Brain (Graph RAG & Memory)"
 slug: "building-an-effective-context-layer-part-7"
 excerpt: "Master Layer 4. Discover how organizational memory, persona voice alignment, hybrid vector search, and Graph RAG entity linking complete the Context Layer for AI Agents."
 date: "2026-08-01"
-coverImage: "/context-layer-semantic-memory-graph.png"
+coverImage: "/context-layer-semantic-memory-graph.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Vector Search", "Graph RAG", "Python"]
 language: "en"
 series: "context-layer"
@@ -17,7 +17,7 @@ seriesOrder: 7
 ---
 
 <figure class="article-screenshot-figure">
-  <img src="/context-layer-semantic-memory-graph.png" alt="Layer 4 Semantic Memory & Graph RAG" class="article-screenshot" />
+  <img src="/context-layer-semantic-memory-graph.webp" alt="Layer 4 Semantic Memory & Graph RAG" class="article-screenshot" />
   <figcaption>Layer 4 Semantic Memory: Long-term organizational memory, persona voice alignment, hybrid vector search, and Graph RAG entity links.</figcaption>
 </figure>
 
@@ -40,7 +40,7 @@ Many architectural patterns have attempted to solve this challenge. A prominent 
 
 <figure class="article-screenshot-figure">
   <a href="https://x.com/karpathy/status/2039805659525644595" target="_blank" rel="noopener noreferrer">
-    <img src="/karpathy-llm-wiki-post.png" alt="Andrej Karpathy's post on LLM Knowledge Bases and compiling personal knowledge bases" class="article-screenshot" />
+    <img src="/karpathy-llm-wiki-post.webp" alt="Andrej Karpathy's post on LLM Knowledge Bases and compiling personal knowledge bases" class="article-screenshot" />
   </a>
   <figcaption>Andrej Karpathy on LLMs as knowledge base compilers, continuously synthesizing raw documents into interlinked markdown wiki pages.</figcaption>
 </figure>

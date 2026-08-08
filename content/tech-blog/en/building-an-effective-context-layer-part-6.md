@@ -4,7 +4,7 @@ title: "Context Layer #6: Preprocessed Data & Multimodal OCR"
 slug: "building-an-effective-context-layer-part-6"
 excerpt: "Master Layer 3 data engineering. Learn how asynchronous feature extraction, batch economics, sentiment tagging, and multimodal OCR PDF/image parsing eliminate runtime model latency for AI Agents."
 date: "2026-08-01"
-coverImage: "/layer3-model-task-matching.png"
+coverImage: "/layer3-model-task-matching.webp"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Kafka", "OCR", "Multimodal AI", "Python"]
 language: "en"
 series: "context-layer"
@@ -37,7 +37,7 @@ When processing data in advance, you do not need synchronous real-time responses
 Take a look at the [AWS Bedrock pricing table](https://aws.amazon.com/bedrock/pricing/):
 
 <figure class="article-screenshot-figure">
-  <img src="/bedrock-batch-pricing.png" alt="Anthropic models on AWS Bedrock, showing standard vs. batch pricing and prompt cache discounts" class="article-screenshot" />
+  <img src="/bedrock-batch-pricing.webp" alt="Anthropic models on AWS Bedrock, showing standard vs. batch pricing and prompt cache discounts" class="article-screenshot" />
   <figcaption>Anthropic pricing model on AWS Bedrock: comparing standard real-time pricing against batch inference and prompt caching discounts.</figcaption>
 </figure>
 
@@ -48,7 +48,7 @@ Batch inference offers a **50% discount on token pricing** in exchange for a pro
 In an offline batch pipeline, you can match **specialized, lightweight models** to specific extraction tasks rather than routing every query through an expensive frontier model. A small classification model handles sentiment tagging perfectly. A specialized vision model extracts tabular data from PDFs cheaper and faster than a general-purpose Claude or GPT-4. You do not need a $15/million-token model to answer "is this email angry?"
 
 <figure class="article-screenshot-figure">
-  <img src="/layer3-model-task-matching.png" alt="Naive LLM Routing vs Smart Task-Matched Model Routing" class="article-screenshot" />
+  <img src="/layer3-model-task-matching.webp" alt="Naive LLM Routing vs Smart Task-Matched Model Routing" class="article-screenshot" />
   <figcaption>Smart model-task matching: routing specific extraction tasks to lightweight specialized models rather than expensive mega-LLMs.</figcaption>
 </figure>
 
