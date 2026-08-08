@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-4"
 excerpt: "בצע צלילה טכנית עמוקה לשכבה 1. למד כיצד צינורות Ingestion בזמן אמת, מידול Domain ואינדקסים ייעודיים מאחדים נתונים תפעוליים מכל הספקים עבור AI Agents."
 date: "2026-08-01"
 coverImage: "/layer1-vendor-agnostic-model.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "PostgreSQL", "Elasticsearch", "Redis", "Kafka"]
 language: "he"
 series: "context-layer"

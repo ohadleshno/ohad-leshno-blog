@@ -108,6 +108,10 @@ export default function TechBlogIndex({ params }: { params: { lang: 'he' | 'en' 
                 />
               </div>
 
+              <div className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">
+                {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')} • {project.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
+              </div>
+
               <div className="flex items-center justify-between pointer-events-auto">
                 <h2 className="font-display text-xl sm:text-2xl font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors">
                   {project.title}

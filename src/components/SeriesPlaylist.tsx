@@ -101,7 +101,7 @@ export function SeriesPlaylist({
               <div className="flex-1 min-w-0 space-y-1">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-[11px] font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
-                    {isHe ? `חלק ${epNum}` : `Part ${epNum}`}
+                    {isHe ? `חלק ${epNum}` : `Part ${epNum}`} • {post.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
                   </span>
 
                   {isCurrent && (

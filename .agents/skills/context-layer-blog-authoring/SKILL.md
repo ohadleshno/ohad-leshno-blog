@@ -77,8 +77,9 @@ Every Context Layer series post must fit strictly into one of the seven designat
 * **STRICT RULE**: Never use em dashes (—) or hyphens/dashes (-) as punctuation in written prose, headers, assistant responses, or markdown content files. Use colons, commas, or parentheses instead.
 
 ### Rule 3: HEBREW TECHNICAL TERMS & PHRASING
-* **STRICT RULE**: In Hebrew markdown files, keep all technical jargon in clean English:
-  - `Data Engineering`, `Apache Airflow`, `Apache Spark`, `Context Layer`, `Raw Operational Data`, `Analytical Data`, `ETL`, `SQL`, `ARR`, `p50/p90 Latency`, `Index`, `Schema`, `Pipeline`, `AI Agent`, `LLM`, `CRM`, `dbt`, `Parquet`, `Vector Search`, `Elasticsearch`, `Graph RAG`, `OCR`, `Kafka`, `Webhooks`, `CDC`, `Change Data Capture`.
+* **STRICT RULE**: In Hebrew markdown files, keep all technical jargon, developer terminology, UI states, and concepts in clean English or native Israeli tech phrasing:
+  - `Data Engineering`, `Apache Airflow`, `Apache Spark`, `Context Layer`, `Raw Operational Data`, `Analytical Data`, `ETL`, `SQL`, `ARR`, `p50/p90 Latency`, `Index`, `Schema`, `Pipeline`, `AI Agent`, `LLM`, `CRM`, `dbt`, `Parquet`, `Vector Search`, `Elasticsearch`, `Graph RAG`, `OCR`, `Kafka`, `Webhooks`, `CDC`, `Change Data Capture`, `Context Switching`, `Refactoring`, `Clean Code`, `Production`, `Domain`, `Review`, `Pagination`, `Over-mocking`, `Assertions`, `Guardrails`, `Linter`, `CI/CD`, `Testcontainers`, `MCP`, `Model Context Protocol`, `Sentry`, `Datadog`, `Telemetry`, `TDD`, `Debugging`, `Debug`, `Open Specs`.
+* **NO LITERAL MACHINE TRANSLATIONS OR HEBREW TRANSLITERATIONS**: Never translate developer slang literally or transliterate common English tech terms into awkward Hebrew script (e.g., NEVER write "דיבאגינג" or "לדיבאג" — write "debugging" or "לעשות debugging"; NEVER write "גלגלי טעינה" — write "ספינר"; NEVER write "קוד מומצא" — write "הזיות של AI").
 * **HEBREW PHRASING & PROPER GERESH**:
   - Always use natural, idiomatic Hebrew possessive phrasing: write `התרחיש של ג׳אנט` instead of `תרחיש ג'אנט`.
   - Use proper geresh/gershayim for non-Hebrew names: write `ג׳אנט` with geresh `׳`.

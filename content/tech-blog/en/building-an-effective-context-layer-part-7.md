@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-7"
 excerpt: "Master Layer 4. Discover how organizational memory, persona voice alignment, hybrid vector search, and Graph RAG entity linking complete the Context Layer for AI Agents."
 date: "2026-08-01"
 coverImage: "/context-layer-semantic-memory-graph.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Vector Search", "Graph RAG", "Python"]
 language: "en"
 series: "context-layer"

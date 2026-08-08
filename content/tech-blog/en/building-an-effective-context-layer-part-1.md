@@ -4,7 +4,6 @@ slug: "building-an-effective-context-layer-part-1"
 excerpt: "At their core, AI agents are just LLM loops wrapped in context and tools. Discover why the context layer is the true bottleneck of agent performance, and why context quality matters more than unconstrained planning."
 date: "2026-08-01"
 coverImage: "/context-layer-what-is-it.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "LLM Systems", "System Architecture", "TypeScript", "Prompt Engineering"]
 language: "en"
 draft: false

@@ -101,6 +101,25 @@ export function getAllPosts(lang: 'he' | 'en' = 'he'): PostMetaData[] {
   return posts.sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));
 }
 
+export function calculateReadingTime(content: string, frontmatterMinutes?: number): number {
+  if (typeof frontmatterMinutes === 'number' && frontmatterMinutes > 0) {
+    return frontmatterMinutes;
+  }
+  const cleanContent = content
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/<figure[\s\S]*?<\/figure>/g, '')
+    .replace(/<[^>]*>/g, '')
+    .replace(/!\[[^\]]*\]\([^)]+\)/g, '')
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+    .replace(/https?:\/\/\S+/g, '')
+    .replace(/^#+\s+/gm, '')
+    .trim();
+  const words = cleanContent ? cleanContent.split(/\s+/).filter(Boolean).length : 0;
+  // Tech article digital reading speed: ~260 words per minute
+  const minutes = Math.ceil(words / 260);
+  return Math.max(1, minutes);
+}
+
 export function getPostData(slug: string, lang: 'he' | 'en' = 'he'): PostDetail | null {
   const decodedSlug = decodeURIComponent(slug);
   let fullPath = path.join(contentDirectory, lang, `${decodedSlug}.md`);
@@ -129,7 +148,7 @@ export function getPostData(slug: string, lang: 'he' | 'en' = 'he'): PostDetail 
     excerpt: data.excerpt || '',
     date: data.date || new Date().toISOString(),
     coverImage,
-    minutesToRead: data.minutesToRead || 5,
+    minutesToRead: calculateReadingTime(content, data.minutesToRead),
     language: data.language || lang,
     tags: data.tags || [],
     youtubeId,

@@ -211,7 +211,7 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
                 <div className="flex flex-col justify-between space-y-1">
                   <div>
                     <span className="text-[11px] text-neutral-500 dark:text-neutral-400 font-medium">
-                      {new Date(post.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')}
+                      {new Date(post.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')} • {post.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
                     </span>
                     <h4 className="font-display text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors line-clamp-2">
                       {post.title}
@@ -266,6 +266,10 @@ export default function HomePage({ params }: { params: { lang: 'he' | 'en' } }) 
                     decoding="async"
                     className="w-full h-full object-cover group-hover:scale-102 transition-transform duration-500"
                   />
+                </div>
+
+                <div className="text-xs text-neutral-500 dark:text-neutral-400 font-medium">
+                  {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')} • {project.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
                 </div>
 
                 <div className="flex items-center justify-between pointer-events-auto">

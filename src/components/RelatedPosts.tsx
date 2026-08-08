@@ -17,6 +17,7 @@ export function RelatedPosts({ currentSlug, lang, category }: RelatedPostsProps)
     excerpt: string;
     date: string;
     coverImage: string;
+    minutesToRead: number;
   }> = [];
 
   if (category === 'tech') {
@@ -72,7 +73,7 @@ export function RelatedPosts({ currentSlug, lang, category }: RelatedPostsProps)
 
               <div className="p-4 sm:p-5 flex flex-col flex-1 space-y-2.5">
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-600 dark:text-neutral-400">
-                  {formattedDate}
+                  {formattedDate} • {post.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
                 </span>
 
                 <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100 group-hover:text-rose-600 dark:group-hover:text-rose-400 transition-colors line-clamp-2 leading-snug">

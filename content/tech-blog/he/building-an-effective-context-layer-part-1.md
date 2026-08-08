@@ -4,7 +4,6 @@ slug: "building-an-effective-context-layer-part-1"
 excerpt: "בבסיסם, AI Agents הם פשוט לולאת LLM העטופה ב-Context וב-Tools. גלה למה ה-Context Layer הוא צוואר הבקבוק האמיתי של ביצועי Agent, ולמה איכות ה-Context חשובה בהרבה מ-Planning אוטונומי."
 date: "2026-08-01"
 coverImage: "/context-layer-what-is-it.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "LLM Systems", "System Architecture", "TypeScript", "Prompt Engineering"]
 language: "he"
 draft: false

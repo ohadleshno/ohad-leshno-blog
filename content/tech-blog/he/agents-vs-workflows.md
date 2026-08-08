@@ -4,7 +4,6 @@ slug: "agents-vs-workflows"
 excerpt: "כולם רצים לבנות AI Agents אוטונומיים. אבל לתת ל-LLM לקבל כל מיקרו-החלטה בלולאה זה יקר, איטי ולא אמין. הנה למה המערכות הטובות ביותר הן Workflows ולא Agents."
 date: "2026-07-29"
 coverImage: "/agents-agents-everywhere-08d12096d9.jpg"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Workflows", "LLM Systems", "System Architecture", "TypeScript", "Prompt Engineering"]
 language: "he"
 ---

@@ -569,6 +569,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-7" />
   </url>
   <url>
+    <loc>https://ohadleshno.com/he/tech/how-i-work-with-ai-in-development</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/how-i-work-with-ai-in-development" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/how-i-work-with-ai-in-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/how-i-work-with-ai-in-development" />
+  </url>
+  <url>
     <loc>https://ohadleshno.com/he/tech/nehorai-ai</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -650,6 +659,15 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-7" />
   </url>
   <url>
+    <loc>https://ohadleshno.com/en/tech/how-i-work-with-ai-in-development</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/how-i-work-with-ai-in-development" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/how-i-work-with-ai-in-development" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/how-i-work-with-ai-in-development" />
+  </url>
+  <url>
     <loc>https://ohadleshno.com/en/tech/nehorai-ai</loc>
     <lastmod>2026-03-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -657,5 +675,14 @@
     <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/nehorai-ai" />
     <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/nehorai-ai" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/nehorai-ai" />
+  </url>
+  <url>
+    <loc>https://ohadleshno.com/en/tech/product-manager-in-the-ai-era</loc>
+    <lastmod>2026-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="he" href="https://ohadleshno.com/he/tech/product-manager-in-the-ai-era" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ohadleshno.com/en/tech/product-manager-in-the-ai-era" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://ohadleshno.com/he/tech/product-manager-in-the-ai-era" />
   </url>
 </urlset>

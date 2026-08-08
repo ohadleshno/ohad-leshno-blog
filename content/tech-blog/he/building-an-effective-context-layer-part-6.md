@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-6"
 excerpt: "צלילה טכנית לשכבה 3. למד כיצד חילוץ פיצ'רים אסינכרוני, כלכלת Batch, Sentiment Tagging ופרסור Multimodal OCR של PDF ותמונות מבטלים Latency של מודלים בזמן ריצה."
 date: "2026-08-01"
 coverImage: "/layer3-model-task-matching.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Kafka", "OCR", "Multimodal AI", "Python"]
 language: "he"
 series: "context-layer"

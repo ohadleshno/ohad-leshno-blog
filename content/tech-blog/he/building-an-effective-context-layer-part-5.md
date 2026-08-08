@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-5"
 excerpt: "צלילה טכנית לשכבה 2. למד כיצד חישוב מראש של Rollups סטטיסטיים, Baselines של p50/p90 Response Latency ויחסי ARR Triage באמצעות Apache Spark ו-dbt מעצימים AI Agents."
 date: "2026-08-01"
 coverImage: "/layer2-batch-pipeline.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "dbt", "SQL", "PostgreSQL"]
 language: "he"
 series: "context-layer"

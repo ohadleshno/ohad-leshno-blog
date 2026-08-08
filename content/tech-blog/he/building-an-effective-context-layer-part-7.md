@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-7"
 excerpt: "שלוט בשכבה 4. למד כיצד זיכרון ארגוני, התאמת קול ה-Persona, חיפוש סמנטי היברידי ומיפוי ישויות ב-Graph RAG משלימים את ה-Context Layer."
 date: "2026-08-01"
 coverImage: "/context-layer-semantic-memory-graph.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Vector Search", "Graph RAG", "Python"]
 language: "he"
 series: "context-layer"

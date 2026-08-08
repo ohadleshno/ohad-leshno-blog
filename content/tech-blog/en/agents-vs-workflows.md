@@ -4,7 +4,6 @@ slug: "agents-vs-workflows"
 excerpt: "Everyone is racing to build autonomous AI agents. But letting an LLM decide every micro-action is expensive, slow, and unreliable. Here is why the most effective AI systems are workflows, not agents."
 date: "2026-07-29"
 coverImage: "/agents-agents-everywhere-08d12096d9.jpg"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Workflows", "LLM Systems", "System Architecture", "TypeScript", "Prompt Engineering"]
 language: "en"
 ---

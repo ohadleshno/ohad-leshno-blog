@@ -5,6 +5,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 import hljs from 'highlight.js';
+import { calculateReadingTime } from './posts';
 
 export interface TechProjectMetaData {
   title: string;
@@ -12,7 +13,8 @@ export interface TechProjectMetaData {
   excerpt: string;
   date: string;
   coverImage: string;
-  projectUrl: string;
+  minutesToRead: number;
+  projectUrl?: string;
   techStack: string[];
   language: string;
   draft: boolean;
@@ -135,7 +137,8 @@ export function getTechProjectData(slug: string, lang: 'he' | 'en' = 'he'): Tech
     excerpt: data.excerpt || '',
     date: data.date || new Date().toISOString(),
     coverImage: data.coverImage ? data.coverImage.replace(/^\/public/, '') : '/hero-cover.webp',
-    projectUrl: data.projectUrl || 'https://github.com/ohadleshno',
+    minutesToRead: calculateReadingTime(content, data.minutesToRead),
+    projectUrl: data.projectUrl || undefined,
     techStack: data.techStack || ['AI', 'TypeScript'],
     language: data.language || lang,
     draft: data.draft === true,

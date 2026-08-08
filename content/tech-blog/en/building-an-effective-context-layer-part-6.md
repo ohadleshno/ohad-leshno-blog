@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-6"
 excerpt: "Master Layer 3 data engineering. Learn how asynchronous feature extraction, batch economics, sentiment tagging, and multimodal OCR PDF/image parsing eliminate runtime model latency for AI Agents."
 date: "2026-08-01"
 coverImage: "/layer3-model-task-matching.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Kafka", "OCR", "Multimodal AI", "Python"]
 language: "en"
 series: "context-layer"

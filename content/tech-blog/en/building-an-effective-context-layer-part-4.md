@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-4"
 excerpt: "Master Layer 1 data engineering. Learn how real-time ingestion pipelines, domain modeling, and dedicated indices unify multi-vendor operational data for AI Agents."
 date: "2026-08-01"
 coverImage: "/layer1-vendor-agnostic-model.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "PostgreSQL", "Elasticsearch", "Redis", "Kafka"]
 language: "en"
 series: "context-layer"

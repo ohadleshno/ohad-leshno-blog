@@ -4,7 +4,6 @@ slug: "building-an-effective-context-layer-part-2"
 excerpt: "לפני שנכנסים לבניית Data Pipelines או Context Abstractions מורכבים, חייבים לענות על שאלה אחת מרכזית: איך מודדים מה באמת אפקטיבי? גלה את 4 רמות ה-Evals לבניית Context Layer מונחה ביצועים."
 date: "2026-08-01"
 coverImage: "/evals-four-tiers.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Evals", "LLM Architecture", "Python", "Prompt Engineering"]
 language: "he"
 draft: false
@@ -35,7 +34,7 @@ seriesOrder: 2
 
 למוצרים שונים יש סדר עדיפויות שונה לחלוטין:
 * **הגישה הקפדנית של Directory Strict**: עבור אפליקציית HR ארגונית, זיהוי ג'אנט הנכונה (ג'אנט מניהול מול ג'אנט המתמחה) הוא בסדר עדיפויות עליון. נמען שגוי הוא דליפת אבטחה חמורה.
-* **גישת Human In The Loop**: עבור כלי לסייען ניהולי, לבחור מזהה פנימי שגוי בזמן טיוטת ההודעה זה נסבל, כל עוד המערכת מציגה את הבחירה לפני השליחה כך שהמשתמש יכול לתקן אותה ("תכננתי לג'אנט מניהול, לא לג'אנט המתמחה").
+* **גישת Human In The Loop**: עבור כלי לסייען ניהולי, יצירת טיוטה עם מזהה נמען שגוי היא נסבלת כי המשתמש מאמת בקלות את הנמען לפני השליחה. מה שבאמת חשוב בהחלטה הזו הוא **דיוק ה-Data**: ה-Context Layer חייב לשלוף את הפרטים העובדתיים המדויקים (אזכור הבלנדר המקורי מהקבלה) מבלי להזות עובדות (כמו להודות על ספל קפה שהיא מעולם לא קנתה).
 * **גישת Tone First**: עבור אפליקציה המבוססת על אישיות, העדיפות העליונה עשויה להיות ה-Tone הפסיבי אגרסיבי של ההודעה. מייל התודה צריך לפגוע ב-Tone הסיינפלדי המדויק ("תודה על המתנה, אשתדל למצוא לזה פינה בארון בסופו של דבר.") כדי שג'אנט תבין שהמתנה בסדר, אבל לא מעבר.
 
 לפני שבונים פיצ'רים של Context, חייבים להעריך: אילו פונקציות קריטיות המערכת שלך חייבת לבצע בצורה מעולה, אילו פונקציות יכולות להיות רק בסדר, ואיפה אפשר להשלים עם פשרות?
@@ -53,6 +52,8 @@ seriesOrder: 2
 ---
 
 ## 4 הרמות של הערכת Agents ו-Context
+
+אנחנו לא הולכים לבזבז כאן זמן על דיונים תיאורטיים במדדים בסיסיים כמו Precision ו-Recall או מושגי יסוד שכל אחד מכיר. במקום זאת, המטרה של הסעיף הזה היא להנחות אותך בפרקטיקה ההנדסית הממשית: **מה** הדברים הספציפיים והמעשיים שאתה באמת חייב לבדוק (מבנה ה-Payload, התנהגות ה-Trace, ומכניקת ה-Context) כדי לוודא שאיכות ה-Context Layer שלך עובדת ב-Production.
 
 <figure class="article-screenshot-figure">
   <img src="/evals-four-tiers-pyramid.png" alt="פירמידת 4 רמות ה-Evals עבור AI Agents" class="article-screenshot" />
@@ -120,6 +121,8 @@ def assert_retrieval_relevance(retrieved_docs: list[dict]):
 # Groundedness via Structured Output
 def assert_groundedness(referenced_item: str, retrieved_docs: list[dict]):
     doc_text = " ".join(d.get("content", "") for d in retrieved_docs).lower()
+    assert "blender" in referenced_item.lower(), \
+        f"Incorrect item referenced: '{referenced_item}' (expected blender)"
     assert referenced_item.lower() in doc_text, \
         f"Ungrounded claim: '{referenced_item}' not supported by retrieved docs"
 
@@ -171,14 +174,14 @@ def assert_reasoning_coherence(tool_calls: list[dict]):
 
 ---
 
-### רמה 4: בדיקות איכות וטון (Tone and Persona)
+### רמה 4: בדיקות איכות וטון (LLM as a Judge)
 
-בדיקות ברמה 4 מעריכות איכות סובייקטיבית, התאמת Tone ועמידה בחוקים מורכבים:
-* **Tone and Persona Alignment**: האם סגנון הכתיבה מתאים ל-Persona המבוקשת?
-* **Constraint Satisfaction**: האם הפלט כיבד הנחיות משתמעות (כמו "שמור על זה מתחת לשלושה משפטים" או "אל תישמע נלהב מדי")?
-* **Completeness and Task Success**: אישור מקצה לקצה שהמטרה המרכזית הושגה כראוי מנקודת המבט של המשתמש.
+בדיקות ברמה 4 מעריכות איכות סובייקטיבית, התאמת Tone ועמידה בסגנון כתיבה שלא ניתן לאמת באמצעות בדיקות קוד דטרמיניסטיות:
+* **Tone and Persona Alignment**: האם סגנון הכתיבה מתאים ל-Persona הספציפית של המשתמש (כגון הומור יבש)?
+* **Authorship Authenticity (אותנטיות הכותב)**: האם הטיוטה נשמעת באמת כמו משהו שאני כתבתי, בהתאמה לדוגמאות כתיבה אמיתיות שלי ולא לטקסט גנרי של AI?
+* **הערכת ניואנסים סובייקטיביים**: האם הפלט מכבד גבולות סגנון משתמעים (הימנעות מניסוחים נלהבים מדי)?
 
-**התרחיש של ג׳אנט**: האם המייל פגע ברמת ה-Tone הפסיבי אגרסיבי הנדרשת?
+**התרחיש של ג׳אנט**: פרופיל ה-Persona של המשתמש מציין שהוא מתקשר בהומור יבש. האם המייל פגע ברמת ה-Tone המבוקשת ונשמע כמו משהו שהמשתמש כתב, או שהמודל הפיק תודה נלהבת וגנרית שסותרת את הקול האמיתי של המשתמש?
 
 ```python
 import json
@@ -186,13 +189,7 @@ from openai import OpenAI
 
 client = OpenAI()
 
-# Structural Constraint (Sentence Count)
-def assert_sentence_constraint(draft_text: str, max_sentences: int = 3):
-    sentences = [s for s in draft_text.split(".") if s.strip()]
-    assert len(sentences) <= max_sentences, \
-        f"Verbosity error: {len(sentences)} sentences (max {max_sentences})"
-
-# Qualitative Tone and Persona Alignment
+# Qualitative Tone and Persona Alignment (LLM-as-a-Judge)
 def assert_persona_tone(draft_text: str, target_persona: str) -> dict:
     sys_prompt = (
         f"The user's communication style is: {target_persona}.\n"
@@ -210,6 +207,28 @@ def assert_persona_tone(draft_text: str, target_persona: str) -> dict:
     )
     result = json.loads(response.choices[0].message.content)
     assert result["score"] >= 4, f"Tone mismatch ({result['score']}/5): {result['reasoning']}"
+    return result
+
+# Authorship Authenticity Check (Voice Fingerprint Match)
+def assert_authorship_authenticity(draft_text: str, writing_samples: list[str]) -> dict:
+    samples_block = "\n---\n".join(writing_samples)
+    sys_prompt = (
+        "Compare the draft email against these authentic writing samples from the user:\n"
+        f"{samples_block}\n"
+        "Evaluate if the draft sounds genuinely like something this specific person wrote.\n"
+        "Score 1-5: 1=generic AI tone, 5=indistinguishable from the author's voice.\n"
+        'Return JSON: {"score": int, "reasoning": str}'
+    )
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        response_format={"type": "json_object"},
+        messages=[
+            {"role": "system", "content": sys_prompt},
+            {"role": "user", "content": draft_text}
+        ]
+    )
+    result = json.loads(response.choices[0].message.content)
+    assert result["score"] >= 4, f"Authenticity failure ({result['score']}/5): {result['reasoning']}"
     return result
 ```
 

@@ -7,6 +7,13 @@
   <language>he-IL</language>
   
   <item>
+    <title><![CDATA[איך אני עובד עם AI בפיתוח תוכנה]]></title>
+    <link>https://ohadleshno.com/he/tech/how-i-work-with-ai-in-development</link>
+    <description><![CDATA[פיתוח תוכנה עם AI הוא לא להאציל משימות לפרומפט. הוא עוסק בהסטת הפוקוס מכתיבת סינטקס למפרטים מפורטים, קריאת קוד, Context Layer ולולאות משוב מהירות.]]></description>
+    <pubDate>Thu, 06 Aug 2026 00:00:00 GMT</pubDate>
+    <guid>https://ohadleshno.com/he/tech/how-i-work-with-ai-in-development</guid>
+  </item>
+  <item>
     <title><![CDATA[Context Layer #1: למה ה-Agent שלך נכשל]]></title>
     <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-1</link>
     <description><![CDATA[בבסיסם, AI Agents הם פשוט לולאת LLM העטופה ב-Context וב-Tools. גלה למה ה-Context Layer הוא צוואר הבקבוק האמיתי של ביצועי Agent, ולמה איכות ה-Context חשובה בהרבה מ-Planning אוטונומי.]]></description>

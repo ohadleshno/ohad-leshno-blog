@@ -5,7 +5,6 @@ slug: "building-an-effective-context-layer-part-5"
 excerpt: "Explore Layer 2 in detail. Learn how pre-computing statistical rollups, p50/p90 response latencies, and ARR triage ratios with Apache Spark and dbt empowers AI Agents to make business decisions."
 date: "2026-08-01"
 coverImage: "/layer2-batch-pipeline.png"
-projectUrl: "https://github.com/ohadleshno"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "dbt", "SQL", "PostgreSQL"]
 language: "en"
 series: "context-layer"

@@ -11,6 +11,7 @@ import { RelatedPosts } from '@/components/RelatedPosts';
 import { DraftGuard } from '@/components/DraftGuard';
 import { SeriesBannerNav } from '@/components/SeriesBannerNav';
 import { LanguageBanner } from '@/components/LanguageBanner';
+import { MailingList } from '@/components/MailingList';
 
 export function generateStaticParams() {
   const heSlugs = getAllTechSlugs('he').flatMap((slug) => [
@@ -168,7 +169,7 @@ export default function TechProjectDetail({
 
           <div className="flex items-center justify-between pt-1">
             <span className="text-xs sm:text-sm text-neutral-500 dark:text-neutral-400 font-medium">
-              {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')}
+              {new Date(project.date).toLocaleDateString(isHe ? 'he-IL' : 'en-US')} • {project.minutesToRead} {isHe ? 'דקות קריאה' : 'min read'}
             </span>
 
             {project.projectUrl && (
@@ -210,6 +211,9 @@ export default function TechProjectDetail({
           <SocialShare title={project.title} url={currentUrl} isHe={isHe} />
           <LikeButton postSlug={project.slug} lang={lang} />
         </div>
+
+        {/* Mailing List Section */}
+        <MailingList lang={lang} />
 
         {/* Related Projects */}
         <RelatedPosts currentSlug={project.slug} lang={lang} category="tech" />
