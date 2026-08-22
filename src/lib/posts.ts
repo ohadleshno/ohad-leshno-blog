@@ -5,6 +5,9 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 import hljs from 'highlight.js';
+import { contentStamp } from './content-stamp';
+
+void contentStamp;
 
 export interface PostMetaData {
   title: string;

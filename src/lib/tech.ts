@@ -6,6 +6,9 @@ import html from 'remark-html';
 import remarkGfm from 'remark-gfm';
 import hljs from 'highlight.js';
 import { calculateReadingTime } from './posts';
+import { contentStamp } from './content-stamp';
+
+void contentStamp;
 
 export interface TechProjectMetaData {
   title: string;
