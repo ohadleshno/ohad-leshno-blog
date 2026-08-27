@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Context Layer #3: The 4 Layer Architecture Blueprint"
 slug: "building-an-effective-context-layer-part-3"
 excerpt: "Learn how to structure a Context Layer into four functional layers around a real-world CRM scenario: Raw Data, Analytical Data, Preprocessed Signals, and Semantic High-Level Memory."

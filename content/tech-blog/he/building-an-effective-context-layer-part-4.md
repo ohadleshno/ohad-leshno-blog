@@ -22,7 +22,7 @@ seriesOrder: 4
 
 זו לא בעיה של AI. זו בעיית Backend Engineering קלאסית. כאשר ה-AI Agent צריך לחפש "את כל האימיילים מ-avi@gmail.com," הוא לא אמור לבצע קריאת HTTP חיה ל-Gmail REST API בתוך לולאת השיחה. הדרך הזו מובילה ל-Rate Limits, השהיית רשת ותלות שבירה בספקים (כפי שכיסינו ב-[5 מצבי כשל ב-Production בחלק 3](/he/tech/building-an-effective-context-layer-part-3)).
 
-אבל יש סיבה עמוקה יותר לחשיבות השכבה הזו: **המאגר התפעולי הגולמי הוא לא רק בשביל ה-Agent.** הוא הבסיס למוצר שלך כולו. מערכת ה-CRM של ג'אנט צריכה את הנתונים האלה בשביל ה-UI של המוצר עצמו: הצגת ציר זמן תקשורת, כרטיס איש קשר, תיבת דואר מאוחדת. ה-Agent הוא רק צרכן אחד של הנתונים האלה. אם תבנה את זה נכון, תבנה את זה פעם אחת.
+אבל יש סיבה עמוקה יותר לחשיבות השכבה הזו: **המאגר התפעולי הגולמי הוא לא רק בשביל ה-Agent.** הוא הבסיס למוצר שלך כולו. מערכת ה-CRM של נהוראי צריכה את הנתונים האלה בשביל ה-UI של המוצר עצמו: הצגת ציר זמן תקשורת, כרטיס איש קשר, תיבת דואר מאוחדת. ה-Agent הוא רק צרכן אחד של הנתונים האלה. אם תבנה את זה נכון, תבנה את זה פעם אחת.
 
 ---
 
@@ -36,8 +36,8 @@ seriesOrder: 4
 * **בסיס לכלי Agent**: כל קריאת Tool של ה-AI Agent (שליפת איש קשר, חיפוש בשרשרת, שליפת הודעה) פונה למאגר התפעולי ישירות עם השהיה של פחות מ-15 מילי-שניות, במקום 3 עד 5 שניות של Round Trip ל-APIs של ספקים.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer1-janet-unified-inbox.webp" alt="ציר זמן תקשורת מאוחד ב-CRM של ג'אנט" class="article-screenshot" />
-  <figcaption>ציר זמן תקשורת מאוחד ב-CRM של ג'אנט: ריכוז אימיילים מ-Gmail, הודעות WhatsApp ויומני שיחות בפיד אחד.</figcaption>
+  <img src="/layer1-janet-unified-inbox.webp" alt="ציר זמן תקשורת מאוחד ב-CRM של נהוראי" class="article-screenshot" />
+  <figcaption>ציר זמן תקשורת מאוחד ב-CRM של נהוראי: ריכוז אימיילים מ-Gmail, הודעות WhatsApp ויומני שיחות בפיד אחד.</figcaption>
 </figure>
 
 ### Vendor-Agnostic מהיום הראשון
@@ -77,7 +77,7 @@ seriesOrder: 4
 * **PostgreSQL (Relational SQL)**: הבחירה הטובה ביותר כאשר דפוסי הגישה מוגדרים היטב ומובנים. צריך אינדקסי B-Tree לשליפות מדויקות, מפתחות זרים בין אנשי קשר והודעות, ועקביות טרנזקציונלית. עבור רוב הנתונים התפעוליים של CRM, PostgreSQL היא בחירת ברירת המחדל הנכונה.
 * **MongoDB / DynamoDB (NoSQL)**: שימושי כאשר ה-Schema משתנה מאוד או כשצריך מבני מסמכים גמישים. ה-Trade-off הוא גמישות שאילתות חלשה יותר וללא תמיכה ב-JOIN.
 
-עבור ה-CRM של ג'אנט, PostgreSQL היא הבחירה הנכונה כי יש לנו ישויות מוגדרות בבירור (הודעות, אנשי קשר, שרשראות) עם יחסים צפויים.
+עבור ה-CRM של נהוראי, PostgreSQL היא הבחירה הנכונה כי יש לנו ישויות מוגדרות בבירור (הודעות, אנשי קשר, שרשראות) עם יחסים צפויים.
 
 ### חיפוש: Elasticsearch / OpenSearch
 
@@ -164,9 +164,9 @@ flowchart TD
 
 ---
 
-## דוגמה מעשית: ה-CRM של ג'אנט בפעולה
+## דוגמה מעשית: ה-CRM של נהוראי בפעולה
 
-במערכת ה-CRM של ג'אנט, נתונים זורמים באופן רציף מכל הספקים המחוברים דרך צינור Ingestion בזמן אמת לתוך המאגר התפעולי המאוחד:
+במערכת ה-CRM של נהוראי, נתונים זורמים באופן רציף מכל הספקים המחוברים דרך צינור Ingestion בזמן אמת לתוך המאגר התפעולי המאוחד:
 
 ```mermaid
 flowchart LR
@@ -203,14 +203,14 @@ flowchart LR
   {
     "vendor": "whatsapp",
     "sender_email": "avi@gmail.com",
-    "recipient_name": "Janet H.",
+    "recipient_name": "Nehorai H.",
     "content_body": "Can you check the revised payment schedule for Coca Cola Enterprise?",
     "timestamp": "2026-08-01T14:20:00Z"
   },
   {
     "vendor": "gmail",
     "sender_email": "avi@gmail.com",
-    "recipient_name": "Janet H.",
+    "recipient_name": "Nehorai H.",
     "content_body": "Attached is the signed Coca Cola contract addendum.",
     "timestamp": "2026-08-01T11:05:00Z"
   }
