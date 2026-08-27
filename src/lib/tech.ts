@@ -89,11 +89,12 @@ export function getAllTechSlugs(lang: 'he' | 'en' = 'he'): string[] {
 }
 
 export function getAllTechProjects(lang: 'he' | 'en' = 'he'): TechProjectMetaData[] {
+  const includeDrafts = process.env.NODE_ENV === 'development';
   const slugs = getAllTechSlugs(lang);
   const projects = slugs
     .map((slug) => getTechProjectData(slug, lang))
     .filter((proj): proj is TechProjectDetail => proj !== null)
-    .filter((proj) => !proj.draft)
+    .filter((proj) => includeDrafts || !proj.draft)
     .map(({ contentHtml, ...metadata }) => metadata);
 
   return projects.sort((a, b) => (new Date(b.date).getTime() - new Date(a.date).getTime()));

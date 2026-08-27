@@ -1,199 +1,145 @@
 ---
 draft: true
-title: "Context Layer #5: חישוב מראש של אינטליגנציה אנליטית"
+title: "Context Layer #5: ניהול Context אנליטי"
 slug: "building-an-effective-context-layer-part-5"
-excerpt: "צלילה טכנית לשכבה 2. למד כיצד חישוב מראש של Rollups סטטיסטיים, Baselines של p50/p90 Response Latency ויחסי ARR Triage באמצעות Apache Spark ו-dbt מעצימים AI Agents."
+excerpt: "בנו ממשק אנליטי מנוהל שנותן ל-AI Agents הגדרות מטריקה, אי ודאות, טריות וראיות להחלטות עסקיות."
 date: "2026-08-01"
-coverImage: "/layer2-batch-pipeline.webp"
-techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "dbt", "SQL", "PostgreSQL"]
+coverImage: "/layer2-silence-detection.webp"
+techStack: ["AI Agents", "Context Layer", "Data Engineering", "dbt", "SQL", "PostgreSQL", "ClickHouse"]
 language: "he"
 series: "context-layer"
 seriesTitle: "Context Layer"
 seriesOrder: 5
 ---
 
-*זהו חלק 5 בסדרה הטכנית בת 7 חלקים על Context Layers עבור AI Agents. לפני קריאת צלילה עמוקה זו, מומלץ לקרוא את [חלק 3: סקירת הארכיטקטורה](/he/tech/building-an-effective-context-layer-part-3) ו-[חלק 4: צלילה עמוקה לשכבה 1](/he/tech/building-an-effective-context-layer-part-4).*
+*זהו חלק 5 בסדרה בת 7 חלקים על Context Layers עבור AI Agents. [חלק 4: קליטת דאטה תפעולי](/he/tech/building-an-effective-context-layer-part-4) הראה איך ה-CRM יוצר רשומה אמינה אחת של אנשי קשר, הודעות ושרשורים. החלק הזה הופך את ההיסטוריה ל-Context אנליטי מנוהל.*
 
----
+**TL;DR**: שכבה 2 היא ממשק אנליטי מנוהל. היא מגדירה מה כל מטריקה אומרת ומחזירה את הערך יחד עם Cohort, גודל מדגם, אי ודאות, טריות, גרסה ו-Lineage. המטריקה מספקת ראיות. Policy עסקי נפרד מחליט אם ה-Agent צריך להמתין, להודיע או להסלים.
 
-## למה אנחנו צריכים את השכבה הזו?
+## האם השתיקה של ג׳אנט חריגה?
 
-שכבה 1 עונה על *"מה קרה"*: ההודעות הגולמיות, אנשי הקשר, השרשראות. אבל היא לא יכולה לענות על *"מה זה אומר?"*
+ה-CRM שלח לג׳אנט הצעת חידוש ביום שני בבוקר. ביום רביעי היא עדיין לא ענתה. המשתמש שואל:
 
-חשבו על שאלה פשוטה: *"ג'אנט לא ענתה כבר 48 שעות. האם כדאי לשלוח מעקב דחוף?"* שכבה 1 יכולה לספר לכם שההודעה האחרונה של ג'אנט הייתה לפני 48 שעות. אבל האם 48 שעות שתיקה זה חריג אצל ג'אנט? האם החשבון הזה בכלל שווה את הדחיפות? אלה **שאלות כמותיות ואנליטיות** שדורשות Baselines סטטיסטיים המחושבים על פני נתונים היסטוריים.
+*"ג׳אנט שקטה כבר 48 שעות. כדאי לשלוח Follow Up דחוף?"*
 
-AI Agent לא יכול לחשב p50 Response Latencies, מהירויות עסקאות או Benchmarks של ARR תוך כדי שיחה על ידי סריקת מחרוזות הודעות גולמיות. המטריקות האלה חייבות להיות **מחושבות מראש** באמצעות צינורות Data Engineering ולהיחשף כ-Context אנליטי מובנה.
+שכבה 1 יכולה להחזיר את ההצעה, זמן השליחה, השרשור והזהות של ג׳אנט. היא לא יכולה לקבוע אם השתיקה חריגה.
 
-ללא שכבה 2, ה-Agent שלכם הוא קורא הודעות. עם שכבה 2, ה-Agent שלכם הוא אנליסט עסקי.
+גם "48 שעות" מסתיר החלטות. האם סופרים לילות, סופי שבוע וחגים? האם ג׳אנט עונה להצעות חידוש לאט יותר מאשר לשאלות Support? כמה שיחות קודמות בכלל קיימות?
 
----
+לפני בחירת PostgreSQL, ClickHouse או Data Warehouse, הגדירו את השאלות:
 
-## היתרונות של שכבה זו
+1. כמה שעות עבודה עברו מאז ההודעה שדורשת תשובה?
+2. כמה שיחות דומות עדיין פתוחות אחרי פרק זמן כזה?
+3. אילו שיחות יצרו את ההשוואה וכמה אי ודאות נשארה?
+4. עד כמה הדאטה מלא וטרי?
+5. איזו פעולה ה-Policy העסקי דורש לפי הראיות?
 
-### Business Intelligence בתוך לולאת ה-Agent
+> **מתחילים משאלת ההחלטה**: מטריקה מועילה רק כאשר ההגדרה והראיות שלה מתאימות להחלטה שצורכת אותה.
 
-מטריקות אנליטיות מחושבות מראש פותחות מחלקה חדשה לגמרי של יכולות Agent:
+## שכבה 2 היא ממשק, לא Batch Pipeline
 
-* **זיהוי שתיקה (Silence Detection)**: חישוב Baselines של p50 (חציון) ו-p90 Response Latency לכל איש קשר. אם ה-p50 Response Latency של ג'אנט הוא 72 שעות, הפסקה של 48 שעות היא התנהגות רגילה. אם ה-p50 שלה הוא 2 שעות, 48 שעות שתיקה היא אנומליה קריטית שמפעילה התראה.
-
-<figure class="article-screenshot-figure">
-  <img src="/layer2-silence-detection.webp" alt="תרשים זיהוי שתיקה לפי Response Latency היסטורי" class="article-screenshot" />
-  <figcaption>תרשים זיהוי שתיקה לפי Response Latency היסטורי: השוואת השתיקה הנוכחית מול מדדי p50 ו-p90 של איש הקשר.</figcaption>
-</figure>
-
-* **מהירות ונפח עסקאות (Deal Velocity and Volume Impact)**: הבנת כמה עסקאות העסק שלכם מעבד ביום משנה את חשבון ההחלטות. אם ג'אנט סוגרת עסקה אחת ביום, לכל עסקה יש השפעה עצומה וראוי לתשומת לב אנושית. אם היא סוגרת 100 עסקאות ביום, כללים אוטומטיים צריכים לטפל ברובן.
-
-* **ARR Triage והקצאת מאמץ**: חישוב היחס בין ה-ARR של חשבון ל-ARR החציוני (p50) של החברה. אם החשבון הזה שווה $10,000 ARR בעוד ה-p50 Benchmark של החברה הוא $100,000 ARR, והלקוח שולח 15 בקשות פיצ'רים מורכבות, ה-Agent צריך להמליץ על פיצ'רים סטנדרטיים של המוצר במקום מאמץ הנדסי מותאם אישית.
-
-<figure class="article-screenshot-figure">
-  <img src="/layer2-arr-triage-matrix.webp" alt="מטריצת קבלת החלטות עבור ARR Triage" class="article-screenshot" />
-  <figcaption>מטריצת קבלת החלטות עבור ARR Triage: הערכת ה-ARR של החשבון ביחס למדדי ייחוס כדי לתעדף משאבי טיפול.</figcaption>
-</figure>
-
-* **זיהוי מגמות (Trend Detection)**: מעקב אחר מטריקות לאורך זמן חושף מגמות בלתי נראות בנתונים גולמיים. האם זמן התגובה של החשבון הזה מתארך מחודש לחודש? האם מהירות העסקאות מואצת או מאטה?
-
-### מתגובתי לפרואקטיבי
-
-היתרון החזק ביותר של שכבה 2 הוא שהיא מעבירה את ה-Agent מ-**תגובתי** (עונה על שאלות כשנשאל) ל-**פרואקטיבי** (מציף תובנות לפני שהמשתמש בכלל שואל). ה-Agent יכול לסמן *"זמן התגובה של ג'אנט עלה פי 3 בהשוואה ל-Baseline ההיסטורי שלה"* ללא כל Prompt מהמשתמש.
-
----
-
-## אילו כלים אני צריך?
-
-<figure class="article-screenshot-figure">
-  <img src="/layer2-batch-pipeline.webp" alt="צינור Data Engineering באצוות עם Spark ו-dbt" class="article-screenshot" />
-  <figcaption>צינור עיבוד Data Engineering באצוות: ניצול Apache Spark ו-dbt לחישוב מראש של מטריקות אנליטיות עבור ה-Context Layer.</figcaption>
-</figure>
-
-### מנועי עיבוד באצוות (Batch Processing)
-
-הכלים המרכזיים לשכבה 2 הם עיבוד נתונים באצוות:
-
-* **Apache Spark**: לאגרגציות בקנה מידה גדול על פני מיליוני רשומות. Spark מצטיין בחישוב התפלגויות סטטיסטיות (אחוזונים p50, p90, p99) על פני מערכי נתונים שלמים. הטוב ביותר לחברות עם נפחי נתונים משמעותיים.
-* **dbt (Data Build Tool)**: לטרנספורמציות מבוססות SQL שקל יותר לתחזק ולנהל בגרסאות. מודלים של dbt מגדירים את המטריקות שלכם כשאילתות SQL שרצות מעת לעת. הטוב ביותר לצוותים שרוצים להישאר באקוסיסטם ה-SQL.
+ה-Contract יכול להישען על שאילתת Warehouse חיה, שאילתת PostgreSQL מאונדקסת, ClickHouse או Serving Table. Rollups מתוזמנים הם דרך מימוש אחת, לא ההגדרה של השכבה.
 
 ```mermaid
-flowchart TD
-    subgraph Sources["Layer 1 Data Sources"]
-        Messages["operational_messages\n(PostgreSQL)"]
-        Contacts["operational_contacts\n(PostgreSQL)"]
-        Deals["deal_stages\n(PostgreSQL)"]
-    end
-
-    subgraph Processing["Batch Processing Pipeline"]
-        Messages --> Spark["Apache Spark / dbt\n(Scheduled Aggregations)"]
-        Contacts --> Spark
-        Deals --> Spark
-        Spark --> ResponseLatency["Response Latency\np50 / p90 per Contact"]
-        Spark --> DealVelocity["Deal Velocity\nDeals per Day / Week"]
-        Spark --> ARRRatio["ARR Triage Ratio\nAccount vs Company p50"]
-    end
-
-    subgraph Store["Analytical Metrics Store"]
-        ResponseLatency --> MatViews["PostgreSQL Materialized Views\nor ClickHouse"]
-        DealVelocity --> MatViews
-        ARRRatio --> MatViews
-    end
-
-    MatViews --> Agent["AI Agent\nAnalytical Tool"]
+flowchart LR
+    Events["Layer 1"] --> Metrics["Metrics"]
+    Metrics --> Tool["Agent Tool"]
+    Policy["Policy"] --> Tool
+    Tool --> Agent["AI Agent"]
 ```
 
-### אחסון: Materialized Views מול Data Warehouse
+ה-Agent לא צריך לדעת איזה מנוע חישב את התוצאה. הוא צריך לדעת מה התוצאה אומרת, מתי חושבה והאם הראיות מספיק חזקות.
 
-היכן שומרים מטריקות מחושבות מראש תלוי בסקייל:
+## מגדירים את המטריקה לפני שמחשבים אותה
 
-* **PostgreSQL Materialized Views**: לצוותים שרוצים לשמור הכל במסד נתונים אחד. צרו Materialized Views שמחשבות מראש את ה-Rollups שלכם ורעננו אותן מעת לעת. פשוט, יעיל ומספיק לרוב הסטארטאפים.
-* **ClickHouse / TimescaleDB**: לעומסי Time-Series כבדים שבהם צריך שאילתות אנליטיות בפחות משנייה על פני מיליארדי שורות.
-* **BigQuery / Redshift**: לארגונים שכבר יש להם Data Warehouse. חשבו מטריקות שם וסנכרנו תוצאות חזרה למאגר התפעולי.
+"זמן תגובה" נשמע ברור עד ששני צוותים מממשים אותו אחרת. אחד מתחיל את השעון בהודעה הראשונה ברצף. השני מתחיל באחרונה. אחד סופר תשובה אוטומטית והשני סופר רק אדם.
 
-### תזמון: Orchestration
+Contract שימושי צריך להגדיר:
 
-עבודות Batch צריכות לרוץ על לוח זמנים:
+| שדה | הגדרה |
+|---|---|
+| Metric | `contact_response_survival` |
+| Pairing | הרצף של החברה מסתיים בתשובה האנושית הראשונה של הלקוח באותו Thread |
+| Start | הודעת החברה האחרונה שדורשת תשובה |
+| Clock | שעות עבודה לפי לוח השנה וה-Time Zone של ה-Account |
+| Exclusions | תשובות אוטומטיות, Notes פנימיים והודעות שחזרו |
+| Event time | `occurredAt` של המקור |
+| Window | 180 הימים שקדמו לזמן הבדיקה |
+| Cohort | אותו Contact ו-Channel, עם Fallback ל-Segment |
+| Sample rule | משתמשים ב-Contact רק אחרי 20 שיחות נצפות |
+| Version | `contact_response_survival_v2` |
+| Freshness | Source Watermark בן 15 דקות לכל היותר |
 
-* **Apache Airflow**: סטנדרט תעשייתי לתזמור DAGs מורכבים של צינורות נתונים. מטפל בתלויות, ניסיונות חוזרים וניטור.
-* **Cron Jobs פשוטים**: לצוותים קטנים יותר, עבודת Cron מתוזמנת שמריצה מודל dbt כל שעה היא לעתים קרובות מספיקה. אל תעשו Over-Engineering לשכבת ה-Orchestration לפני שאתם צריכים את זה.
+סף המדגם אינו חוק סטטיסטי אוניברסלי. הוא מונע משתי תשובות ישנות להיראות כמו דפוס אישי יציב. כאשר אין מספיק היסטוריה, הכלי משתמש ב-Fallback Cohort ומציין זאת.
 
-### ה-Trade-Off המרכזי: טריות מול עלות חישוב
+## שיחה פתוחה עדיין לא קיבלה זמן תגובה סופי
 
-כמה פעמים צריך לחשב מטריקות מחדש? כל שעה? כל 15 דקות? כל דקה?
+נניח שג׳אנט ענתה בעבר אחרי 3, 6, 8, 20 ו-30 שעות עבודה. השיחה הנוכחית פתוחה כבר 16 שעות.
 
-רענון Materialized Views בתדירות גבוהה יותר נותן ל-Agent נתונים טריים יותר אבל עולה יותר חישוב. עבור רוב מקרי השימוש של CRM, **חישוב מחדש כל שעה** הוא הנקודה המתוקה: Baselines של Response Latency לא משתנים באופן משמעותי בתוך שעה, ועלות החישוב נשארת ניתנת לניהול.
+לשיחה הנוכחית אין משך סופי. ידוע רק שזמן התגובה גדול מ-16 שעות. זה נקרא **Right Censored Data**. במילים פשוטות, השעון עדיין רץ.
 
----
+Survival Curve משתמש גם בשיחות שהסתיימו וגם בשיחות שעדיין פתוחות. כאן Survival פירושו "עדיין ללא תשובה". הכלי יכול להעריך את ההסתברות ששיחה דומה תישאר פתוחה מעבר ל-16 שעות.
 
-## מלכודות נפוצות
+אם ההערכה היא 68%, השתיקה נפוצה ב-Cohort. אם היא 4%, היא חריגה. אף מספר לא מחליט לבדו מה לעשות. צריך גם גודל מדגם ו-Uncertainty Interval.
 
-### 1. חישוב מטריקות בזמן השאילתה
+[NIST מסביר Censored Data](https://itl.nist.gov/div898/handbook/apr/section1/apr131.htm) ומציג [Kaplan Meier Estimation](https://www.itl.nist.gov/div898/handbook/apr/section2/apr215.htm) שמשלב תצפיות שהסתיימו ותצפיות פתוחות.
 
-הטעות הנפוצה ביותר היא לדלג על חישוב מראש ולחשב אגרגציות בתוך קריאת ה-Tool של ה-Agent. שאילתת SQL שמחשבת p50 Response Latency על פני 2 מיליון הודעות לוקחת 3 עד 8 שניות. ה-Latency הזה בלתי מקובל בתוך לולאת שיחה. **חשבו מראש, אל תחשבו בזמן השאילתה.**
+<figure class="article-screenshot-figure">
+  <img src="/layer2-silence-detection.webp" alt="השוואת השתיקה הנוכחית של ג׳אנט לשיחות היסטוריות" class="article-screenshot" />
+  <figcaption>השתיקה הנוכחית מוצגת מול שיחות דומות, יחד עם Cohort וגודל מדגם.</figcaption>
+</figure>
 
-### 2. לא לנהל גרסאות של הגדרות מטריקות
+## ראיות ו-Policy הם Contracts שונים
 
-מה נחשב "זמן תגובה"? הזמן מההודעה האחרונה לתגובה הראשונה? או הזמן מכל הודעה לכל תגובה? אם משנים את ההגדרה הזו בלי ניהול גרסאות, השוואות היסטוריות הופכות לחסרות משמעות. **התייחסו להגדרות מטריקות כמו לקוד: נהלו גרסאות, בדקו, עשו Review לשינויים.**
+המטריקה עונה: *"עד כמה השתיקה של ג׳אנט חריגה לפי ההשוואה שהגדרנו?"*
 
-### 3. התעלמות ממקרי קצה סטטיסטיים
+ה-Policy עונה: *"לפי הראיות ומצב החידוש, איזו פעולה ה-CRM צריך לבצע?"*
 
-חשבון חדש עם 2 הודעות בלבד אין לו Baseline p50 משמעותי. חשבון עם נקודת נתונים בודדת מייצר "חציון" חסר משמעות. הצינור שלכם צריך **סף מדגם מינימלי** לפני יצירת מטריקות אמון. בלי זה, ה-Agent מקבל החלטות על סמך נתונים חסרי משמעות סטטיסטית.
+שתיקה נדירה יכולה להיות חסרת משמעות. שתיקה רגילה עדיין יכולה לדרוש פעולה אם מחר יש Deadline חוזי. Account Value, העדפות לקוח, התחייבויות ועלות טעות שייכים ל-Policy.
 
-### 4. Over-Engineering של מערך הנתונים
+> **מטריקות מתארות את הראיות**: ה-Policy מחזיק את הפעולה, הספים והעלות המקובלת של החלטה שגויה.
 
-לא כל צוות צריך Apache Spark, Airflow ו-Data Warehouse ייעודי ביום הראשון. אם יש לכם 50,000 הודעות, Materialized View ב-PostgreSQL שמתרענן על ידי Cron Job כל שעה הוא יותר ממספיק. **התחילו עם הכלי הפשוט ביותר שפותר את ה-Access Pattern שלכם, ואז שדרגו כשהנתונים דורשים את זה.**
+## בוחרים Serving Path לפי Access Pattern
 
-### 5. לא ליישר חלונות מטריקות עם המציאות העסקית
+| Access Pattern | מימוש מתאים |
+|---|---|
+| שאילתה מוגבלת על היסטוריה קטנה | PostgreSQL מאונדקס |
+| אגרגציה יציבה שחוזרת | PostgreSQL Materialized View |
+| ניתוח רחב שכבר נמצא ב-Warehouse | BigQuery או Redshift |
+| קריאות אנליטיות אינטראקטיביות תכופות | ClickHouse |
+| Contract עם Latency קשיח | Serving Table מתוחזק |
 
-האם מטריקת Deal Velocity שלכם צריכה להשתמש בחלון מתגלגל של 30 יום או בחודש קלנדרי? האם Baselines של Response Latency צריכים לכסות את 90 הימים האחרונים או את 12 החודשים האחרונים? אלה **החלטות עסקיות**, לא החלטות הנדסיות. יישרו את חלונות המטריקות שלכם עם האופן שבו העסק באמת חושב על זמן.
+התחילו עם PostgreSQL כאשר הוא עומד בדרישה. `REFRESH MATERIALIZED VIEW` מחליף את תוכן ה-View. `CONCURRENTLY` מאפשר קריאות בזמן הרענון אבל דורש Unique Index מתאים. ראו את [PostgreSQL Materialized Views](https://www.postgresql.org/docs/current/rules-materializedviews.html).
 
----
+dbt אינו מנוע חישוב חלופי ל-Spark. הוא מגדיר, בודק ומתעד Transformations שה-Data Platform מריץ. אין גם מרווח רענון אוניברסלי. לכל שדה צריך Freshness Target משלו.
 
-## דוגמה מעשית: ה-CRM של ג'אנט בפעולה
+## Context אנליטי חייב לשרוד שינויים
 
-במערכת ה-CRM של ג'אנט, שכבה 2 צורכת נתונים תפעוליים גולמיים משכבה 1 ומייצרת מטריקות אנליטיות מחושבות מראש שה-Agent מתשאל באופן מיידי.
+* אירוע שמגיע באיחור צריך לעדכן את השיחה ואת החלונות שהושפעו
+* תיקון או מחיקה במקור צריכים לבטל Projection ישן
+* מיזוג Contacts צריך להיות הפיך ולגרור Rebuild
+* Metric Version חדש צריך להיבנות לצד הישן לפני Migration
+* Refresh שנכשל צריך להחזיר `stale`, לא תשובה שקטה
+* המלצה היסטורית צריכה להיות ניתנת לשחזור לפי Watermark, Metric Version ו-Policy Version
 
-### תרחיש: זיהוי שתיקה עם Baselines של Response Latency
+## חושפים כלי אנליטי צר
 
-משתמש מבקש מה-AI Agent: *"ג'אנט לא ענתה להצעה שלנו שנשלחה לפני 48 שעות. האם כדאי לשלוח מעקב דחוף?"*
+`getContactResponseContext(contactId, threadId, observedAt)` צריך להחזיר משך נוכחי, Survival Probability, Uncertainty, Cohort, גודל מדגם, Freshness ו-Lineage. הוא לא צריך להחזיר SQL פתוח או שדה נסתר בשם `is_anomalous`.
 
-ה-Agent קורא לכלי האנליטי שלו, שמתשאל את מאגר המטריקות המחושבות מראש:
+## חוזרים לחידוש של ג׳אנט
 
-```json
-{
-  "account_email": "janet@business.com",
-  "p50_response_latency_hours": 72.0,
-  "p90_response_latency_hours": 96.0,
-  "hours_currently_silent": 48.0,
-  "is_anomalously_silent": false,
-  "account_arr_usd": 340000.0,
-  "arr_ratio_to_company_p50": 3.4,
-  "deal_velocity_per_week": 2.3,
-  "response_trend_30d": "stable"
-}
-```
+ה-CRM פועל בשלושה שלבים:
 
-**תגובת ה-Agent**: *"ה-Baseline של Response Latency של ג'אנט הוא 3 ימים (p50). אחרי 48 שעות, היא עדיין בתוך חלון התגובה הרגיל שלה. מכיוון שזהו חשבון בעל ערך גבוה ($340k ARR, פי 3.4 מה-Baseline של החברה), אני ממליץ להמתין עוד 24 שעות לפני מעקב כדי להימנע מהרושם של לחץ יתר."*
+1. `findContact` פותר את ג׳אנט ל-Contact ID קנוני
+2. `getContactResponseContext` מחזיר 16 שעות עבודה, הערכת Survival וטריות
+3. `evaluateFollowUpPolicy` מפעיל Policy שדורש אישור אנושי לפני הודעה דחופה
 
-### תרחיש: ARR Triage והקצאת מאמץ
+ה-Agent מסביר ש-68% מהשיחות הדומות עדיין פתוחות בשלב הזה, שהדאטה טרי, ושאין Deadline ב-24 השעות הקרובות. הוא ממליץ להמתין עד בוקר העבודה הבא ולא מציג את ההערכה כוודאות.
 
-משתמש אחר שואל: *"הלקוח דייב שלח 15 בקשות פיצ'רים. כמה מאמץ הנדסי מותאם אישית כדאי להשקיע?"*
+## מודל ההפעלה של שכבה 2
 
-```json
-{
-  "account_name": "Dave's Startup",
-  "account_arr_usd": 8500.0,
-  "arr_ratio_to_company_p50": 0.085,
-  "custom_request_count": 15,
-  "avg_engineering_hours_per_request": 4.0,
-  "total_estimated_hours": 60.0
-}
-```
+שכבה 2 אינה Spark, dbt או אוסף Rollups. היא ה-Contract האנליטי המנוהל המשותף למוצר ול-Agent.
 
-**תגובת ה-Agent**: *"ה-ARR של החשבון של דייב ($8,500) הוא 8.5% מהחציון של החברה ($100,000). השקעת 60 שעות הנדסה על פיצ'רים מותאמים אישית לחשבון הזה אינה כדאית מבחינת עלות-תועלת. אני ממליץ להציע פיצ'רים סטנדרטיים של המוצר ולהסלים רק את 2 הבקשות המובילות לבדיקת צוות המוצר."*
+> **הכלל של שכבה 2**: הגדירו כל מטריקה כ-Contract מנוהל גרסה, החזירו טריות, גודל מדגם, אי ודאות ו-Lineage יחד עם הערך, ותנו ל-Policy עסקי מפורש לבחור את הפעולה.
 
----
-
-## סיכום והצעדים הבאים
-
-שכבה 2 הופכת מחרוזות אירועים גולמיות ל-Business Intelligence כמותי. על ידי הרצת Spark או dbt Rollups על לוח זמנים, ה-AI Agent שלכם מעריך Baselines סטטיסטיים באופן מיידי ללא הרצת אגרגציות SQL איטיות בזמן ריצה.
-
-ה-Trade-off המרכזי בשכבה זו הוא **טריות מול עלות חישוב**: חישוב מחדש תכוף יותר נותן מטריקות טריות יותר אבל עולה יותר. עבור רוב מקרי השימוש, רענון כל שעה הוא האיזון הנכון.
-
-המשיכו ל-[חלק 6: צלילה עמוקה לשכבה 3 (אותות מעובדים מראש ו-Multimodal OCR)](/he/tech/building-an-effective-context-layer-part-6) כדי לראות כיצד חילוץ פיצ'רים אסינכרוני מעבד סנטימנט, Intent ונספחי מסמכים לפני הרצת ה-Agent.
+המשיכו ל-[חלק 6: בניית אותות מעובדים מראש עם גרסאות](/he/tech/building-an-effective-context-layer-part-6).

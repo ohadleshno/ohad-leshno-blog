@@ -1,199 +1,276 @@
 ---
 draft: true
-title: "Context Layer #5: Precomputing Analytical Intelligence"
+title: "Context Layer #5: Governing Analytical Context"
 slug: "building-an-effective-context-layer-part-5"
-excerpt: "Explore Layer 2 in detail. Learn how pre-computing statistical rollups, p50/p90 response latencies, and ARR triage ratios with Apache Spark and dbt empowers AI Agents to make business decisions."
+excerpt: "Build a governed analytical interface that gives AI Agents clear metric definitions, uncertainty, freshness, and evidence for business decisions."
 date: "2026-08-01"
-coverImage: "/layer2-batch-pipeline.webp"
-techStack: ["AI Agents", "Context Layer", "Data Engineering", "Apache Spark", "dbt", "SQL", "PostgreSQL"]
+coverImage: "/layer2-silence-detection.webp"
+techStack: ["AI Agents", "Context Layer", "Data Engineering", "dbt", "SQL", "PostgreSQL", "ClickHouse"]
 language: "en"
 series: "context-layer"
 seriesTitle: "Context Layer"
 seriesOrder: 5
 ---
 
-*This is Part 5 of our 7-part technical series on Context Layers for AI Agents. Before reading this deep dive, make sure to read [Part 3: Architecture Overview](/en/tech/building-an-effective-context-layer-part-3) and [Part 4: Deep Dive into Layer 1 Operational Data](/en/tech/building-an-effective-context-layer-part-4).*
+*This is Part 5 of our 7 part technical series on Context Layers for AI Agents. [Part 4: Ingesting Raw Operational Data](/en/tech/building-an-effective-context-layer-part-4) showed how the CRM gives every consumer one reliable record of contacts, messages, and threads. This part turns that history into governed analytical context.*
 
----
+**TL;DR**: Layer 2 is a governed analytical interface. It defines what each metric means, computes it through a measured serving path, and returns the value together with its cohort, sample size, uncertainty, freshness, version, and lineage. The metric supplies evidence. A separate business policy decides whether the AI Agent should wait, notify a user, or escalate.
 
-## Why Do We Need This Layer?
+## Is Janet's silence unusual?
 
-Layer 1 answers *"what happened"*: the raw messages, the contacts, the threads. But it cannot answer *"what does it mean?"*
+The CRM sent Janet a renewal proposal on Monday morning. It is now Wednesday morning, and Janet has not replied. A user asks the AI Agent:
 
-Consider a simple question: *"Janet H. hasn't replied in 48 hours. Should I send an urgent follow-up?"* Layer 1 can tell you Janet's last message was 48 hours ago. But is 48 hours of silence unusual for Janet? Is this account even worth the urgency? These are **quantitative, analytical questions** that require statistical baselines computed over historical data.
+*"Janet has been silent for 48 hours. Should I send an urgent follow up?"*
 
-An AI Agent cannot compute p50 response latencies, deal velocities, or ARR benchmarks on the fly during a conversation by scanning raw message strings. These metrics must be **pre-calculated** using data engineering pipelines and exposed as structured analytical context.
+Layer 1 can retrieve the proposal, its send time, the thread, and Janet's identity. That proves what happened. It does not tell us whether the silence is unusual.
 
-Without Layer 2, your agent is a message reader. With Layer 2, your agent is a business analyst.
+Even the phrase "48 hours" hides decisions. The interval may include two nights. It may include a weekend or a holiday in Janet's country. Janet may usually answer renewal emails more slowly than support questions. The CRM may also have received only a few past replies from her.
 
----
+Before choosing PostgreSQL, ClickHouse, or a warehouse, write down the questions the analytical interface must answer:
 
-## Benefits of This Layer
+1. **Current duration**: How many business hours have passed since the message that needs a reply?
+2. **Expected behavior**: How often are comparable conversations still unanswered after that duration?
+3. **Evidence quality**: Which conversations formed the comparison, and how much uncertainty remains?
+4. **Data health**: How current and complete are the source records?
+5. **Decision policy**: Given that evidence, what does the business want the AI Agent to do?
 
-### Business Intelligence Inside the Agent Loop
+> **Start from the decision question**: A metric is useful only when its definition and evidence match the decision that consumes it.
 
-Pre-computed analytical metrics unlock an entirely new class of agent capabilities:
+## Layer 2 is an interface, not a batch pipeline
 
-* **Silence Detection**: Calculating p50 (median) and p90 response latency baselines per contact. If Janet's p50 response latency is 72 hours, a 48 hour pause is normal behavior. If her p50 is 2 hours, 48 hours of silence is a critical anomaly that triggers an alert.
+Layer 2 gives the product one governed contract for analytical questions. The contract can be served by a live warehouse query, an indexed PostgreSQL query, ClickHouse, or a maintained serving table. Scheduled rollups are one implementation, not the layer itself.
+
+```mermaid
+flowchart LR
+    Events["Layer 1"] --> Metrics["Metrics"]
+    Metrics --> Tool["Agent Tool"]
+    Policy["Policy"] --> Tool
+    Tool --> Agent["AI Agent"]
+```
+
+The AI Agent should not know which database ran the calculation. It should know what the result means, when it was calculated, and whether the evidence is strong enough to use.
+
+This distinction matters because changing the execution engine should not change the meaning of `response_latency`. Changing the meaning should create a new metric version even if the SQL still runs in the same database.
+
+## Define the response metric before computing it
+
+"Response time" sounds obvious until two teams implement it differently. One starts the clock at the first message in a burst. Another starts at the last message. One includes automated acknowledgements. Another counts only a human reply. Both return a number called `response_latency_hours`, but those numbers are not comparable.
+
+For Janet's history in the CRM, define one contract:
+
+| Contract field | Definition |
+|---|---|
+| Metric | `contact_response_survival` |
+| Pairing | A company turn ends at the first human customer reply in the same thread |
+| Start event | The last human company message that requires a reply |
+| Message burst | Company messages within 30 minutes, with no customer reply between them |
+| Clock | Business hours in the account calendar and time zone |
+| Exclusions | Automated acknowledgements, internal notes, and bounced messages |
+| Event time | The source `occurredAt` value, not the ingestion time |
+| Window | The previous 180 days as of the requested observation time |
+| First cohort | The same contact and channel |
+| Fallback cohort | The same account segment and channel |
+| Sample rule | Use the contact cohort only after 20 observed conversations |
+| Version | `contact_response_survival_v2` |
+| Freshness target | Source watermark no more than 15 minutes old |
+
+The sample rule is a product reliability choice, not a universal statistical law. Its purpose is to stop the system from presenting one or two past replies as a stable personal pattern. When Janet has too little history, the tool uses the declared fallback cohort and says so.
+
+Business hours also belong in the contract. If the proposal was sent Monday at 4 PM and the CRM asks on Wednesday at 10 AM, the result might be 10 business hours rather than 42 wall clock hours. The calendar, time zone, and holiday source must therefore be versioned inputs.
+
+Metric definitions are public interfaces. [dbt model contracts](https://docs.getdbt.com/docs/mesh/govern/model-contracts) can enforce output columns and data types, while [dbt model versions](https://docs.getdbt.com/docs/mesh/govern/model-versions) provide a migration path when a breaking definition changes. These controls do not replace a written semantic contract, but they help keep its implementation honest.
+
+## An unanswered conversation has no final response time
+
+Suppose Janet answered five earlier proposals after 3, 6, 8, 20, and 30 business hours. Her current conversation has been open for 16 business hours.
+
+It would be tempting to calculate a median from the five completed replies and compare 16 with that number. The problem is that the current conversation has no completed duration yet. We only know that its response time is greater than 16 hours.
+
+This is called **right censored data**. In plain language, the clock is still running. Throwing away every open conversation makes the fastest completed replies dominate the baseline. Pretending the current duration is final makes the response look faster than it may eventually be.
+
+A survival curve handles both completed and still open conversations. Here, "survival" simply means "still unanswered." At 16 business hours, the tool can estimate the probability that a comparable conversation remains unanswered beyond that point.
+
+If the estimate is 68 percent, Janet's silence is common in the selected cohort. If it is 4 percent, the silence is unusual. Neither number alone decides what to do. The result also needs a sample count and an uncertainty interval, especially when Janet has little history.
+
+The [NIST explanation of censored data](https://itl.nist.gov/div898/handbook/apr/section1/apr131.htm) describes observations whose final event has not happened during the observation period. Its [Kaplan Meier guide](https://www.itl.nist.gov/div898/handbook/apr/section2/apr215.htm) shows how to estimate a distribution from completed and censored observations without assuming a particular distribution shape.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-silence-detection.webp" alt="Contact Response Latency Silence Detection Chart" class="article-screenshot" />
-  <figcaption>Silence detection using contact response latency baselines: comparing current silence against historical p50 and p90 response times.</figcaption>
+  <img src="/layer2-silence-detection.webp" alt="Response survival chart comparing Janet's current silence with historical conversations" class="article-screenshot" />
+  <figcaption>Janet's current silence is placed against comparable completed and still open conversations, with the cohort and sample size kept visible.</figcaption>
 </figure>
 
-* **Deal Velocity and Volume Impact**: Understanding how many deals your business processes daily changes the decision calculus. If Janet closes 1 deal per day, every deal has massive impact and warrants human attention. If she closes 100 deals per day, automated rules should handle most of them.
+Percentiles can still help summarize completed durations. PostgreSQL provides `percentile_cont`, and Apache Spark provides `percentile_approx` with an explicit accuracy and memory tradeoff. A percentile is a summary, though, not proof that an observation is urgent. The [PostgreSQL aggregate documentation](https://www.postgresql.org/docs/current/functions-aggregate.html) and [Spark function documentation](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.functions.percentile_approx.html) also make clear that engines can implement percentile calculations differently. Record the method in the metric contract.
 
-* **ARR Triage and Effort Allocation**: Computing the ratio of an account's ARR relative to the company's median (p50) account ARR. If this account is worth $10,000 ARR while the company p50 benchmark is $100,000 ARR, and the client is sending 15 complex feature requests, the agent should recommend standard product features instead of custom engineering effort.
+## Evidence and policy are different contracts
+
+The analytical result should answer:
+
+*"How unusual is Janet's current silence, according to this defined comparison?"*
+
+The business policy should answer:
+
+*"Given that evidence and the state of this renewal, what action should the CRM take?"*
+
+Those are not the same question. A rare silence may still be harmless. A common silence may still require action because a contractual deadline is tomorrow. Account value, customer preference, legal commitments, and the cost of a mistaken escalation belong in policy.
+
+A versioned policy might say:
+
+```json
+{
+  "policy": "renewal_follow_up_v3",
+  "rules": {
+    "urgent_if_deadline_hours_lte": 24,
+    "review_if_survival_probability_lte": 0.1,
+    "wait_if_data_is_stale": true,
+    "human_approval_for_urgent_message": true
+  }
+}
+```
+
+The AI Agent can explain and apply this policy. It must not invent a threshold because 48 hours sounds long. Keeping policy separate also lets business owners change escalation behavior without silently changing the historical metric.
+
+> **Metrics describe the evidence**: Policies own the action, its thresholds, and the acceptable cost of a wrong decision.
+
+## Choose the serving path from the access pattern
+
+The same metric contract can have several implementations. Choose one by measuring query latency, concurrency, source volume, correction frequency, freshness needs, and operating cost.
+
+| Access pattern | Serving choice | Important behavior |
+|---|---|---|
+| Bounded query over modest history | Indexed PostgreSQL query | Simple operations and immediate access to corrected source rows |
+| Repeated stable aggregation | PostgreSQL materialized view | Stored results, but refresh replaces the view contents |
+| Broad analysis already in a warehouse | BigQuery or Redshift query | Strong fit for large scans, with platform specific materialization limits |
+| Frequent interactive analytical reads | ClickHouse | Column oriented execution and stored aggregate states |
+| Strict low latency contract | Maintained serving table | Fast bounded reads, with another projection to monitor and repair |
+
+Start with PostgreSQL when it meets the measured requirement. PostgreSQL materialized views persist query results in a table like form, but they do not refresh themselves. A regular refresh replaces the contents and can block readers. `REFRESH MATERIALIZED VIEW CONCURRENTLY` avoids blocking selects but requires a suitable unique index. The [PostgreSQL materialized view guide](https://www.postgresql.org/docs/current/rules-materializedviews.html) and [refresh reference](https://www.postgresql.org/docs/current/sql-refreshmaterializedview.html) document these behaviors.
+
+Use the existing warehouse when broad scans or shared analytical models already live there. BigQuery supports scheduled queries for arbitrary recurring calculations, while its incremental materialized views accept a restricted set of aggregate functions. Redshift also limits incremental refresh for materialized views that use percentile functions. These constraints affect the serving design, not the metric contract.
+
+Primary references:
+
+1. [BigQuery scheduled queries](https://cloud.google.com/bigquery/docs/scheduling-queries)
+2. [BigQuery materialized view requirements](https://cloud.google.com/bigquery/docs/materialized-views-create)
+3. [Redshift materialized view refresh](https://docs.aws.amazon.com/redshift/latest/dg/materialized-view-refresh.html)
+
+ClickHouse is useful when the product repeatedly slices large event histories with low interactive latency. Its incremental materialized views can store intermediate aggregate states as new blocks arrive. That behavior differs from a PostgreSQL refresh, so copying the same SQL shape between them can produce the wrong maintenance model. See the [ClickHouse incremental materialized view guide](https://clickhouse.com/docs/concepts/features/materialized-views/incremental-materialized-view).
+
+dbt is not an alternative execution engine beside Spark or ClickHouse. dbt defines, tests, documents, and materializes transformations by dispatching work to the selected data platform. Its [model documentation](https://docs.getdbt.com/docs/build/models) explains that the data remains in that platform during transformation. Spark is useful when distributed processing is justified by the workload, but it is not a required stop in Layer 2.
 
 <figure class="article-screenshot-figure">
-  <img src="/layer2-arr-triage-matrix.webp" alt="Account ARR Triage Decision Matrix" class="article-screenshot" />
-  <figcaption>ARR triage decision matrix: evaluating account ARR relative to company benchmarks to allocate engineering effort efficiently.</figcaption>
+  <img src="/layer2-batch-pipeline.webp" alt="Scheduled aggregation pipeline writing analytical results to a serving store" class="article-screenshot" />
+  <figcaption>A scheduled aggregation is one possible serving path. Layer 2 remains the analytical contract even when the execution engine changes.</figcaption>
 </figure>
-
-* **Trend Detection**: Tracking metrics over time reveals trends invisible in raw data. Is this account's response time getting slower month over month? Is deal velocity accelerating or decelerating?
-
-### From Reactive to Proactive
-
-The most powerful benefit of Layer 2 is that it shifts the agent from **reactive** (answering questions when asked) to **proactive** (surfacing insights before the user even asks). The agent can flag *"Janet's response time has increased 3x compared to her historical baseline"* without any user prompt.
-
----
-
-## What Tools Do I Need?
-
-<figure class="article-screenshot-figure">
-  <img src="/layer2-batch-pipeline.webp" alt="Batch Data Engineering Pipeline with Spark and dbt" class="article-screenshot" />
-  <figcaption>Batch data engineering pipeline: leveraging Apache Spark and dbt to aggregate historical operational metrics for the Context Layer.</figcaption>
-</figure>
-
-### Batch Processing Engines
-
-The core tooling for Layer 2 is batch data processing:
-
-* **Apache Spark**: For large scale aggregations across millions of records. Spark excels at computing statistical distributions (p50, p90, p99 percentiles) across entire datasets. Best for companies with significant data volumes.
-* **dbt (Data Build Tool)**: For SQL based transformations that are easier to maintain and version control. dbt models define your metrics as SQL queries that run periodically. Best for teams that want to stay in the SQL ecosystem.
 
 ```mermaid
 flowchart TD
-    subgraph Sources["Layer 1 Data Sources"]
-        Messages["operational_messages\n(PostgreSQL)"]
-        Contacts["operational_contacts\n(PostgreSQL)"]
-        Deals["deal_stages\n(PostgreSQL)"]
-    end
-
-    subgraph Processing["Batch Processing Pipeline"]
-        Messages --> Spark["Apache Spark / dbt\n(Scheduled Aggregations)"]
-        Contacts --> Spark
-        Deals --> Spark
-        Spark --> ResponseLatency["Response Latency\np50 / p90 per Contact"]
-        Spark --> DealVelocity["Deal Velocity\nDeals per Day / Week"]
-        Spark --> ARRRatio["ARR Triage Ratio\nAccount vs Company p50"]
-    end
-
-    subgraph Store["Analytical Metrics Store"]
-        ResponseLatency --> MatViews["PostgreSQL Materialized Views\nor ClickHouse"]
-        DealVelocity --> MatViews
-        ARRRatio --> MatViews
-    end
-
-    MatViews --> Agent["AI Agent\nAnalytical Tool"]
+    Events["Layer 1"] --> Query["Live Query"]
+    Events --> Rollup["Rollup"]
+    Query --> Contract["Metric Contract"]
+    Rollup --> Contract
+    Contract --> Agent["AI Agent"]
 ```
 
-### Storage: Materialized Views vs Data Warehouse
+There is no universal refresh interval. The response distribution may change slowly, while the current open duration and deadline state change continuously. Give each field an explicit freshness target. If several jobs have dependencies, retries, and backfills, [Apache Airflow](https://airflow.apache.org/docs/apache-airflow/stable/) can orchestrate those finite batch workflows. A simple scheduler may be enough when there is only one reliable job.
 
-Where you store pre-computed metrics depends on your scale:
+## Analytical context must survive change
 
-* **PostgreSQL Materialized Views**: For teams that want to keep everything in one database. Create materialized views that pre-compute your rollups and refresh them periodically. Simple, effective, and sufficient for most startups.
-* **ClickHouse / TimescaleDB**: For time-series heavy workloads where you need sub-second analytical queries over billions of rows.
-* **BigQuery / Redshift**: For organizations that already have a data warehouse. Compute metrics there and sync results back to the operational store.
+Historical metrics are projections over changing operational data. A correct first run is not enough.
 
-### Scheduling: Orchestration
+### Late events
 
-Batch jobs need to run on a schedule:
+A provider may deliver Tuesday's message on Thursday. Use source event time for the metric, then recompute every affected conversation and aggregate window. If processing streams, a watermark defines how long the system waits for late events before closing state. The [Spark event time guide](https://spark.apache.org/docs/latest/streaming/apis-on-dataframes-and-datasets.html) explains the tradeoff between accepting late data and keeping unbounded state.
 
-* **Apache Airflow**: Industry standard for orchestrating complex data pipeline DAGs. Handles dependencies, retries, and monitoring.
-* **Simple Cron Jobs**: For smaller teams, a scheduled cron job running a dbt model every hour is often sufficient. Do not over-engineer the orchestration layer before you need it.
+### Corrected and deleted records
 
-### The Core Trade-Off: Freshness vs Compute Cost
+An edited timestamp, removed automated reply, or provider deletion can change the paired response observation. Preserve the correction in Layer 1, invalidate the derived observation, and rebuild each dependent aggregate. Deletion requirements must propagate into analytical stores rather than leaving the deleted content encoded in a rollup.
 
-How often should you recalculate metrics? Every hour? Every 15 minutes? Every minute?
+### Contact merges
 
-Refreshing materialized views more frequently gives the agent fresher data but costs more compute. For most CRM use cases, **hourly recalculation** is the sweet spot: response latency baselines do not shift meaningfully within an hour, and the compute cost stays manageable.
+If two records are later confirmed to represent Janet, do not rewrite old facts without a trace. Keep the source identities, record the merge version, and rebuild both contact histories into the new canonical projection. A reversible merge lets the team repair a mistaken identity decision.
 
----
+### Backfills and definition changes
 
-## Common Pitfalls
+A backfill must be deterministic for a stated time range, source watermark, and metric version. When `v3` changes message pairing, build it beside `v2`, compare the outputs, and migrate consumers deliberately. dbt [incremental models](https://docs.getdbt.com/docs/build/incremental-models) can process selected new or changed rows, while [dbt snapshots](https://docs.getdbt.com/docs/build/snapshots) retain changes to mutable source records.
 
-### 1. Computing Metrics at Query Time
+### Failed refreshes
 
-The most common mistake is skipping pre-computation entirely and computing aggregations inside the agent's tool call. An SQL query that calculates p50 response latency across 2 million messages takes 3 to 8 seconds. That latency is unacceptable inside a conversational loop. **Pre-compute, do not query-time compute.**
+Keep the last successful result only if the tool marks it stale and reports the failed refresh. "No unusual silence" and "the metric has not refreshed since yesterday" are different facts. [dbt source freshness](https://docs.getdbt.com/docs/build/sources) supports explicit warning and error thresholds for source data.
 
-### 2. Not Versioning Metric Definitions
+### Point in time reproduction
 
-What counts as "response time"? Time from the last message to the first reply? Or time from any message to any reply? If you change this definition without versioning it, historical comparisons become meaningless. **Treat metric definitions like code: version them, test them, review changes.**
+Store enough metadata to answer: *"Why did the AI Agent recommend waiting at 10:05 AM?"* The record needs the observation time, source watermark, metric version, policy version, cohort, and run identifier. Replaying those inputs should reproduce the evidence available at that moment, even if Janet replies later.
 
-### 3. Ignoring Statistical Edge Cases
+## Expose one narrow analytical tool
 
-A new account with only 2 messages has no meaningful p50 baseline. An account with a single data point produces a meaningless "median." Your pipeline needs **minimum sample thresholds** before generating confidence metrics. Without them, the agent makes decisions based on statistically insignificant data.
+The agent does not need raw reply histories or an open SQL endpoint. Give it a bounded domain tool such as:
 
-### 4. Over-Engineering the Data Stack
+```text
+getContactResponseContext(contactId, threadId, observedAt)
+```
 
-Not every team needs Apache Spark, Airflow, and a dedicated data warehouse on day one. If you have 50,000 messages, a PostgreSQL materialized view refreshed by a cron job every hour is more than sufficient. **Start with the simplest tool that solves your access pattern, then scale when the data demands it.**
-
-### 5. Not Aligning Metric Windows with Business Reality
-
-Should your deal velocity metric use a rolling 30 day window or a calendar month? Should response latency baselines cover the last 90 days or the last 12 months? These are **business decisions**, not engineering decisions. Align your metric windows with how the business actually thinks about time.
-
----
-
-## Real-Life Example: Janet's CRM in Action
-
-In Janet's CRM system, Layer 2 consumes raw operational data from Layer 1 and produces pre-computed analytical metrics that the agent queries instantly.
-
-### Scenario: Silence Detection with Response Latency Baselines
-
-A user prompts the AI Agent: *"Janet H. hasn't replied to our proposal sent 48 hours ago. Should I send an urgent follow-up?"*
-
-The agent calls its analytical tool, which queries the pre-computed metrics store:
+Its response should carry enough context to interpret the metric without flooding the model:
 
 ```json
 {
-  "account_email": "janet@business.com",
-  "p50_response_latency_hours": 72.0,
-  "p90_response_latency_hours": 96.0,
-  "hours_currently_silent": 48.0,
-  "is_anomalously_silent": false,
-  "account_arr_usd": 340000.0,
-  "arr_ratio_to_company_p50": 3.4,
-  "deal_velocity_per_week": 2.3,
-  "response_trend_30d": "stable"
+  "contactId": "contact_1842",
+  "threadId": "thread_771",
+  "observedAt": "2026-08-05T10:00:00Z",
+  "currentSilence": {
+    "businessHours": 16.0,
+    "wallClockHours": 48.0
+  },
+  "metric": {
+    "name": "contact_response_survival",
+    "version": "v2",
+    "method": "kaplan_meier",
+    "probabilityStillUnanswered": 0.68,
+    "uncertaintyInterval": [0.52, 0.81]
+  },
+  "cohort": {
+    "scope": "contact",
+    "channel": "email",
+    "windowDays": 180
+  },
+  "sample": {
+    "completed": 34,
+    "rightCensored": 6
+  },
+  "freshness": {
+    "sourceWatermark": "2026-08-05T09:56:00Z",
+    "status": "fresh"
+  },
+  "lineage": {
+    "metricRunId": "metric_run_932",
+    "sourceRecordCount": 40
+  }
 }
 ```
 
-**Agent Response**: *"Janet's baseline response latency is 3 days (p50). At 48 hours, she is still within her normal response window. Because this is a high-value account ($340k ARR, 3.4x company baseline), I recommend waiting another 24 hours before following up to avoid appearing overly aggressive."*
+This example is illustrative. The important part is the shape of the evidence. There is no `is_anomalous` field and no hidden instruction to send a message. The policy evaluates the result separately.
 
-### Scenario: ARR Triage and Effort Allocation
+## Returning to Janet's renewal
 
-A different user asks: *"Client Dave sent 15 feature requests. How much custom engineering should we invest?"*
+Now return to the opening question:
 
-```json
-{
-  "account_name": "Dave's Startup",
-  "account_arr_usd": 8500.0,
-  "arr_ratio_to_company_p50": 0.085,
-  "custom_request_count": 15,
-  "avg_engineering_hours_per_request": 4.0,
-  "total_estimated_hours": 60.0
-}
-```
+*"Janet has been silent for 48 hours. Should I send an urgent follow up?"*
 
-**Agent Response**: *"Dave's account ARR ($8,500) is 8.5% of our company median ($100,000). Investing 60 engineering hours on custom features for this account is not cost-effective. I recommend offering standard product features and escalating only the top 2 requests for product team review."*
+The CRM handles it in three explicit operations:
 
----
+1. `findContact` resolves Janet to the canonical contact ID.
+2. `getContactResponseContext` returns 16 business hours of current silence, the survival estimate, uncertainty, cohort, freshness, version, and lineage.
+3. `evaluateFollowUpPolicy` applies `renewal_follow_up_v3`, including the renewal deadline and the requirement for human approval before an urgent message.
 
-## Conclusion & Next Steps
+The AI Agent can now answer:
 
-Layer 2 transforms raw event strings into quantitative business intelligence. By running Spark or dbt rollups on a schedule, your AI Agent evaluates statistical baselines instantly without running slow runtime SQL aggregations.
+*"Janet has been silent for 48 wall clock hours, which is 16 business hours in the account calendar. Based on 40 comparable email conversations, the current estimate says 68 percent would still be unanswered at this point. The source data is current as of 9:56 AM. Our renewal policy does not call for an urgent follow up yet, and there is no deadline within 24 hours. I recommend waiting until the next business morning. A user should review the message before any urgent outreach."*
 
-The core trade-off at this layer is **freshness against compute cost**: more frequent recalculation gives fresher metrics but costs more. For most use cases, hourly refresh is the right balance.
+This is a restrained recommendation, not a statistical certainty. The AI Agent names the evidence, applies an owned policy, and leaves room for a person to override it.
 
-Continue to [Part 6: Deep Dive into Layer 3 (Preprocessed Signals & Multimodal OCR)](/en/tech/building-an-effective-context-layer-part-6) to see how asynchronous feature extraction parses sentiment, intent, and document attachments before the agent loop runs.
+## The Layer 2 operating model
+
+Layer 2 is not Spark, dbt, ClickHouse, or a collection of scheduled rollups. It is the governed analytical contract shared by the product and the AI Agent.
+
+> **The Layer 2 Rule**: Define every metric as a versioned contract, serve it through a measured access path, return freshness, sample size, uncertainty, and lineage with the value, and let an explicit business policy decide the action.
+
+Continue to [Part 6: Building Versioned Preprocessed Signals](/en/tech/building-an-effective-context-layer-part-6) to see how asynchronous extraction turns sentiment, intent, and document content into structured signals before the AI Agent needs them.
