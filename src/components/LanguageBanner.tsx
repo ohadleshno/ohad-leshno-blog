@@ -24,7 +24,7 @@ export function LanguageBanner({ category, slug, lang }: LanguageBannerProps) {
       <div className="flex-1 text-xs sm:text-sm text-neutral-800 dark:text-neutral-200 leading-relaxed">
         {isHe ? (
           <>
-            רוצה לקרוא את זה באנגלית?{' '}
+            הטקסט המקורי נכתב באנגלית. רוצה לקרוא את גרסת המקור באנגלית?{' '}
             <Link
               href={targetUrl}
               className="font-semibold text-indigo-600 dark:text-indigo-400 underline underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
@@ -37,7 +37,7 @@ export function LanguageBanner({ category, slug, lang }: LanguageBannerProps) {
           </>
         ) : (
           <>
-            Do you want to read it in Hebrew?{' '}
+            The original text was written in English. Do you want to read the Hebrew version?{' '}
             <Link
               href={targetUrl}
               className="font-semibold text-indigo-600 dark:text-indigo-400 underline underline-offset-4 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors"
