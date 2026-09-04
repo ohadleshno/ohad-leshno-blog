@@ -1,206 +1,169 @@
 ---
 draft: true
-title: "Context Layer #6: דאטה מעובד מראש ו-Multimodal OCR"
+title: "Context Layer #6: בניית אותות מעובדים מראש עם גרסאות"
 slug: "building-an-effective-context-layer-part-6"
-excerpt: "צלילה טכנית לשכבה 3. למד כיצד חילוץ פיצ'רים אסינכרוני, כלכלת Batch, Sentiment Tagging ופרסור Multimodal OCR של PDF ותמונות מבטלים Latency של מודלים בזמן ריצה."
+excerpt: "בנו אותות אמינים עם ראיות מקור, גרסאות מפורשות, מצבי כשל בטוחים, Document Extraction ו-Evaluation Gates."
 date: "2026-08-01"
 coverImage: "/layer3-model-task-matching.webp"
-techStack: ["AI Agents", "Context Layer", "Data Engineering", "Kafka", "OCR", "Multimodal AI", "Python"]
+techStack: ["AI Agents", "Context Layer", "Data Engineering", "Kafka", "PostgreSQL", "OCR", "Document AI"]
 language: "he"
 series: "context-layer"
 seriesTitle: "Context Layer"
 seriesOrder: 6
 ---
 
-*זהו חלק 6 בסדרה הטכנית בת 7 חלקים על Context Layers עבור AI Agents. לפני קריאת צלילה עמוקה זו, מומלץ לקרוא את [חלק 3: סקירת הארכיטקטורה](/he/tech/building-an-effective-context-layer-part-3), [חלק 4: שכבה 1 נתונים תפעוליים](/he/tech/building-an-effective-context-layer-part-4), ו-[חלק 5: שכבה 2 מטריקות אנליטיות](/he/tech/building-an-effective-context-layer-part-5).*
+*זהו חלק 6 בסדרה בת 7 חלקים על Context Layers עבור AI Agents. [חלק 4](/he/tech/building-an-effective-context-layer-part-4) בנה את שכבה 1, ו-[חלק 5](/he/tech/building-an-effective-context-layer-part-5) הגדיר Context אנליטי מנוהל.*
 
----
+**TL;DR**: שכבה 3 מחשבת עבודה נגזרת לפני שה-Agent צריך אותה ושומרת כל תוצאה כאות עם גרסה. האות נשאר מחובר לראיות, ל-Extractor Version, ל-Confidence, לטריות ולמצב Review. Pipeline אמין משתמש ב-Transactional Outbox, ב-Idempotent Workers ובמצבים מפורשים: `ready`, `pending`, `stale`, `failed` או `review_required`.
 
-## למה אנחנו צריכים את השכבה הזו?
+## ג׳אנט מערערת על חשבונית
 
-שכבה 1 נותנת לכם נתונים גולמיים. שכבה 2 נותנת לכם מטריקות סטטיסטיות. אבל יש מחלקה של שאלות שדורשת **חילוץ אינטליגנציה**: הבנת משמעות, סנטימנט ותוכן מובנה מתוך קלטים לא מובנים.
+ג׳אנט שולחת אימייל עם חשבונית סרוקה:
 
-שאלו את עצמכם שאלה פשוטה: **איזה נתונים אני יכול לעבד מראש, לפני שלולאת ה-Agent בכלל מתחילה?**
+> חיוב ההקמה בעמוד 2 לא תואם למה שסיכמנו. תוכלו לבדוק אותו לפני שאאשר את החשבונית?
 
-אם אימייל נכנס מכיל תמונת חשבונית מסורקת או הצעה בת מספר עמודים ב-PDF, לכפות על ה-Agent להריץ OCR ולחלץ פריטים תוך כדי אינטראקציה עם המשתמש זה איטי (5 עד 15 שניות של Model Inference) ויקר (עלויות טוקנים של Frontier Model). אם אתם יודעים שתצטרכו ניתוח סנטימנט על כל אימייל של לקוח, אין סיבה לחשב את זה חי בכל פעם. חשבו את זה פעם אחת כשהאימייל מגיע, שמרו את התוצאה, והגישו אותה באופן מיידי כשה-Agent צריך אותה.
+המשתמש שואל: *"על מה ג׳אנט מערערת, ואיזו שורה בחשבונית תומכת בטענה?"*
 
-העיקרון המרכזי של שכבה 3 הוא: **כל דבר שאתם בטוחים שתצטרכו, ויכולים לחשב באופן אסינכרוני, צריך להיות מעובד מראש לפני שלולאת ה-Agent רצה.**
+שכבה 1 שמרה את האימייל ואת הקובץ. עדיין צריך לזהות Billing Dispute, לקרוא את החשבונית, לחלץ Line Items ולחבר את הביטוי "חיוב הקמה" לשורה המתאימה.
 
----
+התוצאה אינה אמת מוחלטת. היא **Derived Claim עם גרסה וראיות**.
 
-## היתרונות של שכבה זו
+## מגדירים את האות לפני ה-Pipeline
 
-### 1. כלכלת Batch: הפחתת עלויות של 50% עד 90%
+אות יכול להיות Intent, שדה ממסמך, Action Flag או קישור בין שתי ראיות. במקרה של ג׳אנט:
 
-כאשר מעבדים נתונים מראש, לא צריך תגובות סינכרוניות בזמן אמת. על ידי שליחת מסמכים נכנסים דרך Batch Inference APIs, נפתח חיסכון דרמטי בעלויות.
+1. Intent האימייל הוא `billing_dispute`
+2. מספר החשבונית הוא `INV-9042`
+3. בעמוד 2 מופיע `Custom Setup Fee` בסך `$1,500`
+4. הביטוי של ג׳אנט כנראה מתייחס לשורה הזאת
+5. הקישור דורש Review כי ההתאמה אינה מדויקת
 
-הסתכלו על [טבלת התמחור של AWS Bedrock](https://aws.amazon.com/bedrock/pricing/):
-
-<figure class="article-screenshot-figure">
-  <img src="/bedrock-batch-pricing.webp" alt="מודלים של Anthropic ב-AWS Bedrock, המציגים תמחור Standard מול Batch והנחות Prompt Cache" class="article-screenshot" />
-  <figcaption>מבנה תמחור של מודלי Anthropic ב-AWS Bedrock: השוואת תמחור Standard מול Batch Inference והנחות Prompt Caching.</figcaption>
-</figure>
-
-Batch Inference מציע **הנחה של 50% על תמחור טוקנים** בתמורה לחלון עיבוד (עד 24 שעות). בשילוב עם Prompt Caching על הוראות System חוזרות, עלויות טוקנים של Input יורדות עד 90%. מחליפים מהירות מסירה בזמן אמת בחיסכון תפעולי מסיבי.
-
-### 2. Model-Task Matching
-
-בצינור Batch אופליין, אפשר להתאים **מודלים קלים ומתמחים** למשימות חילוץ ספציפיות, במקום לנתב כל שאילתה דרך Frontier Model יקר. מודל סיווג קטן מטפל ב-Sentiment Tagging בצורה מושלמת. מודל Vision מתמחה מחלץ נתונים טבלאיים מ-PDFs בזול ומהר יותר מ-Claude או GPT-4 כלליים. לא צריכים מודל של $15 למיליון טוקנים כדי לענות "האם האימייל הזה כועס?"
-
-<figure class="article-screenshot-figure">
-  <img src="/layer3-model-task-matching.webp" alt="ניתוב משימות חכם למודלים מתאימים מול ניתוב נאיבי" class="article-screenshot" />
-  <figcaption>ניתוב משימות חכם למודלים מתאימים: התאמת מודלים קלים ומתמחים למשימות חילוץ ספציפיות במקום מודלי ענק יקרים.</figcaption>
-</figure>
-
-### 3. Composability מובנית
-
-כל פלט של נתונים מעובדים מראש נשמר חזרה למסד הנתונים כ-JSON מובנה. פיצ'רים ברמה גבוהה יותר יכולים **להיבנות על גבי אבני הבניין האלה** ללא הפעלת LLM בכלל.
-
-לדוגמה, אם צינור אסינכרוני מחשב ושומר ציון `deal_health` לכל עסקה פעילה, חישוב `account_health` כולל מאוחר יותר לא דורש קריאת LLM. מאגרגים את ערכי ה-`deal_health` המעובדים מראש באופן דטרמיניסטי באמצעות קוד או SQL. ה-Composability הזו אפשרית רק כאשר אותות מחולצים מראש ונשמרים כנתונים מובנים.
-
-### 4. בדיקת מוצר אופליין ו-Evals
-
-עיבוד נתונים מראש ב-Worker Jobs ברקע מאפשר **לבדוק ולהעריך את פיצ'רי ה-AI שלכם אופליין** לפני שהם מגיעים ללקוחות חיים. כפי שנקבע ב-[חלק 2: הגדרה ומדידה של Context Layer אפקטיבי](/he/tech/building-an-effective-context-layer-part-2), הרצת Evals אוטומטיים וסימולציות מול אותות מעובדים מראש מבטיחה איכות מוצר, בטיחות ומעקב אחר רגרסיות לפני הפעלת המשתמש.
-
-### 5. ה-Trade-Off העיקרי: חישוב ספקולטיבי מראש
-
-העלות העיקרית של שכבה 3 היא **Speculative Pre-Computation**. מוציאים חישוב רקע על פיצ'רים לפני שיודעים בוודאות אם Session חי של משתמש יתשאל אותם. מהמרים שעלות החישוב ברקע שווה את התגובה ללא Latency, מחושבת מראש, כשה-Agent באמת צריך את ה-Context הזה בזמן אמת. ההקלה היא לעבד מראש רק אותות עם **שיעורי שאילתה צפויים גבוהים**: סנטימנט על אימיילים של לקוחות (כמעט תמיד נדרש) מול OCR מלא על כל נספח ניוזלטר (נדרש לעתים רחוקות).
-
----
-
-## אילו כלים אני צריך?
-
-### תורי הודעות: צינורות Worker אסינכרוניים
-
-עמוד השדרה של שכבה 3 הוא צינור עיבוד אסינכרוני:
-
-* **Kafka / SQS**: לארכיטקטורות Event-Driven שבהן אימיילים ומסמכים נכנסים מפעילים עבודות חילוץ אוטומטית. Kafka מספק יכולות Ordering ו-Replay. SQS פשוט יותר להפעלה לצוותים קטנים יותר.
-* **Celery / Bull**: לדפוסי Task-Queue שבהם מכניסים עבודות חילוץ לתור ו-Workers מושכים אותן. Celery (Python) ו-Bull (Node.js) הם בחירות פופולריות לצוותים שכבר באקוסיסטמים האלה.
-
-```mermaid
-flowchart LR
-    subgraph Triggers["Incoming Events"]
-        Email["New Email Received"]
-        Chat["New Chat Message"]
-        Doc["Document Attachment"]
-    end
-
-    subgraph Queue["Async Processing Queue"]
-        Email --> Kafka["Kafka / SQS\n(Event Queue)"]
-        Chat --> Kafka
-        Doc --> Kafka
-    end
-
-    subgraph Workers["Extraction Workers"]
-        Kafka --> Sentiment["Sentiment Classifier\n(Lightweight Model)"]
-        Kafka --> Intent["Intent Detector\n(Classification Model)"]
-        Kafka --> OCR["OCR Extractor\n(Vision Model / Textract)"]
-        Kafka --> ActionFlag["Action-Required\nFlag Generator"]
-    end
-
-    subgraph Store["Signal Store"]
-        Sentiment --> DB["PostgreSQL JSONB\n(Preprocessed Signals)"]
-        Intent --> DB
-        OCR --> DB
-        ActionFlag --> DB
-    end
-
-    DB --> Agent["AI Agent\nExecution Loop"]
-```
-
-### מודלים לחילוץ
-
-סוגי אותות שונים דורשים כלי חילוץ שונים:
-
-* **סיווג Sentiment ו-Intent**: מודלי סיווג מכווננים (Fine-Tuned) או LLMs קטנים. DistilBERT מכוונן על נתוני Customer Support מטפל בסיווג Sentiment בחלק מהעלות של Frontier Model.
-* **Multimodal OCR**: AWS Textract, Google Document AI או מודלי Vision מתמחים לחילוץ נתונים מובנים (פריטי שורה, סכומים, מספרי חשבונית) מ-PDFs סרוקים ותמונות.
-* **דגלי Action-Required**: מסווגים מבוססי כללים בשילוב מודלים קלים לקביעה אם אינטראקציה נכנסת דורשת תגובה אנושית או של Agent, או שהיא אינפורמטיבית (ניוזלטר, התראת מערכת, תגובת Out-of-Office).
-
-### LLM Batch APIs
-
-למשימות חילוץ שכן דורשות הסקת LLM (סיווג Intent מורכב, ניתוח Sentiment דק), השתמשו ב-Batch Inference Endpoints:
-
-* **AWS Bedrock Batch Inference**: הנחת 50% על עלות טוקנים עם חלון עיבוד של עד 24 שעות.
-* **OpenAI Batch API**: הפחתת עלות דומה לעיבוד אופליין.
-* **Prompt Caching**: כאשר מריצים את אותו System Prompt על אלפי אימיילים, Prompt Caching מפחית עלויות Input Tokens עד 90%.
-
-### אחסון: Signal Store מובנה
-
-אותות מעובדים מראש צריכים להישמר כ-**JSON מובנה** לצד ההודעה המקורית במסד הנתונים התפעולי:
-
-* **עמודות PostgreSQL JSONB**: שמירת אותות מחולצים (סנטימנט, Intent, תוצאות OCR) כשדות JSONB על רשומת ההודעה. ניתן לתשאל, לאנדקס ולהרכיב.
-* **Feature Store ייעודי**: לצוותים גדולים יותר, Feature Store ייעודי (Feast, Tecton) מספק ניהול גרסאות, מעקב Lineage ותשתית הגשה.
-
-### ה-Trade-Off המרכזי: כיסוי חישוב מראש מול חישוב מבוזבז
-
-לא הכל צריך להיות מעובד מראש. מסגרת ההחלטה פשוטה: **כמה סביר שה-Agent יתשאל את האות הזה, וכמה יקר לחשב אותו חי?** הסתברות שאילתה גבוהה ועלות חישוב גבוהה אומר לעבד מראש. הסתברות שאילתה נמוכה ועלות חישוב נמוכה אומר לחשב לפי דרישה.
-
----
-
-## מלכודות נפוצות
-
-### 1. לעבד הכל במקום מה שה-Agent באמת מתשאל
-
-הרצת OCR מלא על כל נספח אימייל, כולל ניוזלטרים שיווקיים וקבלות אוטומטיות, מבזבזת חישוב על אותות שה-Agent לעולם לא ישתמש בהם. **פרופלו את דפוסי קריאות ה-Tool בפועל של ה-Agent שלכם** ועבדו מראש רק אותות עם שיעורי Hit גבוהים.
-
-### 2. לא לנטר דיוק חילוץ לאורך זמן
-
-מסווג Sentiment שאומן על נתוני 2024 עלול לסטות ככל שדפוסי שפת הלקוחות מתפתחים. אם המסווג מתחיל לסווג לקוחות מתוסכלים כ-"Neutral," ה-Agent מקבל החלטות Triage שגויות. **הריצו Evals תקופתיים על דיוק מודל החילוץ** ואמנו מחדש כאשר הדיוק יורד מתחת לסף שלכם.
-
-### 3. צימוד הדוק בין Schema החילוץ ל-Schema של כלי ה-Agent
-
-אם כלי ה-Sentiment של ה-Agent מצפה ל-`{"sentiment": "Frustrated"}` וצינור החילוץ שלכם מפלט `{"tone": "angry"}`, שינוי שם Schema בצינור החילוץ שובר בשקט את ה-Agent. **נהלו גרסאות של Schemas האותות שלכם** ואמתו תאימות בין פלט החילוץ לקלט כלי ה-Agent.
-
-### 4. להריץ חילוץ סינכרוני בתוך לולאת ה-Agent "רק בינתיים"
-
-כל צוות שאומר "נעביר את זה ל-Async אחר כך" לעולם לא עושה את זה. הרצת OCR בתוך לולאת ה-Agent בזמן אמת מוסיפה 5 עד 15 שניות של Latency לכל מסמך. **התחילו Async מיום הראשון.** עלות התשתית של הקמת Kafka Consumer היא טריוויאלית בהשוואה לעלות חוויית המשתמש של תגובת Agent של 15 שניות.
-
-### 5. לא לנצל Prompt Caching בעבודות Batch
-
-כאשר מעבדים 10,000 אימיילים דרך אותו System Prompt, כל אימייל משלם עלות Input Tokens מלאה על הוראות ה-System. Prompt Caching מפחית את זה כמעט לאפס אחרי ההפעלה הראשונה. **תמיד אפשרו Prompt Caching בצינורות Batch Inference.**
-
----
-
-## דוגמה מעשית: ה-CRM של נהוראי בפעולה
-
-במערכת ה-CRM של נהוראי, אימייל נכנס מגיע מהלקוח דייב עם חשבונית PDF סרוקה מצורפת.
-
-### זרימת העיבוד האסינכרוני
-
-כאשר האימייל מגיע, צינור ה-Ingestion (שכבה 1) שומר את ההודעה הגולמית. במקביל, הוא דוחף אירוע חילוץ לתור Kafka. ה-Workers של שכבה 3 קולטים אותו ומריצים שלוש עבודות חילוץ במקביל:
-
-1. **סיווג Sentiment**: מנתח את גוף האימייל ומזהה טון מתוסכל.
-2. **זיהוי Intent**: מסווג את האימייל כ-"Billing Dispute."
-3. **חילוץ OCR**: מפרסר את חשבונית ה-PDF המצורפת ומחלץ פריטי שורה מובנים.
-
-### Payload של אותות מחושבים מראש
-
-כאשר משתמש פותח את הפנייה דקות מאוחר יותר, ה-Agent מתשאל את Signal Store המעובד מראש ומקבל הכל באופן מיידי:
+Contract שימושי שומר `sourceVersion`, `extractorVersion`, `schemaVersion`, ראיות, Confidence, זמן יצירה ומצב Review. שינוי במקור או ב-Extractor יוצר גרסה חדשה במקום לדרוס היסטוריה.
 
 ```json
 {
-  "sender_email": "dave@client.com",
-  "sentiment": "Frustrated",
-  "intent_classification": "Billing Dispute",
-  "requires_human_escalation": true,
-  "extracted_invoice": {
-    "invoice_number": "INV-9042",
-    "disputed_line_item": "Custom Integration Fee",
-    "disputed_amount_usd": 1500.0,
-    "invoice_date": "2026-07-15",
-    "total_amount_usd": 4200.0
-  }
+  "id": "sig_invoice_dispute_4820_v3",
+  "kind": "invoice_dispute",
+  "status": "review_required",
+  "sourceVersion": 4,
+  "extractorVersion": "3.2.1",
+  "schemaVersion": 2,
+  "value": {
+    "invoiceNumber": "INV-9042",
+    "candidateLineItem": "Custom Setup Fee",
+    "candidateAmountUsd": 1500
+  },
+  "evidenceIds": ["msg_4820", "invoice_page_2_row_3"],
+  "confidence": 0.78,
+  "producedAt": "2026-08-01T11:06:42Z",
+  "reviewReason": "ambiguous_line_item"
 }
 ```
 
-**תוצאה**: ה-Agent מסמן מיידית את מחלוקת החיוב, מציג את פריט השורה השנוי במחלוקת ($1,500 עמלת אינטגרציה מותאמת), ומכין טיוטת פתרון מותאמת. אפס הפעלות מודל בזמן ריצה. אפס עיכובי פרסור PDF. כל התגובה מחושבת מראש.
+## מחליטים מה לעבד מראש
 
----
+Query Probability ועלות חישוב חי אינן מספיקות. בדקו גם טריות, תדירות שינוי המקור, עלות Reprocessing, אחסון, פרטיות ועלות טעות.
 
-## סיכום והצעדים הבאים
+```text
+preprocess when:
+expected use × avoided live cost
+>
+compute + refresh + storage + privacy + error cost
+```
 
-שכבה 3 מסירה עיבוד מסמכים וחילוץ אינטליגנציה מלולאת ה-Agent בזמן אמת. על ידי ניצול כלכלת Batch, Model-Task Matching, Composability מובנית ו-Evals אופליין, ה-Agent שלכם מקבל Feature Flags מובנים ועשירים ללא כל עיכוב בזמן ריצה.
+Invoice Fields שמתושאלים לעיתים קרובות הם מועמד טוב. OCR מלא על כל Newsletter הוא בדרך כלל בזבוז. שאלה נדירה עם דאטה שמשתנה מהר יכולה להישאר On Demand.
 
-ה-Trade-off המרכזי בשכבה זו הוא **Speculative Pre-Computation**: משקיעים חישוב רקע על ההימור שה-Agent יצטרך את האותות האלה. הקלו על בזבוז על ידי פרופילינג של דפוסי שאילתות בפועל ועיבוד מראש רק של אותות עם שיעורי Hit גבוהים.
+> **מעבדים מראש ערך מדוד**: הקדימו עבודה כאשר היא חוסכת עלות אמיתית ויכולה להישאר טרייה, פרטית ומדויקת מספיק.
 
-עברו לפרק האחרון, [חלק 7: צלילה עמוקה לשכבה 4 (Semantic Memory ו-Graph RAG)](/he/tech/building-an-effective-context-layer-part-7), כדי ללמוד כיצד זיכרון ארגוני והיסטוריית יחסים משלימים את ה-Context Layer.
+## מפרסמים עבודה בלי לאבד אותה
+
+שמירת האימייל ואז פרסום ל-Kafka יוצרים Dual Write. קריסה בין הפעולות יכולה להשאיר הודעה ללא עבודת חילוץ.
+
+השתמשו ב-[Transactional Outbox](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/transactional-outbox.html):
+
+1. שומרים את רשומת המקור ואת ה-Outbox Row באותה Transaction
+2. Dispatcher מפרסם רק Rows שבוצע להם Commit
+3. מסמנים Published רק אחרי אישור מה-Broker
+4. מניחים שתהיה מסירה כפולה ובונים Consumers שהם Idempotent
+
+Consumer Group אחד של Kafka או Queue אחד של SQS לא שולחים אוטומטית אירוע לכל Extractor. השתמשו ב-Consumer Groups נפרדים, Task Topics, Router מפורש, או [SNS עם כמה SQS Queues](https://docs.aws.amazon.com/sns/latest/dg/sns-common-scenarios.html).
+
+```mermaid
+flowchart LR
+    Source["Source Tx"] --> Outbox["Outbox"]
+    Outbox --> Dispatch["Dispatcher"]
+    Dispatch --> Router["Task Router"]
+    Router --> Text["Text Worker"]
+    Router --> Doc["Doc Worker"]
+    Text --> Check["Validator"]
+    Doc --> Check
+    Check --> Store["Signal Store"]
+    Store --> Agent["AI Agent"]
+```
+
+בנו Job Key דטרמיניסטי מ-Tenant, Source Identity, Source Version, Signal Kind, Extractor Version ו-Schema Version. כך Retry לא יוצר Claim פעיל נוסף.
+
+הגדירו Timeout לכל קריאה, מספר Retries מוגבל, Dead Letter Path ו-Replay. שמרו Terminal Failure במקום להחזיר שורה חסרה שה-Agent עלול לפרש כ-"אין אות".
+
+## בוחרים את השיטה הקטנה שעוברת Evaluation
+
+1. Rules לתנאים מדויקים ויציבים
+2. Document Parser לשדות ולטבלאות
+3. Classifier ל-Label Set צר
+4. LLM כאשר צריך Reasoning גמיש או קישור בין מקורות
+
+[Amazon Textract AnalyzeExpense](https://docs.aws.amazon.com/textract/latest/dg/expensedocuments.html) ו-[Google Document AI](https://cloud.google.com/document-ai/docs/processors-list) מחלצים שדות ו-Line Items. זו לא רק פעולת OCR, אלא גם Layout Analysis, Extraction ו-Normalization.
+
+<figure class="article-screenshot-figure">
+  <img src="/layer3-model-task-matching.webp" alt="התאמת שיטת חילוץ למשימה" class="article-screenshot" />
+  <figcaption>כל משימה משתמשת בשיטה הקטנה ביותר שעוברת את ה-Evaluation Gate שלה.</figcaption>
+</figure>
+
+## מפרידים Batch Pricing מ-Prompt Caching
+
+הטענות הבאות נבדקו מול מסמכי הספקים ב-27 באוגוסט 2026:
+
+* [Amazon Bedrock](https://aws.amazon.com/bedrock/pricing/) מציע Batch בהנחה של 50% למודלים נבחרים. Bedrock Prompt Caching זמין רק ב-On Demand ואינו נתמך ב-Batch
+* [Anthropic Message Batches](https://docs.anthropic.com/en/docs/build-with-claude/batch-processing) מאפשר לשלב Batch ו-Caching, אבל Cache Hits הם Best Effort
+* [OpenAI Batch](https://developers.openai.com/api/docs/guides/batch) מציע הנחה של 50%. הנחת Prompt Caching חלה רק על Input Tokens מתאימים ולא על כל הבקשה
+
+שמרו במודל העלות את המודל, האזור, תאריך המחיר, Input, Output ו-Cache Hits שנמדדו.
+
+## מקדמים Extractor דרך Evaluation Gates
+
+מדדו Precision, Recall ו-F1 לכל Class חשוב. עבור מסמכים, בדקו Exact Match לכל שדה ו-Line Item. נתחו Slices לפי שפה, איכות סריקה, Template וסוג קובץ.
+
+הגדירו Threshold שבו המערכת עוברת ל-`review_required`. מדדו גם Downstream Outcome: האם ה-Agent בחר את החשבונית הנכונה, ציטט את הראיה הנכונה ונמנע מהסלמה שגויה.
+
+## שומרים כל תוצאה לפי Access Pattern
+
+* Typed Columns לשדות יציבים שמסננים או מצרפים לעיתים קרובות
+* JSONB לפרטים שמשתנים ול-Evidence Metadata
+* Object Storage ל-PDFs, תמונות ו-Payloads גדולים
+* Feature Store רק כאשר אותו Feature חייב להיות עקבי בין Training ו-Serving
+
+Authorization ו-Retention חלים על כל עותק. מחיקת מקור צריכה להתפשט לאותות, לאינדקסים, ל-Eval Sets ול-Artifacts.
+
+## נותנים ל-Agent מצבים אמיתיים
+
+| מצב | התנהגות Agent |
+|---|---|
+| `ready` | משתמש בערך ומצטט ראיות |
+| `pending` | מסביר שהעבודה עדיין רצה |
+| `stale` | חושף את הזמן ולא מציג ערך ישן כנוכחי |
+| `failed` | מחזיר Failure Category ומציע Fallback בטוח |
+| `review_required` | מציג Candidates ומבקש אישור |
+
+## חוזרים לחשבונית של ג׳אנט
+
+Layer 1 שומר את האימייל, הקובץ ו-Outbox Event. Workers מחלצים Intent ו-Line Items. ה-Linker מוצא שתי שורות דומות ומחזיר `review_required`.
+
+ה-Agent עונה: החיוב הסביר ביותר הוא `Custom Setup Fee` בסך `$1,500` בעמוד 2, אבל קיימת שורה דומה נוספת. הוא מצטט את שתי הראיות ומבקש אישור לפני שינוי החשבונית.
+
+שכבה 3 לא העלימה אי ודאות. היא הפכה אותה לגלויה וניתנת לניהול.
+
+## מודל ההפעלה של שכבה 3
+
+> **הכלל של שכבה 3**: חשבו מראש Claims בעלי ערך, שמרו את הראיות והגרסאות שלהם, פרסמו עבודה באופן אמין, ותנו ל-Agent להבדיל בין תוצאה נוכחית, ממתינה, ישנה, כושלת או לא ודאית.
+
+המשיכו ל-[חלק 7: בניית זיכרון מבוסס ראיות](/he/tech/building-an-effective-context-layer-part-7).

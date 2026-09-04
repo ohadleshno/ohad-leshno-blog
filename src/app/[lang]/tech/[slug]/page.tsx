@@ -12,6 +12,7 @@ import { DraftGuard } from '@/components/DraftGuard';
 import { SeriesBannerNav } from '@/components/SeriesBannerNav';
 import { LanguageBanner } from '@/components/LanguageBanner';
 import { MailingList } from '@/components/MailingList';
+import { ReviewModeBoundary } from '@/components/content-review/ReviewModeBoundary';
 
 export function generateStaticParams() {
   const heSlugs = getAllTechSlugs('he').flatMap((slug) => [
@@ -224,8 +225,19 @@ export default function TechProjectDetail({
     </div>
   );
 
-  if (!project.draft) {
-    return articleContent;
+  const wrappedArticle = (
+    <ReviewModeBoundary
+      enabled={process.env.NODE_ENV === 'development'}
+      lang={lang}
+      slug={project.slug}
+    >
+      {articleContent}
+    </ReviewModeBoundary>
+  );
+
+  // In local development, draft posts render fully without a preview query param.
+  if (!project.draft || process.env.NODE_ENV === 'development') {
+    return wrappedArticle;
   }
 
   const underPreparationScreen = (
@@ -285,7 +297,7 @@ export default function TechProjectDetail({
 
   return (
     <DraftGuard underPreparationScreen={underPreparationScreen}>
-      {articleContent}
+      {wrappedArticle}
     </DraftGuard>
   );
 }

@@ -8,7 +8,10 @@
     "deploy": "npm run build && npx wrangler pages deploy out --project-name=ohad-leshno-blog",
     "start": "next start",
     "lint": "next lint",
-    "parse-wix": "npx tsx scripts/parse-wix-posts.ts"
+    "parse-wix": "npx tsx scripts/parse-wix-posts.ts",
+    "review": "npx tsx scripts/content-review-server.ts",
+    "review:dev": "npx tsx scripts/run-content-review.ts",
+    "test:review": "node --import tsx --test src/lib/content-review/*.test.ts src/components/content-review/*.test.ts scripts/content-review/*.test.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",

@@ -11,6 +11,11 @@ interface DraftGuardProps {
 function DraftGuardContent({ underPreparationScreen, children }: DraftGuardProps) {
   const searchParams = useSearchParams();
 
+  // In local development, always show draft content without a preview query param.
+  if (process.env.NODE_ENV === 'development') {
+    return <>{children}</>;
+  }
+
   const rawPreview = searchParams.get('preview');
   const rawDraft = searchParams.get('draft');
   const rawSecret = searchParams.get('secret');
