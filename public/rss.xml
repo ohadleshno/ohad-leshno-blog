@@ -35,30 +35,30 @@
     <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-3</guid>
   </item>
   <item>
-    <title><![CDATA[Context Layer #4: הזרמת דאטה תפעולי בזמן אמת]]></title>
+    <title><![CDATA[Context Layer #4: קליטת דאטה תפעולי]]></title>
     <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-4</link>
-    <description><![CDATA[בצע צלילה טכנית עמוקה לשכבה 1. למד כיצד צינורות Ingestion בזמן אמת, מידול Domain ואינדקסים ייעודיים מאחדים נתונים תפעוליים מכל הספקים עבור AI Agents.]]></description>
+    <description><![CDATA[בנו את שכבה 1 עם Ingestion אמין, מודל Domain ואינדקסים ייעודיים שמאחדים דאטה תפעולי עבור AI Agents.]]></description>
     <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
     <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-4</guid>
   </item>
   <item>
-    <title><![CDATA[Context Layer #5: חישוב מראש של אינטליגנציה אנליטית]]></title>
+    <title><![CDATA[Context Layer #5: ניהול Context אנליטי]]></title>
     <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-5</link>
-    <description><![CDATA[צלילה טכנית לשכבה 2. למד כיצד חישוב מראש של Rollups סטטיסטיים, Baselines של p50/p90 Response Latency ויחסי ARR Triage באמצעות Apache Spark ו-dbt מעצימים AI Agents.]]></description>
+    <description><![CDATA[בנו ממשק אנליטי מנוהל שנותן ל-AI Agents הגדרות מטריקה, אי ודאות, טריות וראיות להחלטות עסקיות.]]></description>
     <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
     <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-5</guid>
   </item>
   <item>
-    <title><![CDATA[Context Layer #6: דאטה מעובד מראש ו-Multimodal OCR]]></title>
+    <title><![CDATA[Context Layer #6: בניית אותות מעובדים מראש עם גרסאות]]></title>
     <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-6</link>
-    <description><![CDATA[צלילה טכנית לשכבה 3. למד כיצד חילוץ פיצ'רים אסינכרוני, כלכלת Batch, Sentiment Tagging ופרסור Multimodal OCR של PDF ותמונות מבטלים Latency של מודלים בזמן ריצה.]]></description>
+    <description><![CDATA[בנו אותות אמינים עם ראיות מקור, גרסאות מפורשות, מצבי כשל בטוחים, Document Extraction ו-Evaluation Gates.]]></description>
     <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
     <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-6</guid>
   </item>
   <item>
-    <title><![CDATA[Context Layer #7: המוח (זיכרון סמנטי ו-Graph RAG)]]></title>
+    <title><![CDATA[Context Layer #7: בניית זיכרון מבוסס ראיות]]></title>
     <link>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-7</link>
-    <description><![CDATA[שלוט בשכבה 4. למד כיצד זיכרון ארגוני, התאמת קול ה-Persona, חיפוש סמנטי היברידי ומיפוי ישויות ב-Graph RAG משלימים את ה-Context Layer.]]></description>
+    <description><![CDATA[בנו שכבת זיכרון ו-Retrieval שניתנת לעדכון ושומרת הפרדה בין ראיות, Claims, זמן, סתירות ומצב תפעולי מוסמך.]]></description>
     <pubDate>Sat, 01 Aug 2026 00:00:00 GMT</pubDate>
     <guid>https://ohadleshno.com/he/tech/building-an-effective-context-layer-part-7</guid>
   </item>
