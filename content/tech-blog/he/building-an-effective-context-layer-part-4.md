@@ -4,13 +4,18 @@ title: "Context Layer #4: קליטת דאטה תפעולי"
 slug: "building-an-effective-context-layer-part-4"
 excerpt: "בנו את שכבה 1 עם Ingestion אמין, מודל Domain ואינדקסים ייעודיים שמאחדים דאטה תפעולי עבור AI Agents."
 date: "2026-08-01"
-coverImage: "/layer1-vendor-agnostic-model.webp"
+coverImage: "/layer1-cover.jpg"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "PostgreSQL", "Elasticsearch", "Redis", "Kafka"]
 language: "he"
 series: "context-layer"
 seriesTitle: "Context Layer"
 seriesOrder: 4
 ---
+
+<figure class="article-screenshot-figure">
+  <img src="/layer1-cover.jpg" alt="ארכיטקטורת צינור נתונים של שכבה 1 עבור AI Agents" class="article-screenshot" />
+  <figcaption>שכבה 1 קולטת ומנרמלת דאטה תפעולי למאגר רלציוני נקי לפני שה-Agent מתחיל לרוץ.</figcaption>
+</figure>
 
 *זהו חלק 4 בסדרה בת 7 חלקים על Context Layers עבור AI Agents. אם עדיין לא קראתם את החלקים הקודמים, התחילו עם [חלק 1: מהו Context Layer](/he/tech/building-an-effective-context-layer-part-1), [חלק 2: איך מגדירים ומודדים Context Layer אפקטיבי](/he/tech/building-an-effective-context-layer-part-2), ועם [חלק 3: ארכיטקטורת Context בארבע שכבות](/he/tech/building-an-effective-context-layer-part-3).*
 

@@ -4,13 +4,18 @@ title: "Context Layer #4: Ingesting Raw Operational Data"
 slug: "building-an-effective-context-layer-part-4"
 excerpt: "Build Layer 1 with reliable ingestion, domain modeling, and dedicated indexes that unify operational data for AI Agents."
 date: "2026-08-01"
-coverImage: "/layer1-vendor-agnostic-model.webp"
+coverImage: "/layer1-cover.jpg"
 techStack: ["AI Agents", "Context Layer", "Data Engineering", "PostgreSQL", "Elasticsearch", "Redis", "Kafka"]
 language: "en"
 series: "context-layer"
 seriesTitle: "Context Layer"
 seriesOrder: 4
 ---
+
+<figure class="article-screenshot-figure">
+  <img src="/layer1-cover.jpg" alt="Architecting a Layer 1 data pipeline to unify operational sources for AI agents" class="article-screenshot" />
+  <figcaption>Layer 1 ingests and normalizes messy operational data into a clean relational store before an agent executes.</figcaption>
+</figure>
 
 *This is Part 4 of our 7-part technical series on Context Layers for AI Agents. If you have not read the earlier installments, start with [Part 1: What Is a Context Layer](/en/tech/building-an-effective-context-layer-part-1), [Part 2: Defining and Measuring an Effective Context Layer](/en/tech/building-an-effective-context-layer-part-2), and [Part 3: The 4-Layer Context Architecture](/en/tech/building-an-effective-context-layer-part-3).*
 
